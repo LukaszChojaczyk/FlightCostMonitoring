@@ -8,7 +8,9 @@ dashboard can read those files directly.
 
 Warsaw (WAW), Wroclaw (WRO), Berlin (BER) and Prague (PRG) to Bangkok (BKK and DMK),
 out 2027-01-19, back 2027-02-03, 02-04 or 02-05. 3 adults (the 12-year-old pays adult fare),
-economy, premium airlines only (Star Alliance, oneworld, Emirates, Etihad), at most 1 stop, at most 20 h per direction. Prices are in PLN and are the
+economy, premium airlines only (Star Alliance, oneworld, Emirates, Etihad), at most 1 stop, at most 24 h per direction. Options over 16 h in
+either direction are kept but marked `long_trip: true` with a `duration_label`
+(the return direction is only known for the cheapest few deals). Prices are in PLN and are the
 round-trip total for all three passengers.
 
 ## How it works

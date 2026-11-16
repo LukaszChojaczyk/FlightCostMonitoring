@@ -20,7 +20,8 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from fetch_prices import (  # noqa: E402
-    BAGGAGE_PATH, CONFIG_PATH, DATA_DIR, MAX_HISTORY_ENTRIES, baggage_for, load_json, save_json, worst_baggage,
+    BAGGAGE_PATH, CONFIG_PATH, DATA_DIR, MAX_HISTORY_ENTRIES, baggage_for, label_long_trip, load_json, save_json,
+    worst_baggage,
 )
 
 PAUSE_SECONDS = 3  # be gentle: one request every few seconds
@@ -103,7 +104,10 @@ def scrape_route(ff, route: dict, settings: dict, bag_table: dict, now_iso: str,
                 continue
             for f in found or []:
                 if f.price:
-                    options.append(normalize(f, pax, bag_table))
+                    o = normalize(f, pax, bag_table)
+                    # flying time only (layovers unknown here), so this label can miss some long trips
+                    label_long_trip(o, route.get("long_trip_minutes"), "flying_minutes")
+                    options.append(o)
         options.sort(key=lambda o: o["price"])
         results.append({"return_date": rd, "errors": errors, "options": options})
     return {
