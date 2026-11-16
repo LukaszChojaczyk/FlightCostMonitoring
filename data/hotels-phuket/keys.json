@@ -63,5 +63,15 @@
     "match": "Hotel Indigo Phuket Patong",
     "key": "g293920-d14076704",
     "tripadvisor_name": "Hotel Indigo Phuket Patong by IHG"
+  },
+  "movenpick-bangtao": {
+    "match": "Movenpick Bangtao",
+    "key": "g293920-d1503568",
+    "tripadvisor_name": "Mövenpick Phuket Bangtao"
+  },
+  "pullman-naithon": {
+    "match": "Pullman Phuket Arcadia",
+    "key": "g293920-d3217202",
+    "tripadvisor_name": "Pullman Phuket Arcadia Naithon Beach"
   }
 }

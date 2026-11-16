@@ -1,6 +1,6 @@
 {
   "source": "xotelo (Tripadvisor rates)",
-  "fetched_at": "2026-11-16T18:41:12+00:00",
+  "fetched_at": "2026-11-16T19:10:16+00:00",
   "currency": "EUR",
   "pln_rate": 4.4048,
   "pln_rate_source": "NBP table 222/A/NBP/2026 of 2026-11-16",
@@ -11,10 +11,7 @@
   },
   "price_note": "Cheapest nightly rate shown on Tripadvisor for one room and these guests, times nights. Sites may add taxes and fees at checkout.",
   "requests": 127,
-  "errors": [
-    "Mövenpick Resort Bangtao Beach Phuket: not found in the Tripadvisor list for Phuket; set \"key\" for it in the city's hotels config",
-    "Mövenpick Resort & Spa Karon Beach Phuket: not found in the Tripadvisor list for Phuket; set \"key\" for it in the city's hotels config"
-  ],
+  "errors": [],
   "hotels": [
     {
       "id": "katathani",
@@ -29,13 +26,13 @@
     },
     {
       "id": "movenpick-bangtao",
-      "name": "Mövenpick Resort Bangtao Beach Phuket",
-      "key": null,
-      "tripadvisor_name": null,
-      "tripadvisor_url": null,
-      "rating": null,
-      "reviews": null,
-      "popularity_rank": null,
+      "name": "Mövenpick Phuket Bangtao",
+      "key": "g293920-d1503568",
+      "tripadvisor_name": "Mövenpick Phuket Bangtao",
+      "tripadvisor_url": "https://www.tripadvisor.com/Hotel_Review-g2400063-d1503568-Reviews-Movenpick_Phuket_Bangtao-Bang_Tao_Beach_Choeng_Thale_Thalang_District_Phuket.html",
+      "rating": 4.7,
+      "reviews": 1176,
+      "popularity_rank": 105,
       "typical_price_range": null
     },
     {
@@ -72,14 +69,14 @@
       "typical_price_range": null
     },
     {
-      "id": "movenpick-karon",
-      "name": "Mövenpick Resort & Spa Karon Beach Phuket",
-      "key": null,
-      "tripadvisor_name": null,
-      "tripadvisor_url": null,
-      "rating": null,
-      "reviews": null,
-      "popularity_rank": null,
+      "id": "pullman-naithon",
+      "name": "Pullman Phuket Arcadia Naithon Beach",
+      "key": "g293920-d3217202",
+      "tripadvisor_name": "Pullman Phuket Arcadia Naithon Beach",
+      "tripadvisor_url": "https://www.tripadvisor.com/Hotel_Review-g2315813-d3217202-Reviews-Pullman_Phuket_Arcadia_Naithon_Beach-Sakhu_Thalang_District_Phuket.html",
+      "rating": 4.6,
+      "reviews": 4663,
+      "popularity_rank": 58,
       "typical_price_range": null
     },
     {
@@ -772,6 +769,66 @@
       "error": null
     },
     {
+      "hotel": "movenpick-bangtao",
+      "stay": "middle",
+      "date": "2027-01-23",
+      "chk_in": "2027-01-23",
+      "chk_out": "2027-01-30",
+      "nights": 7,
+      "rates": [
+        {
+          "code": "Agoda",
+          "name": "Agoda.com",
+          "rate": 1198.0
+        },
+        {
+          "code": "BookingCom",
+          "name": "Booking.com",
+          "rate": 1203.0
+        }
+      ],
+      "min_rate": 1198.0,
+      "min_site": "Agoda.com",
+      "total": 8386,
+      "total_pln": 36939,
+      "error": null
+    },
+    {
+      "hotel": "pullman-naithon",
+      "stay": "middle",
+      "date": "2027-01-23",
+      "chk_in": "2027-01-23",
+      "chk_out": "2027-01-30",
+      "nights": 7,
+      "rates": [
+        {
+          "code": "Accor",
+          "name": "Pullman",
+          "rate": 388.0
+        },
+        {
+          "code": "Agoda",
+          "name": "Agoda.com",
+          "rate": 389.0
+        },
+        {
+          "code": "BookingCom",
+          "name": "Booking.com",
+          "rate": 429.0
+        },
+        {
+          "code": "CtripTA",
+          "name": "Trip.com",
+          "rate": 435.0
+        }
+      ],
+      "min_rate": 388.0,
+      "min_site": "Pullman",
+      "total": 2716,
+      "total_pln": 11963,
+      "error": null
+    },
+    {
       "hotel": "la-flora-patong",
       "stay": "middle",
       "date": "2027-01-23",
@@ -789,6 +846,66 @@
       "min_site": "Agoda.com",
       "total": 2016,
       "total_pln": 8880,
+      "error": null
+    },
+    {
+      "hotel": "movenpick-bangtao",
+      "stay": "middle",
+      "date": "2027-01-23",
+      "chk_in": "2027-01-23",
+      "chk_out": "2027-01-31",
+      "nights": 8,
+      "rates": [
+        {
+          "code": "Agoda",
+          "name": "Agoda.com",
+          "rate": 1198.0
+        },
+        {
+          "code": "BookingCom",
+          "name": "Booking.com",
+          "rate": 1203.0
+        }
+      ],
+      "min_rate": 1198.0,
+      "min_site": "Agoda.com",
+      "total": 9584,
+      "total_pln": 42216,
+      "error": null
+    },
+    {
+      "hotel": "pullman-naithon",
+      "stay": "middle",
+      "date": "2027-01-23",
+      "chk_in": "2027-01-23",
+      "chk_out": "2027-01-31",
+      "nights": 8,
+      "rates": [
+        {
+          "code": "Accor",
+          "name": "Pullman",
+          "rate": 390.0
+        },
+        {
+          "code": "Agoda",
+          "name": "Agoda.com",
+          "rate": 391.0
+        },
+        {
+          "code": "BookingCom",
+          "name": "Booking.com",
+          "rate": 432.0
+        },
+        {
+          "code": "CtripTA",
+          "name": "Trip.com",
+          "rate": 433.0
+        }
+      ],
+      "min_rate": 390.0,
+      "min_site": "Pullman",
+      "total": 3120,
+      "total_pln": 13743,
       "error": null
     },
     {
@@ -812,6 +929,66 @@
       "error": null
     },
     {
+      "hotel": "movenpick-bangtao",
+      "stay": "middle",
+      "date": "2027-01-23",
+      "chk_in": "2027-01-23",
+      "chk_out": "2027-02-01",
+      "nights": 9,
+      "rates": [
+        {
+          "code": "Agoda",
+          "name": "Agoda.com",
+          "rate": 1198.0
+        },
+        {
+          "code": "BookingCom",
+          "name": "Booking.com",
+          "rate": 1203.0
+        }
+      ],
+      "min_rate": 1198.0,
+      "min_site": "Agoda.com",
+      "total": 10782,
+      "total_pln": 47493,
+      "error": null
+    },
+    {
+      "hotel": "pullman-naithon",
+      "stay": "middle",
+      "date": "2027-01-23",
+      "chk_in": "2027-01-23",
+      "chk_out": "2027-02-01",
+      "nights": 9,
+      "rates": [
+        {
+          "code": "Accor",
+          "name": "Pullman",
+          "rate": 389.0
+        },
+        {
+          "code": "Agoda",
+          "name": "Agoda.com",
+          "rate": 390.0
+        },
+        {
+          "code": "BookingCom",
+          "name": "Booking.com",
+          "rate": 430.0
+        },
+        {
+          "code": "CtripTA",
+          "name": "Trip.com",
+          "rate": 432.0
+        }
+      ],
+      "min_rate": 389.0,
+      "min_site": "Pullman",
+      "total": 3501,
+      "total_pln": 15421,
+      "error": null
+    },
+    {
       "hotel": "la-flora-patong",
       "stay": "middle",
       "date": "2027-01-23",
@@ -832,6 +1009,61 @@
       "error": null
     },
     {
+      "hotel": "movenpick-bangtao",
+      "stay": "middle",
+      "date": "2027-01-24",
+      "chk_in": "2027-01-24",
+      "chk_out": "2027-01-30",
+      "nights": 6,
+      "rates": [
+        {
+          "code": "Agoda",
+          "name": "Agoda.com",
+          "rate": 1273.0
+        },
+        {
+          "code": "BookingCom",
+          "name": "Booking.com",
+          "rate": 1279.0
+        }
+      ],
+      "min_rate": 1273.0,
+      "min_site": "Agoda.com",
+      "total": 7638,
+      "total_pln": 33644,
+      "error": null
+    },
+    {
+      "hotel": "pullman-naithon",
+      "stay": "middle",
+      "date": "2027-01-24",
+      "chk_in": "2027-01-24",
+      "chk_out": "2027-01-30",
+      "nights": 6,
+      "rates": [
+        {
+          "code": "Accor",
+          "name": "Pullman",
+          "rate": 410.0
+        },
+        {
+          "code": "Agoda",
+          "name": "Agoda.com",
+          "rate": 411.0
+        },
+        {
+          "code": "BookingCom",
+          "name": "Booking.com",
+          "rate": 454.0
+        }
+      ],
+      "min_rate": 410.0,
+      "min_site": "Pullman",
+      "total": 2460,
+      "total_pln": 10836,
+      "error": null
+    },
+    {
       "hotel": "la-flora-patong",
       "stay": "middle",
       "date": "2027-01-24",
@@ -843,6 +1075,66 @@
       "min_site": null,
       "total": null,
       "total_pln": null,
+      "error": null
+    },
+    {
+      "hotel": "movenpick-bangtao",
+      "stay": "middle",
+      "date": "2027-01-24",
+      "chk_in": "2027-01-24",
+      "chk_out": "2027-01-31",
+      "nights": 7,
+      "rates": [
+        {
+          "code": "Agoda",
+          "name": "Agoda.com",
+          "rate": 1198.0
+        },
+        {
+          "code": "BookingCom",
+          "name": "Booking.com",
+          "rate": 1203.0
+        }
+      ],
+      "min_rate": 1198.0,
+      "min_site": "Agoda.com",
+      "total": 8386,
+      "total_pln": 36939,
+      "error": null
+    },
+    {
+      "hotel": "pullman-naithon",
+      "stay": "middle",
+      "date": "2027-01-24",
+      "chk_in": "2027-01-24",
+      "chk_out": "2027-01-31",
+      "nights": 7,
+      "rates": [
+        {
+          "code": "Accor",
+          "name": "Pullman",
+          "rate": 390.0
+        },
+        {
+          "code": "Agoda",
+          "name": "Agoda.com",
+          "rate": 391.0
+        },
+        {
+          "code": "BookingCom",
+          "name": "Booking.com",
+          "rate": 432.0
+        },
+        {
+          "code": "CtripTA",
+          "name": "Trip.com",
+          "rate": 439.0
+        }
+      ],
+      "min_rate": 390.0,
+      "min_site": "Pullman",
+      "total": 2730,
+      "total_pln": 12025,
       "error": null
     },
     {
@@ -871,6 +1163,66 @@
       "error": null
     },
     {
+      "hotel": "movenpick-bangtao",
+      "stay": "middle",
+      "date": "2027-01-24",
+      "chk_in": "2027-01-24",
+      "chk_out": "2027-02-01",
+      "nights": 8,
+      "rates": [
+        {
+          "code": "Agoda",
+          "name": "Agoda.com",
+          "rate": 1198.0
+        },
+        {
+          "code": "BookingCom",
+          "name": "Booking.com",
+          "rate": 1203.0
+        }
+      ],
+      "min_rate": 1198.0,
+      "min_site": "Agoda.com",
+      "total": 9584,
+      "total_pln": 42216,
+      "error": null
+    },
+    {
+      "hotel": "pullman-naithon",
+      "stay": "middle",
+      "date": "2027-01-24",
+      "chk_in": "2027-01-24",
+      "chk_out": "2027-02-01",
+      "nights": 8,
+      "rates": [
+        {
+          "code": "Accor",
+          "name": "Pullman",
+          "rate": 389.0
+        },
+        {
+          "code": "Agoda",
+          "name": "Agoda.com",
+          "rate": 390.0
+        },
+        {
+          "code": "BookingCom",
+          "name": "Booking.com",
+          "rate": 430.0
+        },
+        {
+          "code": "CtripTA",
+          "name": "Trip.com",
+          "rate": 439.0
+        }
+      ],
+      "min_rate": 389.0,
+      "min_site": "Pullman",
+      "total": 3112,
+      "total_pln": 13708,
+      "error": null
+    },
+    {
       "hotel": "la-flora-patong",
       "stay": "middle",
       "date": "2027-01-24",
@@ -888,6 +1240,61 @@
       "min_site": "Agoda.com",
       "total": 2304,
       "total_pln": 10149,
+      "error": null
+    },
+    {
+      "hotel": "movenpick-bangtao",
+      "stay": "middle",
+      "date": "2027-01-25",
+      "chk_in": "2027-01-25",
+      "chk_out": "2027-01-30",
+      "nights": 5,
+      "rates": [
+        {
+          "code": "Agoda",
+          "name": "Agoda.com",
+          "rate": 1273.0
+        },
+        {
+          "code": "BookingCom",
+          "name": "Booking.com",
+          "rate": 1279.0
+        }
+      ],
+      "min_rate": 1273.0,
+      "min_site": "Agoda.com",
+      "total": 6365,
+      "total_pln": 28037,
+      "error": null
+    },
+    {
+      "hotel": "pullman-naithon",
+      "stay": "middle",
+      "date": "2027-01-25",
+      "chk_in": "2027-01-25",
+      "chk_out": "2027-01-30",
+      "nights": 5,
+      "rates": [
+        {
+          "code": "Accor",
+          "name": "Pullman",
+          "rate": 412.0
+        },
+        {
+          "code": "Agoda",
+          "name": "Agoda.com",
+          "rate": 412.0
+        },
+        {
+          "code": "BookingCom",
+          "name": "Booking.com",
+          "rate": 455.0
+        }
+      ],
+      "min_rate": 412.0,
+      "min_site": "Pullman",
+      "total": 2060,
+      "total_pln": 9074,
       "error": null
     },
     {
@@ -916,17 +1323,143 @@
       "error": null
     },
     {
+      "hotel": "movenpick-bangtao",
+      "stay": "middle",
+      "date": "2027-01-25",
+      "chk_in": "2027-01-25",
+      "chk_out": "2027-01-31",
+      "nights": 6,
+      "rates": [
+        {
+          "code": "Agoda",
+          "name": "Agoda.com",
+          "rate": 1273.0
+        },
+        {
+          "code": "BookingCom",
+          "name": "Booking.com",
+          "rate": 1279.0
+        }
+      ],
+      "min_rate": 1273.0,
+      "min_site": "Agoda.com",
+      "total": 7638,
+      "total_pln": 33644,
+      "error": null
+    },
+    {
+      "hotel": "pullman-naithon",
+      "stay": "middle",
+      "date": "2027-01-25",
+      "chk_in": "2027-01-25",
+      "chk_out": "2027-01-31",
+      "nights": 6,
+      "rates": [
+        {
+          "code": "Accor",
+          "name": "Pullman",
+          "rate": 414.0
+        },
+        {
+          "code": "Agoda",
+          "name": "Agoda.com",
+          "rate": 415.0
+        },
+        {
+          "code": "BookingCom",
+          "name": "Booking.com",
+          "rate": 458.0
+        }
+      ],
+      "min_rate": 414.0,
+      "min_site": "Pullman",
+      "total": 2484,
+      "total_pln": 10942,
+      "error": null
+    },
+    {
       "hotel": "la-flora-patong",
       "stay": "middle",
       "date": "2027-01-25",
       "chk_in": "2027-01-25",
       "chk_out": "2027-01-31",
       "nights": 6,
-      "rates": [],
-      "min_rate": null,
-      "min_site": null,
-      "total": null,
-      "total_pln": null,
+      "rates": [
+        {
+          "code": "Agoda",
+          "name": "Agoda.com",
+          "rate": 334.0
+        },
+        {
+          "code": "CtripTA",
+          "name": "Trip.com",
+          "rate": 357.0
+        }
+      ],
+      "min_rate": 334.0,
+      "min_site": "Agoda.com",
+      "total": 2004,
+      "total_pln": 8827,
+      "error": null
+    },
+    {
+      "hotel": "movenpick-bangtao",
+      "stay": "middle",
+      "date": "2027-01-25",
+      "chk_in": "2027-01-25",
+      "chk_out": "2027-02-01",
+      "nights": 7,
+      "rates": [
+        {
+          "code": "Agoda",
+          "name": "Agoda.com",
+          "rate": 1198.0
+        },
+        {
+          "code": "BookingCom",
+          "name": "Booking.com",
+          "rate": 1203.0
+        }
+      ],
+      "min_rate": 1198.0,
+      "min_site": "Agoda.com",
+      "total": 8386,
+      "total_pln": 36939,
+      "error": null
+    },
+    {
+      "hotel": "pullman-naithon",
+      "stay": "middle",
+      "date": "2027-01-25",
+      "chk_in": "2027-01-25",
+      "chk_out": "2027-02-01",
+      "nights": 7,
+      "rates": [
+        {
+          "code": "Accor",
+          "name": "Pullman",
+          "rate": 390.0
+        },
+        {
+          "code": "Agoda",
+          "name": "Agoda.com",
+          "rate": 391.0
+        },
+        {
+          "code": "BookingCom",
+          "name": "Booking.com",
+          "rate": 432.0
+        },
+        {
+          "code": "CtripTA",
+          "name": "Trip.com",
+          "rate": 433.0
+        }
+      ],
+      "min_rate": 390.0,
+      "min_site": "Pullman",
+      "total": 2730,
+      "total_pln": 12025,
       "error": null
     },
     {
@@ -1281,11 +1814,27 @@
       "chk_in": "2027-01-24",
       "chk_out": "2027-01-30",
       "nights": 6,
-      "rates": [],
-      "min_rate": null,
-      "min_site": null,
-      "total": null,
-      "total_pln": null,
+      "rates": [
+        {
+          "code": "Agoda",
+          "name": "Agoda.com",
+          "rate": 261.0
+        },
+        {
+          "code": "Vio",
+          "name": "Vio.com",
+          "rate": 273.0
+        },
+        {
+          "code": "BookingCom",
+          "name": "Booking.com",
+          "rate": 367.0
+        }
+      ],
+      "min_rate": 261.0,
+      "min_site": "Agoda.com",
+      "total": 1566,
+      "total_pln": 6898,
       "error": null
     },
     {

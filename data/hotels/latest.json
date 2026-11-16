@@ -1,6 +1,6 @@
 {
   "source": "xotelo (Tripadvisor rates)",
-  "fetched_at": "2026-11-16T18:41:13+00:00",
+  "fetched_at": "2026-11-16T19:10:22+00:00",
   "currency": "EUR",
   "pln_rate": 4.4048,
   "pln_rate_source": "NBP table 222/A/NBP/2026 of 2026-11-16",
@@ -10,7 +10,7 @@
     "children_ages": []
   },
   "price_note": "Cheapest nightly rate shown on Tripadvisor for one room and these guests, times nights. Sites may add taxes and fees at checkout.",
-  "requests": 300,
+  "requests": 301,
   "errors": [],
   "hotels": [
     {
