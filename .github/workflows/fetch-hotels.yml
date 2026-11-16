@@ -3,6 +3,8 @@ name: Fetch hotel prices
 # Bangkok hotel prices from the free Xotelo API (Tripadvisor rates from Booking.com,
 # Agoda, Expedia and others). No API key and no SerpApi quota, so it is safe to run by
 # hand as often as you like: Actions tab, "Fetch hotel prices", "Run workflow".
+# The hotels are split into 4 batches that fetch in parallel; a last job merges them,
+# so one slow or blocked batch never holds up or loses the others.
 on:
   schedule:
     # Once a day at 08:00 UTC = 09:00 Polish winter time (10:00 in summer: cron is UTC).
@@ -22,7 +24,11 @@ concurrency:
 jobs:
   fetch:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 25
+    strategy:
+      fail-fast: false
+      matrix:
+        batch: [0, 1, 2, 3] # keep --of below equal to the number of batches
     steps:
       - uses: actions/checkout@v4
 
@@ -30,10 +36,36 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Fetch hotel prices
-        # A failed request is recorded in data/hotels/latest.json and does not fail the run.
-        timeout-minutes: 25
-        run: python -u scripts/fetch_hotels.py
+      - name: Fetch hotel prices, batch ${{ matrix.batch }}
+        # A failed request is recorded in the batch file and does not fail the run.
+        timeout-minutes: 22
+        run: python -u scripts/fetch_hotels.py --batch ${{ matrix.batch }} --of 4 --out part-${{ matrix.batch }}.json
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: hotels-part-${{ matrix.batch }}
+          path: part-${{ matrix.batch }}.json
+          retention-days: 3
+
+  merge:
+    needs: fetch
+    if: ${{ !cancelled() }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: hotels-part-*
+          path: parts
+
+      - name: Merge batches
+        run: python -u scripts/fetch_hotels.py --merge parts
 
       - name: Commit updated data
         run: |

@@ -81,7 +81,8 @@ good reviews and a BTS or MRT station within a short walk; edit the list there.
 - Hotel keys are found by name in Tripadvisor's Bangkok list (`match` / `match_exclude` in the
   config, cached in `data/hotels/keys.json`); set `key` on a hotel to pin it. Review scores
   come from the same list.
-- Workflow "Fetch hotel prices" (`.github/workflows/fetch-hotels.yml`) runs daily at 08:00 UTC
+- Workflow "Fetch hotel prices" (`.github/workflows/fetch-hotels.yml`) splits the hotels into 4
+  batches that fetch in parallel (`--batch N --of 4`), then merges them (`--merge`). It runs daily at 08:00 UTC
   (09:00 in Poland in winter) and can be started by hand. Results go to `data/hotels/latest.json`
   and `history.json`; the Pages site redeploys after each run.
 - Prices may leave out taxes and fees, and a room for 3 may need an extra bed or family room,
