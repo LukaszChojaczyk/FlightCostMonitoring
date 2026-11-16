@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Flight prices</title>
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#fcfcfb" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#1a1a19" media="(prefers-color-scheme: dark)">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%E2%9C%88%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="top">
+    <div class="wrap">
+      <div class="top-row">
+        <h1>Flight prices</h1>
+        <button id="refresh" class="icon-btn" type="button" aria-label="Reload data" title="Reload data">&#x21bb;</button>
+      </div>
+      <label class="route-pick" id="route-pick" hidden>
+        <span class="sr-only">Route</span>
+        <select id="route-select"></select>
+      </label>
+      <p class="route-name" id="route-name"></p>
+      <p class="meta" id="meta">Loading&hellip;</p>
+    </div>
+  </header>
+
+  <main class="wrap" id="main">
+    <div id="alerts"></div>
+
+    <section class="hero" id="hero" aria-live="polite"></section>
+
+    <section class="card">
+      <h2>Cheapest by airport and return date</h2>
+      <p class="hint">Round trip for all passengers, both sources. Tap a price to filter the list below.</p>
+      <div class="table-scroll"><table class="matrix" id="matrix"></table></div>
+    </section>
+
+    <section class="card" id="options-card">
+      <div class="section-head">
+        <h2>Current options</h2>
+        <span class="count" id="options-count"></span>
+      </div>
+      <div class="filters" id="filters"></div>
+      <ol class="options" id="options"></ol>
+      <button type="button" class="more-btn" id="more" hidden>Show more</button>
+    </section>
+
+    <section class="card">
+      <div class="section-head">
+        <h2>Price trend</h2>
+        <div class="seg" role="group" aria-label="Trend source" id="trend-source"></div>
+      </div>
+      <p class="hint" id="trend-hint">Cheapest round trip per return date at each check.</p>
+      <div class="legend" id="trend-legend"></div>
+      <div class="chart" id="chart"></div>
+      <details class="table-view">
+        <summary>Show as table</summary>
+        <div class="table-scroll"><table class="history" id="history-table"></table></div>
+      </details>
+    </section>
+
+    <section class="card small" id="search-info"></section>
+  </main>
+
+  <footer class="wrap foot">
+    <p>Prices come from Google Flights via SerpApi (<b>API</b>) and a direct Google Flights scrape for Emirates, Etihad and Qatar (<b>Scraper</b>). Checked-bag flags are rules of thumb per airline, so always confirm on the airline site before booking.</p>
+  </footer>
+
+  <div class="tooltip" id="tooltip" role="status" hidden></div>
+  <script src="app.js" defer></script>
+</body>
+</html>

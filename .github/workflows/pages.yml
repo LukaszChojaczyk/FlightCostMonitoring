@@ -1,0 +1,50 @@
+name: Deploy dashboard
+
+# Publishes site/ plus the data/ and config/ JSON to GitHub Pages.
+# Data commits from the fetch workflow are pushed with GITHUB_TOKEN, which does not
+# trigger "push" workflows, so this also runs after every "Fetch flight prices" run.
+on:
+  push:
+    branches: [main]
+    paths: ["site/**", "data/**", "config/**", ".github/workflows/pages.yml"]
+  workflow_run:
+    workflows: ["Fetch flight prices"]
+    types: [completed]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Assemble site
+        run: |
+          mkdir -p _site
+          cp -r site/. _site/
+          cp -r data config _site/
+          touch _site/.nojekyll
+
+      - uses: actions/configure-pages@v5
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+      - id: deployment
+        uses: actions/deploy-pages@v4

@@ -45,6 +45,22 @@ time, so the step is best effort and never fails the run. Results go to
 | `data/<route_id>/history.json` | One row per run and return date: cheapest price, airline, origin, and cheapest price per origin airport |
 | `data/usage.json` | Searches this script spent per month |
 
+## Dashboard (GitHub Pages)
+
+`site/` is a static page (plain HTML, CSS and JavaScript, no build step) that reads the
+JSON files above. `.github/workflows/pages.yml` copies `site/`, `data/` and `config/` to
+GitHub Pages on every push to `main` that touches them and after every "Fetch flight prices"
+run, so the page is at most a few minutes behind the latest check. It shows the cheapest
+price now (total and per person), a table of the cheapest option per airport and return
+date, every current option with checked-bag flags, source (API or scraper) and a Google
+Flights link, a "longer trip" label above 16 h per direction (the fetcher's `long_trip` flag, or `long_trip_minutes`
+on the route), and the price trend per return date.
+
+One-time setup: Settings, Pages, "Build and deployment", Source: **GitHub Actions**.
+
+Preview locally from the repository root: `python -m http.server`, then open
+http://localhost:8000/site/ (the page falls back to `../data/` when served that way).
+
 ## Adding or changing a route
 
 Add an object to `routes` in `config/routes.json` with a new `id`. Limit airlines with `include_airlines` (2-letter IATA codes and/or `STAR_ALLIANCE`,
