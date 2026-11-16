@@ -1,4 +1,5 @@
-/* Bangkok hotel price dashboard. Static: reads data/hotels/*.json and config/hotels.json. */
+/* Hotel price dashboard. Static: reads the config and data folder named on <body> (data-config, data-dir):
+   Bangkok uses config/hotels.json + data/hotels/, Phuket config/hotels-phuket.json + data/hotels-phuket/. */
 (() => {
   "use strict";
 
@@ -8,9 +9,12 @@
   const SERIES = ["var(--series-1)", "var(--series-2)", "var(--series-3)"];
 
   const $ = (id) => document.getElementById(id);
+  const CONFIG = document.body.dataset.config || "config/hotels.json";
+  const DIR = document.body.dataset.dir || "data/hotels";
+  const NS = "fcm:" + DIR.replace("data/", "") + ":";
   const store = {
-    get(k) { try { return localStorage.getItem("fcm:hotels:" + k); } catch { return null; } },
-    set(k, v) { try { localStorage.setItem("fcm:hotels:" + k, v); } catch { /* private mode */ } },
+    get(k) { try { return localStorage.getItem(NS + k); } catch { return null; } },
+    set(k, v) { try { localStorage.setItem(NS + k, v); } catch { /* private mode */ } },
   };
 
   let base = null;
@@ -18,7 +22,7 @@
   let history = null;
   let config = null;
   const state = {
-    stay: store.get("stay") === "last" ? "last" : "first",
+    stay: store.get("stay"),
     pick: {}, // stay id -> { date, nights }
     sort: store.get("sort") === "rating" ? "rating" : "price",
   };
@@ -69,11 +73,11 @@
   async function findBase() {
     for (const b of ["", "../"]) {
       try {
-        const r = await fetch(`${b}config/hotels.json?t=${Date.now()}`, { cache: "no-store" });
+        const r = await fetch(`${b}${CONFIG}?t=${Date.now()}`, { cache: "no-store" });
         if (r.ok) return b;
       } catch { /* try next */ }
     }
-    throw new Error("config/hotels.json not found");
+    throw new Error(`${CONFIG} not found`);
   }
 
   async function loadAll() {
@@ -81,9 +85,9 @@
     try {
       if (base == null) base = await findBase();
       [config, latest, history] = await Promise.all([
-        getJSON("config/hotels.json"),
-        getJSON("data/hotels/latest.json", true),
-        getJSON("data/hotels/history.json", true),
+        getJSON(CONFIG),
+        getJSON(`${DIR}/latest.json`, true),
+        getJSON(`${DIR}/history.json`, true),
       ]);
       render();
     } catch (err) {
@@ -96,8 +100,16 @@
 
   /* ---------- model ---------- */
   const stayCfg = () => config.stays.find((s) => s.id === state.stay) || config.stays[0];
-  const byCheckout = (s = stayCfg()) => !!s.checkout_dates;
-  const stayDates = (s = stayCfg()) => s.checkout_dates || s.checkin_dates || [];
+  // first stay: check-in dates x nights; last stay: check-out dates x nights;
+  // a stay in between (both lists): check-in dates x check-out dates
+  const isPair = (s = stayCfg()) => !!(s.checkin_dates && s.checkout_dates);
+  const byCheckout = (s = stayCfg()) => !s.checkin_dates;
+  const stayDates = (s = stayCfg()) => s.checkin_dates || s.checkout_dates || [];
+  const nightsBetween = (a, b) => Math.round((Date.parse(b) - Date.parse(a)) / 86400e3);
+  const cols = (s = stayCfg()) => (isPair(s) ? s.checkout_dates : s.nights);
+  const cellNights = (s, d, c) => (isPair(s) ? nightsBetween(d, c) : c);
+  const cityName = () => config.settings?.city || "Bangkok";
+  const shortName = (n) => n.replace(new RegExp(`^(The|${cityName()}) `), "").slice(0, 26);
   function hotelInfo(id) {
     const cfg = config.hotels.find((h) => h.id === id) || { id, name: id };
     const live = (latest?.hotels || []).find((h) => h.id === id) || {};
@@ -106,10 +118,10 @@
   function pick() {
     const s = stayCfg();
     const p = state.pick[s.id];
-    const valid = (x) => x && stayDates(s).includes(x.date) && s.nights.includes(Number(x.nights));
+    const valid = (x) => x && stayDates(s).includes(x.date) && cols(s).some((c) => cellNights(s, x.date, c) === Number(x.nights));
     if (valid(p)) return { date: p.date, nights: Number(p.nights) };
     if (valid(s.default)) return { ...s.default };
-    return { date: stayDates(s)[0], nights: s.nights[0] };
+    return { date: stayDates(s)[0], nights: cellNights(s, stayDates(s)[0], cols(s)[0]) };
   }
   function datesOf(date, nights, s = stayCfg()) {
     const d = new Date(date + "T00:00:00Z");
@@ -122,21 +134,24 @@
 
   function bookingUrl(h, chkIn, chkOut) {
     const g = config.settings?.booking_link_guests || latest?.guests || { adults: 2, children_ages: [12], rooms: 1 };
-    const p = new URLSearchParams({ ss: `${h.name}, Bangkok`, checkin: chkIn, checkout: chkOut,
+    const p = new URLSearchParams({ ss: `${h.name}, ${cityName()}`, checkin: chkIn, checkout: chkOut,
       group_adults: g.adults, group_children: (g.children_ages || []).length, no_rooms: g.rooms || 1,
       selected_currency: cur() === "PLN" ? "PLN" : "EUR", lang: "en-gb" });
     for (const a of g.children_ages || []) p.append("age", a);
     return `https://www.booking.com/searchresults.html?${p}`;
   }
-  const googleUrl = (h) => `https://www.google.com/travel/search?${new URLSearchParams({ q: `${h.name} Bangkok`, hl: "en", gl: "pl", curr: cur() })}`;
+  const googleUrl = (h) => `https://www.google.com/travel/search?${new URLSearchParams({ q: `${h.name} ${cityName()}`, hl: "en", gl: "pl", curr: cur() })}`;
+  // Stayforlong blocks automated requests (AWS WAF), so it is a manual check: open its page for the hotel via search
+  const sflUrl = (h) => `https://www.google.com/search?${new URLSearchParams({ q: `stayforlong ${h.name} ${cityName()}` })}`;
   const taUrl = (h) => (h.tripadvisor_url && /^https:\/\//.test(h.tripadvisor_url) ? h.tripadvisor_url
     : h.tripadvisor_url ? `https://www.tripadvisor.com${h.tripadvisor_url.startsWith("/") ? "" : "/"}${h.tripadvisor_url}` : null);
 
   /* ---------- render ---------- */
   function render() {
+    state.stay = stayCfg().id; // a remembered stay that this page doesn't have falls back to its first
     const g = config.settings || {};
     const bg = g.booking_link_guests || g;
-    $("guests").textContent = `${bg.adults || 2} adults + ${(bg.children_ages || []).length ? `child aged ${(bg.children_ages || []).join(", ")}` : "no children"} · ${g.rooms || 1} room, priced for ${g.adults} guests · 5-star, outdoor pool, high-rise, next to BTS/MRT`;
+    $("guests").textContent = `${bg.adults || 2} adults + ${(bg.children_ages || []).length ? `child aged ${(bg.children_ages || []).join(", ")}` : "no children"} · ${g.rooms || 1} room, priced for ${g.adults} guests${g.criteria_label ? ` · ${g.criteria_label}` : ""}`;
     const updated = latest?.fetched_at;
     $("meta").innerHTML = updated
       ? `Updated ${esc(ago(updated))} (${esc(fmtWhen(updated))}) · next check about ${esc(nextCheck())}`
@@ -151,11 +166,12 @@
   }
 
   function stayLabel(s) {
-    const d = stayDates(s);
-    const span = d.length > 1 ? `${fmtDateShort(d[0]).replace(/ \w+$/, "")}–${fmtDateShort(d[d.length - 1])}` : fmtDateShort(d[0]);
-    return s.checkout_dates ? `Last stay · out ${span}` : `First stay · in ${span}`; // e.g. "First stay · in 18–22 Jan"
+    const span = (d) => (d.length > 1 ? `${fmtDateShort(d[0]).replace(/ \w+$/, "")}–${fmtDateShort(d[d.length - 1])}` : fmtDateShort(d[0]));
+    if (isPair(s)) return `In ${span(s.checkin_dates)} · out ${span(s.checkout_dates)}`;
+    return s.checkout_dates ? `Last stay · out ${span(s.checkout_dates)}` : `First stay · in ${span(s.checkin_dates)}`; // e.g. "First stay · in 18–22 Jan"
   }
   function renderStaySwitch() {
+    $("stay-switch").hidden = config.stays.length < 2;
     $("stay-switch").innerHTML = config.stays.map((s) =>
       `<button type="button" data-s="${esc(s.id)}" aria-pressed="${state.stay === s.id}">${esc(stayLabel(s))}</button>`).join("");
   }
@@ -201,6 +217,7 @@
     return [
       h.rating != null ? `<span class="badge rating" title="Tripadvisor">★ ${esc(h.rating)}${h.reviews ? ` · ${nf.format(h.reviews)} reviews` : ""}</span>` : "",
       h.station ? `<span class="badge transit" title="${esc(h.station_note || "")}">${esc(h.station)}${h.station_note ? ` · ${esc(h.station_note)}` : ""}</span>` : "",
+      h.beach ? `<span class="badge transit" title="${esc(h.beach_note || "")}">${esc(h.beach)}${h.beach_note ? ` · ${esc(h.beach_note)}` : ""}</span>` : "",
       h.pool ? `<span class="badge">${esc(h.pool)}</span>` : "",
       h.building ? `<span class="badge">${esc(h.building)}</span>` : "",
       h.family_note ? `<span class="badge flex">${esc(h.family_note)}</span>` : "",
@@ -246,18 +263,23 @@
   function renderMatrix() {
     const s = stayCfg();
     const p = pick();
-    $("matrix-title").textContent = byCheckout(s) ? "Cheapest last stay by check-out date and nights" : "Cheapest first stay by check-in date and nights";
+    $("matrix-title").textContent = isPair(s) ? "Cheapest stay by check-in and check-out date"
+      : byCheckout(s) ? "Cheapest last stay by check-out date and nights" : "Cheapest first stay by check-in date and nights";
     $("matrix-hint").textContent = `Whole stay, one room${s.note ? `. ${s.note}` : ""} Tap a price to see every hotel for those dates.`;
-    const cells = stayDates(s).map((d) => s.nights.map((n) => priced(quotesFor(d, n))[0] || null));
+    const cells = stayDates(s).map((d) => cols(s).map((c) => priced(quotesFor(d, cellNights(s, d, c)))[0] || null));
     const all = cells.flat().filter(Boolean).map((q) => q.total);
     const min = all.length ? Math.min(...all) : null;
-    $("matrix").innerHTML = `<thead><tr><th>${byCheckout(s) ? "Check-out" : "Check-in"}</th>${s.nights.map((n) => `<th>${n} nights</th>`).join("")}</tr></thead><tbody>${
-      stayDates(s).map((d, i) => `<tr><td class="ap">${esc(fmtDate(d))}<small>${byCheckout(s) ? "in " : "out "}${s.nights.map((n) => esc(fmtDateShort(byCheckout(s) ? datesOf(d, n).chkIn : datesOf(d, n).chkOut))).join(" / ")}</small></td>${
-        s.nights.map((n, j) => {
+    const head = isPair(s) ? cols(s).map((c) => `out ${esc(fmtDateShort(c))}`) : cols(s).map((n) => `${n} nights`);
+    const rowSub = (d) => (isPair(s) ? cols(s).map((c) => `${nightsBetween(d, c)}`).join(" / ") + " nights"
+      : (byCheckout(s) ? "in " : "out ") + s.nights.map((n) => fmtDateShort(byCheckout(s) ? datesOf(d, n).chkIn : datesOf(d, n).chkOut)).join(" / "));
+    $("matrix").innerHTML = `<thead><tr><th>${byCheckout(s) ? "Check-out" : "Check-in"}</th>${head.map((h) => `<th>${h}</th>`).join("")}</tr></thead><tbody>${
+      stayDates(s).map((d, i) => `<tr><td class="ap">${esc(fmtDate(d))}<small>${esc(rowSub(d))}</small></td>${
+        cols(s).map((c, j) => {
+          const n = cellNights(s, d, c);
           const q = cells[i][j];
           const active = p.date === d && p.nights === n;
           if (!q) return `<td class="none"><button type="button" data-d="${d}" data-n="${n}" class="${active ? "active" : ""}">–</button></td>`;
-          return `<td class="${q.total === min ? "best" : ""}"><button type="button" data-d="${d}" data-n="${n}" class="${active ? "active" : ""}">${money(conv(q.total))}<span class="sub">${esc(hotelInfo(q.hotel).name.replace(/^(The|Bangkok) /, "").slice(0, 26))}</span></button></td>`;
+          return `<td class="${q.total === min ? "best" : ""}"><button type="button" data-d="${d}" data-n="${n}" class="${active ? "active" : ""}">${money(conv(q.total))}<span class="sub">${isPair(s) ? `${n} nights · ` : ""}${esc(shortName(hotelInfo(q.hotel).name))}</span></button></td>`;
         }).join("")}</tr>`).join("")}</tbody>`;
   }
 
@@ -283,6 +305,7 @@
       const ta = taUrl(h);
       const links = [`<a href="${esc(bookingUrl(h, chkIn, chkOut))}" target="_blank" rel="noopener">Booking.com for these dates</a>`,
         `<a href="${esc(googleUrl(h))}" target="_blank" rel="noopener">Google Hotels</a>`,
+        `<a href="${esc(sflUrl(h))}" target="_blank" rel="noopener" title="Not checked automatically: Stayforlong blocks bots">Stayforlong</a>`,
         ta ? `<a href="${esc(ta)}" target="_blank" rel="noopener">Tripadvisor</a>` : ""].filter(Boolean).join(" · ");
       const rates = q ? `<details><summary>${q.rates.length} site${q.rates.length === 1 ? "" : "s"}</summary><ul class="legs">${
         q.rates.map((r) => `<li>${esc(r.name)}: <b>${money(conv(r.rate * q.nights))}</b> <span class="lay">(${money(conv(r.rate))} a night${fx() ? ` · ${nf.format(r.rate)} €` : ""})</span></li>`).join("")}</ul></details>` : "";
@@ -305,7 +328,7 @@
     const top = priced(quotesFor(p.date, p.nights)).slice(0, 3).map((q) => q.hotel);
     const entries = history?.entries || [];
     return top.map((id, i) => ({
-      label: hotelInfo(id).name.replace(/^(The|Bangkok) /, ""),
+      label: shortName(hotelInfo(id).name),
       color: SERIES[i],
       values: entries.map((e) => {
         const v = e.prices?.[`${id}|${state.stay}|${chkIn}|${p.nights}`];
@@ -412,8 +435,10 @@
     const g = config.settings || {};
     const rows = [
       ["Guests", g.guests_note || ""],
-      ...config.stays.map((s) => [s.name || s.id, `${byCheckout(s) ? "Check-out" : "Check-in"} ${stayDates(s).map(fmtDateShort).join(", ")} · ${s.nights.join(", ")} nights`]),
-      ["Hotels", `${config.hotels.filter((h) => h.enabled !== false).length} picked for 5 stars, an outdoor pool, a high-rise building, good reviews and a BTS or MRT station within a short walk`],
+      ...config.stays.map((s) => [s.name || s.id, isPair(s)
+        ? `Check-in ${s.checkin_dates.map(fmtDateShort).join(", ")} · check-out ${s.checkout_dates.map(fmtDateShort).join(", ")}`
+        : `${byCheckout(s) ? "Check-out" : "Check-in"} ${stayDates(s).map(fmtDateShort).join(", ")} · ${s.nights.join(", ")} nights`]),
+      ["Hotels", `${config.hotels.filter((h) => h.enabled !== false).length} ${g.selection_note || "picked by hand"}`],
       ["Source", `${latest?.source || "Xotelo (Tripadvisor rates)"}${latest?.requests ? ` · ${latest.requests} requests last run` : ""}`],
       ["Currency", latest?.pln_rate ? `Fetched in ${latest.currency}, shown in PLN at ${latest.pln_rate} (${latest.pln_rate_source})` : `Shown in ${cur()}`],
     ];

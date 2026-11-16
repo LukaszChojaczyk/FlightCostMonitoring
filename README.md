@@ -88,6 +88,18 @@ good reviews and a BTS or MRT station within a short walk; edit the list there.
 - Prices may leave out taxes and fees, and a room for 3 may need an extra bed or family room,
   so the page links each hotel to Booking.com with the dates and guests filled in.
 
+### Phuket hotels
+
+`site/phuket.html` does the same for the nights between the two Bangkok stays: 12 five-star
+family-friendly hotels by the beach with outdoor pools, 4 in or next to Patong and 8 on the quieter west-coast beaches
+(`config/hotels-phuket.json`), check-in 23-25 Jan and check-out 30 Jan-1 Feb (every pair, 5-9 nights).
+The same workflow fetches it (`--city phuket`) into `data/hotels-phuket/`.
+
+### Stayforlong
+
+Stayforlong.com sits behind AWS WAF bot protection: automated requests, even for robots.txt,
+get a challenge or a 403. It is therefore not fetched; each hotel has a Stayforlong link to check by hand.
+
 ## Adding or changing a route
 
 Add an object to `routes` in `config/routes.json` with a new `id`. Limit airlines with `include_airlines` (2-letter IATA codes and/or `STAR_ALLIANCE`,

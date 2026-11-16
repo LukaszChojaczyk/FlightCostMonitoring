@@ -1,9 +1,9 @@
 name: Fetch hotel prices
 
-# Bangkok hotel prices from the free Xotelo API (Tripadvisor rates from Booking.com,
+# Bangkok and Phuket hotel prices from the free Xotelo API (Tripadvisor rates from Booking.com,
 # Agoda, Expedia and others). No API key and no SerpApi quota, so it is safe to run by
 # hand as often as you like: Actions tab, "Fetch hotel prices", "Run workflow".
-# The hotels are split into 4 batches that fetch in parallel; a last job merges them,
+# Each city's hotels are split into 4 batches that fetch in parallel; a last job merges them,
 # so one slow or blocked batch never holds up or loses the others.
 on:
   schedule:
@@ -25,6 +25,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
+        city: [bangkok, phuket] # bangkok = config/hotels.json, phuket = config/hotels-phuket.json
         batch: [0, 1, 2, 3] # keep --of below equal to the number of batches
     steps:
       - uses: actions/checkout@v4
@@ -33,15 +34,15 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Fetch hotel prices, batch ${{ matrix.batch }}
+      - name: Fetch ${{ matrix.city }} hotel prices, batch ${{ matrix.batch }}
         # A failed request is recorded in the batch file and does not fail the run.
         timeout-minutes: 22
-        run: python -u scripts/fetch_hotels.py --batch ${{ matrix.batch }} --of 4 --out part-${{ matrix.batch }}.json
+        run: python -u scripts/fetch_hotels.py --city ${{ matrix.city }} --batch ${{ matrix.batch }} --of 4 --out part-${{ matrix.city }}-${{ matrix.batch }}.json
 
       - uses: actions/upload-artifact@v4
         with:
-          name: hotels-part-${{ matrix.batch }}
-          path: part-${{ matrix.batch }}.json
+          name: hotels-${{ matrix.city }}-${{ matrix.batch }}
+          path: part-${{ matrix.city }}-${{ matrix.batch }}.json
           retention-days: 3
 
   merge:
@@ -58,24 +59,35 @@ jobs:
 
       - uses: actions/download-artifact@v4
         with:
-          pattern: hotels-part-*
-          path: parts
+          pattern: hotels-bangkok-*
+          path: parts/bangkok
 
-      - name: Merge batches
-        run: python -u scripts/fetch_hotels.py --merge parts
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: hotels-phuket-*
+          path: parts/phuket
 
-      - name: Commit updated data
+      - name: Merge batches and commit
+        # Always merge onto the newest commit of the branch, never the one this run started from:
+        # another run may have committed hotel data meanwhile, and rebasing generated JSON onto that
+        # conflicts. If the push loses a race, start again from the new tip (the batch files stay).
+        # Each city merges on its own, so one city with no results still saves the other.
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898233+github-actions[bot]@users.noreply.github.com"
-          git add data/hotels
-          if git diff --cached --quiet; then
-            echo "No data changes."
-            exit 0
-          fi
-          git commit -m "data: hotel prices $(date -u +'%Y-%m-%d %H:%M') UTC"
-          for i in 1 2 3; do
-            git pull --rebase && git push && exit 0
+          branch="${GITHUB_REF_NAME}"
+          for i in 1 2 3 4; do
+            git fetch --quiet origin "$branch"
+            git reset --quiet --hard "origin/$branch"
+            python -u scripts/fetch_hotels.py --city bangkok --merge parts/bangkok || echo "::warning::Bangkok merge failed"
+            python -u scripts/fetch_hotels.py --city phuket --merge parts/phuket || echo "::warning::Phuket merge failed"
+            git add -A data
+            if git diff --cached --quiet; then
+              echo "No data changes."
+              exit 0
+            fi
+            git commit --quiet -m "data: hotel prices $(date -u +'%Y-%m-%d %H:%M') UTC"
+            git push origin "HEAD:$branch" && exit 0
             sleep $((i * 5))
           done
           exit 1

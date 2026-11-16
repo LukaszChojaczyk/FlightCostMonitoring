@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
-"""Fetch Bangkok hotel prices for the hotels and stays in config/hotels.json.
+"""Fetch hotel prices for the hotels and stays in config/hotels.json (Bangkok) or
+config/hotels-<city>.json (--city <city>, e.g. phuket; data then goes to data/hotels-<city>/).
 
 Source: the free Xotelo API (https://xotelo.com), which returns the rates Tripadvisor
 shows from Booking.com, Agoda, Expedia, Hotels.com, Trip.com and others. No API key and
@@ -21,6 +22,7 @@ import json
 import re
 import sys
 import time
+import unicodedata
 import urllib.parse
 import urllib.request
 from datetime import date, datetime, timedelta, timezone
@@ -91,8 +93,16 @@ class XoteloClient:
 
 def stay_options(stay: dict) -> list[dict]:
     """Every (check-in, check-out, nights) the stay can be. A first stay lists
-    check-in dates; a last stay lists check-out dates (the flight home)."""
+    check-in dates; a last stay lists check-out dates (the flight home); a stay in
+    between lists both and takes every check-in x check-out pair."""
     out = []
+    if stay.get("checkin_dates") and stay.get("checkout_dates"):
+        for a in stay["checkin_dates"]:
+            for b in stay["checkout_dates"]:
+                n = (date.fromisoformat(b) - date.fromisoformat(a)).days
+                if n > 0:
+                    out.append({"chk_in": a, "chk_out": b, "nights": n})
+        return sorted(out, key=lambda o: (o["chk_in"], o["nights"]))
     for n in stay["nights"]:
         for d in stay.get("checkin_dates", []):
             ci = date.fromisoformat(d)
@@ -106,13 +116,14 @@ def stay_options(stay: dict) -> list[dict]:
 
 def anchor_date(stay: dict, opt: dict) -> str:
     """The date the dashboard groups by: check-in for a first stay, check-out for a last one."""
-    return opt["chk_out"] if stay.get("checkout_dates") else opt["chk_in"]
+    return opt["chk_in"] if stay.get("checkin_dates") else opt["chk_out"]
 
 
 # ------------------------------------------------------------------ hotel keys and reviews
 
 def tokens(text: str) -> list[str]:
-    return re.sub(r"[^a-z0-9]+", " ", re.sub(r"['\u2019\u2018`]", "", (text or "").lower())).split()
+    plain = unicodedata.normalize("NFKD", text or "").encode("ascii", "ignore").decode().lower()  # Mövenpick -> movenpick
+    return re.sub(r"[^a-z0-9]+", " ", re.sub(r"['`]", "", plain)).split()
 
 
 def name_match(hotel: dict, listed_name: str) -> int | None:
@@ -171,7 +182,7 @@ def scan_city_list(client: XoteloClient, hotels: list[dict], settings: dict, cac
             print(f"key {h['id']}: {row['key']} = {row.get('name')}")
         if not h.get("key"):
             errors.append(f"{h['name']}: not found in the Tripadvisor list for {settings.get('city')}; "
-                          f"set \"key\" in config/hotels.json")
+                          f"set \"key\" for it in the city's hotels config")
     return errors
 
 
@@ -306,20 +317,20 @@ def merge_parts(parts: list[dict], config: dict) -> tuple[dict, dict]:
     return snap, cache
 
 
-def save_outputs(snap: dict, cache: dict) -> None:
-    prev = load_json(OUT_DIR / "latest.json", {})
-    save_json(OUT_DIR / "keys.json", {**load_json(OUT_DIR / "keys.json", {}), **cache})
+def save_outputs(snap: dict, cache: dict, out_dir: Path = OUT_DIR) -> None:
+    prev = load_json(out_dir / "latest.json", {})
+    save_json(out_dir / "keys.json", {**load_json(out_dir / "keys.json", {}), **cache})
     priced = [q for q in snap["quotes"] if q["total"] is not None]
     failed = [q for q in snap["quotes"] if q["error"]]
     if not priced and prev.get("quotes"):
         # keep the last good snapshot on the dashboard; the failure still shows in the log
         print("No prices this run; latest.json left unchanged.", file=sys.stderr)
     else:
-        save_json(OUT_DIR / "latest.json", snap)
+        save_json(out_dir / "latest.json", snap)
     if priced:
-        hist = load_json(OUT_DIR / "history.json", {"entries": []})
+        hist = load_json(out_dir / "history.json", {"entries": []})
         hist["entries"] = (hist["entries"] + [history_entry(snap)])[-MAX_HISTORY_RUNS:]
-        save_json(OUT_DIR / "history.json", hist)
+        save_json(out_dir / "history.json", hist)
     print(f"{snap['requests']} requests, {len(priced)} priced, {len(failed)} failed, EUR/PLN {snap['pln_rate']} ({snap['pln_rate_source']})")
     for e in snap["errors"]:
         print("error:", e, file=sys.stderr)
@@ -331,6 +342,13 @@ def save_outputs(snap: dict, cache: dict) -> None:
               f"cheapest night {best and best['min_rate']} {snap['currency']} ({best and best['min_site']})")
 
 
+def city_paths(city: str) -> tuple[Path, Path]:
+    """Bangkok keeps the original file names; other cities get their own config and data folder."""
+    if city == "bangkok":
+        return CONFIG_PATH, OUT_DIR
+    return ROOT / "config" / f"hotels-{city}.json", ROOT / "data" / f"hotels-{city}"
+
+
 def main(argv: list[str] | None = None) -> int:
     """No arguments: fetch every hotel and save. The workflow runs batches in parallel instead:
       fetch_hotels.py --batch 0 --of 4 --out part.json   fetch one batch into a partial file
@@ -340,19 +358,21 @@ def main(argv: list[str] | None = None) -> int:
     ap.add_argument("--of", type=int, default=1)
     ap.add_argument("--out")
     ap.add_argument("--merge")
+    ap.add_argument("--city", default="bangkok", help="bangkok (config/hotels.json) or e.g. phuket (config/hotels-phuket.json)")
     args = ap.parse_args(argv)
-    config = load_json(CONFIG_PATH, None)
+    config_path, out_dir = city_paths(args.city)
+    config = load_json(config_path, None)
     if args.merge:
         parts = [load_json(p, None) for p in sorted(Path(args.merge).rglob("*.json"))]
         parts = [p for p in parts if p and "quotes" in p]
         print(f"merging {len(parts)} batches")
         snap, cache = merge_parts(parts, config)
-        save_outputs(snap, cache)
+        save_outputs(snap, cache, out_dir)
         return 0
     settings = config["settings"]
-    prev = load_json(OUT_DIR / "latest.json", {})
+    prev = load_json(out_dir / "latest.json", {})
     fx, fx_source = eur_pln(settings.get("currency", "EUR"), prev.get("pln_rate"))
-    cache = load_json(OUT_DIR / "keys.json", {})
+    cache = load_json(out_dir / "keys.json", {})
     client = XoteloClient(pause=float(settings.get("pause_seconds", 1.5)))
     now_iso = datetime.now(timezone.utc).replace(microsecond=0).isoformat()
     snap = run(client, config, now_iso, fx, fx_source, cache, args.batch, args.of)
@@ -362,7 +382,7 @@ def main(argv: list[str] | None = None) -> int:
         priced = sum(1 for q in snap["quotes"] if q["total"] is not None)
         print(f"batch {args.batch + 1}/{args.of}: {client.requests} requests, {priced} of {len(snap['quotes'])} priced")
         return 0
-    save_outputs(snap, cache)
+    save_outputs(snap, cache, out_dir)
     return 0
 
 

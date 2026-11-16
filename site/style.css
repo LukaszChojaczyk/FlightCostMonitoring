@@ -228,7 +228,7 @@ table { border-collapse: collapse; width: 100%; }
 }
 
 /* links between the flight and hotel pages */
-.page-nav { display: flex; gap: 4px; margin-bottom: 8px; font-size: 13px; }
+.page-nav { display: flex; flex-wrap: wrap; gap: 4px; margin-bottom: 8px; font-size: 13px; }
 .page-nav a, .page-nav span { padding: 3px 10px; border-radius: 999px; border: 1px solid var(--border); text-decoration: none; color: var(--text-2); }
 .page-nav a:hover { background: var(--surface-2); }
 .page-nav [aria-current] { background: var(--accent-soft); border-color: var(--accent); color: var(--accent-ink); font-weight: 600; }

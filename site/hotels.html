@@ -10,10 +10,10 @@
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8F%A8%3C/text%3E%3C/svg%3E">
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body data-config="config/hotels.json" data-dir="data/hotels">
   <header class="top">
     <div class="wrap">
-      <nav class="page-nav" aria-label="Dashboards"><a href="./">Flights</a><span aria-current="page">Hotels</span></nav>
+      <nav class="page-nav" aria-label="Dashboards"><a href="./">Flights</a><span aria-current="page">Bangkok hotels</span><a href="phuket.html">Phuket hotels</a></nav>
       <div class="top-row">
         <h1>Bangkok hotels</h1>
         <button id="refresh" class="icon-btn" type="button" aria-label="Reload data" title="Reload data">&#x21bb;</button>
@@ -61,7 +61,7 @@
   </main>
 
   <footer class="wrap foot">
-    <p>Prices come from the free Xotelo API, which returns the rates Tripadvisor shows from Booking.com, Agoda, Expedia, Trip.com and other sites. They are the cheapest nightly rate for one room times the nights, may leave out taxes and fees, and can be for a room that needs an extra bed for the third guest. Always open the booking site and check the room fits 2 adults and a 12-year-old.</p>
+    <p>Prices come from the free Xotelo API, which returns the rates Tripadvisor shows from Booking.com, Agoda, Expedia, Trip.com and other sites. They are the cheapest nightly rate for one room times the nights, may leave out taxes and fees, and can be for a room that needs an extra bed for the third guest. Always open the booking site and check the room fits 2 adults and a 12-year-old. Stayforlong blocks automated checks, so its link is for checking by hand.</p>
   </footer>
 
   <div class="tooltip" id="tooltip" role="status" hidden></div>
