@@ -1,0 +1,57 @@
+{
+  "okura": {
+    "match": "Okura Prestige Bangkok",
+    "key": "g293916-d2624290",
+    "tripadvisor_name": "The Okura Prestige Bangkok"
+  },
+  "eastin-grand-sathorn": {
+    "match": "Eastin Grand Sathorn",
+    "key": "g293916-d2318761",
+    "tripadvisor_name": "Eastin Grand Hotel Sathorn"
+  },
+  "sheraton-grande-sukhumvit": {
+    "match": "Sheraton Grande Sukhumvit",
+    "key": "g293916-d304494",
+    "tripadvisor_name": "Sheraton Grande Sukhumvit, a Luxury Collection Hotel, Bangkok"
+  },
+  "grande-centre-point-terminal21": {
+    "match": "Grande Centre Point Terminal 21",
+    "key": "g293916-d2422237",
+    "tripadvisor_name": "Grande Centre Point Terminal 21"
+  },
+  "centara-grand-centralworld": {
+    "match": "Centara Grand",
+    "key": "g293916-d850401",
+    "tripadvisor_name": "Centara Grand at CentralWorld"
+  },
+  "intercontinental": {
+    "match": "InterContinental Bangkok",
+    "key": "g293916-d299231",
+    "tripadvisor_name": "InterContinental Bangkok by IHG"
+  },
+  "hyatt-regency-sukhumvit": {
+    "match": "Hyatt Regency Bangkok Sukhumvit",
+    "key": "g293916-d14192482",
+    "tripadvisor_name": "Hyatt Regency Bangkok Sukhumvit"
+  },
+  "marriott-sukhumvit-57": {
+    "match": "Bangkok Marriott Hotel Sukhumvit",
+    "key": "g293916-d3825474",
+    "tripadvisor_name": "Bangkok Marriott Hotel Sukhumvit"
+  },
+  "banyan-tree": {
+    "match": "Banyan Tree Bangkok",
+    "key": "g293916-d302959",
+    "tripadvisor_name": "Banyan Tree Bangkok"
+  },
+  "so-bangkok": {
+    "match": "SO Bangkok",
+    "key": "g293916-d2421117",
+    "tripadvisor_name": "SO/ Bangkok"
+  },
+  "waldorf-astoria": {
+    "match": "Waldorf Astoria Bangkok",
+    "key": "g293916-d12987714",
+    "tripadvisor_name": "Waldorf Astoria Bangkok"
+  }
+}
