@@ -65,6 +65,29 @@ One-time setup: Settings, Pages, "Build and deployment", Source: **GitHub Action
 Preview locally from the repository root: `python -m http.server`, then open
 http://localhost:8000/site/ (the page falls back to `../data/` when served that way).
 
+## Bangkok hotels
+
+A second dashboard page, `site/hotels.html` (linked from the flight page), tracks 5-star
+Bangkok hotels for the first and last nights of the trip: 2 adults and a 12-year-old in one room.
+The hotels in `config/hotels.json` were picked for 5 stars, an outdoor pool, a high-rise building,
+good reviews and a BTS or MRT station within a short walk; edit the list there.
+
+- Stays: first stay check-in 18-22 Jan (flights leave 17-21 Jan), last stay check-out
+  3-5 Feb (the flight home), each 3, 4 or 5 nights.
+- `scripts/fetch_hotels.py` asks the free [Xotelo](https://xotelo.com) API for each hotel's rates
+  for every stay option. Xotelo returns what Tripadvisor shows from Booking.com, Agoda, Expedia,
+  Trip.com and others: one nightly rate per room per site for 3 guests (asked as 3 adults: the API returns no rates when a child age is given). No API key and no
+  SerpApi quota. About 300 requests a run. Prices come in EUR and are shown in PLN at the NBP rate of the day.
+- Hotel keys are found by name in Tripadvisor's Bangkok list (`match` / `match_exclude` in the
+  config, cached in `data/hotels/keys.json`); set `key` on a hotel to pin it. Review scores
+  come from the same list.
+- Workflow "Fetch hotel prices" (`.github/workflows/fetch-hotels.yml`) splits the hotels into 4
+  batches that fetch in parallel (`--batch N --of 4`), then merges them (`--merge`). It runs daily at 08:00 UTC
+  (09:00 in Poland in winter) and can be started by hand. Results go to `data/hotels/latest.json`
+  and `history.json`; the Pages site redeploys after each run.
+- Prices may leave out taxes and fees, and a room for 3 may need an extra bed or family room,
+  so the page links each hotel to Booking.com with the dates and guests filled in.
+
 ## Adding or changing a route
 
 Add an object to `routes` in `config/routes.json` with a new `id`. Limit airlines with `include_airlines` (2-letter IATA codes and/or `STAR_ALLIANCE`,

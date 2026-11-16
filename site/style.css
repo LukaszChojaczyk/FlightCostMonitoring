@@ -235,3 +235,4 @@ table { border-collapse: collapse; width: 100%; }
 .badge.rating { color: var(--good-ink); border-color: var(--good); }
 .badge.transit { color: var(--accent-ink); border-color: var(--accent); }
 .opt-badges .badge, .hero-what .badge { white-space: normal; }
+@media (min-width: 640px) { #stay-switch button { white-space: nowrap; } }

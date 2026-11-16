@@ -114,5 +114,21 @@ class RunTest(unittest.TestCase):
         self.assertEqual(next(h for h in snap["hotels"] if h["id"] == "b")["key"], "g293916-d99")
 
 
+class BatchTest(unittest.TestCase):
+    def test_batches_split_and_merge_back(self):
+        parts = []
+        for b in range(2):
+            cache = {}
+            snap = fh.run(fh.XoteloClient(pause=0, get=FakeApi()), CONFIG, "t", 4.0, "x", cache, batch=b, of=2)
+            parts.append({**snap, "keys_cache": cache})
+        self.assertEqual([h["id"] for h in parts[0]["hotels"]], ["a", "c"])
+        self.assertEqual([h["id"] for h in parts[1]["hotels"]], ["b"])
+        merged, cache = fh.merge_parts(parts[::-1], CONFIG)
+        self.assertEqual([h["id"] for h in merged["hotels"]], ["a", "b", "c"])
+        self.assertEqual(len(merged["quotes"]), 10)
+        self.assertEqual(cache["b"]["key"], "g293916-d2")
+        self.assertNotIn("keys_cache", merged)
+
+
 if __name__ == "__main__":
     unittest.main()

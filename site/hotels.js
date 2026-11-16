@@ -121,7 +121,7 @@
   const priced = (qs) => qs.filter((q) => q.total != null).sort((a, b) => a.total - b.total);
 
   function bookingUrl(h, chkIn, chkOut) {
-    const g = latest?.guests || { adults: 2, children_ages: [12], rooms: 1 };
+    const g = config.settings?.booking_link_guests || latest?.guests || { adults: 2, children_ages: [12], rooms: 1 };
     const p = new URLSearchParams({ ss: `${h.name}, Bangkok`, checkin: chkIn, checkout: chkOut,
       group_adults: g.adults, group_children: (g.children_ages || []).length, no_rooms: g.rooms || 1,
       selected_currency: cur() === "PLN" ? "PLN" : "EUR", lang: "en-gb" });
@@ -135,7 +135,8 @@
   /* ---------- render ---------- */
   function render() {
     const g = config.settings || {};
-    $("guests").textContent = `${g.adults || 2} adults + ${(g.children_ages || []).length ? `child aged ${(g.children_ages || []).join(", ")}` : "no children"} · ${g.rooms || 1} room · 5-star, outdoor pool, high-rise, next to BTS/MRT`;
+    const bg = g.booking_link_guests || g;
+    $("guests").textContent = `${bg.adults || 2} adults + ${(bg.children_ages || []).length ? `child aged ${(bg.children_ages || []).join(", ")}` : "no children"} · ${g.rooms || 1} room, priced for ${g.adults} guests · 5-star, outdoor pool, high-rise, next to BTS/MRT`;
     const updated = latest?.fetched_at;
     $("meta").innerHTML = updated
       ? `Updated ${esc(ago(updated))} (${esc(fmtWhen(updated))}) · next check about ${esc(nextCheck())}`
@@ -152,7 +153,7 @@
   function stayLabel(s) {
     const d = stayDates(s);
     const span = d.length > 1 ? `${fmtDateShort(d[0]).replace(/ \w+$/, "")}–${fmtDateShort(d[d.length - 1])}` : fmtDateShort(d[0]);
-    return s.checkout_dates ? `Last stay · out ${span}` : `First stay · in ${span}`;
+    return s.checkout_dates ? `Last stay · out ${span}` : `First stay · in ${span}`; // e.g. "First stay · in 18–22 Jan"
   }
   function renderStaySwitch() {
     $("stay-switch").innerHTML = config.stays.map((s) =>

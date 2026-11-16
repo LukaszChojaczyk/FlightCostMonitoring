@@ -16,6 +16,7 @@ Only the standard library is used, so the GitHub Action needs no pip install.
 """
 from __future__ import annotations
 
+import argparse
 import json
 import re
 import sys
@@ -33,6 +34,7 @@ NBP_URL = "https://api.nbp.pl/api/exchangerates/rates/a/{cur}/?format=json"
 MAX_HISTORY_RUNS = 400  # one run a day: over a year
 MAX_LIST_PAGES = 12  # Tripadvisor hotel list pages (100 each, most popular first) scanned for keys and reviews
 GIVE_UP_AFTER = 12  # consecutive failed rate requests: the API is blocking us, stop asking
+TIME_BUDGET_SECONDS = 18 * 60  # stop asking and save what we have well before the workflow timeout
 
 
 def load_json(path: Path, default):
@@ -47,7 +49,7 @@ def save_json(path: Path, data) -> None:
     path.write_text(json.dumps(data, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
 
 
-def http_json(url: str, timeout: int = 40) -> dict:
+def http_json(url: str, timeout: int = 20) -> dict:
     req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0 (hotel-price-monitor)", "Accept": "application/json"})
     with urllib.request.urlopen(req, timeout=timeout) as resp:
         return json.loads(resp.read().decode("utf-8"))
@@ -110,7 +112,7 @@ def anchor_date(stay: dict, opt: dict) -> str:
 # ------------------------------------------------------------------ hotel keys and reviews
 
 def tokens(text: str) -> list[str]:
-    return re.sub(r"[^a-z0-9]+", " ", (text or "").lower().replace("'", "")).split()
+    return re.sub(r"[^a-z0-9]+", " ", re.sub(r"['\u2019\u2018`]", "", (text or "").lower())).split()
 
 
 def name_match(hotel: dict, listed_name: str) -> int | None:
@@ -202,7 +204,7 @@ def quote(client: XoteloClient, hotel: dict, stay: dict, opt: dict, settings: di
     if settings.get("children_ages"):
         params["age_of_children"] = ",".join(str(a) for a in settings["children_ages"])
     try:
-        res = client.call("rates", params)
+        res = client.call("rates", params, retries=1)
     except Exception as exc:  # noqa: BLE001
         q["error"] = str(exc)
         return q
@@ -228,11 +230,21 @@ def eur_pln(currency: str, previous: float | None) -> tuple[float | None, str]:
         return previous, "NBP unavailable, previous rate reused" if previous else "no rate"
 
 
-def run(client: XoteloClient, config: dict, now_iso: str, fx: float | None, fx_source: str, cache: dict) -> dict:
-    settings = config["settings"]
+def batch_hotels(config: dict, batch: int = 0, of: int = 1) -> list[dict]:
+    """Enabled hotels in batch `batch` of `of` (every of-th hotel, so batches stay even)."""
     hotels = [dict(h) for h in config["hotels"] if h.get("enabled", True)]
+    return [h for i, h in enumerate(hotels) if i % of == batch]
+
+
+def run(client: XoteloClient, config: dict, now_iso: str, fx: float | None, fx_source: str, cache: dict,
+        batch: int = 0, of: int = 1) -> dict:
+    settings = config["settings"]
+    hotels = batch_hotels(config, batch, of)
     errors = scan_city_list(client, hotels, settings, cache)
     quotes, failed_in_row, gave_up = [], 0, False
+    started = time.monotonic()
+    budget = float(settings.get("time_budget_seconds", TIME_BUDGET_SECONDS))
+    total = sum(len(stay_options(s)) for s in config["stays"]) * sum(1 for h in hotels if h.get("key"))
     for stay in config["stays"]:
         for opt in stay_options(stay):
             for h in hotels:
@@ -240,8 +252,15 @@ def run(client: XoteloClient, config: dict, now_iso: str, fx: float | None, fx_s
                     continue
                 if gave_up:
                     break
+                if time.monotonic() - started > budget:
+                    gave_up = True
+                    errors.append(f"Time budget used up after {len(quotes)} of {total} price requests; the rest are skipped this run")
+                    break
+                t0 = time.monotonic()
                 q = quote(client, h, stay, opt, settings, fx)
                 quotes.append(q)
+                print(f"[{len(quotes)}/{total}] {h['id']} {opt['chk_in']}+{opt['nights']}: "
+                      f"{q['min_rate'] if q['total'] is not None else q['error'] or 'no rates'} ({time.monotonic() - t0:.1f}s)", flush=True)
                 failed_in_row = failed_in_row + 1 if q["error"] else 0
                 if failed_in_row >= GIVE_UP_AFTER:
                     gave_up = True
@@ -270,16 +289,26 @@ def history_entry(snap: dict) -> dict:
     return {"fetched_at": snap["fetched_at"], "pln_rate": snap["pln_rate"], "prices": prices}
 
 
-def main() -> int:
-    config = load_json(CONFIG_PATH, None)
-    settings = config["settings"]
+def merge_parts(parts: list[dict], config: dict) -> tuple[dict, dict]:
+    """Join batch snapshots into one snapshot (hotels in config order) and one key cache."""
+    if not parts:
+        raise ValueError("no batch results to merge")
+    order = {h["id"]: i for i, h in enumerate(config["hotels"])}
+    snap = {k: v for k, v in parts[0].items() if k not in ("keys_cache", "batch")}
+    snap["hotels"] = sorted((h for p in parts for h in p["hotels"]), key=lambda h: order.get(h["id"], 999))
+    snap["quotes"] = [q for p in parts for q in p["quotes"]]
+    snap["errors"] = [e for p in parts for e in p["errors"]]
+    snap["requests"] = sum(p.get("requests", 0) for p in parts)
+    snap["batches"] = len(parts)
+    cache = {}
+    for p in parts:
+        cache.update(p.get("keys_cache") or {})
+    return snap, cache
+
+
+def save_outputs(snap: dict, cache: dict) -> None:
     prev = load_json(OUT_DIR / "latest.json", {})
-    fx, fx_source = eur_pln(settings.get("currency", "EUR"), prev.get("pln_rate"))
-    cache = load_json(OUT_DIR / "keys.json", {})
-    client = XoteloClient(pause=float(settings.get("pause_seconds", 1.5)))
-    now_iso = datetime.now(timezone.utc).replace(microsecond=0).isoformat()
-    snap = run(client, config, now_iso, fx, fx_source, cache)
-    save_json(OUT_DIR / "keys.json", cache)
+    save_json(OUT_DIR / "keys.json", {**load_json(OUT_DIR / "keys.json", {}), **cache})
     priced = [q for q in snap["quotes"] if q["total"] is not None]
     failed = [q for q in snap["quotes"] if q["error"]]
     if not priced and prev.get("quotes"):
@@ -291,7 +320,7 @@ def main() -> int:
         hist = load_json(OUT_DIR / "history.json", {"entries": []})
         hist["entries"] = (hist["entries"] + [history_entry(snap)])[-MAX_HISTORY_RUNS:]
         save_json(OUT_DIR / "history.json", hist)
-    print(f"{client.requests} requests, {len(priced)} priced, {len(failed)} failed, EUR/PLN {fx} ({fx_source})")
+    print(f"{snap['requests']} requests, {len(priced)} priced, {len(failed)} failed, EUR/PLN {snap['pln_rate']} ({snap['pln_rate_source']})")
     for e in snap["errors"]:
         print("error:", e, file=sys.stderr)
     for q in failed[:5]:
@@ -300,6 +329,40 @@ def main() -> int:
         best = min((q for q in priced if q["hotel"] == h["id"]), key=lambda q: q["min_rate"], default=None)
         print(f"  {h['name']}: key {h['key']}, rating {h.get('rating')} ({h.get('reviews')}), "
               f"cheapest night {best and best['min_rate']} {snap['currency']} ({best and best['min_site']})")
+
+
+def main(argv: list[str] | None = None) -> int:
+    """No arguments: fetch every hotel and save. The workflow runs batches in parallel instead:
+      fetch_hotels.py --batch 0 --of 4 --out part.json   fetch one batch into a partial file
+      fetch_hotels.py --merge DIR                         join DIR/*.json and save"""
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--batch", type=int, default=0)
+    ap.add_argument("--of", type=int, default=1)
+    ap.add_argument("--out")
+    ap.add_argument("--merge")
+    args = ap.parse_args(argv)
+    config = load_json(CONFIG_PATH, None)
+    if args.merge:
+        parts = [load_json(p, None) for p in sorted(Path(args.merge).rglob("*.json"))]
+        parts = [p for p in parts if p and "quotes" in p]
+        print(f"merging {len(parts)} batches")
+        snap, cache = merge_parts(parts, config)
+        save_outputs(snap, cache)
+        return 0
+    settings = config["settings"]
+    prev = load_json(OUT_DIR / "latest.json", {})
+    fx, fx_source = eur_pln(settings.get("currency", "EUR"), prev.get("pln_rate"))
+    cache = load_json(OUT_DIR / "keys.json", {})
+    client = XoteloClient(pause=float(settings.get("pause_seconds", 1.5)))
+    now_iso = datetime.now(timezone.utc).replace(microsecond=0).isoformat()
+    snap = run(client, config, now_iso, fx, fx_source, cache, args.batch, args.of)
+    if args.out:
+        own = {h["id"] for h in snap["hotels"]}
+        save_json(Path(args.out), {**snap, "batch": args.batch, "keys_cache": {k: v for k, v in cache.items() if k in own}})
+        priced = sum(1 for q in snap["quotes"] if q["total"] is not None)
+        print(f"batch {args.batch + 1}/{args.of}: {client.requests} requests, {priced} of {len(snap['quotes'])} priced")
+        return 0
+    save_outputs(snap, cache)
     return 0
 
 
