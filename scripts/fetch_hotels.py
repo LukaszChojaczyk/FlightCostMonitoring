@@ -33,6 +33,7 @@ NBP_URL = "https://api.nbp.pl/api/exchangerates/rates/a/{cur}/?format=json"
 MAX_HISTORY_RUNS = 400  # one run a day: over a year
 MAX_LIST_PAGES = 12  # Tripadvisor hotel list pages (100 each, most popular first) scanned for keys and reviews
 GIVE_UP_AFTER = 12  # consecutive failed rate requests: the API is blocking us, stop asking
+TIME_BUDGET_SECONDS = 18 * 60  # stop asking and save what we have well before the workflow timeout
 
 
 def load_json(path: Path, default):
@@ -47,7 +48,7 @@ def save_json(path: Path, data) -> None:
     path.write_text(json.dumps(data, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
 
 
-def http_json(url: str, timeout: int = 40) -> dict:
+def http_json(url: str, timeout: int = 20) -> dict:
     req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0 (hotel-price-monitor)", "Accept": "application/json"})
     with urllib.request.urlopen(req, timeout=timeout) as resp:
         return json.loads(resp.read().decode("utf-8"))
@@ -202,7 +203,7 @@ def quote(client: XoteloClient, hotel: dict, stay: dict, opt: dict, settings: di
     if settings.get("children_ages"):
         params["age_of_children"] = ",".join(str(a) for a in settings["children_ages"])
     try:
-        res = client.call("rates", params)
+        res = client.call("rates", params, retries=1)
     except Exception as exc:  # noqa: BLE001
         q["error"] = str(exc)
         return q
@@ -233,6 +234,9 @@ def run(client: XoteloClient, config: dict, now_iso: str, fx: float | None, fx_s
     hotels = [dict(h) for h in config["hotels"] if h.get("enabled", True)]
     errors = scan_city_list(client, hotels, settings, cache)
     quotes, failed_in_row, gave_up = [], 0, False
+    started = time.monotonic()
+    budget = float(settings.get("time_budget_seconds", TIME_BUDGET_SECONDS))
+    total = sum(len(stay_options(s)) for s in config["stays"]) * sum(1 for h in hotels if h.get("key"))
     for stay in config["stays"]:
         for opt in stay_options(stay):
             for h in hotels:
@@ -240,8 +244,15 @@ def run(client: XoteloClient, config: dict, now_iso: str, fx: float | None, fx_s
                     continue
                 if gave_up:
                     break
+                if time.monotonic() - started > budget:
+                    gave_up = True
+                    errors.append(f"Time budget used up after {len(quotes)} of {total} price requests; the rest are skipped this run")
+                    break
+                t0 = time.monotonic()
                 q = quote(client, h, stay, opt, settings, fx)
                 quotes.append(q)
+                print(f"[{len(quotes)}/{total}] {h['id']} {opt['chk_in']}+{opt['nights']}: "
+                      f"{q['min_rate'] if q['total'] is not None else q['error'] or 'no rates'} ({time.monotonic() - t0:.1f}s)", flush=True)
                 failed_in_row = failed_in_row + 1 if q["error"] else 0
                 if failed_in_row >= GIVE_UP_AFTER:
                     gave_up = True

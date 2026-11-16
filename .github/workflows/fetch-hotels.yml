@@ -33,7 +33,7 @@ jobs:
       - name: Fetch hotel prices
         # A failed request is recorded in data/hotels/latest.json and does not fail the run.
         timeout-minutes: 25
-        run: python scripts/fetch_hotels.py
+        run: python -u scripts/fetch_hotels.py
 
       - name: Commit updated data
         run: |

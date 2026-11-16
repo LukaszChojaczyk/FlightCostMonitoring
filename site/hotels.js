@@ -152,7 +152,7 @@
   function stayLabel(s) {
     const d = stayDates(s);
     const span = d.length > 1 ? `${fmtDateShort(d[0]).replace(/ \w+$/, "")}–${fmtDateShort(d[d.length - 1])}` : fmtDateShort(d[0]);
-    return s.checkout_dates ? `Last stay · out ${span}` : `First stay · in ${span}`;
+    return s.checkout_dates ? `Last stay · out ${span}` : `First stay · in ${span}`; // e.g. "First stay · in 18–22 Jan"
   }
   function renderStaySwitch() {
     $("stay-switch").innerHTML = config.stays.map((s) =>
