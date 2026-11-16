@@ -3,8 +3,8 @@
   "use strict";
 
   const TZ = "Europe/Warsaw";
-  const FETCH_CRONS_UTC = [[5, 23], [17, 23]]; // keep in sync with .github/workflows/fetch-prices.yml
-  const STALE_HOURS = 14;
+  const FETCH_CRONS_UTC = [[6, 0], [11, 0]]; // keep in sync with fetch-prices.yml (API) and scrape-prices.yml (scraper)
+  const STALE_HOURS = 26;
   const PAGE_SIZE = 8;
   const SERIES = ["var(--series-1)", "var(--series-2)", "var(--series-3)"];
   const BAG_LABEL = { included: "Bag included", "fare-dependent": "Bag depends on fare", extra: "Bag costs extra", unknown: "Bag unknown" };
