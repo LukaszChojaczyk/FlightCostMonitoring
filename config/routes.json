@@ -3,6 +3,7 @@
     "monthly_search_budget": 250,
     "reserve_searches": 10,
     "runs_per_day": 2,
+    "max_airports_per_search": 7,
     "currency": "PLN",
     "hl": "en",
     "gl": "pl"
@@ -10,9 +11,9 @@
   "routes": [
     {
       "id": "pl-ber-prg-bkk-2027-01",
-      "name": "Poland / Berlin / Prague to Bangkok, Jan-Feb 2027",
+      "name": "Warsaw / Wroclaw / Berlin / Prague to Bangkok, Jan-Feb 2027",
       "enabled": true,
-      "origins": ["WAW", "WMI", "KRK", "GDN", "KTW", "WRO", "POZ", "RZE", "LUZ", "SZZ", "BZG", "LCJ", "SZY", "BER", "PRG"],
+      "origins": ["WAW", "WRO", "BER", "PRG"],
       "destinations": ["BKK", "DMK"],
       "outbound_date": "2027-01-19",
       "return_dates": ["2027-02-03", "2027-02-04", "2027-02-05"],

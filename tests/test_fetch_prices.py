@@ -32,10 +32,13 @@ class ParamsTests(unittest.TestCase):
     def test_route_maps_to_serpapi_params(self):
         cfg = fp.load_json(fp.CONFIG_PATH, None)
         route = cfg["routes"][0]
-        p = fp.base_params(route, cfg["settings"], "2027-02-04")
+        groups = fp.origin_groups(route, cfg["settings"])
+        self.assertTrue(all(len(g) <= 7 for g in groups))
+        self.assertEqual(sum(groups, []), route["origins"])
+        self.assertEqual(fp.searches_per_run(route, cfg["settings"]), 3)
+        p = fp.base_params(route, cfg["settings"], "2027-02-04", groups[0])
+        self.assertEqual(p["departure_id"].split(","), groups[0])
         self.assertIn("WAW", p["departure_id"].split(","))
-        self.assertIn("BER", p["departure_id"].split(","))
-        self.assertIn("PRG", p["departure_id"].split(","))
         self.assertEqual(p["arrival_id"], "BKK,DMK")
         self.assertEqual(p["adults"], 3)
         self.assertEqual(p["stops"], 2)  # SerpApi: 2 = one stop or fewer
@@ -57,7 +60,7 @@ class DryRunTests(unittest.TestCase):
 
         self.assertEqual(len(latest["results"]), 3)
         opts = latest["results"][0]["options"]
-        self.assertEqual([o["price"] for o in opts], [8120, 9870, 10450])  # sorted cheapest first
+        self.assertEqual([o["price"] for o in opts], [8120, 9870, 10450])  # cheapest first
         self.assertEqual(opts[0]["baggage_flag"], "extra")          # flydubai
         self.assertEqual(opts[1]["baggage_flag"], "fare-dependent")  # Etihad
         self.assertEqual(opts[2]["baggage_flag"], "included")       # Qatar
@@ -66,6 +69,22 @@ class DryRunTests(unittest.TestCase):
         self.assertEqual(len(history["entries"]), 3)
         self.assertEqual(history["entries"][0]["min_price_by_origin"], {"BER": 8120, "PRG": 9870, "WAW": 10450})
         self.assertEqual(index["routes"][0]["latest_min_price"], 8120)
+
+
+class NoResultsTests(unittest.TestCase):
+    def test_empty_google_answer_is_not_an_error(self):
+        cfg = fp.load_json(fp.CONFIG_PATH, None)
+        client = mock.Mock(spec=fp.SerpApiClient)
+        client.search.side_effect = fp.NoResults("Google Flights hasn't returned any results for this query.")
+        snap, used = fp.fetch_route(client, cfg["routes"][0], cfg["settings"], {"default": {}, "airlines": {}}, 0, "t")
+        r = snap["results"][0]
+        self.assertIsNone(r["error"])
+        self.assertEqual(r["options"], [])
+        self.assertEqual(r["origin_groups_without_results"], [["WAW", "WRO", "BER", "PRG"]])
+
+    def test_long_origin_lists_are_split_into_groups_of_seven(self):
+        route = {"origins": [f"A{i}" for i in range(15)]}
+        self.assertEqual([len(g) for g in fp.origin_groups(route, {})], [7, 7, 1])
 
 
 if __name__ == "__main__":

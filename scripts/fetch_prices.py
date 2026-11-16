@@ -51,6 +51,10 @@ def save_json(path: Path, data) -> None:
     path.write_text(json.dumps(data, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
 
 
+class NoResults(Exception):
+    """SerpApi answered fine but Google Flights had no flights for the query."""
+
+
 class SerpApiClient:
     def __init__(self, api_key: str, dry_run: bool = False):
         self.api_key = api_key
@@ -70,6 +74,8 @@ class SerpApiClient:
             return json.loads((ROOT / "tests" / "fixtures" / name).read_text(encoding="utf-8"))
         data = self._get(SEARCH_URL, {"engine": "google_flights", **params})
         if data.get("error"):
+            if "hasn't returned any results" in data["error"]:
+                raise NoResults(data["error"])
             raise RuntimeError(f"SerpApi error: {data['error']}")
         return data
 
@@ -176,10 +182,21 @@ def collect_options(resp: dict) -> list[dict]:
 
 # ------------------------------------------------------------------------ fetch
 
-def base_params(route: dict, settings: dict, return_date: str) -> dict:
+def origin_groups(route: dict, settings: dict) -> list[list[str]]:
+    """Google Flights accepts at most 7 airports per side, so split long origin lists."""
+    size = settings.get("max_airports_per_search", 7)
+    o = route["origins"]
+    return [o[i:i + size] for i in range(0, len(o), size)]
+
+
+def searches_per_run(route: dict, settings: dict) -> int:
+    return len(origin_groups(route, settings)) * len(route["return_dates"])
+
+
+def base_params(route: dict, settings: dict, return_date: str, origins: list[str] | None = None) -> dict:
     pax = route["passengers"]
     params = {
-        "departure_id": ",".join(route["origins"]),
+        "departure_id": ",".join(origins or route["origins"]),
         "arrival_id": ",".join(route["destinations"]),
         "outbound_date": route["outbound_date"],
         "return_date": return_date,
@@ -206,15 +223,27 @@ def fetch_route(client: SerpApiClient, route: dict, settings: dict, bag_table: d
     pax = sum(route["passengers"].values())
     results = []
     raw_by_date = []
+    groups = origin_groups(route, settings)
     for rd in route["return_dates"]:
-        params = base_params(route, settings, rd)
-        try:
-            resp = client.search(params)
-            error = None
-        except Exception as exc:  # noqa: BLE001 - keep other dates going
-            resp, error = {}, str(exc)
-            print(f"error: {route['id']} return {rd}: {exc}", file=sys.stderr)
-        raw = collect_options(resp)
+        raw, errors, urls, insights, empty = [], [], [], None, []
+        for group in groups:
+            params = base_params(route, settings, rd, group)
+            try:
+                resp = client.search(params)
+            except NoResults:
+                empty.append(group)
+                continue  # a legitimate empty answer, e.g. no 1-stop flights from these airports
+            except Exception as exc:  # noqa: BLE001 - keep other groups and dates going
+                errors.append(f"{','.join(group)}: {exc}")
+                print(f"error: {route['id']} return {rd} from {','.join(group)}: {exc}", file=sys.stderr)
+                continue
+            for o in collect_options(resp):
+                o["_params"] = params
+                raw.append(o)
+            url = resp.get("search_metadata", {}).get("google_flights_url")
+            if url:
+                urls.append({"origins": group, "url": url})
+            insights = insights or resp.get("price_insights")
         raw.sort(key=lambda o: o.get("price") or 10**12)
         options = []
         for o in raw:
@@ -222,24 +251,28 @@ def fetch_route(client: SerpApiClient, route: dict, settings: dict, bag_table: d
             n["google_best"] = o["_best"]
             n["return_leg"] = None
             options.append(n)
-        raw_by_date.append((rd, params, raw, options))
+        raw_by_date.append((rd, raw, options))
         results.append({
             "return_date": rd,
-            "error": error,
-            "google_flights_url": resp.get("search_metadata", {}).get("google_flights_url"),
-            "price_insights": resp.get("price_insights"),
+            "error": "; ".join(errors) if errors and len(errors) == len(groups) else None,
+            "partial_errors": errors if errors and len(errors) < len(groups) else [],
+            "origin_groups_without_results": empty,
+            "google_flights_urls": urls,
+            "price_insights": insights,
             "options": options,
         })
 
     # Optional: fetch the return flights for the cheapest deals across all dates.
-    candidates = [(no["price"] or 10**12, rd, params, ro, no)
-                  for rd, params, raw, opts in raw_by_date
+    candidates = [(no["price"] or 10**12, rd, ro["_params"], ro, no)
+                  for rd, raw, opts in raw_by_date
                   for ro, no in zip(raw, opts) if ro.get("departure_token")]
     candidates.sort(key=lambda c: c[0])
     used_extra = 0
     for _, rd, params, ro, no in candidates[:min(extra_budget, route.get("return_details_top_n", 0))]:
         try:
             resp = client.search({**params, "departure_token": ro["departure_token"]})
+        except NoResults:
+            continue
         except Exception as exc:  # noqa: BLE001
             print(f"warning: return leg for {rd} failed: {exc}", file=sys.stderr)
             continue
@@ -316,7 +349,7 @@ def main() -> int:
     usage = load_json(usage_path, {})
 
     client = SerpApiClient(api_key, dry_run)
-    base_per_run = sum(len(r["return_dates"]) for r in routes)
+    base_per_run = sum(searches_per_run(r, settings) for r in routes)
     left = client.searches_left()
     if left is None:
         left = local_searches_left(usage, settings.get("monthly_search_budget", 250), now)
