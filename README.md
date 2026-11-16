@@ -8,7 +8,7 @@ dashboard can read those files directly.
 
 Warsaw (WAW), Wroclaw (WRO), Berlin (BER) and Prague (PRG) to Bangkok (BKK and DMK),
 out 2027-01-19, back 2027-02-03, 02-04 or 02-05. 3 adults (the 12-year-old pays adult fare),
-economy, premium airlines only (Star Alliance, oneworld, Emirates, Etihad), at most 1 stop, at most 16 h per direction. Prices are in PLN and are the
+economy, premium airlines only (Star Alliance, oneworld, Emirates, Etihad), at most 1 stop, at most 20 h per direction. Prices are in PLN and are the
 round-trip total for all three passengers.
 
 ## How it works
@@ -23,6 +23,16 @@ round-trip total for all three passengers.
 - Google Flights has no checked-bag data, so every airline gets a flag from
   `config/airlines_baggage.json`: `included`, `fare-dependent`, `extra` or `unknown`.
   An itinerary takes the worst flag of its airlines. Always confirm on the airline site.
+
+## Second source: direct Google Flights scraping
+
+`scripts/scrape_prices.py` reads Google Flights pages directly with the
+[fast-flights](https://pypi.org/project/fast-flights/) package, so it needs no API key and
+uses no quota. It runs after the SerpApi step in the same workflow, one request per origin
+and return date, limited to the airlines in the route's `scraper.airlines`
+(currently Emirates, Etihad and Qatar Airways). Google may block or change the page at any
+time, so the step is best effort and never fails the run. Results go to
+`data/<route_id>/scraped_latest.json` and `scraped_history.json`.
 
 ## Data files (for the dashboard)
 
