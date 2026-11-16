@@ -1,0 +1,47 @@
+{
+  "katathani": {
+    "match": "Katathani Phuket Beach Resort",
+    "key": "g293920-d540134",
+    "tripadvisor_name": "Katathani Phuket Beach Resort"
+  },
+  "intercontinental-phuket": {
+    "match": "InterContinental Phuket",
+    "key": "g293920-d16711842",
+    "tripadvisor_name": "InterContinental Phuket Resort by IHG"
+  },
+  "le-meridien-phuket": {
+    "match": "Le Meridien Phuket Beach Resort",
+    "key": "g293920-d302525",
+    "tripadvisor_name": "Le Méridien Phuket Beach Resort"
+  },
+  "angsana-laguna": {
+    "match": "Angsana Laguna Phuket",
+    "key": "g293920-d304521",
+    "tripadvisor_name": "Angsana Laguna Phuket"
+  },
+  "hyatt-regency-phuket": {
+    "match": "Hyatt Regency Phuket",
+    "key": "g293920-d5861493",
+    "tripadvisor_name": "Hyatt Regency Phuket Resort"
+  },
+  "jw-marriott-mai-khao": {
+    "match": "JW Marriott Phuket Resort",
+    "key": "g293920-d519702",
+    "tripadvisor_name": "JW Marriott Phuket Resort & Spa"
+  },
+  "dusit-laguna": {
+    "match": "Dusit Thani Laguna Phuket",
+    "key": "g293920-d301365",
+    "tripadvisor_name": "Dusit Thani Laguna Phuket"
+  },
+  "twinpalms": {
+    "match": "Twinpalms Phuket",
+    "key": "g293920-d28613762",
+    "tripadvisor_name": "Twinpalms Tented Camp Phuket"
+  },
+  "the-nai-harn": {
+    "match": "The Nai Harn",
+    "key": "g293920-d302529",
+    "tripadvisor_name": "The Nai Harn"
+  }
+}

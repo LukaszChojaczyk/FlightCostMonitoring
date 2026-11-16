@@ -1,0 +1,2274 @@
+{
+  "source": "xotelo (Tripadvisor rates)",
+  "fetched_at": "2026-11-16T18:33:17+00:00",
+  "currency": "EUR",
+  "pln_rate": 4.4048,
+  "pln_rate_source": "NBP table 222/A/NBP/2026 of 2026-11-16",
+  "guests": {
+    "rooms": 1,
+    "adults": 3,
+    "children_ages": []
+  },
+  "price_note": "Cheapest nightly rate shown on Tripadvisor for one room and these guests, times nights. Sites may add taxes and fees at checkout.",
+  "requests": 136,
+  "errors": [
+    "Outrigger Laguna Phuket Beach Resort: not found in the Tripadvisor list for Phuket; set \"key\" for it in the city's hotels config",
+    "Mövenpick Resort & Spa Karon Beach Phuket: not found in the Tripadvisor list for Phuket; set \"key\" for it in the city's hotels config",
+    "Mövenpick Resort Bangtao Beach Phuket: not found in the Tripadvisor list for Phuket; set \"key\" for it in the city's hotels config"
+  ],
+  "hotels": [
+    {
+      "id": "katathani",
+      "name": "Katathani Phuket Beach Resort",
+      "key": "g293920-d540134",
+      "tripadvisor_name": "Katathani Phuket Beach Resort",
+      "tripadvisor_url": "https://www.tripadvisor.com/Hotel_Review-g7847985-d540134-Reviews-Katathani_Phuket_Beach_Resort-Kata_Noi_Beach_Karon_Phuket.html",
+      "rating": 4.4,
+      "reviews": 6805,
+      "popularity_rank": 167,
+      "typical_price_range": null
+    },
+    {
+      "id": "movenpick-bangtao",
+      "name": "Mövenpick Resort Bangtao Beach Phuket",
+      "key": null,
+      "tripadvisor_name": null,
+      "tripadvisor_url": null,
+      "rating": null,
+      "reviews": null,
+      "popularity_rank": null,
+      "typical_price_range": null
+    },
+    {
+      "id": "angsana-laguna",
+      "name": "Angsana Laguna Phuket",
+      "key": "g293920-d304521",
+      "tripadvisor_name": "Angsana Laguna Phuket",
+      "tripadvisor_url": "https://www.tripadvisor.com/Hotel_Review-g1224250-d304521-Reviews-Angsana_Laguna_Phuket-Choeng_Thale_Thalang_District_Phuket.html",
+      "rating": 4.6,
+      "reviews": 6508,
+      "popularity_rank": 1127,
+      "typical_price_range": null
+    },
+    {
+      "id": "dusit-laguna",
+      "name": "Dusit Thani Laguna Phuket",
+      "key": "g293920-d301365",
+      "tripadvisor_name": "Dusit Thani Laguna Phuket",
+      "tripadvisor_url": "https://www.tripadvisor.com/Hotel_Review-g1224250-d301365-Reviews-Dusit_Thani_Laguna_Phuket-Choeng_Thale_Thalang_District_Phuket.html",
+      "rating": 4.4,
+      "reviews": 3069,
+      "popularity_rank": 173,
+      "typical_price_range": null
+    },
+    {
+      "id": "outrigger-laguna",
+      "name": "Outrigger Laguna Phuket Beach Resort",
+      "key": null,
+      "tripadvisor_name": null,
+      "tripadvisor_url": null,
+      "rating": null,
+      "reviews": null,
+      "popularity_rank": null,
+      "typical_price_range": null
+    },
+    {
+      "id": "intercontinental-phuket",
+      "name": "InterContinental Phuket Resort",
+      "key": "g293920-d16711842",
+      "tripadvisor_name": "InterContinental Phuket Resort by IHG",
+      "tripadvisor_url": "https://www.tripadvisor.com/Hotel_Review-g1379324-d16711842-Reviews-InterContinental_Phuket_Resort_by_IHG-Kamala_Kathu_Phuket.html",
+      "rating": 4.8,
+      "reviews": 2828,
+      "popularity_rank": 42,
+      "typical_price_range": null
+    },
+    {
+      "id": "hyatt-regency-phuket",
+      "name": "Hyatt Regency Phuket Resort",
+      "key": "g293920-d5861493",
+      "tripadvisor_name": "Hyatt Regency Phuket Resort",
+      "tripadvisor_url": "https://www.tripadvisor.com/Hotel_Review-g1379324-d5861493-Reviews-Hyatt_Regency_Phuket_Resort-Kamala_Kathu_Phuket.html",
+      "rating": 4.6,
+      "reviews": 1687,
+      "popularity_rank": 134,
+      "typical_price_range": null
+    },
+    {
+      "id": "twinpalms",
+      "name": "Twinpalms Phuket",
+      "key": "g293920-d28613762",
+      "tripadvisor_name": "Twinpalms Tented Camp Phuket",
+      "tripadvisor_url": "https://www.tripadvisor.com/Hotel_Review-g1224250-d28613762-Reviews-Twinpalms_Tented_Camp_Phuket-Choeng_Thale_Thalang_District_Phuket.html",
+      "rating": 4.7,
+      "reviews": 72,
+      "popularity_rank": 260,
+      "typical_price_range": null
+    },
+    {
+      "id": "movenpick-karon",
+      "name": "Mövenpick Resort & Spa Karon Beach Phuket",
+      "key": null,
+      "tripadvisor_name": null,
+      "tripadvisor_url": null,
+      "rating": null,
+      "reviews": null,
+      "popularity_rank": null,
+      "typical_price_range": null
+    },
+    {
+      "id": "le-meridien-phuket",
+      "name": "Le Méridien Phuket Beach Resort",
+      "key": "g293920-d302525",
+      "tripadvisor_name": "Le Méridien Phuket Beach Resort",
+      "tripadvisor_url": "https://www.tripadvisor.com/Hotel_Review-g1215780-d302525-Reviews-Le_Meridien_Phuket_Beach_Resort-Karon_Phuket.html",
+      "rating": 4.4,
+      "reviews": 4731,
+      "popularity_rank": 178,
+      "typical_price_range": null
+    },
+    {
+      "id": "jw-marriott-mai-khao",
+      "name": "JW Marriott Phuket Resort & Spa",
+      "key": "g293920-d519702",
+      "tripadvisor_name": "JW Marriott Phuket Resort & Spa",
+      "tripadvisor_url": "https://www.tripadvisor.com/Hotel_Review-g1223683-d519702-Reviews-JW_Marriott_Phuket_Resort_Spa-Mai_Khao_Thalang_District_Phuket.html",
+      "rating": 4.7,
+      "reviews": 8157,
+      "popularity_rank": 238,
+      "typical_price_range": null
+    },
+    {
+      "id": "the-nai-harn",
+      "name": "The Nai Harn",
+      "key": "g293920-d302529",
+      "tripadvisor_name": "The Nai Harn",
+      "tripadvisor_url": "https://www.tripadvisor.com/Hotel_Review-g1231757-d302529-Reviews-The_Nai_Harn-Nai_Harn_Rawai_Phuket.html",
+      "rating": 4.7,
+      "reviews": 1680,
+      "popularity_rank": 99,
+      "typical_price_range": null
+    }
+  ],
+  "quotes": [
+    {
+      "hotel": "katathani",
+      "stay": "middle",
+      "date": "2027-01-23",
+      "chk_in": "2027-01-23",
+      "chk_out": "2027-01-30",
+      "nights": 7,
+      "rates": [],
+      "min_rate": null,
+      "min_site": null,
+      "total": null,
+      "total_pln": null,
+      "error": null
+    },
+    {
+      "hotel": "katathani",
+      "stay": "middle",
+      "date": "2027-01-23",
+      "chk_in": "2027-01-23",
+      "chk_out": "2027-01-31",
+      "nights": 8,
+      "rates": [],
+      "min_rate": null,
+      "min_site": null,
+      "total": null,
+      "total_pln": null,
+      "error": null
+    },
+    {
+      "hotel": "katathani",
+      "stay": "middle",
+      "date": "2027-01-23",
+      "chk_in": "2027-01-23",
+      "chk_out": "2027-02-01",
+      "nights": 9,
+      "rates": [],
+      "min_rate": null,
+      "min_site": null,
+      "total": null,
+      "total_pln": null,
+      "error": null
+    },
+    {
+      "hotel": "katathani",
+      "stay": "middle",
+      "date": "2027-01-24",
+      "chk_in": "2027-01-24",
+      "chk_out": "2027-01-30",
+      "nights": 6,
+      "rates": [],
+      "min_rate": null,
+      "min_site": null,
+      "total": null,
+      "total_pln": null,
+      "error": null
+    },
+    {
+      "hotel": "katathani",
+      "stay": "middle",
+      "date": "2027-01-24",
+      "chk_in": "2027-01-24",
+      "chk_out": "2027-01-31",
+      "nights": 7,
+      "rates": [],
+      "min_rate": null,
+      "min_site": null,
+      "total": null,
+      "total_pln": null,
+      "error": null
+    },
+    {
+      "hotel": "katathani",
+      "stay": "middle",
+      "date": "2027-01-24",
+      "chk_in": "2027-01-24",
+      "chk_out": "2027-02-01",
+      "nights": 8,
+      "rates": [],
+      "min_rate": null,
+      "min_site": null,
+      "total": null,
+      "total_pln": null,
+      "error": null
+    },
+    {
+      "hotel": "katathani",
+      "stay": "middle",
+      "date": "2027-01-25",
+      "chk_in": "2027-01-25",
+      "chk_out": "2027-01-30",
+      "nights": 5,
+      "rates": [],
+      "min_rate": null,
+      "min_site": null,
+      "total": null,
+      "total_pln": null,
+      "error": null
+    },
+    {
+      "hotel": "katathani",
+      "stay": "middle",
+      "date": "2027-01-25",
+      "chk_in": "2027-01-25",
+      "chk_out": "2027-01-31",
+      "nights": 6,
+      "rates": [],
+      "min_rate": null,
+      "min_site": null,
+      "total": null,
+      "total_pln": null,
+      "error": null
+    },
+    {
+      "hotel": "katathani",
+      "stay": "middle",
+      "date": "2027-01-25",
+      "chk_in": "2027-01-25",
+      "chk_out": "2027-02-01",
+      "nights": 7,
+      "rates": [],
+      "min_rate": null,
+      "min_site": null,
+      "total": null,
+      "total_pln": null,
+      "error": null
+    },
+    {
+      "hotel": "intercontinental-phuket",
+      "stay": "middle",
+      "date": "2027-01-23",
+      "chk_in": "2027-01-23",
+      "chk_out": "2027-01-30",
+      "nights": 7,
+      "rates": [
+        {
+          "code": "Agoda",
+          "name": "Agoda.com",
+          "rate": 542.0
+        },
+        {
+          "code": "BookingCom",
+          "name": "Booking.com",
+          "rate": 691.0
+        },
+        {
+          "code": "CtripTA",
+          "name": "Trip.com",
+          "rate": 693.0
+        },
+        {
+          "code": "IHG",
+          "name": "IHG",
+          "rate": 831.0
+        }
+      ],
+      "min_rate": 542.0,
+      "min_site": "Agoda.com",
+      "total": 3794,
+      "total_pln": 16712,
+      "error": null
+    },
+    {
+      "hotel": "le-meridien-phuket",
+      "stay": "middle",
+      "date": "2027-01-23",
+      "chk_in": "2027-01-23",
+      "chk_out": "2027-01-30",
+      "nights": 7,
+      "rates": [
+        {
+          "code": "Agoda",
+          "name": "Agoda.com",
+          "rate": 361.0
+        },
+        {
+          "code": "BookingCom",
+          "name": "Booking.com",
+          "rate": 437.0
+        },
+        {
+          "code": "CtripTA",
+          "name": "Trip.com",
+          "rate": 438.0
+        },
+        {
+          "code": "Marriott1",
+          "name": "LeMeridien.com",
+          "rate": 440.0
+        }
+      ],
+      "min_rate": 361.0,
+      "min_site": "Agoda.com",
+      "total": 2527,
+      "total_pln": 11131,
+      "error": null
+    },
+    {
+      "hotel": "intercontinental-phuket",
+      "stay": "middle",
+      "date": "2027-01-23",
+      "chk_in": "2027-01-23",
+      "chk_out": "2027-01-31",
+      "nights": 8,
+      "rates": [
+        {
+          "code": "Agoda",
+          "name": "Agoda.com",
+          "rate": 652.0
+        },
+        {
+          "code": "IHG",
+          "name": "IHG",
+          "rate": 833.0
+        },
+        {
+          "code": "BookingCom",
+          "name": "Booking.com",
+          "rate": 837.0
+        },
+        {
+          "code": "CtripTA",
+          "name": "Trip.com",
+          "rate": 840.0
+        }
+      ],
+      "min_rate": 652.0,
+      "min_site": "Agoda.com",
+      "total": 5216,
+      "total_pln": 22975,
+      "error": null
+    },
+    {
+      "hotel": "le-meridien-phuket",
+      "stay": "middle",
+      "date": "2027-01-23",
+      "chk_in": "2027-01-23",
+      "chk_out": "2027-01-31",
+      "nights": 8,
+      "rates": [
+        {
+          "code": "Agoda",
+          "name": "Agoda.com",
+          "rate": 361.0
+        },
+        {
+          "code": "BookingCom",
+          "name": "Booking.com",
+          "rate": 437.0
+        },
+        {
+          "code": "CtripTA",
+          "name": "Trip.com",
+          "rate": 438.0
+        },
+        {
+          "code": "Marriott1",
+          "name": "LeMeridien.com",
+          "rate": 440.0
+        }
+      ],
+      "min_rate": 361.0,
+      "min_site": "Agoda.com",
+      "total": 2888,
+      "total_pln": 12721,
+      "error": null
+    },
+    {
+      "hotel": "intercontinental-phuket",
+      "stay": "middle",
+      "date": "2027-01-23",
+      "chk_in": "2027-01-23",
+      "chk_out": "2027-02-01",
+      "nights": 9,
+      "rates": [
+        {
+          "code": "Agoda",
+          "name": "Agoda.com",
+          "rate": 645.0
+        },
+        {
+          "code": "IHG",
+          "name": "IHG",
+          "rate": 821.0
+        },
+        {
+          "code": "BookingCom",
+          "name": "Booking.com",
+          "rate": 826.0
+        },
+        {
+          "code": "CtripTA",
+          "name": "Trip.com",
+          "rate": 828.0
+        }
+      ],
+      "min_rate": 645.0,
+      "min_site": "Agoda.com",
+      "total": 5805,
+      "total_pln": 25570,
+      "error": null
+    },
+    {
+      "hotel": "le-meridien-phuket",
+      "stay": "middle",
+      "date": "2027-01-23",
+      "chk_in": "2027-01-23",
+      "chk_out": "2027-02-01",
+      "nights": 9,
+      "rates": [
+        {
+          "code": "Agoda",
+          "name": "Agoda.com",
+          "rate": 362.0
+        },
+        {
+          "code": "BookingCom",
+          "name": "Booking.com",
+          "rate": 437.0
+        },
+        {
+          "code": "Marriott1",
+          "name": "LeMeridien.com",
+          "rate": 440.0
+        }
+      ],
+      "min_rate": 362.0,
+      "min_site": "Agoda.com",
+      "total": 3258,
+      "total_pln": 14351,
+      "error": null
+    },
+    {
+      "hotel": "intercontinental-phuket",
+      "stay": "middle",
+      "date": "2027-01-24",
+      "chk_in": "2027-01-24",
+      "chk_out": "2027-01-30",
+      "nights": 6,
+      "rates": [
+        {
+          "code": "Agoda",
+          "name": "Agoda.com",
+          "rate": 543.0
+        },
+        {
+          "code": "BookingCom",
+          "name": "Booking.com",
+          "rate": 692.0
+        },
+        {
+          "code": "IHG",
+          "name": "IHG",
+          "rate": 829.0
+        }
+      ],
+      "min_rate": 543.0,
+      "min_site": "Agoda.com",
+      "total": 3258,
+      "total_pln": 14351,
+      "error": null
+    },
+    {
+      "hotel": "le-meridien-phuket",
+      "stay": "middle",
+      "date": "2027-01-24",
+      "chk_in": "2027-01-24",
+      "chk_out": "2027-01-30",
+      "nights": 6,
+      "rates": [
+        {
+          "code": "Agoda",
+          "name": "Agoda.com",
+          "rate": 362.0
+        },
+        {
+          "code": "BookingCom",
+          "name": "Booking.com",
+          "rate": 437.0
+        },
+        {
+          "code": "CtripTA",
+          "name": "Trip.com",
+          "rate": 438.0
+        },
+        {
+          "code": "Marriott1",
+          "name": "LeMeridien.com",
+          "rate": 440.0
+        }
+      ],
+      "min_rate": 362.0,
+      "min_site": "Agoda.com",
+      "total": 2172,
+      "total_pln": 9567,
+      "error": null
+    },
+    {
+      "hotel": "intercontinental-phuket",
+      "stay": "middle",
+      "date": "2027-01-24",
+      "chk_in": "2027-01-24",
+      "chk_out": "2027-01-31",
+      "nights": 7,
+      "rates": [
+        {
+          "code": "Agoda",
+          "name": "Agoda.com",
+          "rate": 652.0
+        },
+        {
+          "code": "IHG",
+          "name": "IHG",
+          "rate": 831.0
+        },
+        {
+          "code": "BookingCom",
+          "name": "Booking.com",
+          "rate": 836.0
+        },
+        {
+          "code": "CtripTA",
+          "name": "Trip.com",
+          "rate": 838.0
+        }
+      ],
+      "min_rate": 652.0,
+      "min_site": "Agoda.com",
+      "total": 4564,
+      "total_pln": 20104,
+      "error": null
+    },
+    {
+      "hotel": "le-meridien-phuket",
+      "stay": "middle",
+      "date": "2027-01-24",
+      "chk_in": "2027-01-24",
+      "chk_out": "2027-01-31",
+      "nights": 7,
+      "rates": [
+        {
+          "code": "Agoda",
+          "name": "Agoda.com",
+          "rate": 362.0
+        },
+        {
+          "code": "BookingCom",
+          "name": "Booking.com",
+          "rate": 437.0
+        },
+        {
+          "code": "Marriott1",
+          "name": "LeMeridien.com",
+          "rate": 440.0
+        }
+      ],
+      "min_rate": 362.0,
+      "min_site": "Agoda.com",
+      "total": 2534,
+      "total_pln": 11162,
+      "error": null
+    },
+    {
+      "hotel": "intercontinental-phuket",
+      "stay": "middle",
+      "date": "2027-01-24",
+      "chk_in": "2027-01-24",
+      "chk_out": "2027-02-01",
+      "nights": 8,
+      "rates": [
+        {
+          "code": "Agoda",
+          "name": "Agoda.com",
+          "rate": 641.0
+        },
+        {
+          "code": "IHG",
+          "name": "IHG",
+          "rate": 818.0
+        },
+        {
+          "code": "BookingCom",
+          "name": "Booking.com",
+          "rate": 823.0
+        },
+        {
+          "code": "CtripTA",
+          "name": "Trip.com",
+          "rate": 825.0
+        }
+      ],
+      "min_rate": 641.0,
+      "min_site": "Agoda.com",
+      "total": 5128,
+      "total_pln": 22588,
+      "error": null
+    },
+    {
+      "hotel": "le-meridien-phuket",
+      "stay": "middle",
+      "date": "2027-01-24",
+      "chk_in": "2027-01-24",
+      "chk_out": "2027-02-01",
+      "nights": 8,
+      "rates": [
+        {
+          "code": "Agoda",
+          "name": "Agoda.com",
+          "rate": 361.0
+        },
+        {
+          "code": "BookingCom",
+          "name": "Booking.com",
+          "rate": 437.0
+        },
+        {
+          "code": "CtripTA",
+          "name": "Trip.com",
+          "rate": 438.0
+        },
+        {
+          "code": "Marriott1",
+          "name": "LeMeridien.com",
+          "rate": 440.0
+        }
+      ],
+      "min_rate": 361.0,
+      "min_site": "Agoda.com",
+      "total": 2888,
+      "total_pln": 12721,
+      "error": null
+    },
+    {
+      "hotel": "intercontinental-phuket",
+      "stay": "middle",
+      "date": "2027-01-25",
+      "chk_in": "2027-01-25",
+      "chk_out": "2027-01-30",
+      "nights": 5,
+      "rates": [
+        {
+          "code": "Agoda",
+          "name": "Agoda.com",
+          "rate": 671.0
+        },
+        {
+          "code": "BookingCom",
+          "name": "Booking.com",
+          "rate": 860.0
+        },
+        {
+          "code": "IHG",
+          "name": "IHG",
+          "rate": 1033.0
+        }
+      ],
+      "min_rate": 671.0,
+      "min_site": "Agoda.com",
+      "total": 3355,
+      "total_pln": 14778,
+      "error": null
+    },
+    {
+      "hotel": "le-meridien-phuket",
+      "stay": "middle",
+      "date": "2027-01-25",
+      "chk_in": "2027-01-25",
+      "chk_out": "2027-01-30",
+      "nights": 5,
+      "rates": [
+        {
+          "code": "Agoda",
+          "name": "Agoda.com",
+          "rate": 362.0
+        },
+        {
+          "code": "BookingCom",
+          "name": "Booking.com",
+          "rate": 437.0
+        },
+        {
+          "code": "CtripTA",
+          "name": "Trip.com",
+          "rate": 438.0
+        },
+        {
+          "code": "Marriott1",
+          "name": "LeMeridien.com",
+          "rate": 440.0
+        }
+      ],
+      "min_rate": 362.0,
+      "min_site": "Agoda.com",
+      "total": 1810,
+      "total_pln": 7973,
+      "error": null
+    },
+    {
+      "hotel": "intercontinental-phuket",
+      "stay": "middle",
+      "date": "2027-01-25",
+      "chk_in": "2027-01-25",
+      "chk_out": "2027-01-31",
+      "nights": 6,
+      "rates": [
+        {
+          "code": "Agoda",
+          "name": "Agoda.com",
+          "rate": 658.0
+        },
+        {
+          "code": "IHG",
+          "name": "IHG",
+          "rate": 840.0
+        },
+        {
+          "code": "BookingCom",
+          "name": "Booking.com",
+          "rate": 845.0
+        },
+        {
+          "code": "CtripTA",
+          "name": "Trip.com",
+          "rate": 847.0
+        }
+      ],
+      "min_rate": 658.0,
+      "min_site": "Agoda.com",
+      "total": 3948,
+      "total_pln": 17390,
+      "error": null
+    },
+    {
+      "hotel": "le-meridien-phuket",
+      "stay": "middle",
+      "date": "2027-01-25",
+      "chk_in": "2027-01-25",
+      "chk_out": "2027-01-31",
+      "nights": 6,
+      "rates": [
+        {
+          "code": "Agoda",
+          "name": "Agoda.com",
+          "rate": 361.0
+        },
+        {
+          "code": "BookingCom",
+          "name": "Booking.com",
+          "rate": 437.0
+        },
+        {
+          "code": "CtripTA",
+          "name": "Trip.com",
+          "rate": 438.0
+        },
+        {
+          "code": "Marriott1",
+          "name": "LeMeridien.com",
+          "rate": 440.0
+        }
+      ],
+      "min_rate": 361.0,
+      "min_site": "Agoda.com",
+      "total": 2166,
+      "total_pln": 9541,
+      "error": null
+    },
+    {
+      "hotel": "intercontinental-phuket",
+      "stay": "middle",
+      "date": "2027-01-25",
+      "chk_in": "2027-01-25",
+      "chk_out": "2027-02-01",
+      "nights": 7,
+      "rates": [
+        {
+          "code": "Agoda",
+          "name": "Agoda.com",
+          "rate": 646.0
+        },
+        {
+          "code": "IHG",
+          "name": "IHG",
+          "rate": 824.0
+        },
+        {
+          "code": "BookingCom",
+          "name": "Booking.com",
+          "rate": 829.0
+        },
+        {
+          "code": "CtripTA",
+          "name": "Trip.com",
+          "rate": 831.0
+        }
+      ],
+      "min_rate": 646.0,
+      "min_site": "Agoda.com",
+      "total": 4522,
+      "total_pln": 19919,
+      "error": null
+    },
+    {
+      "hotel": "le-meridien-phuket",
+      "stay": "middle",
+      "date": "2027-01-25",
+      "chk_in": "2027-01-25",
+      "chk_out": "2027-02-01",
+      "nights": 7,
+      "rates": [
+        {
+          "code": "Agoda",
+          "name": "Agoda.com",
+          "rate": 362.0
+        },
+        {
+          "code": "BookingCom",
+          "name": "Booking.com",
+          "rate": 437.0
+        },
+        {
+          "code": "CtripTA",
+          "name": "Trip.com",
+          "rate": 438.0
+        },
+        {
+          "code": "Marriott1",
+          "name": "LeMeridien.com",
+          "rate": 440.0
+        }
+      ],
+      "min_rate": 362.0,
+      "min_site": "Agoda.com",
+      "total": 2534,
+      "total_pln": 11162,
+      "error": null
+    },
+    {
+      "hotel": "angsana-laguna",
+      "stay": "middle",
+      "date": "2027-01-23",
+      "chk_in": "2027-01-23",
+      "chk_out": "2027-01-30",
+      "nights": 7,
+      "rates": [
+        {
+          "code": "BookingCom",
+          "name": "Booking.com",
+          "rate": 498.0
+        },
+        {
+          "code": "Agoda",
+          "name": "Agoda.com",
+          "rate": 500.0
+        },
+        {
+          "code": "CtripTA",
+          "name": "Trip.com",
+          "rate": 1318.0
+        }
+      ],
+      "min_rate": 498.0,
+      "min_site": "Booking.com",
+      "total": 3486,
+      "total_pln": 15355,
+      "error": null
+    },
+    {
+      "hotel": "hyatt-regency-phuket",
+      "stay": "middle",
+      "date": "2027-01-23",
+      "chk_in": "2027-01-23",
+      "chk_out": "2027-01-30",
+      "nights": 7,
+      "rates": [
+        {
+          "code": "Agoda",
+          "name": "Agoda.com",
+          "rate": 301.0
+        },
+        {
+          "code": "BookingCom",
+          "name": "Booking.com",
+          "rate": 366.0
+        }
+      ],
+      "min_rate": 301.0,
+      "min_site": "Agoda.com",
+      "total": 2107,
+      "total_pln": 9281,
+      "error": null
+    },
+    {
+      "hotel": "jw-marriott-mai-khao",
+      "stay": "middle",
+      "date": "2027-01-23",
+      "chk_in": "2027-01-23",
+      "chk_out": "2027-01-30",
+      "nights": 7,
+      "rates": [
+        {
+          "code": "Agoda",
+          "name": "Agoda.com",
+          "rate": 476.0
+        },
+        {
+          "code": "BookingCom",
+          "name": "Booking.com",
+          "rate": 492.0
+        },
+        {
+          "code": "Marriott1",
+          "name": "JW Marriott",
+          "rate": 495.0
+        }
+      ],
+      "min_rate": 476.0,
+      "min_site": "Agoda.com",
+      "total": 3332,
+      "total_pln": 14677,
+      "error": null
+    },
+    {
+      "hotel": "angsana-laguna",
+      "stay": "middle",
+      "date": "2027-01-23",
+      "chk_in": "2027-01-23",
+      "chk_out": "2027-01-31",
+      "nights": 8,
+      "rates": [
+        {
+          "code": "BookingCom",
+          "name": "Booking.com",
+          "rate": 500.0
+        },
+        {
+          "code": "Agoda",
+          "name": "Agoda.com",
+          "rate": 502.0
+        },
+        {
+          "code": "CtripTA",
+          "name": "Trip.com",
+          "rate": 1309.0
+        }
+      ],
+      "min_rate": 500.0,
+      "min_site": "Booking.com",
+      "total": 4000,
+      "total_pln": 17619,
+      "error": null
+    },
+    {
+      "hotel": "hyatt-regency-phuket",
+      "stay": "middle",
+      "date": "2027-01-23",
+      "chk_in": "2027-01-23",
+      "chk_out": "2027-01-31",
+      "nights": 8,
+      "rates": [
+        {
+          "code": "Agoda",
+          "name": "Agoda.com",
+          "rate": 301.0
+        },
+        {
+          "code": "BookingCom",
+          "name": "Booking.com",
+          "rate": 366.0
+        }
+      ],
+      "min_rate": 301.0,
+      "min_site": "Agoda.com",
+      "total": 2408,
+      "total_pln": 10607,
+      "error": null
+    },
+    {
+      "hotel": "jw-marriott-mai-khao",
+      "stay": "middle",
+      "date": "2027-01-23",
+      "chk_in": "2027-01-23",
+      "chk_out": "2027-01-31",
+      "nights": 8,
+      "rates": [
+        {
+          "code": "Agoda",
+          "name": "Agoda.com",
+          "rate": 478.0
+        },
+        {
+          "code": "BookingCom",
+          "name": "Booking.com",
+          "rate": 492.0
+        },
+        {
+          "code": "Marriott1",
+          "name": "JW Marriott",
+          "rate": 495.0
+        }
+      ],
+      "min_rate": 478.0,
+      "min_site": "Agoda.com",
+      "total": 3824,
+      "total_pln": 16844,
+      "error": null
+    },
+    {
+      "hotel": "angsana-laguna",
+      "stay": "middle",
+      "date": "2027-01-23",
+      "chk_in": "2027-01-23",
+      "chk_out": "2027-02-01",
+      "nights": 9,
+      "rates": [
+        {
+          "code": "Agoda",
+          "name": "Agoda.com",
+          "rate": 502.0
+        }
+      ],
+      "min_rate": 502.0,
+      "min_site": "Agoda.com",
+      "total": 4518,
+      "total_pln": 19901,
+      "error": null
+    },
+    {
+      "hotel": "hyatt-regency-phuket",
+      "stay": "middle",
+      "date": "2027-01-23",
+      "chk_in": "2027-01-23",
+      "chk_out": "2027-02-01",
+      "nights": 9,
+      "rates": [
+        {
+          "code": "BookingCom",
+          "name": "Booking.com",
+          "rate": 366.0
+        },
+        {
+          "code": "Agoda",
+          "name": "Agoda.com",
+          "rate": 367.0
+        }
+      ],
+      "min_rate": 366.0,
+      "min_site": "Booking.com",
+      "total": 3294,
+      "total_pln": 14509,
+      "error": null
+    },
+    {
+      "hotel": "jw-marriott-mai-khao",
+      "stay": "middle",
+      "date": "2027-01-23",
+      "chk_in": "2027-01-23",
+      "chk_out": "2027-02-01",
+      "nights": 9,
+      "rates": [
+        {
+          "code": "Vio",
+          "name": "Vio.com",
+          "rate": 402.0
+        },
+        {
+          "code": "Agoda",
+          "name": "Agoda.com",
+          "rate": 476.0
+        },
+        {
+          "code": "BookingCom",
+          "name": "Booking.com",
+          "rate": 492.0
+        },
+        {
+          "code": "Marriott1",
+          "name": "JW Marriott",
+          "rate": 495.0
+        }
+      ],
+      "min_rate": 402.0,
+      "min_site": "Vio.com",
+      "total": 3618,
+      "total_pln": 15937,
+      "error": null
+    },
+    {
+      "hotel": "angsana-laguna",
+      "stay": "middle",
+      "date": "2027-01-24",
+      "chk_in": "2027-01-24",
+      "chk_out": "2027-01-30",
+      "nights": 6,
+      "rates": [
+        {
+          "code": "BookingCom",
+          "name": "Booking.com",
+          "rate": 535.0
+        },
+        {
+          "code": "Agoda",
+          "name": "Agoda.com",
+          "rate": 535.0
+        },
+        {
+          "code": "CtripTA",
+          "name": "Trip.com",
+          "rate": 1462.0
+        }
+      ],
+      "min_rate": 535.0,
+      "min_site": "Booking.com",
+      "total": 3210,
+      "total_pln": 14139,
+      "error": null
+    },
+    {
+      "hotel": "hyatt-regency-phuket",
+      "stay": "middle",
+      "date": "2027-01-24",
+      "chk_in": "2027-01-24",
+      "chk_out": "2027-01-30",
+      "nights": 6,
+      "rates": [
+        {
+          "code": "Agoda",
+          "name": "Agoda.com",
+          "rate": 300.0
+        },
+        {
+          "code": "BookingCom",
+          "name": "Booking.com",
+          "rate": 366.0
+        }
+      ],
+      "min_rate": 300.0,
+      "min_site": "Agoda.com",
+      "total": 1800,
+      "total_pln": 7929,
+      "error": null
+    },
+    {
+      "hotel": "jw-marriott-mai-khao",
+      "stay": "middle",
+      "date": "2027-01-24",
+      "chk_in": "2027-01-24",
+      "chk_out": "2027-01-30",
+      "nights": 6,
+      "rates": [
+        {
+          "code": "Agoda",
+          "name": "Agoda.com",
+          "rate": 478.0
+        },
+        {
+          "code": "BookingCom",
+          "name": "Booking.com",
+          "rate": 492.0
+        },
+        {
+          "code": "Marriott1",
+          "name": "JW Marriott",
+          "rate": 495.0
+        }
+      ],
+      "min_rate": 478.0,
+      "min_site": "Agoda.com",
+      "total": 2868,
+      "total_pln": 12633,
+      "error": null
+    },
+    {
+      "hotel": "angsana-laguna",
+      "stay": "middle",
+      "date": "2027-01-24",
+      "chk_in": "2027-01-24",
+      "chk_out": "2027-01-31",
+      "nights": 7,
+      "rates": [
+        {
+          "code": "BookingCom",
+          "name": "Booking.com",
+          "rate": 530.0
+        },
+        {
+          "code": "Agoda",
+          "name": "Agoda.com",
+          "rate": 531.0
+        },
+        {
+          "code": "CtripTA",
+          "name": "Trip.com",
+          "rate": 1400.0
+        }
+      ],
+      "min_rate": 530.0,
+      "min_site": "Booking.com",
+      "total": 3710,
+      "total_pln": 16342,
+      "error": null
+    },
+    {
+      "hotel": "hyatt-regency-phuket",
+      "stay": "middle",
+      "date": "2027-01-24",
+      "chk_in": "2027-01-24",
+      "chk_out": "2027-01-31",
+      "nights": 7,
+      "rates": [
+        {
+          "code": "Agoda",
+          "name": "Agoda.com",
+          "rate": 301.0
+        },
+        {
+          "code": "BookingCom",
+          "name": "Booking.com",
+          "rate": 366.0
+        }
+      ],
+      "min_rate": 301.0,
+      "min_site": "Agoda.com",
+      "total": 2107,
+      "total_pln": 9281,
+      "error": null
+    },
+    {
+      "hotel": "jw-marriott-mai-khao",
+      "stay": "middle",
+      "date": "2027-01-24",
+      "chk_in": "2027-01-24",
+      "chk_out": "2027-01-31",
+      "nights": 7,
+      "rates": [
+        {
+          "code": "Agoda",
+          "name": "Agoda.com",
+          "rate": 478.0
+        },
+        {
+          "code": "BookingCom",
+          "name": "Booking.com",
+          "rate": 492.0
+        },
+        {
+          "code": "Marriott1",
+          "name": "JW Marriott",
+          "rate": 495.0
+        }
+      ],
+      "min_rate": 478.0,
+      "min_site": "Agoda.com",
+      "total": 3346,
+      "total_pln": 14738,
+      "error": null
+    },
+    {
+      "hotel": "angsana-laguna",
+      "stay": "middle",
+      "date": "2027-01-24",
+      "chk_in": "2027-01-24",
+      "chk_out": "2027-02-01",
+      "nights": 8,
+      "rates": [
+        {
+          "code": "BookingCom",
+          "name": "Booking.com",
+          "rate": 528.0
+        },
+        {
+          "code": "Agoda",
+          "name": "Agoda.com",
+          "rate": 529.0
+        },
+        {
+          "code": "CtripTA",
+          "name": "Trip.com",
+          "rate": 1381.0
+        }
+      ],
+      "min_rate": 528.0,
+      "min_site": "Booking.com",
+      "total": 4224,
+      "total_pln": 18606,
+      "error": null
+    },
+    {
+      "hotel": "hyatt-regency-phuket",
+      "stay": "middle",
+      "date": "2027-01-24",
+      "chk_in": "2027-01-24",
+      "chk_out": "2027-02-01",
+      "nights": 8,
+      "rates": [
+        {
+          "code": "Agoda",
+          "name": "Agoda.com",
+          "rate": 301.0
+        },
+        {
+          "code": "BookingCom",
+          "name": "Booking.com",
+          "rate": 366.0
+        }
+      ],
+      "min_rate": 301.0,
+      "min_site": "Agoda.com",
+      "total": 2408,
+      "total_pln": 10607,
+      "error": null
+    },
+    {
+      "hotel": "jw-marriott-mai-khao",
+      "stay": "middle",
+      "date": "2027-01-24",
+      "chk_in": "2027-01-24",
+      "chk_out": "2027-02-01",
+      "nights": 8,
+      "rates": [
+        {
+          "code": "Agoda",
+          "name": "Agoda.com",
+          "rate": 476.0
+        },
+        {
+          "code": "BookingCom",
+          "name": "Booking.com",
+          "rate": 492.0
+        },
+        {
+          "code": "Marriott1",
+          "name": "JW Marriott",
+          "rate": 495.0
+        }
+      ],
+      "min_rate": 476.0,
+      "min_site": "Agoda.com",
+      "total": 3808,
+      "total_pln": 16773,
+      "error": null
+    },
+    {
+      "hotel": "angsana-laguna",
+      "stay": "middle",
+      "date": "2027-01-25",
+      "chk_in": "2027-01-25",
+      "chk_out": "2027-01-30",
+      "nights": 5,
+      "rates": [
+        {
+          "code": "BookingCom",
+          "name": "Booking.com",
+          "rate": 532.0
+        },
+        {
+          "code": "Agoda",
+          "name": "Agoda.com",
+          "rate": 532.0
+        },
+        {
+          "code": "CtripTA",
+          "name": "Trip.com",
+          "rate": 1426.0
+        }
+      ],
+      "min_rate": 532.0,
+      "min_site": "Booking.com",
+      "total": 2660,
+      "total_pln": 11717,
+      "error": null
+    },
+    {
+      "hotel": "hyatt-regency-phuket",
+      "stay": "middle",
+      "date": "2027-01-25",
+      "chk_in": "2027-01-25",
+      "chk_out": "2027-01-30",
+      "nights": 5,
+      "rates": [
+        {
+          "code": "Agoda",
+          "name": "Agoda.com",
+          "rate": 301.0
+        },
+        {
+          "code": "BookingCom",
+          "name": "Booking.com",
+          "rate": 366.0
+        }
+      ],
+      "min_rate": 301.0,
+      "min_site": "Agoda.com",
+      "total": 1505,
+      "total_pln": 6629,
+      "error": null
+    },
+    {
+      "hotel": "jw-marriott-mai-khao",
+      "stay": "middle",
+      "date": "2027-01-25",
+      "chk_in": "2027-01-25",
+      "chk_out": "2027-01-30",
+      "nights": 5,
+      "rates": [
+        {
+          "code": "Agoda",
+          "name": "Agoda.com",
+          "rate": 478.0
+        },
+        {
+          "code": "BookingCom",
+          "name": "Booking.com",
+          "rate": 492.0
+        },
+        {
+          "code": "Marriott1",
+          "name": "JW Marriott",
+          "rate": 495.0
+        }
+      ],
+      "min_rate": 478.0,
+      "min_site": "Agoda.com",
+      "total": 2390,
+      "total_pln": 10527,
+      "error": null
+    },
+    {
+      "hotel": "angsana-laguna",
+      "stay": "middle",
+      "date": "2027-01-25",
+      "chk_in": "2027-01-25",
+      "chk_out": "2027-01-31",
+      "nights": 6,
+      "rates": [
+        {
+          "code": "BookingCom",
+          "name": "Booking.com",
+          "rate": 529.0
+        },
+        {
+          "code": "Agoda",
+          "name": "Agoda.com",
+          "rate": 531.0
+        },
+        {
+          "code": "CtripTA",
+          "name": "Trip.com",
+          "rate": 1403.0
+        }
+      ],
+      "min_rate": 529.0,
+      "min_site": "Booking.com",
+      "total": 3174,
+      "total_pln": 13981,
+      "error": null
+    },
+    {
+      "hotel": "hyatt-regency-phuket",
+      "stay": "middle",
+      "date": "2027-01-25",
+      "chk_in": "2027-01-25",
+      "chk_out": "2027-01-31",
+      "nights": 6,
+      "rates": [
+        {
+          "code": "Agoda",
+          "name": "Agoda.com",
+          "rate": 301.0
+        },
+        {
+          "code": "BookingCom",
+          "name": "Booking.com",
+          "rate": 366.0
+        }
+      ],
+      "min_rate": 301.0,
+      "min_site": "Agoda.com",
+      "total": 1806,
+      "total_pln": 7955,
+      "error": null
+    },
+    {
+      "hotel": "jw-marriott-mai-khao",
+      "stay": "middle",
+      "date": "2027-01-25",
+      "chk_in": "2027-01-25",
+      "chk_out": "2027-01-31",
+      "nights": 6,
+      "rates": [
+        {
+          "code": "Agoda",
+          "name": "Agoda.com",
+          "rate": 478.0
+        },
+        {
+          "code": "BookingCom",
+          "name": "Booking.com",
+          "rate": 492.0
+        },
+        {
+          "code": "Marriott1",
+          "name": "JW Marriott",
+          "rate": 495.0
+        }
+      ],
+      "min_rate": 478.0,
+      "min_site": "Agoda.com",
+      "total": 2868,
+      "total_pln": 12633,
+      "error": null
+    },
+    {
+      "hotel": "angsana-laguna",
+      "stay": "middle",
+      "date": "2027-01-25",
+      "chk_in": "2027-01-25",
+      "chk_out": "2027-02-01",
+      "nights": 7,
+      "rates": [
+        {
+          "code": "BookingCom",
+          "name": "Booking.com",
+          "rate": 525.0
+        },
+        {
+          "code": "Agoda",
+          "name": "Agoda.com",
+          "rate": 526.0
+        },
+        {
+          "code": "CtripTA",
+          "name": "Trip.com",
+          "rate": 1350.0
+        }
+      ],
+      "min_rate": 525.0,
+      "min_site": "Booking.com",
+      "total": 3675,
+      "total_pln": 16188,
+      "error": null
+    },
+    {
+      "hotel": "hyatt-regency-phuket",
+      "stay": "middle",
+      "date": "2027-01-25",
+      "chk_in": "2027-01-25",
+      "chk_out": "2027-02-01",
+      "nights": 7,
+      "rates": [
+        {
+          "code": "Agoda",
+          "name": "Agoda.com",
+          "rate": 301.0
+        },
+        {
+          "code": "BookingCom",
+          "name": "Booking.com",
+          "rate": 366.0
+        }
+      ],
+      "min_rate": 301.0,
+      "min_site": "Agoda.com",
+      "total": 2107,
+      "total_pln": 9281,
+      "error": null
+    },
+    {
+      "hotel": "jw-marriott-mai-khao",
+      "stay": "middle",
+      "date": "2027-01-25",
+      "chk_in": "2027-01-25",
+      "chk_out": "2027-02-01",
+      "nights": 7,
+      "rates": [
+        {
+          "code": "Agoda",
+          "name": "Agoda.com",
+          "rate": 478.0
+        },
+        {
+          "code": "BookingCom",
+          "name": "Booking.com",
+          "rate": 492.0
+        },
+        {
+          "code": "Marriott1",
+          "name": "JW Marriott",
+          "rate": 495.0
+        }
+      ],
+      "min_rate": 478.0,
+      "min_site": "Agoda.com",
+      "total": 3346,
+      "total_pln": 14738,
+      "error": null
+    },
+    {
+      "hotel": "dusit-laguna",
+      "stay": "middle",
+      "date": "2027-01-23",
+      "chk_in": "2027-01-23",
+      "chk_out": "2027-01-30",
+      "nights": 7,
+      "rates": [
+        {
+          "code": "DerbySoft",
+          "name": "Official Site",
+          "rate": 438.0
+        },
+        {
+          "code": "Agoda",
+          "name": "Agoda.com",
+          "rate": 546.0
+        },
+        {
+          "code": "BookingCom",
+          "name": "Booking.com",
+          "rate": 556.0
+        }
+      ],
+      "min_rate": 438.0,
+      "min_site": "Official Site",
+      "total": 3066,
+      "total_pln": 13505,
+      "error": null
+    },
+    {
+      "hotel": "twinpalms",
+      "stay": "middle",
+      "date": "2027-01-23",
+      "chk_in": "2027-01-23",
+      "chk_out": "2027-01-30",
+      "nights": 7,
+      "rates": [
+        {
+          "code": "Vio",
+          "name": "Vio.com",
+          "rate": 879.0
+        }
+      ],
+      "min_rate": 879.0,
+      "min_site": "Vio.com",
+      "total": 6153,
+      "total_pln": 27103,
+      "error": null
+    },
+    {
+      "hotel": "the-nai-harn",
+      "stay": "middle",
+      "date": "2027-01-23",
+      "chk_in": "2027-01-23",
+      "chk_out": "2027-01-30",
+      "nights": 7,
+      "rates": [
+        {
+          "code": "Agoda",
+          "name": "Agoda.com",
+          "rate": 411.0
+        },
+        {
+          "code": "BookingCom",
+          "name": "Booking.com",
+          "rate": 562.0
+        }
+      ],
+      "min_rate": 411.0,
+      "min_site": "Agoda.com",
+      "total": 2877,
+      "total_pln": 12673,
+      "error": null
+    },
+    {
+      "hotel": "dusit-laguna",
+      "stay": "middle",
+      "date": "2027-01-23",
+      "chk_in": "2027-01-23",
+      "chk_out": "2027-01-31",
+      "nights": 8,
+      "rates": [
+        {
+          "code": "DerbySoft",
+          "name": "Official Site",
+          "rate": 437.0
+        },
+        {
+          "code": "Agoda",
+          "name": "Agoda.com",
+          "rate": 545.0
+        },
+        {
+          "code": "BookingCom",
+          "name": "Booking.com",
+          "rate": 554.0
+        }
+      ],
+      "min_rate": 437.0,
+      "min_site": "Official Site",
+      "total": 3496,
+      "total_pln": 15399,
+      "error": null
+    },
+    {
+      "hotel": "twinpalms",
+      "stay": "middle",
+      "date": "2027-01-23",
+      "chk_in": "2027-01-23",
+      "chk_out": "2027-01-31",
+      "nights": 8,
+      "rates": [
+        {
+          "code": "Vio",
+          "name": "Vio.com",
+          "rate": 877.0
+        }
+      ],
+      "min_rate": 877.0,
+      "min_site": "Vio.com",
+      "total": 7016,
+      "total_pln": 30904,
+      "error": null
+    },
+    {
+      "hotel": "the-nai-harn",
+      "stay": "middle",
+      "date": "2027-01-23",
+      "chk_in": "2027-01-23",
+      "chk_out": "2027-01-31",
+      "nights": 8,
+      "rates": [
+        {
+          "code": "BookingCom",
+          "name": "Booking.com",
+          "rate": 561.0
+        }
+      ],
+      "min_rate": 561.0,
+      "min_site": "Booking.com",
+      "total": 4488,
+      "total_pln": 19769,
+      "error": null
+    },
+    {
+      "hotel": "dusit-laguna",
+      "stay": "middle",
+      "date": "2027-01-23",
+      "chk_in": "2027-01-23",
+      "chk_out": "2027-02-01",
+      "nights": 9,
+      "rates": [
+        {
+          "code": "DerbySoft",
+          "name": "Official Site",
+          "rate": 436.0
+        },
+        {
+          "code": "Agoda",
+          "name": "Agoda.com",
+          "rate": 545.0
+        },
+        {
+          "code": "BookingCom",
+          "name": "Booking.com",
+          "rate": 554.0
+        }
+      ],
+      "min_rate": 436.0,
+      "min_site": "Official Site",
+      "total": 3924,
+      "total_pln": 17284,
+      "error": null
+    },
+    {
+      "hotel": "twinpalms",
+      "stay": "middle",
+      "date": "2027-01-23",
+      "chk_in": "2027-01-23",
+      "chk_out": "2027-02-01",
+      "nights": 9,
+      "rates": [
+        {
+          "code": "Vio",
+          "name": "Vio.com",
+          "rate": 876.0
+        }
+      ],
+      "min_rate": 876.0,
+      "min_site": "Vio.com",
+      "total": 7884,
+      "total_pln": 34727,
+      "error": null
+    },
+    {
+      "hotel": "the-nai-harn",
+      "stay": "middle",
+      "date": "2027-01-23",
+      "chk_in": "2027-01-23",
+      "chk_out": "2027-02-01",
+      "nights": 9,
+      "rates": [
+        {
+          "code": "BookingCom",
+          "name": "Booking.com",
+          "rate": 559.0
+        }
+      ],
+      "min_rate": 559.0,
+      "min_site": "Booking.com",
+      "total": 5031,
+      "total_pln": 22161,
+      "error": null
+    },
+    {
+      "hotel": "dusit-laguna",
+      "stay": "middle",
+      "date": "2027-01-24",
+      "chk_in": "2027-01-24",
+      "chk_out": "2027-01-30",
+      "nights": 6,
+      "rates": [
+        {
+          "code": "DerbySoft",
+          "name": "Official Site",
+          "rate": 433.0
+        },
+        {
+          "code": "Agoda",
+          "name": "Agoda.com",
+          "rate": 542.0
+        },
+        {
+          "code": "BookingCom",
+          "name": "Booking.com",
+          "rate": 550.0
+        }
+      ],
+      "min_rate": 433.0,
+      "min_site": "Official Site",
+      "total": 2598,
+      "total_pln": 11444,
+      "error": null
+    },
+    {
+      "hotel": "twinpalms",
+      "stay": "middle",
+      "date": "2027-01-24",
+      "chk_in": "2027-01-24",
+      "chk_out": "2027-01-30",
+      "nights": 6,
+      "rates": [],
+      "min_rate": null,
+      "min_site": null,
+      "total": null,
+      "total_pln": null,
+      "error": null
+    },
+    {
+      "hotel": "the-nai-harn",
+      "stay": "middle",
+      "date": "2027-01-24",
+      "chk_in": "2027-01-24",
+      "chk_out": "2027-01-30",
+      "nights": 6,
+      "rates": [
+        {
+          "code": "BookingCom",
+          "name": "Booking.com",
+          "rate": 564.0
+        }
+      ],
+      "min_rate": 564.0,
+      "min_site": "Booking.com",
+      "total": 3384,
+      "total_pln": 14906,
+      "error": null
+    },
+    {
+      "hotel": "dusit-laguna",
+      "stay": "middle",
+      "date": "2027-01-24",
+      "chk_in": "2027-01-24",
+      "chk_out": "2027-01-31",
+      "nights": 7,
+      "rates": [
+        {
+          "code": "DerbySoft",
+          "name": "Official Site",
+          "rate": 432.0
+        },
+        {
+          "code": "Agoda",
+          "name": "Agoda.com",
+          "rate": 541.0
+        },
+        {
+          "code": "BookingCom",
+          "name": "Booking.com",
+          "rate": 549.0
+        }
+      ],
+      "min_rate": 432.0,
+      "min_site": "Official Site",
+      "total": 3024,
+      "total_pln": 13320,
+      "error": null
+    },
+    {
+      "hotel": "twinpalms",
+      "stay": "middle",
+      "date": "2027-01-24",
+      "chk_in": "2027-01-24",
+      "chk_out": "2027-01-31",
+      "nights": 7,
+      "rates": [
+        {
+          "code": "Vio",
+          "name": "Vio.com",
+          "rate": 865.0
+        }
+      ],
+      "min_rate": 865.0,
+      "min_site": "Vio.com",
+      "total": 6055,
+      "total_pln": 26671,
+      "error": null
+    },
+    {
+      "hotel": "the-nai-harn",
+      "stay": "middle",
+      "date": "2027-01-24",
+      "chk_in": "2027-01-24",
+      "chk_out": "2027-01-31",
+      "nights": 7,
+      "rates": [
+        {
+          "code": "BookingCom",
+          "name": "Booking.com",
+          "rate": 562.0
+        }
+      ],
+      "min_rate": 562.0,
+      "min_site": "Booking.com",
+      "total": 3934,
+      "total_pln": 17328,
+      "error": null
+    },
+    {
+      "hotel": "dusit-laguna",
+      "stay": "middle",
+      "date": "2027-01-24",
+      "chk_in": "2027-01-24",
+      "chk_out": "2027-02-01",
+      "nights": 8,
+      "rates": [
+        {
+          "code": "DerbySoft",
+          "name": "Official Site",
+          "rate": 432.0
+        },
+        {
+          "code": "Agoda",
+          "name": "Agoda.com",
+          "rate": 541.0
+        },
+        {
+          "code": "BookingCom",
+          "name": "Booking.com",
+          "rate": 549.0
+        }
+      ],
+      "min_rate": 432.0,
+      "min_site": "Official Site",
+      "total": 3456,
+      "total_pln": 15223,
+      "error": null
+    },
+    {
+      "hotel": "twinpalms",
+      "stay": "middle",
+      "date": "2027-01-24",
+      "chk_in": "2027-01-24",
+      "chk_out": "2027-02-01",
+      "nights": 8,
+      "rates": [
+        {
+          "code": "Vio",
+          "name": "Vio.com",
+          "rate": 865.0
+        }
+      ],
+      "min_rate": 865.0,
+      "min_site": "Vio.com",
+      "total": 6920,
+      "total_pln": 30481,
+      "error": null
+    },
+    {
+      "hotel": "the-nai-harn",
+      "stay": "middle",
+      "date": "2027-01-24",
+      "chk_in": "2027-01-24",
+      "chk_out": "2027-02-01",
+      "nights": 8,
+      "rates": [
+        {
+          "code": "Agoda",
+          "name": "Agoda.com",
+          "rate": 411.0
+        },
+        {
+          "code": "BookingCom",
+          "name": "Booking.com",
+          "rate": 561.0
+        }
+      ],
+      "min_rate": 411.0,
+      "min_site": "Agoda.com",
+      "total": 3288,
+      "total_pln": 14483,
+      "error": null
+    },
+    {
+      "hotel": "dusit-laguna",
+      "stay": "middle",
+      "date": "2027-01-25",
+      "chk_in": "2027-01-25",
+      "chk_out": "2027-01-30",
+      "nights": 5,
+      "rates": [
+        {
+          "code": "DerbySoft",
+          "name": "Official Site",
+          "rate": 435.0
+        },
+        {
+          "code": "Agoda",
+          "name": "Agoda.com",
+          "rate": 542.0
+        },
+        {
+          "code": "BookingCom",
+          "name": "Booking.com",
+          "rate": 552.0
+        }
+      ],
+      "min_rate": 435.0,
+      "min_site": "Official Site",
+      "total": 2175,
+      "total_pln": 9580,
+      "error": null
+    },
+    {
+      "hotel": "twinpalms",
+      "stay": "middle",
+      "date": "2027-01-25",
+      "chk_in": "2027-01-25",
+      "chk_out": "2027-01-30",
+      "nights": 5,
+      "rates": [],
+      "min_rate": null,
+      "min_site": null,
+      "total": null,
+      "total_pln": null,
+      "error": null
+    },
+    {
+      "hotel": "the-nai-harn",
+      "stay": "middle",
+      "date": "2027-01-25",
+      "chk_in": "2027-01-25",
+      "chk_out": "2027-01-30",
+      "nights": 5,
+      "rates": [
+        {
+          "code": "BookingCom",
+          "name": "Booking.com",
+          "rate": 561.0
+        }
+      ],
+      "min_rate": 561.0,
+      "min_site": "Booking.com",
+      "total": 2805,
+      "total_pln": 12355,
+      "error": null
+    },
+    {
+      "hotel": "dusit-laguna",
+      "stay": "middle",
+      "date": "2027-01-25",
+      "chk_in": "2027-01-25",
+      "chk_out": "2027-01-31",
+      "nights": 6,
+      "rates": [
+        {
+          "code": "DerbySoft",
+          "name": "Official Site",
+          "rate": 433.0
+        },
+        {
+          "code": "Agoda",
+          "name": "Agoda.com",
+          "rate": 541.0
+        },
+        {
+          "code": "BookingCom",
+          "name": "Booking.com",
+          "rate": 551.0
+        }
+      ],
+      "min_rate": 433.0,
+      "min_site": "Official Site",
+      "total": 2598,
+      "total_pln": 11444,
+      "error": null
+    },
+    {
+      "hotel": "twinpalms",
+      "stay": "middle",
+      "date": "2027-01-25",
+      "chk_in": "2027-01-25",
+      "chk_out": "2027-01-31",
+      "nights": 6,
+      "rates": [],
+      "min_rate": null,
+      "min_site": null,
+      "total": null,
+      "total_pln": null,
+      "error": null
+    },
+    {
+      "hotel": "the-nai-harn",
+      "stay": "middle",
+      "date": "2027-01-25",
+      "chk_in": "2027-01-25",
+      "chk_out": "2027-01-31",
+      "nights": 6,
+      "rates": [
+        {
+          "code": "BookingCom",
+          "name": "Booking.com",
+          "rate": 559.0
+        }
+      ],
+      "min_rate": 559.0,
+      "min_site": "Booking.com",
+      "total": 3354,
+      "total_pln": 14774,
+      "error": null
+    },
+    {
+      "hotel": "dusit-laguna",
+      "stay": "middle",
+      "date": "2027-01-25",
+      "chk_in": "2027-01-25",
+      "chk_out": "2027-02-01",
+      "nights": 7,
+      "rates": [
+        {
+          "code": "DerbySoft",
+          "name": "Official Site",
+          "rate": 433.0
+        },
+        {
+          "code": "Agoda",
+          "name": "Agoda.com",
+          "rate": 542.0
+        },
+        {
+          "code": "BookingCom",
+          "name": "Booking.com",
+          "rate": 550.0
+        }
+      ],
+      "min_rate": 433.0,
+      "min_site": "Official Site",
+      "total": 3031,
+      "total_pln": 13351,
+      "error": null
+    },
+    {
+      "hotel": "twinpalms",
+      "stay": "middle",
+      "date": "2027-01-25",
+      "chk_in": "2027-01-25",
+      "chk_out": "2027-02-01",
+      "nights": 7,
+      "rates": [
+        {
+          "code": "Vio",
+          "name": "Vio.com",
+          "rate": 732.0
+        }
+      ],
+      "min_rate": 732.0,
+      "min_site": "Vio.com",
+      "total": 5124,
+      "total_pln": 22570,
+      "error": null
+    },
+    {
+      "hotel": "the-nai-harn",
+      "stay": "middle",
+      "date": "2027-01-25",
+      "chk_in": "2027-01-25",
+      "chk_out": "2027-02-01",
+      "nights": 7,
+      "rates": [
+        {
+          "code": "BookingCom",
+          "name": "Booking.com",
+          "rate": 558.0
+        }
+      ],
+      "min_rate": 558.0,
+      "min_site": "Booking.com",
+      "total": 3906,
+      "total_pln": 17205,
+      "error": null
+    }
+  ],
+  "batches": 4
+}
