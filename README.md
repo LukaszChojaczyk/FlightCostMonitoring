@@ -1,6 +1,6 @@
 # FlightCostMonitoring
 
-Twice a day a GitHub Action asks SerpApi (Google Flights) for prices on the routes in
+Once a day a GitHub Action asks SerpApi (Google Flights) for prices on the routes in
 `config/routes.json` and commits the results as JSON under `data/`. A static GitHub Pages
 dashboard can read those files directly.
 
@@ -21,7 +21,7 @@ round-trip total for all three passengers.
 - It checks the remaining SerpApi quota first (that check is free). Searches left over after
   reserving enough for every remaining run this month are spent on fetching the actual
   return flights for the cheapest deals (`return_details_top_n` per route at most). On the
-  free plan (250/month) that is usually about one extra search per run.
+  free plan (250/month) with one run a day that is usually the full `return_details_top_n`.
 - Google Flights has no checked-bag data, so every airline gets a flag from
   `config/airlines_baggage.json`: `included`, `fare-dependent`, `extra` or `unknown`.
   An itinerary takes the worst flag of its airlines. Always confirm on the airline site.
@@ -31,7 +31,7 @@ round-trip total for all three passengers.
 `scripts/scrape_prices.py` reads Google Flights pages directly with the
 [fast-flights](https://pypi.org/project/fast-flights/) package, so it needs no API key and
 uses no quota. It has its own workflow, "Scrape Google Flights"
-(`.github/workflows/scrape-prices.yml`), which runs at 05:33 and 17:33 UTC and can be started
+(`.github/workflows/scrape-prices.yml`), which runs daily at 11:00 UTC (12:00 in Poland in winter) and can be started
 by hand from the Actions tab ("Run workflow") at no cost. It makes one request per origin
 and return date, limited to the airlines in the route's `scraper.airlines`
 (currently Emirates, Etihad and Qatar Airways). Google may block or change the page at any
@@ -72,7 +72,7 @@ so check the budget: runs per day x airport groups x return dates x 31 should st
 
 ## Running
 
-- Automatically at 05:23 and 17:23 UTC (06:23 and 18:23 in Poland).
+- Automatically at 06:00 UTC: 07:00 in Poland in winter, 08:00 in summer (GitHub cron is UTC). GitHub often starts scheduled runs 5-30 minutes late.
 - Manually: Actions tab, "Fetch flight prices", "Run workflow" (optionally one route id).
 - Locally without a key: `DRY_RUN=1 python scripts/fetch_prices.py` uses the fixtures in
   `tests/fixtures` (it overwrites `data/`, so don't commit that output).

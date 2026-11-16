@@ -2,7 +2,7 @@
   "settings": {
     "monthly_search_budget": 250,
     "reserve_searches": 10,
-    "runs_per_day": 2,
+    "runs_per_day": 1,
     "max_airports_per_search": 7,
     "currency": "PLN",
     "hl": "en",

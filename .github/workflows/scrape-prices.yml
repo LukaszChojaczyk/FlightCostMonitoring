@@ -5,9 +5,8 @@ name: Scrape Google Flights
 # Actions tab, "Scrape Google Flights", "Run workflow".
 on:
   schedule:
-    # 10 minutes after the SerpApi fetch so the two data commits don't race.
-    - cron: "33 5 * * *"
-    - cron: "33 17 * * *"
+    # Once a day at 11:00 UTC = 12:00 Polish winter time (13:00 in summer: cron is UTC).
+    - cron: "0 11 * * *"
   workflow_dispatch:
 
 permissions:
