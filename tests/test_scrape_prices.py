@@ -55,14 +55,18 @@ class ScrapeTests(unittest.TestCase):
         ff = FakeFastFlights()
         snap = sp.scrape_route(ff, route, cfg["settings"], bags, "2026-11-16T00:00:00+00:00", pause=0)
 
-        self.assertEqual(len(ff.queries), len(route["origins"]) * len(route["return_dates"]))
+        days = 2 * route["scraper"].get("outbound_flex_days", 0) + 1
+        self.assertEqual(len(ff.queries), days * len(route["origins"]) * len(route["return_dates"]))
         q = ff.queries[0]
         self.assertEqual(q["trip"], "round-trip")
-        self.assertEqual(q["flights"][0]["airlines"], ["EK", "EY", "QR"])
+        self.assertEqual(q["flights"][0]["airlines"], route["scraper"]["airlines"])
+        self.assertEqual(q["flights"][0]["date"], sp.outbound_dates(route)[0])
         self.assertEqual(q["flights"][1]["from_airport"], "BKK")
         self.assertEqual(q["passengers"]["adults"], 3)
 
+        self.assertEqual(len(snap["results"]), days * len(route["return_dates"]))
         r = snap["results"][0]
+        self.assertEqual(r["outbound_date"], sp.outbound_dates(route)[0])
         self.assertEqual(r["errors"], ["PRG: RuntimeError: blocked"])  # WRO had no flights, not an error
         self.assertEqual({o["origin"] for o in r["options"]}, {"WAW", "BER"})
         best = r["options"][0]
@@ -75,6 +79,13 @@ class ScrapeTests(unittest.TestCase):
         rows = sp.summarize(snap)
         self.assertEqual(rows[0]["min_price"], 9200)
         self.assertEqual(rows[0]["errors"], 1)
+        self.assertEqual(rows[0]["outbound_date"], r["outbound_date"])
+
+    def test_outbound_dates_flex(self):
+        route = {"outbound_date": "2027-01-19", "scraper": {"outbound_flex_days": 2}}
+        self.assertEqual(sp.outbound_dates(route),
+                         ["2027-01-17", "2027-01-18", "2027-01-19", "2027-01-20", "2027-01-21"])
+        self.assertEqual(sp.outbound_dates({"outbound_date": "2027-01-19", "scraper": {}}), ["2027-01-19"])
 
 
 if __name__ == "__main__":

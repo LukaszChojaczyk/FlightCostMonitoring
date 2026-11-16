@@ -29,6 +29,8 @@
     view: "best",
     shown: PAGE_SIZE,
     source: ["all", "api", "scraper"].includes(store.get("source")) ? store.get("source") : "all",
+    flex: store.get("flex") === "flex" ? "flex" : "exact", // departure: main date only, or +/- flex days
+    outDate: "all",
     length: "any",
   };
 
@@ -126,7 +128,6 @@
     ]);
     bundle = { id, latest, history, scraped, scrapedHistory, summary: index.routes.find((r) => r.id === id) };
     bundle.allOptions = buildOptions(bundle);
-    bundle.timeline = buildTimeline(bundle);
     render();
   }
 
@@ -156,6 +157,7 @@
         out.push({
           source: "api",
           fetchedAt: b.latest.fetched_at,
+          outDate: r.outbound_date || info.outbound_date,
           returnDate: r.return_date,
           price: o.price,
           pp: o.price_per_person ?? Math.round(o.price / pax),
@@ -176,7 +178,7 @@
           longTrip: typeof o.long_trip === "boolean" ? o.long_trip : null,
           durationLabel: o.duration_label || null,
           ret: o.return_leg || null,
-          url: urlGroup?.url || gfSearchUrl(o.origin, o.destination, info.outbound_date, r.return_date),
+          url: urlGroup?.url || gfSearchUrl(o.origin, o.destination, r.outbound_date || info.outbound_date, r.return_date),
           exactLink: !!urlGroup,
         });
       }
@@ -187,6 +189,7 @@
         out.push({
           source: "scraper",
           fetchedAt: b.scraped.fetched_at,
+          outDate: r.outbound_date || info.outbound_date,
           returnDate: r.return_date,
           price: o.price,
           pp: o.price_per_person ?? Math.round(o.price / pax),
@@ -207,7 +210,7 @@
           longTrip: typeof o.long_trip === "boolean" ? o.long_trip : null,
           durationLabel: o.duration_label || null,
           ret: null,
-          url: gfSearchUrl(o.origin, o.destination, info.outbound_date, r.return_date),
+          url: gfSearchUrl(o.origin, o.destination, r.outbound_date || info.outbound_date, r.return_date),
           exactLink: false,
         });
       }
@@ -216,10 +219,12 @@
   }
 
   /* One point per check: the cheapest known price per return date, per source and combined. */
-  function buildTimeline(b) {
+  function buildTimeline(b, flex) {
+    const main = routeInfo().outbound_date;
+    const keep = (e) => flex || !e.outbound_date || e.outbound_date === main;
     const rows = [];
-    for (const e of b.history?.entries || []) rows.push({ ...e, source: "api" });
-    for (const e of b.scrapedHistory?.entries || []) rows.push({ ...e, source: "scraper" });
+    for (const e of b.history?.entries || []) if (keep(e)) rows.push({ ...e, source: "api" });
+    for (const e of b.scrapedHistory?.entries || []) if (keep(e)) rows.push({ ...e, source: "scraper" });
     rows.sort((a, c) => a.fetched_at.localeCompare(c.fetched_at));
     const dates = [...new Set([...(routeInfo().return_dates || []), ...rows.map((r) => r.return_date)])].sort();
     const current = { api: {}, scraper: {} };
@@ -230,7 +235,9 @@
       const src = rows[i].source;
       const run = {};
       while (i < rows.length && rows[i].fetched_at === t && rows[i].source === src) {
-        run[rows[i].return_date] = rows[i].min_price ?? null;
+        // with flexible departure several rows share a return date: keep the cheapest
+        const rd = rows[i].return_date, p = rows[i].min_price ?? null;
+        if (!(rd in run) || (p != null && (run[rd] == null || p < run[rd]))) run[rd] = p;
         i++;
       }
       // a run that failed for a date tells us nothing new; keep the last known price for "both"
@@ -269,8 +276,13 @@
 
   function render() {
     // the page-wide source switch: every section below works on bundle.options
-    bundle.options = bundle.allOptions.filter((o) => state.source === "all" || o.source === state.source);
+    const main = routeInfo().outbound_date;
+    const flexOn = state.flex === "flex";
+    bundle.options = bundle.allOptions.filter((o) =>
+      (state.source === "all" || o.source === state.source) && (flexOn || o.outDate === main));
+    bundle.timeline = buildTimeline(bundle, flexOn);
     renderSourceSwitch();
+    renderFlexSwitch();
     const info = routeInfo();
     $("route-name").textContent = info.name || bundle.id;
     document.title = `Flight prices · ${info.name || bundle.id}`;
@@ -286,6 +298,27 @@
     renderOptions();
     renderTrend();
     renderInfo();
+  }
+
+  function flexDays() {
+    const sc = (config?.routes || []).find((x) => x.id === bundle.id)?.scraper;
+    return Number(sc?.outbound_flex_days) || 0;
+  }
+  const isFlexDate = (o) => o.outDate && o.outDate !== routeInfo().outbound_date;
+  function dayShift(o) {
+    const d = Math.round((Date.parse(o.outDate) - Date.parse(routeInfo().outbound_date)) / 86400000);
+    return d > 0 ? `+${d}` : `${d}`;
+  }
+
+  function renderFlexSwitch() {
+    const main = routeInfo().outbound_date;
+    const hasFlex = flexDays() > 0 || bundle.allOptions.some(isFlexDate);
+    $("flex-switch").hidden = !hasFlex || !main;
+    if ($("flex-switch").hidden) return;
+    const n = bundle.allOptions.filter((o) => (state.source === "all" || o.source === state.source) && isFlexDate(o)).length;
+    const days = flexDays() || 2;
+    $("flex-switch").innerHTML = [["exact", `Out ${fmtDateShort(main)} only`], ["flex", `± ${days} days`]].map(([v, t]) =>
+      `<button type="button" data-f="${v}" aria-pressed="${state.flex === v}">${esc(t)}${v === "flex" ? ` <span class="n">+${n}</span>` : ""}</button>`).join("");
   }
 
   function renderSourceSwitch() {
@@ -324,6 +357,7 @@
   function badges(o, withSource = true) {
     const bagNote = o.baggage.map((x) => `${x.airline}: ${x.note}`).join(" · ");
     return [
+      isFlexDate(o) ? `<span class="badge flex">Out ${esc(fmtDateShort(o.outDate))} · ${dayShift(o)} day${Math.abs(Number(dayShift(o))) === 1 ? "" : "s"}</span>` : "",
       `<span class="badge bag ${esc(o.bag)}" title="${esc(bagNote)}">${esc(BAG_LABEL[o.bag] || o.bag)}</span>`,
       `<span class="badge">${o.stops === 0 ? "Direct" : o.stops === 1 ? `1 stop${o.via.length ? " · " + esc(o.via.join(", ")) : ""}` : `${o.stops} stops`}</span>`,
       isLong(o) ? `<span class="badge long" title="${esc(o.durationLabel || `Longer than the preferred ${Math.round(preferredMinutes() / 60)} h per direction`)}">${o.durationLabel ? esc(o.durationLabel) : `Longer trip · ${dur(longestMinutes(o))}`}</span>` : "",
@@ -363,7 +397,7 @@
         <div class="hero-label">Cheapest right now${state.source === "all" ? "" : " · " + esc(SOURCE_NAME[state.source])} · ${paxCount()} passengers, round trip</div>
         <div class="hero-price">${money(best.price, cur)}</div>
         <div class="hero-pp">${money(best.pp, cur)} per person</div>
-        <div class="hero-what"><b>${esc(best.airlines.join(" + "))}</b> · ${esc(best.origin)} → ${esc(best.destination)} · back ${esc(fmtDate(best.returnDate))}</div>
+        <div class="hero-route"><b>${esc(best.airlines.join(" + "))}</b> · ${esc(best.origin)} → ${esc(best.destination)} · out ${esc(fmtDate(best.outDate))} · back ${esc(fmtDate(best.returnDate))}</div>
         <div class="hero-what">${badges(best)}</div>
       </div>
       <div class="hero-side">
@@ -392,7 +426,7 @@
       const o = cell[org + "|" + d];
       if (!o) return `<td class="none">–</td>`;
       const active = state.origin === org && state.returnDate === d;
-      return `<td class="${o.price === min ? "best" : ""}"><button type="button" data-o="${esc(org)}" data-d="${esc(d)}" class="${active ? "active" : ""}" aria-label="${esc(org)}, back ${esc(fmtDate(d))}: ${money(o.price, cur)}">${money(o.price, cur)}<span class="sub">${esc(o.airlines.join(" + "))}</span></button></td>`;
+      return `<td class="${o.price === min ? "best" : ""}"><button type="button" data-o="${esc(org)}" data-d="${esc(d)}" class="${active ? "active" : ""}" aria-label="${esc(org)}, back ${esc(fmtDate(d))}: ${money(o.price, cur)}">${money(o.price, cur)}<span class="sub">${esc(o.airlines.join(" + "))}${isFlexDate(o) ? ` · out ${esc(fmtDateShort(o.outDate))}` : ""}</span></button></td>`;
     }).join("")}</tr>`).join("");
     $("matrix").innerHTML = head + `<tbody>${body}</tbody>`;
   }
@@ -407,6 +441,7 @@
     const dates = [...new Set([...(info.return_dates || []), ...bundle.options.map((o) => o.returnDate)])].sort();
     const origins = [...new Set([...(info.origins || []), ...bundle.options.map((o) => o.origin)])];
     $("filters").innerHTML = [
+      state.flex === "flex" ? chipRow("Out", "outDate", [["all", "Any day"], ...[...new Set(bundle.options.map((o) => o.outDate))].sort().map((d) => [d, fmtDate(d)])]) : "",
       chipRow("Back", "returnDate", [["all", "Any day"], ...dates.map((d) => [d, fmtDate(d)])]),
       chipRow("From", "origin", [["all", "Any airport"], ...origins.map((o) => [o, o])]),
       chipRow("Bags", "bags", [["any", "Any"], ["included", "Included only"], ["ok", "Included or by fare"]]),
@@ -418,13 +453,14 @@
   function filteredOptions() {
     let list = bundle.options.filter((o) =>
       (state.returnDate === "all" || o.returnDate === state.returnDate) &&
+      (state.outDate === "all" || o.outDate === state.outDate) &&
       (state.origin === "all" || o.origin === state.origin) &&
       (state.length === "any" || !isLong(o)) &&
       (state.bags === "any" || (state.bags === "included" ? o.bag === "included" : o.bag === "included" || o.bag === "fare-dependent")));
     if (state.view === "best") {
       const seen = new Set();
       list = list.filter((o) => {
-        const k = `${o.returnDate}|${o.origin}|${o.airlines.join("+")}`;
+        const k = `${o.outDate}|${o.returnDate}|${o.origin}|${o.airlines.join("+")}`;
         if (seen.has(k)) return false;
         seen.add(k);
         return true;
@@ -461,7 +497,7 @@
         <div class="opt-head">
           <div>
             <div class="opt-air">${esc(o.airlines.join(" + "))}</div>
-            <div class="opt-route">${esc(o.origin)} ${esc(hm(o.dep))} → ${esc(o.destination)} ${esc(hm(o.arr))}${plusDays(o.dep, o.arr)} · ${esc(fmtDateShort(info.outbound_date || o.dep?.slice(0, 10) || ""))}${o.minutes ? ` · ${dur(o.minutes)} ${o.minutesLabel}` : ""}</div>
+            <div class="opt-route">${esc(o.origin)} ${esc(hm(o.dep))} → ${esc(o.destination)} ${esc(hm(o.arr))}${plusDays(o.dep, o.arr)} · ${esc(fmtDate(o.outDate || o.dep?.slice(0, 10) || ""))}${o.minutes ? ` · ${dur(o.minutes)} ${o.minutesLabel}` : ""}</div>
             <div class="opt-route">Back ${esc(fmtDate(o.returnDate))}${ret ? ` · ${esc(ret.origin)} ${esc(hm(ret.departure_time))} → ${esc(ret.destination)} ${esc(hm(ret.arrival_time))}${plusDays(ret.departure_time, ret.arrival_time)} · ${dur(ret.total_duration_minutes)}` : ""}</div>
           </div>
           <div class="opt-price"><div class="t">${money(o.price, cur)}</div><div class="p">${money(o.pp, cur)} pp</div></div>
@@ -620,7 +656,7 @@
     const month = new Date().toISOString().slice(0, 7);
     const used = usage?.[month];
     const rows = [
-      ["Out", r.outbound_date ? fmtDate(r.outbound_date) : "–"],
+      ["Out", r.outbound_date ? fmtDate(r.outbound_date) + (flexDays() ? ` (scraper also checks ± ${flexDays()} days)` : "") : "–"],
       ["Back", (r.return_dates || []).map(fmtDate).join(", ") || "–"],
       ["From", (r.origins || []).join(", ")],
       ["To", (r.destinations || []).join(", ")],
@@ -663,12 +699,20 @@
     if (!same) $("options-card").scrollIntoView({ behavior: "smooth", block: "start" });
   });
   $("more").addEventListener("click", () => { state.shown += PAGE_SIZE; renderOptions(); });
+  $("flex-switch").addEventListener("click", (e) => {
+    const b = e.target.closest("button[data-f]");
+    if (!b || b.dataset.f === state.flex) return;
+    state.flex = b.dataset.f;
+    store.set("flex", state.flex);
+    Object.assign(state, { outDate: "all", shown: PAGE_SIZE });
+    render();
+  });
   $("source-switch").addEventListener("click", (e) => {
     const b = e.target.closest("button[data-s]");
     if (!b || b.dataset.s === state.source) return;
     state.source = b.dataset.s;
     store.set("source", state.source);
-    Object.assign(state, { returnDate: "all", origin: "all", shown: PAGE_SIZE });
+    Object.assign(state, { returnDate: "all", origin: "all", outDate: "all", shown: PAGE_SIZE });
     render();
   });
   const chart = $("chart");

@@ -20,7 +20,7 @@ concurrency:
 jobs:
   scrape:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 30
     steps:
       - uses: actions/checkout@v4
 
@@ -34,7 +34,7 @@ jobs:
 
       - name: Scrape Google Flights
         # A blocked or failed request is recorded in scraped_latest.json and does not fail the run.
-        timeout-minutes: 10
+        timeout-minutes: 25
         run: python scripts/scrape_prices.py
 
       - name: Commit updated data

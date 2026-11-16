@@ -6,7 +6,8 @@ website uses and parses the returned page. Google can change that page or block
 requests at any time, so this is a fallback next to SerpApi, not a replacement.
 
 For every route with "scraper": {"enabled": true, ...} in config/routes.json it runs
-one query per origin airport and return date, limited to the scraper's airlines, and writes
+one query per outbound date, return date and origin airport, limited to the scraper's
+airlines, and writes
   data/<route_id>/scraped_latest.json
   data/<route_id>/scraped_history.json
 A failed query is recorded in the snapshot and never fails the run.
@@ -15,7 +16,7 @@ from __future__ import annotations
 
 import sys
 import time
-from datetime import datetime, timezone
+from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
@@ -65,6 +66,13 @@ def normalize(f, pax: int, bag_table: dict) -> dict:
     }
 
 
+def outbound_dates(route: dict) -> list[str]:
+    """The route's outbound date plus scraper.outbound_flex_days on each side (17-21 Jan for 2)."""
+    base = date.fromisoformat(route["outbound_date"])
+    flex = int(route.get("scraper", {}).get("outbound_flex_days") or 0)
+    return [(base + timedelta(days=d)).isoformat() for d in range(-flex, flex + 1)]
+
+
 def scrape_route(ff, route: dict, settings: dict, bag_table: dict, now_iso: str, pause: float = PAUSE_SECONDS) -> dict:
     sc = route["scraper"]
     pax_cfg = route["passengers"]
@@ -73,7 +81,7 @@ def scrape_route(ff, route: dict, settings: dict, bag_table: dict, now_iso: str,
     currency = route.get("currency", settings.get("currency", "PLN"))
     results = []
     first = True
-    for rd in route["return_dates"]:
+    for od, rd in [(od, rd) for od in outbound_dates(route) for rd in route["return_dates"]]:
         options, errors = [], []
         for origin in sc.get("origins") or route["origins"]:
             if not first:
@@ -83,7 +91,7 @@ def scrape_route(ff, route: dict, settings: dict, bag_table: dict, now_iso: str,
                           max_duration_minutes=route.get("max_duration_minutes"))
             query = ff.create_query(
                 flights=[
-                    ff.FlightQuery(date=route["outbound_date"], from_airport=origin, to_airport=dest, **common),
+                    ff.FlightQuery(date=od, from_airport=origin, to_airport=dest, **common),
                     ff.FlightQuery(date=rd, from_airport=dest, to_airport=origin, **common),
                 ],
                 trip="round-trip",
@@ -100,7 +108,7 @@ def scrape_route(ff, route: dict, settings: dict, bag_table: dict, now_iso: str,
                 continue
             except Exception as exc:  # noqa: BLE001 - one blocked page must not stop the rest
                 errors.append(f"{origin}: {type(exc).__name__}: {exc}")
-                print(f"scrape error {route['id']} {origin} back {rd}: {exc}", file=sys.stderr)
+                print(f"scrape error {route['id']} {origin} out {od} back {rd}: {exc}", file=sys.stderr)
                 continue
             for f in found or []:
                 if f.price:
@@ -109,11 +117,12 @@ def scrape_route(ff, route: dict, settings: dict, bag_table: dict, now_iso: str,
                     label_long_trip(o, route.get("long_trip_minutes"), "flying_minutes")
                     options.append(o)
         options.sort(key=lambda o: o["price"])
-        results.append({"return_date": rd, "errors": errors, "options": options})
+        results.append({"outbound_date": od, "return_date": rd, "errors": errors, "options": options})
     return {
         "source": "google-flights-scrape",
         "fetched_at": now_iso,
         "airlines_filter": sc.get("airlines"),
+        "outbound_dates": outbound_dates(route),
         "destination": dest,
         "price_note": "Round-trip totals for all passengers as shown on Google Flights, outbound flights only.",
         "results": results,
@@ -126,6 +135,7 @@ def summarize(snapshot: dict) -> list[dict]:
         best = r["options"][0] if r["options"] else None
         rows.append({
             "fetched_at": snapshot["fetched_at"],
+            "outbound_date": r.get("outbound_date"),
             "return_date": r["return_date"],
             "min_price": best["price"] if best else None,
             "min_price_airlines": best["airlines"] if best else None,
@@ -158,7 +168,7 @@ def main() -> int:
         hist["entries"] = (hist["entries"] + rows)[-MAX_HISTORY_ENTRIES:]
         save_json(route_dir / "scraped_history.json", hist)
         print(f"{route['id']} (scraped): " + ", ".join(
-            f"{r['return_date']}={r['min_price']} ({r['options_count']} options, {r['errors']} errors)" for r in rows))
+            f"{r['outbound_date']}/{r['return_date']}={r['min_price']} ({r['options_count']} options, {r['errors']} errors)" for r in rows))
     return 0
 
 

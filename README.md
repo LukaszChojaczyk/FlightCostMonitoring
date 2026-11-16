@@ -32,9 +32,11 @@ round-trip total for all three passengers.
 [fast-flights](https://pypi.org/project/fast-flights/) package, so it needs no API key and
 uses no quota. It has its own workflow, "Scrape Google Flights"
 (`.github/workflows/scrape-prices.yml`), which runs daily at 11:00 UTC (12:00 in Poland in winter) and can be started
-by hand from the Actions tab ("Run workflow") at no cost. It makes one request per origin
-and return date, limited to the airlines in the route's `scraper.airlines`
-(currently Emirates, Etihad and Qatar Airways). Google may block or change the page at any
+by hand from the Actions tab ("Run workflow") at no cost. It makes one request per outbound date, return date
+and origin, limited to the airlines in the route's `scraper.airlines` (the same premium
+airlines as the API search). `scraper.outbound_flex_days: 2` also checks departures 2 days
+either side of `outbound_date` (17-21 Jan, about 60 requests a run); the dashboard's "± 2 days"
+switch shows them. Google may block or change the page at any
 time, so a blocked request is recorded in the snapshot instead of failing the run. Results go to
 `data/<route_id>/scraped_latest.json` and `scraped_history.json`.
 
