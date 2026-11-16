@@ -1,0 +1,55 @@
+{
+  "search_metadata": {
+    "status": "Success"
+  },
+  "best_flights": [
+    {
+      "flights": [
+        {
+          "departure_airport": {
+            "name": "BKK airport",
+            "id": "BKK",
+            "time": "2027-02-04 01:10"
+          },
+          "arrival_airport": {
+            "name": "AUH airport",
+            "id": "AUH",
+            "time": "2027-02-04 04:55"
+          },
+          "duration": 405,
+          "airplane": "Boeing 787",
+          "airline": "Etihad",
+          "flight_number": "EY 407",
+          "travel_class": "Economy"
+        },
+        {
+          "departure_airport": {
+            "name": "AUH airport",
+            "id": "AUH",
+            "time": "2027-02-04 08:30"
+          },
+          "arrival_airport": {
+            "name": "PRG airport",
+            "id": "PRG",
+            "time": "2027-02-04 12:45"
+          },
+          "duration": 375,
+          "airplane": "Boeing 787",
+          "airline": "Etihad",
+          "flight_number": "EY 141",
+          "travel_class": "Economy"
+        }
+      ],
+      "layovers": [
+        {
+          "duration": 215,
+          "name": "Zayed",
+          "id": "AUH"
+        }
+      ],
+      "total_duration": 995,
+      "price": 9870
+    }
+  ],
+  "other_flights": []
+}
