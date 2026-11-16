@@ -1,44 +1,169 @@
 {
   "_note": "Google Flights data has no checked-bag info, so each airline gets a flag here. Rules of thumb for long-haul economy Europe-Asia as of late 2026. Always verify on the airline site before booking.",
-  "default": { "status": "unknown", "note": "Airline not in the list. Check the checked-bag allowance before booking." },
+  "default": {
+    "status": "unknown",
+    "note": "Airline not in the list. Check the checked-bag allowance before booking."
+  },
   "airlines": {
-    "Qatar Airways": { "status": "included", "note": "Economy usually includes 1 checked bag (23-25 kg)." },
-    "Emirates": { "status": "included", "note": "Economy fares include checked baggage (20-30 kg by fare)." },
-    "Turkish Airlines": { "status": "included", "note": "Intercontinental economy includes 1 checked bag." },
-    "Thai Airways": { "status": "included", "note": "Economy includes checked baggage." },
-    "THAI": { "status": "included", "note": "Economy includes checked baggage." },
-    "Oman Air": { "status": "included", "note": "Economy usually includes checked baggage." },
-    "Gulf Air": { "status": "included", "note": "Economy usually includes checked baggage." },
-    "Saudia": { "status": "included", "note": "Economy usually includes checked baggage." },
-    "Air China": { "status": "included", "note": "Intercontinental economy includes 1-2 checked bags." },
-    "China Eastern": { "status": "included", "note": "Intercontinental economy includes checked baggage." },
-    "China Southern": { "status": "included", "note": "Intercontinental economy includes checked baggage." },
-    "Air India": { "status": "fare-dependent", "note": "Lowest 'Comfort'/value fares can have reduced allowance. Check fare." },
-    "Air Astana": { "status": "fare-dependent", "note": "Economy Light has no checked bag." },
-    "Uzbekistan Airways": { "status": "fare-dependent", "note": "Lightest fares may exclude a checked bag." },
-    "Etihad": { "status": "fare-dependent", "note": "Economy Basic may exclude a checked bag on some routes." },
-    "LOT": { "status": "fare-dependent", "note": "Long-haul Economy Saver usually has 1 bag, but check the fare." },
-    "LOT Polish Airlines": { "status": "fare-dependent", "note": "Long-haul Economy Saver usually has 1 bag, but check the fare." },
-    "Lufthansa": { "status": "fare-dependent", "note": "Economy Light / Basic fares exclude a checked bag." },
-    "SWISS": { "status": "fare-dependent", "note": "Economy Light fares exclude a checked bag." },
-    "Austrian": { "status": "fare-dependent", "note": "Economy Light fares exclude a checked bag." },
-    "Finnair": { "status": "fare-dependent", "note": "Economy Light fares exclude a checked bag." },
-    "KLM": { "status": "fare-dependent", "note": "Economy Light fares exclude a checked bag." },
-    "Air France": { "status": "fare-dependent", "note": "Economy Light fares exclude a checked bag." },
-    "EVA Air": { "status": "included", "note": "Economy includes checked baggage." },
-    "Cathay Pacific": { "status": "fare-dependent", "note": "Economy Essential/basic fares may have reduced allowance." },
-    "Vietnam Airlines": { "status": "fare-dependent", "note": "Lowest economy fares may have reduced allowance." },
-    "flydubai": { "status": "extra", "note": "Value fares on flydubai often exclude checked baggage." },
-    "Scoot": { "status": "extra", "note": "Low-cost: checked bags cost extra." },
-    "AirAsia": { "status": "extra", "note": "Low-cost: checked bags cost extra." },
-    "AirAsia X": { "status": "extra", "note": "Low-cost: checked bags cost extra." },
-    "Thai AirAsia": { "status": "extra", "note": "Low-cost: checked bags cost extra." },
-    "Thai AirAsia X": { "status": "extra", "note": "Low-cost: checked bags cost extra." },
-    "Nok Air": { "status": "extra", "note": "Low-cost: checked bags often cost extra." },
-    "Ryanair": { "status": "extra", "note": "Low-cost: checked bags cost extra." },
-    "Wizz Air": { "status": "extra", "note": "Low-cost: checked bags cost extra." },
-    "easyJet": { "status": "extra", "note": "Low-cost: checked bags cost extra." },
-    "Pegasus": { "status": "extra", "note": "Low-cost: checked bags cost extra on basic fares." },
-    "Eurowings": { "status": "extra", "note": "Basic fares exclude a checked bag." }
+    "Qatar Airways": {
+      "status": "included",
+      "note": "Economy usually includes 1 checked bag (23-25 kg)."
+    },
+    "Emirates": {
+      "status": "included",
+      "note": "Economy fares include checked baggage (20-30 kg by fare)."
+    },
+    "Turkish Airlines": {
+      "status": "included",
+      "note": "Intercontinental economy includes 1 checked bag."
+    },
+    "Thai Airways": {
+      "status": "included",
+      "note": "Economy includes checked baggage."
+    },
+    "THAI": {
+      "status": "included",
+      "note": "Economy includes checked baggage."
+    },
+    "Oman Air": {
+      "status": "included",
+      "note": "Economy usually includes checked baggage."
+    },
+    "Gulf Air": {
+      "status": "included",
+      "note": "Economy usually includes checked baggage."
+    },
+    "Saudia": {
+      "status": "included",
+      "note": "Economy usually includes checked baggage."
+    },
+    "Air China": {
+      "status": "included",
+      "note": "Intercontinental economy includes 1-2 checked bags."
+    },
+    "China Eastern": {
+      "status": "included",
+      "note": "Intercontinental economy includes checked baggage."
+    },
+    "China Southern": {
+      "status": "included",
+      "note": "Intercontinental economy includes checked baggage."
+    },
+    "Air India": {
+      "status": "fare-dependent",
+      "note": "Lowest 'Comfort'/value fares can have reduced allowance. Check fare."
+    },
+    "Air Astana": {
+      "status": "fare-dependent",
+      "note": "Economy Light has no checked bag."
+    },
+    "Uzbekistan Airways": {
+      "status": "fare-dependent",
+      "note": "Lightest fares may exclude a checked bag."
+    },
+    "Etihad": {
+      "status": "fare-dependent",
+      "note": "Economy Basic may exclude a checked bag on some routes."
+    },
+    "LOT": {
+      "status": "fare-dependent",
+      "note": "Long-haul Economy Saver usually has 1 bag, but check the fare."
+    },
+    "LOT Polish Airlines": {
+      "status": "fare-dependent",
+      "note": "Long-haul Economy Saver usually has 1 bag, but check the fare."
+    },
+    "Lufthansa": {
+      "status": "fare-dependent",
+      "note": "Economy Light / Basic fares exclude a checked bag."
+    },
+    "SWISS": {
+      "status": "fare-dependent",
+      "note": "Economy Light fares exclude a checked bag."
+    },
+    "Austrian": {
+      "status": "fare-dependent",
+      "note": "Economy Light fares exclude a checked bag."
+    },
+    "Finnair": {
+      "status": "fare-dependent",
+      "note": "Economy Light fares exclude a checked bag."
+    },
+    "KLM": {
+      "status": "fare-dependent",
+      "note": "Economy Light fares exclude a checked bag."
+    },
+    "Air France": {
+      "status": "fare-dependent",
+      "note": "Economy Light fares exclude a checked bag."
+    },
+    "EVA Air": {
+      "status": "included",
+      "note": "Economy includes checked baggage."
+    },
+    "Cathay Pacific": {
+      "status": "fare-dependent",
+      "note": "Economy Essential/basic fares may have reduced allowance."
+    },
+    "Vietnam Airlines": {
+      "status": "fare-dependent",
+      "note": "Lowest economy fares may have reduced allowance."
+    },
+    "flydubai": {
+      "status": "extra",
+      "note": "Value fares on flydubai often exclude checked baggage."
+    },
+    "Scoot": {
+      "status": "extra",
+      "note": "Low-cost: checked bags cost extra."
+    },
+    "AirAsia": {
+      "status": "extra",
+      "note": "Low-cost: checked bags cost extra."
+    },
+    "AirAsia X": {
+      "status": "extra",
+      "note": "Low-cost: checked bags cost extra."
+    },
+    "Thai AirAsia": {
+      "status": "extra",
+      "note": "Low-cost: checked bags cost extra."
+    },
+    "Thai AirAsia X": {
+      "status": "extra",
+      "note": "Low-cost: checked bags cost extra."
+    },
+    "Nok Air": {
+      "status": "extra",
+      "note": "Low-cost: checked bags often cost extra."
+    },
+    "Ryanair": {
+      "status": "extra",
+      "note": "Low-cost: checked bags cost extra."
+    },
+    "Wizz Air": {
+      "status": "extra",
+      "note": "Low-cost: checked bags cost extra."
+    },
+    "easyJet": {
+      "status": "extra",
+      "note": "Low-cost: checked bags cost extra."
+    },
+    "Pegasus": {
+      "status": "extra",
+      "note": "Low-cost: checked bags cost extra on basic fares."
+    },
+    "Eurowings": {
+      "status": "extra",
+      "note": "Basic fares exclude a checked bag."
+    },
+    "Air Arabia": {
+      "status": "extra",
+      "note": "Low-cost: the basic fare has no checked bag; the Value fare adds one."
+    },
+    "Condor": {
+      "status": "fare-dependent",
+      "note": "Long-haul Economy Light has no checked bag; Classic and Flex include one."
+    }
   }
 }
