@@ -28,9 +28,8 @@
     bags: "any",
     view: "best",
     shown: PAGE_SIZE,
-    source: "all",
+    source: ["all", "api", "scraper"].includes(store.get("source")) ? store.get("source") : "all",
     length: "any",
-    trend: store.get("trend") || "both",
   };
 
   /* ---------- formatting ---------- */
@@ -126,7 +125,7 @@
       getJSON(dir + "scraped_history.json", true).catch(() => null),
     ]);
     bundle = { id, latest, history, scraped, scrapedHistory, summary: index.routes.find((r) => r.id === id) };
-    bundle.options = buildOptions(bundle);
+    bundle.allOptions = buildOptions(bundle);
     bundle.timeline = buildTimeline(bundle);
     render();
   }
@@ -265,7 +264,13 @@
     sel.value = state.route;
   }
 
+  const trendMode = () => (state.source === "all" ? "both" : state.source);
+  const SOURCE_NAME = { all: "Everything", api: "API only", scraper: "Scraper only" };
+
   function render() {
+    // the page-wide source switch: every section below works on bundle.options
+    bundle.options = bundle.allOptions.filter((o) => state.source === "all" || o.source === state.source);
+    renderSourceSwitch();
     const info = routeInfo();
     $("route-name").textContent = info.name || bundle.id;
     document.title = `Flight prices · ${info.name || bundle.id}`;
@@ -281,6 +286,12 @@
     renderOptions();
     renderTrend();
     renderInfo();
+  }
+
+  function renderSourceSwitch() {
+    const n = (src) => bundle.allOptions.filter((o) => src === "all" || o.source === src).length;
+    $("source-switch").innerHTML = [["all", "Everything"], ["api", "API"], ["scraper", "Scraper"]].map(([v, t]) =>
+      `<button type="button" data-s="${v}" aria-pressed="${state.source === v}">${t} <span class="n">${n(v)}</span></button>`).join("");
   }
 
   function renderAlerts(updated) {
@@ -324,9 +335,11 @@
     const cur = currency();
     const best = bundle.options[0];
     const bestBag = bundle.options.find((o) => o.bag === "included");
-    const pts = bundle.timeline.points;
-    const overall = (p) => { const v = Object.values(p.both).filter((x) => x != null); return v.length ? Math.min(...v) : null; };
-    const series = pts.map(overall).filter((v) => v != null);
+    const trend = trendSeries(trendMode());
+    const series = (trend[0]?.values || []).map((_, k) => {
+      const v = trend.map((s) => s.values[k].v).filter((x) => x != null);
+      return v.length ? Math.min(...v) : null;
+    }).filter((v) => v != null);
     const allTime = series.length ? Math.min(...series, best?.price ?? Infinity) : best?.price;
     let delta = null;
     if (series.length >= 2) {
@@ -336,7 +349,10 @@
       delta = prev == null ? 0 : last - prev;
     }
     if (!best) {
-      $("hero").innerHTML = `<div class="hero-main"><div class="hero-label">Cheapest right now</div><div class="hero-price">–</div><div class="hero-pp">No options in the latest check.</div></div>`;
+      const msg = state.source === "scraper"
+        ? "No scraper results yet. The scraper adds Emirates, Etihad and Qatar prices once it is switched on and has run."
+        : "No options in the latest check.";
+      $("hero").innerHTML = `<div class="hero-main"><div class="hero-label">Cheapest right now${state.source === "all" ? "" : " · " + esc(SOURCE_NAME[state.source])}</div><div class="hero-price">–</div><div class="hero-pp">${esc(msg)}</div></div>`;
       return;
     }
     const deltaHtml = delta == null ? "–"
@@ -344,7 +360,7 @@
       : `<span class="${delta < 0 ? "delta-down" : "delta-up"}">${delta < 0 ? "▼" : "▲"} ${money(Math.abs(delta), cur)}</span>`;
     $("hero").innerHTML = `
       <div class="hero-main">
-        <div class="hero-label">Cheapest right now · ${paxCount()} passengers, round trip</div>
+        <div class="hero-label">Cheapest right now${state.source === "all" ? "" : " · " + esc(SOURCE_NAME[state.source])} · ${paxCount()} passengers, round trip</div>
         <div class="hero-price">${money(best.price, cur)}</div>
         <div class="hero-pp">${money(best.pp, cur)} per person</div>
         <div class="hero-what"><b>${esc(best.airlines.join(" + "))}</b> · ${esc(best.origin)} → ${esc(best.destination)} · back ${esc(fmtDate(best.returnDate))}</div>
@@ -390,23 +406,19 @@
     const info = routeInfo();
     const dates = [...new Set([...(info.return_dates || []), ...bundle.options.map((o) => o.returnDate)])].sort();
     const origins = [...new Set([...(info.origins || []), ...bundle.options.map((o) => o.origin)])];
-    const hasScraper = bundle.options.some((o) => o.source === "scraper");
     $("filters").innerHTML = [
       chipRow("Back", "returnDate", [["all", "Any day"], ...dates.map((d) => [d, fmtDate(d)])]),
       chipRow("From", "origin", [["all", "Any airport"], ...origins.map((o) => [o, o])]),
       chipRow("Bags", "bags", [["any", "Any"], ["included", "Included only"], ["ok", "Included or by fare"]]),
       bundle.options.some(isLong) ? chipRow("Length", "length", [["any", "Any"], ["short", `Up to ${Math.round(preferredMinutes() / 60)} h`]]) : "",
       chipRow("Show", "view", [["best", "Cheapest per airline"], ["all", "Every option"]]),
-      hasScraper ? chipRow("Source", "source", [["all", "Both"], ["api", "API"], ["scraper", "Scraper"]]) : "",
     ].join("");
   }
 
   function filteredOptions() {
-    if (!state.source) state.source = "all";
     let list = bundle.options.filter((o) =>
       (state.returnDate === "all" || o.returnDate === state.returnDate) &&
       (state.origin === "all" || o.origin === state.origin) &&
-      (state.source === "all" || o.source === state.source) &&
       (state.length === "any" || !isLong(o)) &&
       (state.bags === "any" || (state.bags === "included" ? o.bag === "included" : o.bag === "included" || o.bag === "fare-dependent")));
     if (state.view === "best") {
@@ -468,15 +480,11 @@
 
   /* ---------- trend chart ---------- */
   function renderTrend() {
-    const hasScraper = bundle.timeline.points.some((p) => p.source === "scraper");
-    const modes = hasScraper ? [["both", "Both"], ["api", "API"], ["scraper", "Scraper"]] : [["api", "API"]];
-    if (!modes.some(([m]) => m === state.trend)) state.trend = modes[0][0];
-    $("trend-source").innerHTML = modes.map(([m, t]) => `<button type="button" data-m="${m}" aria-pressed="${state.trend === m}">${t}</button>`).join("");
-    $("trend-source").hidden = modes.length < 2;
-    $("trend-hint").textContent = state.trend === "both"
+    const mode = trendMode();
+    $("trend-hint").textContent = mode === "both"
       ? "Cheapest round trip per return date at each check, best of API and scraper."
-      : `Cheapest round trip per return date at each ${state.trend === "api" ? "API" : "scraper"} check.`;
-    const series = trendSeries(state.trend);
+      : `Cheapest round trip per return date at each ${mode === "api" ? "API" : "scraper"} check.`;
+    const series = trendSeries(mode);
     $("trend-legend").innerHTML = series.length > 1
       ? series.map((s) => `<span><i style="background:${s.color}"></i>Back ${esc(s.label)}</span>`).join("")
       : "";
@@ -655,12 +663,13 @@
     if (!same) $("options-card").scrollIntoView({ behavior: "smooth", block: "start" });
   });
   $("more").addEventListener("click", () => { state.shown += PAGE_SIZE; renderOptions(); });
-  $("trend-source").addEventListener("click", (e) => {
-    const b = e.target.closest("button[data-m]");
-    if (!b) return;
-    state.trend = b.dataset.m;
-    store.set("trend", state.trend);
-    renderTrend();
+  $("source-switch").addEventListener("click", (e) => {
+    const b = e.target.closest("button[data-s]");
+    if (!b || b.dataset.s === state.source) return;
+    state.source = b.dataset.s;
+    store.set("source", state.source);
+    Object.assign(state, { returnDate: "all", origin: "all", shown: PAGE_SIZE });
+    render();
   });
   const chart = $("chart");
   chart.addEventListener("pointermove", chartHover);

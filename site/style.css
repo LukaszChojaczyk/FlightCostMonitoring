@@ -186,6 +186,11 @@ table { border-collapse: collapse; width: 100%; }
 .seg button { border: 0; background: none; padding: 4px 12px; border-radius: 999px; font-size: 13px; cursor: pointer; color: var(--text-2); }
 .seg button[aria-pressed="true"] { background: var(--surface); color: var(--text); font-weight: 600; box-shadow: var(--shadow); }
 
+.source-switch { display: flex; width: 100%; margin-top: 10px; }
+.source-switch button { flex: 1; padding: 7px 8px; font-size: 14px; }
+.source-switch .n { font-size: 11px; color: var(--text-3); font-weight: 400; }
+@media (min-width: 640px) { .source-switch { display: inline-flex; width: auto; } }
+
 /* chart */
 .legend { display: flex; flex-wrap: wrap; gap: 12px; font-size: 13px; color: var(--text-2); margin-bottom: 12px; }
 .legend span { display: inline-flex; align-items: center; gap: 6px; }

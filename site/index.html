@@ -23,6 +23,7 @@
       </label>
       <p class="route-name" id="route-name"></p>
       <p class="meta" id="meta">Loading&hellip;</p>
+      <div class="seg source-switch" role="group" aria-label="Which prices to show" id="source-switch"></div>
     </div>
   </header>
 
@@ -33,7 +34,7 @@
 
     <section class="card">
       <h2>Cheapest by airport and return date</h2>
-      <p class="hint">Round trip for all passengers, both sources. Tap a price to filter the list below.</p>
+      <p class="hint">Round trip for all passengers. Tap a price to filter the list below.</p>
       <div class="table-scroll"><table class="matrix" id="matrix"></table></div>
     </section>
 
@@ -50,7 +51,6 @@
     <section class="card">
       <div class="section-head">
         <h2>Price trend</h2>
-        <div class="seg" role="group" aria-label="Trend source" id="trend-source"></div>
       </div>
       <p class="hint" id="trend-hint">Cheapest round trip per return date at each check.</p>
       <div class="legend" id="trend-legend"></div>
