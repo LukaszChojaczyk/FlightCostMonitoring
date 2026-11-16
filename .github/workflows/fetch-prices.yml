@@ -42,7 +42,8 @@ jobs:
         continue-on-error: true
         timeout-minutes: 8
         run: |
-          pip install --quiet fast-flights==3.1.0
+          # fast-flights imports typing_extensions without declaring it as a dependency
+          pip install --quiet fast-flights==3.1.0 typing_extensions
           python scripts/scrape_prices.py
 
       - name: Commit updated data

@@ -135,8 +135,9 @@ def summarize(snapshot: dict) -> list[dict]:
 def main() -> int:
     try:
         import fast_flights as ff
-    except ImportError:
-        print("fast-flights is not installed: pip install fast-flights", file=sys.stderr)
+    except ImportError as exc:
+        print(f"Could not import fast-flights ({exc}). Install it with: pip install fast-flights typing_extensions",
+              file=sys.stderr)
         return 1
     config = load_json(CONFIG_PATH, None)
     settings = config.get("settings", {})
