@@ -1,0 +1,12 @@
+name: Probe hotel API (temporary)
+on:
+  push:
+    branches: [claude/project-thread-n6wrnx]
+    paths: [scripts/probe_hotels.py]
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 -u scripts/probe_hotels.py

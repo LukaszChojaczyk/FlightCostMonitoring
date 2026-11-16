@@ -112,7 +112,7 @@ def anchor_date(stay: dict, opt: dict) -> str:
 # ------------------------------------------------------------------ hotel keys and reviews
 
 def tokens(text: str) -> list[str]:
-    return re.sub(r"[^a-z0-9]+", " ", (text or "").lower().replace("'", "")).split()
+    return re.sub(r"[^a-z0-9]+", " ", re.sub(r"['\u2019\u2018`]", "", (text or "").lower())).split()
 
 
 def name_match(hotel: dict, listed_name: str) -> int | None:
