@@ -10,9 +10,6 @@ on:
     # Once a day at 08:00 UTC = 09:00 Polish winter time (10:00 in summer: cron is UTC).
     - cron: "0 8 * * *"
   workflow_dispatch:
-  push:
-    branches: [claude/project-thread-n6wrnx] # TEMPORARY: test run from the PR branch, removed before merge
-    paths: [".github/workflows/fetch-hotels.yml", "scripts/fetch_hotels.py", "config/hotels*.json"]
 
 permissions:
   contents: write
