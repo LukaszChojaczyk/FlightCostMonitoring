@@ -1,0 +1,712 @@
+{
+  "source": "google-flights-scrape",
+  "fetched_at": "2026-11-16T13:45:46+00:00",
+  "airlines_filter": [
+    "EK",
+    "EY",
+    "QR"
+  ],
+  "destination": "BKK",
+  "price_note": "Round-trip totals for all passengers as shown on Google Flights, outbound flights only.",
+  "results": [
+    {
+      "return_date": "2027-02-03",
+      "errors": [
+        "WRO: TypeError: 'NoneType' object is not subscriptable"
+      ],
+      "options": [
+        {
+          "price": 11675,
+          "price_per_person": 3892,
+          "origin": "WAW",
+          "destination": "BKK",
+          "departure_time": "2027-01-19 14:40",
+          "arrival_time": "2027-01-20 18:50",
+          "flying_minutes": 705,
+          "stops": 1,
+          "via": [
+            "DOH"
+          ],
+          "airlines": [
+            "Qatar Airways"
+          ],
+          "legs": [
+            {
+              "from": "WAW",
+              "to": "DOH",
+              "departure_time": "2027-01-19 14:40",
+              "arrival_time": "2027-01-19 22:10",
+              "duration_minutes": 330,
+              "airplane": "Boeing 787"
+            },
+            {
+              "from": "DOH",
+              "to": "BKK",
+              "departure_time": "2027-01-20 08:35",
+              "arrival_time": "2027-01-20 18:50",
+              "duration_minutes": 375,
+              "airplane": "Airbus A350"
+            }
+          ],
+          "baggage": [
+            {
+              "airline": "Qatar Airways",
+              "status": "included",
+              "note": "Economy usually includes 1 checked bag (23-25 kg)."
+            }
+          ],
+          "baggage_flag": "included",
+          "long_trip": false,
+          "duration_label": null
+        },
+        {
+          "price": 13400,
+          "price_per_person": 4467,
+          "origin": "WAW",
+          "destination": "BKK",
+          "departure_time": "2027-01-19 09:00",
+          "arrival_time": "2027-01-20 06:40",
+          "flying_minutes": 705,
+          "stops": 1,
+          "via": [
+            "DOH"
+          ],
+          "airlines": [
+            "Qatar Airways"
+          ],
+          "legs": [
+            {
+              "from": "WAW",
+              "to": "DOH",
+              "departure_time": "2027-01-19 09:00",
+              "arrival_time": "2027-01-19 16:30",
+              "duration_minutes": 330,
+              "airplane": "Boeing 787"
+            },
+            {
+              "from": "DOH",
+              "to": "BKK",
+              "departure_time": "2027-01-19 20:25",
+              "arrival_time": "2027-01-20 06:40",
+              "duration_minutes": 375,
+              "airplane": "Boeing 777"
+            }
+          ],
+          "baggage": [
+            {
+              "airline": "Qatar Airways",
+              "status": "included",
+              "note": "Economy usually includes 1 checked bag (23-25 kg)."
+            }
+          ],
+          "baggage_flag": "included",
+          "long_trip": false,
+          "duration_label": null
+        },
+        {
+          "price": 13400,
+          "price_per_person": 4467,
+          "origin": "WAW",
+          "destination": "BKK",
+          "departure_time": "2027-01-19 14:40",
+          "arrival_time": "2027-01-20 12:15",
+          "flying_minutes": 705,
+          "stops": 1,
+          "via": [
+            "DOH"
+          ],
+          "airlines": [
+            "Qatar Airways"
+          ],
+          "legs": [
+            {
+              "from": "WAW",
+              "to": "DOH",
+              "departure_time": "2027-01-19 14:40",
+              "arrival_time": "2027-01-19 22:10",
+              "duration_minutes": 330,
+              "airplane": "Boeing 787"
+            },
+            {
+              "from": "DOH",
+              "to": "BKK",
+              "departure_time": "2027-01-20 02:00",
+              "arrival_time": "2027-01-20 12:15",
+              "duration_minutes": 375,
+              "airplane": "Airbus A380"
+            }
+          ],
+          "baggage": [
+            {
+              "airline": "Qatar Airways",
+              "status": "included",
+              "note": "Economy usually includes 1 checked bag (23-25 kg)."
+            }
+          ],
+          "baggage_flag": "included",
+          "long_trip": false,
+          "duration_label": null
+        },
+        {
+          "price": 13896,
+          "price_per_person": 4632,
+          "origin": "WAW",
+          "destination": "BKK",
+          "departure_time": "2027-01-19 13:40",
+          "arrival_time": "2027-01-20 12:05",
+          "flying_minutes": 700,
+          "stops": 1,
+          "via": [
+            "DXB"
+          ],
+          "airlines": [
+            "Emirates"
+          ],
+          "legs": [
+            {
+              "from": "WAW",
+              "to": "DXB",
+              "departure_time": "2027-01-19 13:40",
+              "arrival_time": "2027-01-19 22:20",
+              "duration_minutes": 340,
+              "airplane": "Boeing 777"
+            },
+            {
+              "from": "DXB",
+              "to": "BKK",
+              "departure_time": "2027-01-20 03:05",
+              "arrival_time": "2027-01-20 12:05",
+              "duration_minutes": 360,
+              "airplane": "Airbus A380"
+            }
+          ],
+          "baggage": [
+            {
+              "airline": "Emirates",
+              "status": "included",
+              "note": "Economy fares include checked baggage (20-30 kg by fare)."
+            }
+          ],
+          "baggage_flag": "included",
+          "long_trip": false,
+          "duration_label": null
+        },
+        {
+          "price": 14682,
+          "price_per_person": 4894,
+          "origin": "WAW",
+          "destination": "BKK",
+          "departure_time": "2027-01-19 20:30",
+          "arrival_time": "2027-01-20 18:05",
+          "flying_minutes": 740,
+          "stops": 1,
+          "via": [
+            "DXB"
+          ],
+          "airlines": [
+            "flydubai",
+            "Emirates"
+          ],
+          "legs": [
+            {
+              "from": "WAW",
+              "to": "DXB",
+              "departure_time": "2027-01-19 20:30",
+              "arrival_time": "2027-01-20 05:40",
+              "duration_minutes": 370,
+              "airplane": "Boeing 737MAX 8 Passenger"
+            },
+            {
+              "from": "DXB",
+              "to": "BKK",
+              "departure_time": "2027-01-20 08:55",
+              "arrival_time": "2027-01-20 18:05",
+              "duration_minutes": 370,
+              "airplane": "Boeing 777"
+            }
+          ],
+          "baggage": [
+            {
+              "airline": "flydubai",
+              "status": "extra",
+              "note": "Value fares on flydubai often exclude checked baggage."
+            },
+            {
+              "airline": "Emirates",
+              "status": "included",
+              "note": "Economy fares include checked baggage (20-30 kg by fare)."
+            }
+          ],
+          "baggage_flag": "extra",
+          "long_trip": false,
+          "duration_label": null
+        },
+        {
+          "price": 15020,
+          "price_per_person": 5007,
+          "origin": "WAW",
+          "destination": "BKK",
+          "departure_time": "2027-01-19 09:00",
+          "arrival_time": "2027-01-20 06:15",
+          "flying_minutes": 705,
+          "stops": 1,
+          "via": [
+            "DOH"
+          ],
+          "airlines": [
+            "Qatar Airways"
+          ],
+          "legs": [
+            {
+              "from": "WAW",
+              "to": "DOH",
+              "departure_time": "2027-01-19 09:00",
+              "arrival_time": "2027-01-19 16:30",
+              "duration_minutes": 330,
+              "airplane": "Boeing 787"
+            },
+            {
+              "from": "DOH",
+              "to": "BKK",
+              "departure_time": "2027-01-19 20:00",
+              "arrival_time": "2027-01-20 06:15",
+              "duration_minutes": 375,
+              "airplane": "Boeing 787"
+            }
+          ],
+          "baggage": [
+            {
+              "airline": "Qatar Airways",
+              "status": "included",
+              "note": "Economy usually includes 1 checked bag (23-25 kg)."
+            }
+          ],
+          "baggage_flag": "included",
+          "long_trip": false,
+          "duration_label": null
+        }
+      ]
+    },
+    {
+      "return_date": "2027-02-04",
+      "errors": [
+        "WRO: TypeError: 'NoneType' object is not subscriptable"
+      ],
+      "options": []
+    },
+    {
+      "return_date": "2027-02-05",
+      "errors": [],
+      "options": [
+        {
+          "price": 11304,
+          "price_per_person": 3768,
+          "origin": "BER",
+          "destination": "BKK",
+          "departure_time": "2027-01-19 21:40",
+          "arrival_time": "2027-01-20 18:50",
+          "flying_minutes": 715,
+          "stops": 1,
+          "via": [
+            "DOH"
+          ],
+          "airlines": [
+            "Qatar Airways"
+          ],
+          "legs": [
+            {
+              "from": "BER",
+              "to": "DOH",
+              "departure_time": "2027-01-19 21:40",
+              "arrival_time": "2027-01-20 05:20",
+              "duration_minutes": 340,
+              "airplane": "Boeing 787"
+            },
+            {
+              "from": "DOH",
+              "to": "BKK",
+              "departure_time": "2027-01-20 08:35",
+              "arrival_time": "2027-01-20 18:50",
+              "duration_minutes": 375,
+              "airplane": "Airbus A350"
+            }
+          ],
+          "baggage": [
+            {
+              "airline": "Qatar Airways",
+              "status": "included",
+              "note": "Economy usually includes 1 checked bag (23-25 kg)."
+            }
+          ],
+          "baggage_flag": "included",
+          "long_trip": false,
+          "duration_label": null
+        },
+        {
+          "price": 12059,
+          "price_per_person": 4020,
+          "origin": "BER",
+          "destination": "BKK",
+          "departure_time": "2027-01-19 10:00",
+          "arrival_time": "2027-01-20 06:35",
+          "flying_minutes": 750,
+          "stops": 1,
+          "via": [
+            "AUH"
+          ],
+          "airlines": [
+            "Condor",
+            "Etihad"
+          ],
+          "legs": [
+            {
+              "from": "BER",
+              "to": "AUH",
+              "departure_time": "2027-01-19 10:00",
+              "arrival_time": "2027-01-19 19:15",
+              "duration_minutes": 375,
+              "airplane": "Airbus A320neo"
+            },
+            {
+              "from": "AUH",
+              "to": "BKK",
+              "departure_time": "2027-01-19 21:20",
+              "arrival_time": "2027-01-20 06:35",
+              "duration_minutes": 375,
+              "airplane": "Airbus A380"
+            }
+          ],
+          "baggage": [
+            {
+              "airline": "Condor",
+              "status": "fare-dependent",
+              "note": "Long-haul Economy Light has no checked bag; Classic and Flex include one."
+            },
+            {
+              "airline": "Etihad",
+              "status": "fare-dependent",
+              "note": "Economy Basic may exclude a checked bag on some routes."
+            }
+          ],
+          "baggage_flag": "fare-dependent",
+          "long_trip": false,
+          "duration_label": null
+        },
+        {
+          "price": 12059,
+          "price_per_person": 4020,
+          "origin": "BER",
+          "destination": "BKK",
+          "departure_time": "2027-01-19 10:00",
+          "arrival_time": "2027-01-20 07:15",
+          "flying_minutes": 735,
+          "stops": 1,
+          "via": [
+            "AUH"
+          ],
+          "airlines": [
+            "Condor"
+          ],
+          "legs": [
+            {
+              "from": "BER",
+              "to": "AUH",
+              "departure_time": "2027-01-19 10:00",
+              "arrival_time": "2027-01-19 19:15",
+              "duration_minutes": 375,
+              "airplane": "Airbus A320neo"
+            },
+            {
+              "from": "AUH",
+              "to": "BKK",
+              "departure_time": "2027-01-19 22:15",
+              "arrival_time": "2027-01-20 07:15",
+              "duration_minutes": 360,
+              "airplane": "Airbus A330-900neo"
+            }
+          ],
+          "baggage": [
+            {
+              "airline": "Condor",
+              "status": "fare-dependent",
+              "note": "Long-haul Economy Light has no checked bag; Classic and Flex include one."
+            }
+          ],
+          "baggage_flag": "fare-dependent",
+          "long_trip": false,
+          "duration_label": null
+        },
+        {
+          "price": 12542,
+          "price_per_person": 4181,
+          "origin": "WAW",
+          "destination": "BKK",
+          "departure_time": "2027-01-19 14:40",
+          "arrival_time": "2027-01-20 18:50",
+          "flying_minutes": 705,
+          "stops": 1,
+          "via": [
+            "DOH"
+          ],
+          "airlines": [
+            "Qatar Airways"
+          ],
+          "legs": [
+            {
+              "from": "WAW",
+              "to": "DOH",
+              "departure_time": "2027-01-19 14:40",
+              "arrival_time": "2027-01-19 22:10",
+              "duration_minutes": 330,
+              "airplane": "Boeing 787"
+            },
+            {
+              "from": "DOH",
+              "to": "BKK",
+              "departure_time": "2027-01-20 08:35",
+              "arrival_time": "2027-01-20 18:50",
+              "duration_minutes": 375,
+              "airplane": "Airbus A350"
+            }
+          ],
+          "baggage": [
+            {
+              "airline": "Qatar Airways",
+              "status": "included",
+              "note": "Economy usually includes 1 checked bag (23-25 kg)."
+            }
+          ],
+          "baggage_flag": "included",
+          "long_trip": false,
+          "duration_label": null
+        },
+        {
+          "price": 13615,
+          "price_per_person": 4538,
+          "origin": "BER",
+          "destination": "BKK",
+          "departure_time": "2027-01-19 08:50",
+          "arrival_time": "2027-01-20 06:40",
+          "flying_minutes": 715,
+          "stops": 1,
+          "via": [
+            "DOH"
+          ],
+          "airlines": [
+            "Qatar Airways"
+          ],
+          "legs": [
+            {
+              "from": "BER",
+              "to": "DOH",
+              "departure_time": "2027-01-19 08:50",
+              "arrival_time": "2027-01-19 16:30",
+              "duration_minutes": 340,
+              "airplane": "Boeing 787"
+            },
+            {
+              "from": "DOH",
+              "to": "BKK",
+              "departure_time": "2027-01-19 20:25",
+              "arrival_time": "2027-01-20 06:40",
+              "duration_minutes": 375,
+              "airplane": "Boeing 777"
+            }
+          ],
+          "baggage": [
+            {
+              "airline": "Qatar Airways",
+              "status": "included",
+              "note": "Economy usually includes 1 checked bag (23-25 kg)."
+            }
+          ],
+          "baggage_flag": "included",
+          "long_trip": false,
+          "duration_label": null
+        },
+        {
+          "price": 14127,
+          "price_per_person": 4709,
+          "origin": "WAW",
+          "destination": "BKK",
+          "departure_time": "2027-01-19 20:30",
+          "arrival_time": "2027-01-20 18:05",
+          "flying_minutes": 740,
+          "stops": 1,
+          "via": [
+            "DXB"
+          ],
+          "airlines": [
+            "flydubai",
+            "Emirates"
+          ],
+          "legs": [
+            {
+              "from": "WAW",
+              "to": "DXB",
+              "departure_time": "2027-01-19 20:30",
+              "arrival_time": "2027-01-20 05:40",
+              "duration_minutes": 370,
+              "airplane": "Boeing 737MAX 8 Passenger"
+            },
+            {
+              "from": "DXB",
+              "to": "BKK",
+              "departure_time": "2027-01-20 08:55",
+              "arrival_time": "2027-01-20 18:05",
+              "duration_minutes": 370,
+              "airplane": "Boeing 777"
+            }
+          ],
+          "baggage": [
+            {
+              "airline": "flydubai",
+              "status": "extra",
+              "note": "Value fares on flydubai often exclude checked baggage."
+            },
+            {
+              "airline": "Emirates",
+              "status": "included",
+              "note": "Economy fares include checked baggage (20-30 kg by fare)."
+            }
+          ],
+          "baggage_flag": "extra",
+          "long_trip": false,
+          "duration_label": null
+        },
+        {
+          "price": 14267,
+          "price_per_person": 4756,
+          "origin": "WAW",
+          "destination": "BKK",
+          "departure_time": "2027-01-19 09:00",
+          "arrival_time": "2027-01-20 06:40",
+          "flying_minutes": 705,
+          "stops": 1,
+          "via": [
+            "DOH"
+          ],
+          "airlines": [
+            "Qatar Airways"
+          ],
+          "legs": [
+            {
+              "from": "WAW",
+              "to": "DOH",
+              "departure_time": "2027-01-19 09:00",
+              "arrival_time": "2027-01-19 16:30",
+              "duration_minutes": 330,
+              "airplane": "Boeing 787"
+            },
+            {
+              "from": "DOH",
+              "to": "BKK",
+              "departure_time": "2027-01-19 20:25",
+              "arrival_time": "2027-01-20 06:40",
+              "duration_minutes": 375,
+              "airplane": "Boeing 777"
+            }
+          ],
+          "baggage": [
+            {
+              "airline": "Qatar Airways",
+              "status": "included",
+              "note": "Economy usually includes 1 checked bag (23-25 kg)."
+            }
+          ],
+          "baggage_flag": "included",
+          "long_trip": false,
+          "duration_label": null
+        },
+        {
+          "price": 14267,
+          "price_per_person": 4756,
+          "origin": "WAW",
+          "destination": "BKK",
+          "departure_time": "2027-01-19 14:40",
+          "arrival_time": "2027-01-20 12:15",
+          "flying_minutes": 705,
+          "stops": 1,
+          "via": [
+            "DOH"
+          ],
+          "airlines": [
+            "Qatar Airways"
+          ],
+          "legs": [
+            {
+              "from": "WAW",
+              "to": "DOH",
+              "departure_time": "2027-01-19 14:40",
+              "arrival_time": "2027-01-19 22:10",
+              "duration_minutes": 330,
+              "airplane": "Boeing 787"
+            },
+            {
+              "from": "DOH",
+              "to": "BKK",
+              "departure_time": "2027-01-20 02:00",
+              "arrival_time": "2027-01-20 12:15",
+              "duration_minutes": 375,
+              "airplane": "Airbus A380"
+            }
+          ],
+          "baggage": [
+            {
+              "airline": "Qatar Airways",
+              "status": "included",
+              "note": "Economy usually includes 1 checked bag (23-25 kg)."
+            }
+          ],
+          "baggage_flag": "included",
+          "long_trip": false,
+          "duration_label": null
+        },
+        {
+          "price": 14933,
+          "price_per_person": 4978,
+          "origin": "WAW",
+          "destination": "BKK",
+          "departure_time": "2027-01-19 09:00",
+          "arrival_time": "2027-01-20 06:15",
+          "flying_minutes": 705,
+          "stops": 1,
+          "via": [
+            "DOH"
+          ],
+          "airlines": [
+            "Qatar Airways"
+          ],
+          "legs": [
+            {
+              "from": "WAW",
+              "to": "DOH",
+              "departure_time": "2027-01-19 09:00",
+              "arrival_time": "2027-01-19 16:30",
+              "duration_minutes": 330,
+              "airplane": "Boeing 787"
+            },
+            {
+              "from": "DOH",
+              "to": "BKK",
+              "departure_time": "2027-01-19 20:00",
+              "arrival_time": "2027-01-20 06:15",
+              "duration_minutes": 375,
+              "airplane": "Boeing 787"
+            }
+          ],
+          "baggage": [
+            {
+              "airline": "Qatar Airways",
+              "status": "included",
+              "note": "Economy usually includes 1 checked bag (23-25 kg)."
+            }
+          ],
+          "baggage_flag": "included",
+          "long_trip": false,
+          "duration_label": null
+        }
+      ]
+    }
+  ]
+}

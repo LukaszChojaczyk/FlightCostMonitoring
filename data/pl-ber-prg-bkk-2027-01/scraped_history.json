@@ -1,0 +1,36 @@
+{
+  "route_id": "pl-ber-prg-bkk-2027-01",
+  "entries": [
+    {
+      "fetched_at": "2026-11-16T13:45:46+00:00",
+      "return_date": "2027-02-03",
+      "min_price": 11675,
+      "min_price_airlines": [
+        "Qatar Airways"
+      ],
+      "min_price_origin": "WAW",
+      "options_count": 6,
+      "errors": 1
+    },
+    {
+      "fetched_at": "2026-11-16T13:45:46+00:00",
+      "return_date": "2027-02-04",
+      "min_price": null,
+      "min_price_airlines": null,
+      "min_price_origin": null,
+      "options_count": 0,
+      "errors": 1
+    },
+    {
+      "fetched_at": "2026-11-16T13:45:46+00:00",
+      "return_date": "2027-02-05",
+      "min_price": 11304,
+      "min_price_airlines": [
+        "Qatar Airways"
+      ],
+      "min_price_origin": "BER",
+      "options_count": 9,
+      "errors": 0
+    }
+  ]
+}
