@@ -226,3 +226,12 @@ table { border-collapse: collapse; width: 100%; }
   .matrix td button { padding: 6px 4px; font-size: 13px; }
   .matrix thead th { font-size: 11px; }
 }
+
+/* links between the flight and hotel pages */
+.page-nav { display: flex; gap: 4px; margin-bottom: 8px; font-size: 13px; }
+.page-nav a, .page-nav span { padding: 3px 10px; border-radius: 999px; border: 1px solid var(--border); text-decoration: none; color: var(--text-2); }
+.page-nav a:hover { background: var(--surface-2); }
+.page-nav [aria-current] { background: var(--accent-soft); border-color: var(--accent); color: var(--accent-ink); font-weight: 600; }
+.badge.rating { color: var(--good-ink); border-color: var(--good); }
+.badge.transit { color: var(--accent-ink); border-color: var(--accent); }
+.opt-badges .badge, .hero-what .badge { white-space: normal; }

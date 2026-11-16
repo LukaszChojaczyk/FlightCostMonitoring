@@ -1,0 +1,165 @@
+{
+  "settings": {
+    "city": "Bangkok",
+    "tripadvisor_location_key": "g293916",
+    "currency": "EUR",
+    "currency_note": "Xotelo has no PLN, so prices are fetched in EUR and converted with the NBP mid rate of the day.",
+    "rooms": 1,
+    "adults": 2,
+    "children_ages": [12],
+    "guests_note": "2 adults + 1 child aged 12 in one room. Many 5-star rooms take 3 guests only with an extra bed or as a family room, so confirm the room type before booking.",
+    "pause_seconds": 1.5,
+    "list_pages": 12,
+    "match_note": "Each hotel's Tripadvisor key is found by name in the city list: every word of match must be in the Tripadvisor name, no word of match_exclude. Set key to pin a hotel."
+  },
+  "stays": [
+    {
+      "id": "first",
+      "name": "First stay, after landing",
+      "checkin_dates": ["2027-01-18", "2027-01-19", "2027-01-20", "2027-01-21", "2027-01-22"],
+      "nights": [3, 4, 5],
+      "default": {
+        "date": "2027-01-20",
+        "nights": 4
+      },
+      "note": "Flights leave 17-21 Jan and land the next day, so check-in is 18-22 Jan."
+    },
+    {
+      "id": "last",
+      "name": "Last stay, before flying home",
+      "checkout_dates": ["2027-02-03", "2027-02-04", "2027-02-05"],
+      "nights": [3, 4, 5],
+      "default": {
+        "date": "2027-02-04",
+        "nights": 4
+      },
+      "note": "Check-out on the day of the flight home (3, 4 or 5 Feb). Night flights may need a late check-out."
+    }
+  ],
+  "hotels": [
+    {
+      "id": "okura",
+      "name": "The Okura Prestige Bangkok",
+      "match": "Okura Prestige Bangkok",
+      "area": "Ploenchit",
+      "station": "BTS Phloen Chit",
+      "station_note": "Skywalk straight into the station",
+      "building": "Park Ventures tower, hotel on floors 24-34",
+      "pool": "Cantilevered infinity pool on the 25th floor"
+    },
+    {
+      "id": "eastin-grand-sathorn",
+      "name": "Eastin Grand Hotel Sathorn",
+      "match": "Eastin Grand Sathorn",
+      "area": "Sathorn",
+      "station": "BTS Surasak",
+      "station_note": "Covered walkway into the station",
+      "building": "33-floor tower",
+      "pool": "Outdoor infinity pool with city views"
+    },
+    {
+      "id": "sheraton-grande-sukhumvit",
+      "name": "Sheraton Grande Sukhumvit",
+      "match": "Sheraton Grande Sukhumvit",
+      "area": "Asok, Sukhumvit",
+      "station": "BTS Asok, MRT Sukhumvit",
+      "station_note": "Skywalk to BTS Asok, MRT about 5 min",
+      "building": "33-floor tower",
+      "pool": "Outdoor lagoon-style garden pool"
+    },
+    {
+      "id": "grande-centre-point-terminal21",
+      "name": "Grande Centre Point Hotel Terminal 21",
+      "match": "Grande Centre Point Terminal 21",
+      "area": "Asok, Sukhumvit",
+      "station": "BTS Asok, MRT Sukhumvit",
+      "station_note": "Linked through Terminal 21 mall to both stations",
+      "building": "High-rise tower above Terminal 21",
+      "pool": "Outdoor pool",
+      "family_note": "Large suites, popular with families of 3-4"
+    },
+    {
+      "id": "centara-grand-centralworld",
+      "name": "Centara Grand at CentralWorld",
+      "match": "Centara Grand",
+      "match_exclude": ["ladprao", "pattaya", "hua", "phuket", "krabi"],
+      "area": "Ratchaprasong",
+      "station": "BTS Chit Lom, BTS Siam",
+      "station_note": "Skywalk to BTS Chit Lom",
+      "building": "55-floor tower",
+      "pool": "Outdoor pool on the 26th floor"
+    },
+    {
+      "id": "intercontinental",
+      "name": "InterContinental Bangkok",
+      "match": "InterContinental Bangkok",
+      "match_exclude": ["sukhumvit"],
+      "area": "Ratchaprasong",
+      "station": "BTS Chit Lom",
+      "station_note": "Skywalk to BTS Chit Lom",
+      "building": "37-floor tower",
+      "pool": "Rooftop outdoor pool"
+    },
+    {
+      "id": "marriott-marquis-queens-park",
+      "name": "Bangkok Marriott Marquis Queen's Park",
+      "match": "Marriott Marquis Queen's Park",
+      "area": "Phrom Phong, Sukhumvit",
+      "station": "BTS Phrom Phong",
+      "station_note": "About 5 min walk",
+      "building": "37-floor tower",
+      "pool": "Large outdoor resort-style pools",
+      "family_note": "Big resort-style hotel next to Benjasiri Park"
+    },
+    {
+      "id": "hyatt-regency-sukhumvit",
+      "name": "Hyatt Regency Bangkok Sukhumvit",
+      "match": "Hyatt Regency Bangkok Sukhumvit",
+      "area": "Nana, Sukhumvit",
+      "station": "BTS Nana",
+      "station_note": "Next to the station",
+      "building": "High-rise tower",
+      "pool": "Outdoor pool high up with skyline views"
+    },
+    {
+      "id": "marriott-sukhumvit-57",
+      "name": "Bangkok Marriott Hotel Sukhumvit",
+      "match": "Bangkok Marriott Hotel Sukhumvit",
+      "area": "Thong Lo, Sukhumvit",
+      "station": "BTS Thong Lo",
+      "station_note": "About 3 min walk",
+      "building": "High-rise tower with Octave rooftop bar",
+      "pool": "Outdoor pool"
+    },
+    {
+      "id": "banyan-tree",
+      "name": "Banyan Tree Bangkok",
+      "match": "Banyan Tree Bangkok",
+      "area": "Sathorn",
+      "station": "MRT Lumphini",
+      "station_note": "About 10 min walk",
+      "building": "61-floor tower with Vertigo rooftop",
+      "pool": "Outdoor pool on the 21st floor"
+    },
+    {
+      "id": "so-bangkok",
+      "name": "SO/ Bangkok",
+      "match": "SO Bangkok",
+      "area": "Lumphini",
+      "station": "MRT Lumphini",
+      "station_note": "Across the road from the station",
+      "building": "High-rise facing Lumphini Park",
+      "pool": "Outdoor infinity pool over Lumphini Park"
+    },
+    {
+      "id": "waldorf-astoria",
+      "name": "Waldorf Astoria Bangkok",
+      "match": "Waldorf Astoria Bangkok",
+      "area": "Ratchadamri",
+      "station": "BTS Ratchadamri",
+      "station_note": "Skywalk to the station",
+      "building": "60-floor Magnolias Ratchadamri tower",
+      "pool": "Outdoor pool on the 16th floor"
+    }
+  ]
+}

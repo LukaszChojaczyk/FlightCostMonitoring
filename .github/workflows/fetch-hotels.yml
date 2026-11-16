@@ -1,0 +1,52 @@
+name: Fetch hotel prices
+
+# Bangkok hotel prices from the free Xotelo API (Tripadvisor rates from Booking.com,
+# Agoda, Expedia and others). No API key and no SerpApi quota, so it is safe to run by
+# hand as often as you like: Actions tab, "Fetch hotel prices", "Run workflow".
+on:
+  schedule:
+    # Once a day at 08:00 UTC = 09:00 Polish winter time (10:00 in summer: cron is UTC).
+    - cron: "0 8 * * *"
+  workflow_dispatch:
+  push:
+    branches: [claude/project-thread-n6wrnx] # TEMPORARY: test run from the PR branch, removed before merge
+    paths: [".github/workflows/fetch-hotels.yml", "scripts/fetch_hotels.py", "config/hotels.json"]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: fetch-hotels
+  cancel-in-progress: false
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Fetch hotel prices
+        # A failed request is recorded in data/hotels/latest.json and does not fail the run.
+        timeout-minutes: 25
+        run: python scripts/fetch_hotels.py
+
+      - name: Commit updated data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898233+github-actions[bot]@users.noreply.github.com"
+          git add data/hotels
+          if git diff --cached --quiet; then
+            echo "No data changes."
+            exit 0
+          fi
+          git commit -m "data: hotel prices $(date -u +'%Y-%m-%d %H:%M') UTC"
+          for i in 1 2 3; do
+            git pull --rebase && git push && exit 0
+            sleep $((i * 5))
+          done
+          exit 1
