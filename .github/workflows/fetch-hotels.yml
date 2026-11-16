@@ -70,24 +70,27 @@ jobs:
           pattern: hotels-phuket-*
           path: parts/phuket
 
-      - name: Merge batches
-        # each city on its own, so one city with no results still saves the other
-        run: |
-          python -u scripts/fetch_hotels.py --city bangkok --merge parts/bangkok || echo "::warning::Bangkok merge failed"
-          python -u scripts/fetch_hotels.py --city phuket --merge parts/phuket || echo "::warning::Phuket merge failed"
-
-      - name: Commit updated data
+      - name: Merge batches and commit
+        # Always merge onto the newest commit of the branch, never the one this run started from:
+        # another run may have committed hotel data meanwhile, and rebasing generated JSON onto that
+        # conflicts. If the push loses a race, start again from the new tip (the batch files stay).
+        # Each city merges on its own, so one city with no results still saves the other.
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898233+github-actions[bot]@users.noreply.github.com"
-          git add -A data
-          if git diff --cached --quiet; then
-            echo "No data changes."
-            exit 0
-          fi
-          git commit -m "data: hotel prices $(date -u +'%Y-%m-%d %H:%M') UTC"
-          for i in 1 2 3; do
-            git pull --rebase && git push && exit 0
+          branch="${GITHUB_REF_NAME}"
+          for i in 1 2 3 4; do
+            git fetch --quiet origin "$branch"
+            git reset --quiet --hard "origin/$branch"
+            python -u scripts/fetch_hotels.py --city bangkok --merge parts/bangkok || echo "::warning::Bangkok merge failed"
+            python -u scripts/fetch_hotels.py --city phuket --merge parts/phuket || echo "::warning::Phuket merge failed"
+            git add -A data
+            if git diff --cached --quiet; then
+              echo "No data changes."
+              exit 0
+            fi
+            git commit --quiet -m "data: hotel prices $(date -u +'%Y-%m-%d %H:%M') UTC"
+            git push origin "HEAD:$branch" && exit 0
             sleep $((i * 5))
           done
           exit 1
