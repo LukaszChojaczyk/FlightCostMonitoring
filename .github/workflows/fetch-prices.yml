@@ -2,9 +2,10 @@ name: Fetch flight prices
 
 on:
   schedule:
-    # Once a day at 05:23 UTC. 2 airport groups x 3 return dates x 31 days = 186 of the
+    # Twice a day (UTC). 2 runs x 1 airport group x 3 return dates x 31 days = 186 of the
     # 250 free searches; the script spends what is left on return-leg details for the cheapest deals.
     - cron: "23 5 * * *"
+    - cron: "23 17 * * *"
   workflow_dispatch:
     inputs:
       route_id:

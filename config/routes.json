@@ -2,7 +2,7 @@
   "settings": {
     "monthly_search_budget": 250,
     "reserve_searches": 10,
-    "runs_per_day": 1,
+    "runs_per_day": 2,
     "max_airports_per_search": 7,
     "currency": "PLN",
     "hl": "en",
@@ -11,10 +11,9 @@
   "routes": [
     {
       "id": "pl-ber-prg-bkk-2027-01",
-      "name": "Poland / Berlin / Prague to Bangkok, Jan-Feb 2027",
+      "name": "Warsaw / Wroclaw / Berlin / Prague to Bangkok, Jan-Feb 2027",
       "enabled": true,
-      "origins": ["WAW", "KRK", "KTW", "GDN", "WRO", "POZ", "BER", "PRG", "WMI", "RZE", "LUZ", "SZZ", "BZG", "LCJ"],
-      "origins_note": "Google Flights takes at most 7 airports per search, so these are searched in groups of 7 (2 searches per return date). Olsztyn (SZY) was dropped to stay at 2 groups.",
+      "origins": ["WAW", "WRO", "BER", "PRG"],
       "destinations": ["BKK", "DMK"],
       "outbound_date": "2027-01-19",
       "return_dates": ["2027-02-03", "2027-02-04", "2027-02-05"],

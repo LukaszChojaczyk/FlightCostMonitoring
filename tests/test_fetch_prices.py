@@ -35,7 +35,7 @@ class ParamsTests(unittest.TestCase):
         groups = fp.origin_groups(route, cfg["settings"])
         self.assertTrue(all(len(g) <= 7 for g in groups))
         self.assertEqual(sum(groups, []), route["origins"])
-        self.assertEqual(fp.searches_per_run(route, cfg["settings"]), 6)
+        self.assertEqual(fp.searches_per_run(route, cfg["settings"]), 3)
         p = fp.base_params(route, cfg["settings"], "2027-02-04", groups[0])
         self.assertEqual(p["departure_id"].split(","), groups[0])
         self.assertIn("WAW", p["departure_id"].split(","))
@@ -60,11 +60,10 @@ class DryRunTests(unittest.TestCase):
 
         self.assertEqual(len(latest["results"]), 3)
         opts = latest["results"][0]["options"]
-        # the fixture answers both airport groups, so every option appears twice
-        self.assertEqual([o["price"] for o in opts], [8120, 8120, 9870, 9870, 10450, 10450])
+        self.assertEqual([o["price"] for o in opts], [8120, 9870, 10450])  # cheapest first
         self.assertEqual(opts[0]["baggage_flag"], "extra")          # flydubai
-        self.assertEqual(opts[2]["baggage_flag"], "fare-dependent")  # Etihad
-        self.assertEqual(opts[4]["baggage_flag"], "included")       # Qatar
+        self.assertEqual(opts[1]["baggage_flag"], "fare-dependent")  # Etihad
+        self.assertEqual(opts[2]["baggage_flag"], "included")       # Qatar
         self.assertEqual(opts[0]["price_per_person"], 2707)
         self.assertEqual(opts[0]["destination"], "DMK")
         self.assertEqual(len(history["entries"]), 3)
@@ -81,7 +80,11 @@ class NoResultsTests(unittest.TestCase):
         r = snap["results"][0]
         self.assertIsNone(r["error"])
         self.assertEqual(r["options"], [])
-        self.assertEqual(len(r["origin_groups_without_results"]), 2)
+        self.assertEqual(r["origin_groups_without_results"], [["WAW", "WRO", "BER", "PRG"]])
+
+    def test_long_origin_lists_are_split_into_groups_of_seven(self):
+        route = {"origins": [f"A{i}" for i in range(15)]}
+        self.assertEqual([len(g) for g in fp.origin_groups(route, {})], [7, 7, 1])
 
 
 if __name__ == "__main__":
