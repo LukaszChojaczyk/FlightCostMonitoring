@@ -45,8 +45,8 @@
     },
     {
       "id": "movenpick-bangtao",
-      "name": "Mövenpick Resort Bangtao Beach Phuket",
-      "match": "Movenpick Resort Bangtao Beach",
+      "name": "Mövenpick Phuket Bangtao",
+      "match": "Movenpick Bangtao",
       "area": "Bang Tao",
       "beach": "Bang Tao Beach",
       "beach_note": "Beachfront",
@@ -88,15 +88,15 @@
       "family_note": "Kids club"
     },
     {
-      "id": "movenpick-karon",
-      "name": "Mövenpick Resort & Spa Karon Beach Phuket",
-      "match": "Movenpick Karon Beach",
-      "area": "Karon",
-      "beach": "Karon Beach",
-      "beach_note": "Across the road from the beach",
-      "building": "Resort with villas",
-      "pool": "Outdoor pools",
-      "family_note": "Kids club"
+      "id": "pullman-naithon",
+      "name": "Pullman Phuket Arcadia Naithon Beach",
+      "match": "Pullman Phuket Arcadia",
+      "area": "Nai Thon",
+      "beach": "Nai Thon Beach",
+      "beach_note": "Across a quiet road from the beach",
+      "building": "Hillside resort over the bay",
+      "pool": "Several outdoor pools",
+      "family_note": "Family rooms, kids club"
     },
     {
       "id": "le-meridien-phuket",
