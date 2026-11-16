@@ -1,0 +1,164 @@
+{
+  "search_metadata": {
+    "status": "Success",
+    "google_flights_url": "https://www.google.com/travel/flights?example"
+  },
+  "best_flights": [
+    {
+      "flights": [
+        {
+          "departure_airport": {
+            "name": "WAW airport",
+            "id": "WAW",
+            "time": "2027-01-19 15:40"
+          },
+          "arrival_airport": {
+            "name": "DOH airport",
+            "id": "DOH",
+            "time": "2027-01-19 23:10"
+          },
+          "duration": 330,
+          "airplane": "Boeing 787",
+          "airline": "Qatar Airways",
+          "flight_number": "QR 260",
+          "travel_class": "Economy"
+        },
+        {
+          "departure_airport": {
+            "name": "DOH airport",
+            "id": "DOH",
+            "time": "2027-01-20 02:05"
+          },
+          "arrival_airport": {
+            "name": "BKK airport",
+            "id": "BKK",
+            "time": "2027-01-20 12:55"
+          },
+          "duration": 410,
+          "airplane": "Boeing 787",
+          "airline": "Qatar Airways",
+          "flight_number": "QR 836",
+          "travel_class": "Economy"
+        }
+      ],
+      "layovers": [
+        {
+          "duration": 175,
+          "name": "Hamad International Airport",
+          "id": "DOH"
+        }
+      ],
+      "total_duration": 915,
+      "price": 10450,
+      "type": "Round trip",
+      "departure_token": "TOKEN_A",
+      "extensions": []
+    }
+  ],
+  "other_flights": [
+    {
+      "flights": [
+        {
+          "departure_airport": {
+            "name": "PRG airport",
+            "id": "PRG",
+            "time": "2027-01-19 11:00"
+          },
+          "arrival_airport": {
+            "name": "AUH airport",
+            "id": "AUH",
+            "time": "2027-01-19 19:30"
+          },
+          "duration": 390,
+          "airplane": "Boeing 787",
+          "airline": "Etihad",
+          "flight_number": "EY 140",
+          "travel_class": "Economy"
+        },
+        {
+          "departure_airport": {
+            "name": "AUH airport",
+            "id": "AUH",
+            "time": "2027-01-19 21:40"
+          },
+          "arrival_airport": {
+            "name": "BKK airport",
+            "id": "BKK",
+            "time": "2027-01-20 07:00"
+          },
+          "duration": 380,
+          "airplane": "Boeing 787",
+          "airline": "Etihad",
+          "flight_number": "EY 402",
+          "travel_class": "Economy"
+        }
+      ],
+      "layovers": [
+        {
+          "duration": 130,
+          "name": "Zayed International Airport",
+          "id": "AUH"
+        }
+      ],
+      "total_duration": 900,
+      "price": 9870,
+      "departure_token": "TOKEN_B"
+    },
+    {
+      "flights": [
+        {
+          "departure_airport": {
+            "name": "BER airport",
+            "id": "BER",
+            "time": "2027-01-19 14:00"
+          },
+          "arrival_airport": {
+            "name": "DXB airport",
+            "id": "DXB",
+            "time": "2027-01-19 22:45"
+          },
+          "duration": 405,
+          "airplane": "Boeing 787",
+          "airline": "flydubai",
+          "flight_number": "FZ 1700",
+          "travel_class": "Economy"
+        },
+        {
+          "departure_airport": {
+            "name": "DXB airport",
+            "id": "DXB",
+            "time": "2027-01-20 03:00"
+          },
+          "arrival_airport": {
+            "name": "DMK airport",
+            "id": "DMK",
+            "time": "2027-01-20 12:10"
+          },
+          "duration": 370,
+          "airplane": "Boeing 787",
+          "airline": "flydubai",
+          "flight_number": "FZ 1800",
+          "travel_class": "Economy"
+        }
+      ],
+      "layovers": [
+        {
+          "duration": 255,
+          "name": "Dubai International Airport",
+          "id": "DXB"
+        }
+      ],
+      "total_duration": 955,
+      "price": 8120,
+      "departure_token": "TOKEN_C"
+    }
+  ],
+  "price_insights": {
+    "lowest_price": 8120,
+    "price_level": "typical",
+    "typical_price_range": [
+      8000,
+      12000
+    ]
+  }
+}
