@@ -1,6 +1,6 @@
 {
   "source": "xotelo (Tripadvisor rates)",
-  "fetched_at": "2026-11-16T18:33:21+00:00",
+  "fetched_at": "2026-11-16T18:41:13+00:00",
   "currency": "EUR",
   "pln_rate": 4.4048,
   "pln_rate_source": "NBP table 222/A/NBP/2026 of 2026-11-16",
@@ -1274,11 +1274,27 @@
       "chk_in": "2027-01-22",
       "chk_out": "2027-01-26",
       "nights": 4,
-      "rates": [],
-      "min_rate": null,
-      "min_site": null,
-      "total": null,
-      "total_pln": null,
+      "rates": [
+        {
+          "code": "Vio",
+          "name": "Vio.com",
+          "rate": 270.0
+        },
+        {
+          "code": "Agoda",
+          "name": "Agoda.com",
+          "rate": 279.0
+        },
+        {
+          "code": "BookingCom",
+          "name": "Booking.com",
+          "rate": 344.0
+        }
+      ],
+      "min_rate": 270.0,
+      "min_site": "Vio.com",
+      "total": 1080,
+      "total_pln": 4757,
       "error": null
     },
     {

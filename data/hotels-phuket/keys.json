@@ -43,5 +43,25 @@
     "match": "The Nai Harn",
     "key": "g293920-d302529",
     "tripadvisor_name": "The Nai Harn"
+  },
+  "amari-phuket": {
+    "match": "Amari Phuket",
+    "key": "g293920-d305178",
+    "tripadvisor_name": "Amari Phuket"
+  },
+  "la-flora-patong": {
+    "match": "La Flora Resort Patong",
+    "key": "g293920-d1098621",
+    "tripadvisor_name": "La Flora Resort Patong"
+  },
+  "kalima-patong": {
+    "match": "Kalima Resort",
+    "key": "g293920-d2542406",
+    "tripadvisor_name": "Kalima Resort & Spa Phuket"
+  },
+  "indigo-patong": {
+    "match": "Hotel Indigo Phuket Patong",
+    "key": "g293920-d14076704",
+    "tripadvisor_name": "Hotel Indigo Phuket Patong by IHG"
   }
 }
