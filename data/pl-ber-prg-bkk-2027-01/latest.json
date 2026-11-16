@@ -1,0 +1,71 @@
+{
+  "route": {
+    "id": "pl-ber-prg-bkk-2027-01",
+    "name": "Poland / Berlin / Prague to Bangkok, Jan-Feb 2027",
+    "origins": [
+      "WAW",
+      "WMI",
+      "KRK",
+      "GDN",
+      "KTW",
+      "WRO",
+      "POZ",
+      "RZE",
+      "LUZ",
+      "SZZ",
+      "BZG",
+      "LCJ",
+      "SZY",
+      "BER",
+      "PRG"
+    ],
+    "destinations": [
+      "BKK",
+      "DMK"
+    ],
+    "outbound_date": "2027-01-19",
+    "return_dates": [
+      "2027-02-03",
+      "2027-02-04",
+      "2027-02-05"
+    ],
+    "passengers": {
+      "adults": 3,
+      "children": 0,
+      "infants_in_seat": 0,
+      "infants_on_lap": 0
+    },
+    "passenger_note": "2 adults + 1 child aged 12. A 12-year-old pays adult fare, so the search uses 3 adults.",
+    "travel_class": "economy",
+    "max_stops": 1,
+    "max_duration_minutes": 960,
+    "checked_bags_needed": 3,
+    "return_details_top_n": 3
+  },
+  "fetched_at": "2026-11-16T12:40:02+00:00",
+  "passengers_total": 3,
+  "price_note": "Prices are round-trip totals for all passengers, as shown by Google Flights.",
+  "results": [
+    {
+      "return_date": "2027-02-03",
+      "error": "SerpApi error: Google Flights hasn't returned any results for this query.",
+      "google_flights_url": null,
+      "price_insights": null,
+      "options": []
+    },
+    {
+      "return_date": "2027-02-04",
+      "error": "SerpApi error: Google Flights hasn't returned any results for this query.",
+      "google_flights_url": null,
+      "price_insights": null,
+      "options": []
+    },
+    {
+      "return_date": "2027-02-05",
+      "error": "SerpApi error: Google Flights hasn't returned any results for this query.",
+      "google_flights_url": null,
+      "price_insights": null,
+      "options": []
+    }
+  ]
+}

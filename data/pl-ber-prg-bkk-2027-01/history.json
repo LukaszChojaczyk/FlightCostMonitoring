@@ -1,0 +1,23 @@
+{
+  "route_id": "pl-ber-prg-bkk-2027-01",
+  "entries": [
+    {
+      "fetched_at": "2026-11-16T12:40:02+00:00",
+      "return_date": "2027-02-03",
+      "min_price": null,
+      "error": "SerpApi error: Google Flights hasn't returned any results for this query."
+    },
+    {
+      "fetched_at": "2026-11-16T12:40:02+00:00",
+      "return_date": "2027-02-04",
+      "min_price": null,
+      "error": "SerpApi error: Google Flights hasn't returned any results for this query."
+    },
+    {
+      "fetched_at": "2026-11-16T12:40:02+00:00",
+      "return_date": "2027-02-05",
+      "min_price": null,
+      "error": "SerpApi error: Google Flights hasn't returned any results for this query."
+    }
+  ]
+}
