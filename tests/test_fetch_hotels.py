@@ -64,6 +64,23 @@ class StayOptionsTest(unittest.TestCase):
         self.assertEqual(fh.anchor_date(CONFIG["stays"][1], opts[0]), "2027-02-04")
 
 
+class PairStayTest(unittest.TestCase):
+    def test_stay_between_takes_every_checkin_checkout_pair(self):
+        stay = {"id": "middle", "checkin_dates": ["2027-01-23", "2027-01-24"], "checkout_dates": ["2027-01-30", "2027-01-31"]}
+        opts = fh.stay_options(stay)
+        self.assertEqual([o["nights"] for o in opts], [7, 8, 6, 7])
+        self.assertEqual(fh.anchor_date(stay, opts[0]), "2027-01-23")
+
+    def test_city_paths(self):
+        self.assertEqual(fh.city_paths("bangkok")[1].name, "hotels")
+        cfg, out = fh.city_paths("phuket")
+        self.assertEqual((cfg.name, out.name), ("hotels-phuket.json", "hotels-phuket"))
+        self.assertTrue(cfg.exists())
+
+    def test_accents_and_curly_apostrophes_match(self):
+        self.assertEqual(fh.tokens("Mövenpick Queen’s Park"), ["movenpick", "queens", "park"])
+
+
 class RunTest(unittest.TestCase):
     def setUp(self):
         self.api = FakeApi()

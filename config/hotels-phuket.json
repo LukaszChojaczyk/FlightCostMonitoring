@@ -1,0 +1,168 @@
+{
+  "settings": {
+    "city": "Phuket",
+    "tripadvisor_location_key": "g293920",
+    "list_pages": 20,
+    "currency": "EUR",
+    "currency_note": "Xotelo has no PLN, so prices are fetched in EUR and converted with the NBP mid rate of the day.",
+    "rooms": 1,
+    "adults": 3,
+    "children_ages": [],
+    "booking_link_guests": {
+      "adults": 2,
+      "children_ages": [12]
+    },
+    "guests_note": "2 adults + 1 child aged 12 in one room, priced for 3 adults (the API returns nothing when a child age is given). Confirm the room or villa fits 3 before booking.",
+    "criteria_label": "5-star beach resort, outdoor pool, family-friendly",
+    "selection_note": "picked for 5 stars, an outdoor pool, a beach on the doorstep, good reviews and room for a family of 3 (no adults-only resorts), on the quieter west-coast beaches",
+    "match_note": "Each hotel's Tripadvisor key is found by name in the Phuket list: every word of match must be in the Tripadvisor name, no word of match_exclude. Set key to pin a hotel.",
+    "pause_seconds": 1.5
+  },
+  "stays": [
+    {
+      "id": "middle",
+      "name": "Phuket, between the Bangkok stays",
+      "checkin_dates": ["2027-01-23", "2027-01-24", "2027-01-25"],
+      "checkout_dates": ["2027-01-30", "2027-01-31", "2027-02-01"],
+      "default": {
+        "date": "2027-01-24",
+        "nights": 7
+      },
+      "note": "Check-in after the first Bangkok stay (23-25 Jan), check-out before the last one (30 Jan-1 Feb). Flights BKK-HKT not included."
+    }
+  ],
+  "hotels": [
+    {
+      "id": "katathani",
+      "name": "Katathani Phuket Beach Resort",
+      "match": "Katathani Phuket Beach Resort",
+      "area": "Kata Noi",
+      "beach": "Kata Noi Beach",
+      "beach_note": "Right on the beach",
+      "building": "Large low-rise resort",
+      "pool": "Several outdoor pools",
+      "family_note": "Family rooms, kids club"
+    },
+    {
+      "id": "movenpick-bangtao",
+      "name": "Mövenpick Resort Bangtao Beach Phuket",
+      "match": "Movenpick Resort Bangtao Beach",
+      "area": "Bang Tao",
+      "beach": "Bang Tao Beach",
+      "beach_note": "Beachfront",
+      "building": "Low-rise resort with villas",
+      "pool": "Large outdoor pools",
+      "family_note": "Kids club"
+    },
+    {
+      "id": "angsana-laguna",
+      "name": "Angsana Laguna Phuket",
+      "match": "Angsana Laguna Phuket",
+      "area": "Laguna, Bang Tao",
+      "beach": "Bang Tao Beach",
+      "beach_note": "Beachfront",
+      "building": "Resort in the Laguna complex",
+      "pool": "One of the longest outdoor pools in Phuket",
+      "family_note": "Family suites, kids club"
+    },
+    {
+      "id": "dusit-laguna",
+      "name": "Dusit Thani Laguna Phuket",
+      "match": "Dusit Thani Laguna Phuket",
+      "area": "Laguna, Bang Tao",
+      "beach": "Bang Tao Beach",
+      "beach_note": "Beachfront",
+      "building": "Low-rise resort between beach and lagoon",
+      "pool": "Outdoor pools",
+      "family_note": "Kids club"
+    },
+    {
+      "id": "outrigger-laguna",
+      "name": "Outrigger Laguna Phuket Beach Resort",
+      "match": "Outrigger Laguna Phuket Beach Resort",
+      "area": "Laguna, Bang Tao",
+      "beach": "Bang Tao Beach",
+      "beach_note": "Beachfront",
+      "building": "Resort in the Laguna complex",
+      "pool": "Outdoor pools",
+      "family_note": "Family suites"
+    },
+    {
+      "id": "intercontinental-phuket",
+      "name": "InterContinental Phuket Resort",
+      "match": "InterContinental Phuket",
+      "area": "Kamala",
+      "beach": "Kamala Beach",
+      "beach_note": "Beachfront",
+      "building": "Low-rise resort",
+      "pool": "Outdoor pools",
+      "family_note": "Kids club"
+    },
+    {
+      "id": "hyatt-regency-phuket",
+      "name": "Hyatt Regency Phuket Resort",
+      "match": "Hyatt Regency Phuket",
+      "area": "Kamala",
+      "beach": "Kamala Bay",
+      "beach_note": "Hillside, short shuttle to the beach",
+      "building": "Hillside resort with sea views",
+      "pool": "Outdoor infinity pools",
+      "family_note": "Kids club"
+    },
+    {
+      "id": "twinpalms",
+      "name": "Twinpalms Phuket",
+      "match": "Twinpalms Phuket",
+      "match_exclude": ["montazure", "lofts"],
+      "area": "Surin",
+      "beach": "Surin Beach",
+      "beach_note": "Short walk to the beach",
+      "building": "Boutique resort",
+      "pool": "Outdoor pools"
+    },
+    {
+      "id": "movenpick-karon",
+      "name": "Mövenpick Resort & Spa Karon Beach Phuket",
+      "match": "Movenpick Karon Beach",
+      "area": "Karon",
+      "beach": "Karon Beach",
+      "beach_note": "Across the road from the beach",
+      "building": "Resort with villas",
+      "pool": "Outdoor pools",
+      "family_note": "Kids club"
+    },
+    {
+      "id": "le-meridien-phuket",
+      "name": "Le Méridien Phuket Beach Resort",
+      "match": "Le Meridien Phuket Beach Resort",
+      "area": "Karon Noi (Relax Bay)",
+      "beach": "Relax Bay",
+      "beach_note": "Private bay beachfront",
+      "building": "Resort in its own bay",
+      "pool": "Large outdoor pools",
+      "family_note": "Kids club"
+    },
+    {
+      "id": "jw-marriott-mai-khao",
+      "name": "JW Marriott Phuket Resort & Spa",
+      "match": "JW Marriott Phuket Resort",
+      "area": "Mai Khao",
+      "beach": "Mai Khao Beach",
+      "beach_note": "Beachfront, 15 min from the airport",
+      "building": "Low-rise resort",
+      "pool": "Several outdoor pools",
+      "family_note": "Kids club"
+    },
+    {
+      "id": "the-nai-harn",
+      "name": "The Nai Harn",
+      "match": "The Nai Harn",
+      "match_exclude": ["villa", "resort"],
+      "area": "Nai Harn",
+      "beach": "Nai Harn Beach",
+      "beach_note": "Above the beach",
+      "building": "Hillside hotel over the bay",
+      "pool": "Outdoor pool with sea view"
+    }
+  ]
+}
