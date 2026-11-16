@@ -13,8 +13,8 @@
       "children_ages": [12]
     },
     "guests_note": "2 adults + 1 child aged 12 in one room, priced for 3 adults (the API returns nothing when a child age is given). Confirm the room or villa fits 3 before booking.",
-    "criteria_label": "5-star beach resort, outdoor pool, family-friendly",
-    "selection_note": "picked for 5 stars, an outdoor pool, a beach on the doorstep, good reviews and room for a family of 3 (no adults-only resorts), on the quieter west-coast beaches",
+    "criteria_label": "5-star, outdoor pool, by the beach, family-friendly · Patong + quieter beaches",
+    "selection_note": "picked for 5 stars, an outdoor pool, a beach close by, good reviews and room for a family of 3 (no adults-only resorts): 4 in or next to lively Patong, 8 on the quieter west-coast beaches",
     "match_note": "Each hotel's Tripadvisor key is found by name in the Phuket list: every word of match must be in the Tripadvisor name, no word of match_exclude. Set key to pin a hotel.",
     "pause_seconds": 1.5
   },
@@ -66,28 +66,6 @@
       "family_note": "Family suites, kids club"
     },
     {
-      "id": "dusit-laguna",
-      "name": "Dusit Thani Laguna Phuket",
-      "match": "Dusit Thani Laguna Phuket",
-      "area": "Laguna, Bang Tao",
-      "beach": "Bang Tao Beach",
-      "beach_note": "Beachfront",
-      "building": "Low-rise resort between beach and lagoon",
-      "pool": "Outdoor pools",
-      "family_note": "Kids club"
-    },
-    {
-      "id": "outrigger-laguna",
-      "name": "Outrigger Laguna Phuket Beach Resort",
-      "match": "Outrigger Laguna Phuket Beach Resort",
-      "area": "Laguna, Bang Tao",
-      "beach": "Bang Tao Beach",
-      "beach_note": "Beachfront",
-      "building": "Resort in the Laguna complex",
-      "pool": "Outdoor pools",
-      "family_note": "Family suites"
-    },
-    {
       "id": "intercontinental-phuket",
       "name": "InterContinental Phuket Resort",
       "match": "InterContinental Phuket",
@@ -108,17 +86,6 @@
       "building": "Hillside resort with sea views",
       "pool": "Outdoor infinity pools",
       "family_note": "Kids club"
-    },
-    {
-      "id": "twinpalms",
-      "name": "Twinpalms Phuket",
-      "match": "Twinpalms Phuket",
-      "match_exclude": ["montazure", "lofts"],
-      "area": "Surin",
-      "beach": "Surin Beach",
-      "beach_note": "Short walk to the beach",
-      "building": "Boutique resort",
-      "pool": "Outdoor pools"
     },
     {
       "id": "movenpick-karon",
@@ -154,15 +121,46 @@
       "family_note": "Kids club"
     },
     {
-      "id": "the-nai-harn",
-      "name": "The Nai Harn",
-      "match": "The Nai Harn",
-      "match_exclude": ["villa", "resort"],
-      "area": "Nai Harn",
-      "beach": "Nai Harn Beach",
-      "beach_note": "Above the beach",
-      "building": "Hillside hotel over the bay",
-      "pool": "Outdoor pool with sea view"
+      "id": "amari-phuket",
+      "name": "Amari Phuket",
+      "match": "Amari Phuket",
+      "area": "Patong",
+      "beach": "Patong Beach",
+      "beach_note": "Beachfront at the quieter south end, walk to the centre",
+      "building": "Hillside resort over the bay",
+      "pool": "Outdoor infinity pools",
+      "family_note": "Family rooms, kids club"
+    },
+    {
+      "id": "la-flora-patong",
+      "name": "La Flora Resort Patong",
+      "match": "La Flora Resort Patong",
+      "area": "Patong",
+      "beach": "Patong Beach",
+      "beach_note": "Beachfront on the main beach road",
+      "building": "Low-rise resort",
+      "pool": "Outdoor pools"
+    },
+    {
+      "id": "kalima-patong",
+      "name": "Kalima Resort & Spa",
+      "match": "Kalima Resort",
+      "area": "Kalim, north of Patong",
+      "beach": "Kalim Bay",
+      "beach_note": "Hillside over the bay, 5 min to Patong",
+      "building": "Hillside resort with sea views",
+      "pool": "Outdoor infinity pools",
+      "family_note": "Family suites, kids club"
+    },
+    {
+      "id": "indigo-patong",
+      "name": "Hotel Indigo Phuket Patong",
+      "match": "Hotel Indigo Phuket Patong",
+      "area": "Patong",
+      "beach": "Patong Beach",
+      "beach_note": "About 5 min walk to the beach",
+      "building": "Modern hotel in central Patong",
+      "pool": "Rooftop infinity pool"
     }
   ]
 }

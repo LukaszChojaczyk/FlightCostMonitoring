@@ -91,7 +91,7 @@ good reviews and a BTS or MRT station within a short walk; edit the list there.
 ### Phuket hotels
 
 `site/phuket.html` does the same for the nights between the two Bangkok stays: 12 five-star
-family beach resorts with outdoor pools on Phuket's quieter west-coast beaches
+family-friendly hotels by the beach with outdoor pools, 4 in or next to Patong and 8 on the quieter west-coast beaches
 (`config/hotels-phuket.json`), check-in 23-25 Jan and check-out 30 Jan-1 Feb (every pair, 5-9 nights).
 The same workflow fetches it (`--city phuket`) into `data/hotels-phuket/`.
 
