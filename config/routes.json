@@ -25,7 +25,13 @@
       "long_trip_minutes": 960,
       "max_duration_note": "Search allows up to 24 h per direction; options over long_trip_minutes (16 h) get long_trip=true and a duration_label. A 16 h cap hid every Qatar option (return via Doha is 17h40).",
       "include_airlines": ["STAR_ALLIANCE", "ONEWORLD", "EK", "EY"],
-      "scraper": { "enabled": true, "airlines": ["EK", "EY", "QR"], "destination": "BKK" },
+      "scraper": {
+        "enabled": true,
+        "airlines": ["STAR_ALLIANCE", "ONEWORLD", "EK", "EY"],
+        "destination": "BKK",
+        "outbound_flex_days": 2,
+        "note": "Free second source. Checks outbound_date +/- outbound_flex_days (17-21 Jan) x every return date x every origin, about 60 requests a day, same premium airlines as the API search (Qatar is in oneworld)."
+      },
       "include_airlines_note": "Premium carriers only: Star Alliance (LOT, Lufthansa, Turkish, Thai, Swiss, Austrian, Singapore...), oneworld (Qatar, Finnair, BA, Cathay, Oman Air...), Emirates and Etihad. Google Flights then shows only itineraries flown by these airlines.",
       "checked_bags_needed": 3,
       "return_details_top_n": 3
