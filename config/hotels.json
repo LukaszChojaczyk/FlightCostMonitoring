@@ -13,7 +13,9 @@
     "selection_note": "picked for 5 stars, an outdoor pool, a high-rise building, good reviews and a BTS or MRT station within a short walk",
     "pause_seconds": 1.5,
     "list_pages": 12,
-    "match_note": "Each hotel's Tripadvisor key is found by name in the city list: every word of match must be in the Tripadvisor name, no word of match_exclude. Set key to pin a hotel."
+    "match_note": "Each hotel's Tripadvisor key is found by name in the city list: every word of match must be in the Tripadvisor name, no word of match_exclude. Set key to pin a hotel.",
+    "stayforlong_city": "bangkok",
+    "stayforlong_note": "stayforlong = the hotel's page slug on stayforlong.com (checked by hand, the site blocks bots); without it the link opens Stayforlong's city page (stayforlong_city) for the same dates."
   },
   "stays": [
     {
@@ -21,10 +23,7 @@
       "name": "First stay, after landing",
       "checkin_dates": ["2027-01-18", "2027-01-19", "2027-01-20", "2027-01-21", "2027-01-22"],
       "nights": [3, 4, 5],
-      "default": {
-        "date": "2027-01-20",
-        "nights": 4
-      },
+      "default": { "date": "2027-01-20", "nights": 4 },
       "note": "Flights leave 17-21 Jan and land the next day, so check-in is 18-22 Jan."
     },
     {
@@ -32,10 +31,7 @@
       "name": "Last stay, before flying home",
       "checkout_dates": ["2027-02-03", "2027-02-04", "2027-02-05"],
       "nights": [3, 4, 5],
-      "default": {
-        "date": "2027-02-04",
-        "nights": 4
-      },
+      "default": { "date": "2027-02-04", "nights": 4 },
       "note": "Check-out on the day of the flight home (3, 4 or 5 Feb). Night flights may need a late check-out."
     }
   ],
@@ -48,7 +44,8 @@
       "station": "BTS Phloen Chit",
       "station_note": "Skywalk straight into the station",
       "building": "Park Ventures tower, hotel on floors 24-34",
-      "pool": "Cantilevered infinity pool on the 25th floor"
+      "pool": "Cantilevered infinity pool on the 25th floor",
+      "stayforlong": "the-okura-prestige-bangkok_bangkok"
     },
     {
       "id": "eastin-grand-sathorn",
@@ -58,7 +55,8 @@
       "station": "BTS Surasak",
       "station_note": "Covered walkway into the station",
       "building": "33-floor tower",
-      "pool": "Outdoor infinity pool with city views"
+      "pool": "Outdoor infinity pool with city views",
+      "stayforlong": "eastin-grand-hotel-sathorn-bangkok_bangkok"
     },
     {
       "id": "sheraton-grande-sukhumvit",
@@ -68,7 +66,8 @@
       "station": "BTS Asok, MRT Sukhumvit",
       "station_note": "Skywalk to BTS Asok, MRT about 5 min",
       "building": "33-floor tower",
-      "pool": "Outdoor lagoon-style garden pool"
+      "pool": "Outdoor lagoon-style garden pool",
+      "stayforlong": "sheraton-grande-sukhumvit-luxury-collection-hotel-bangkok_bangkok"
     },
     {
       "id": "grande-centre-point-terminal21",
@@ -90,7 +89,8 @@
       "station": "BTS Chit Lom, BTS Siam",
       "station_note": "Skywalk to BTS Chit Lom",
       "building": "55-floor tower",
-      "pool": "Outdoor pool on the 26th floor"
+      "pool": "Outdoor pool on the 26th floor",
+      "stayforlong": "centara-grand-at-centralworld_bangkok"
     },
     {
       "id": "intercontinental",
@@ -101,7 +101,8 @@
       "station": "BTS Chit Lom",
       "station_note": "Skywalk to BTS Chit Lom",
       "building": "37-floor tower",
-      "pool": "Rooftop outdoor pool"
+      "pool": "Rooftop outdoor pool",
+      "stayforlong": "intercontinental-bangkok-by-ihg_bangkok"
     },
     {
       "id": "marriott-marquis-queens-park",
@@ -112,7 +113,8 @@
       "station_note": "About 5 min walk",
       "building": "37-floor tower",
       "pool": "Large outdoor resort-style pools",
-      "family_note": "Big resort-style hotel next to Benjasiri Park"
+      "family_note": "Big resort-style hotel next to Benjasiri Park",
+      "stayforlong": "bangkok-marriott-marquis-queen-s-park_bangkok"
     },
     {
       "id": "hyatt-regency-sukhumvit",
@@ -132,7 +134,8 @@
       "station": "BTS Thong Lo",
       "station_note": "About 3 min walk",
       "building": "High-rise tower with Octave rooftop bar",
-      "pool": "Outdoor pool"
+      "pool": "Outdoor pool",
+      "stayforlong": "marriott-bangkok-sukhumvit_bangkok"
     },
     {
       "id": "banyan-tree",
@@ -142,7 +145,8 @@
       "station": "MRT Lumphini",
       "station_note": "About 10 min walk",
       "building": "61-floor tower with Vertigo rooftop",
-      "pool": "Outdoor pool on the 21st floor"
+      "pool": "Outdoor pool on the 21st floor",
+      "stayforlong": "banyan-tree-bangkok_bangkok"
     },
     {
       "id": "so-bangkok",
@@ -152,7 +156,8 @@
       "station": "MRT Lumphini",
       "station_note": "Across the road from the station",
       "building": "High-rise facing Lumphini Park",
-      "pool": "Outdoor infinity pool over Lumphini Park"
+      "pool": "Outdoor infinity pool over Lumphini Park",
+      "stayforlong": "so-bangkok_bangkok"
     },
     {
       "id": "waldorf-astoria",
@@ -162,7 +167,8 @@
       "station": "BTS Ratchadamri",
       "station_note": "Skywalk to the station",
       "building": "60-floor Magnolias Ratchadamri tower",
-      "pool": "Outdoor pool on the 16th floor"
+      "pool": "Outdoor pool on the 16th floor",
+      "stayforlong": "waldorf-astoria-bangkok_bangkok"
     }
   ]
 }
