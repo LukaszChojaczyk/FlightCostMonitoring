@@ -141,8 +141,15 @@
     return `https://www.booking.com/searchresults.html?${p}`;
   }
   const googleUrl = (h) => `https://www.google.com/travel/search?${new URLSearchParams({ q: `${h.name} ${cityName()}`, hl: "en", gl: "pl", curr: cur() })}`;
-  // Stayforlong blocks automated requests (AWS WAF), so it is a manual check: open its page for the hotel via search
-  const sflUrl = (h) => `https://www.google.com/search?${new URLSearchParams({ q: `stayforlong ${h.name} ${cityName()}` })}`;
+  // Stayforlong blocks automated requests (AWS WAF), so it is a manual check. Its hotel page when the config has the
+  // slug (h.stayforlong), otherwise its city listing; both take the dates and guests in the query.
+  function sflUrl(h, chkIn, chkOut) {
+    const g = config.settings || {};
+    const q = new URLSearchParams({ checkin: chkIn, checkout: chkOut, adults: g.adults || 2, ch: 0 });
+    return h.stayforlong
+      ? `https://www.stayforlong.com/hotel/th/${encodeURIComponent(h.stayforlong)}?${q}`
+      : `https://www.stayforlong.com/th/city/${encodeURIComponent(h.stayforlong_city || g.stayforlong_city || cityName().toLowerCase())}?${q}`;
+  }
   const taUrl = (h) => (h.tripadvisor_url && /^https:\/\//.test(h.tripadvisor_url) ? h.tripadvisor_url
     : h.tripadvisor_url ? `https://www.tripadvisor.com${h.tripadvisor_url.startsWith("/") ? "" : "/"}${h.tripadvisor_url}` : null);
 
@@ -305,7 +312,7 @@
       const ta = taUrl(h);
       const links = [`<a href="${esc(bookingUrl(h, chkIn, chkOut))}" target="_blank" rel="noopener">Booking.com for these dates</a>`,
         `<a href="${esc(googleUrl(h))}" target="_blank" rel="noopener">Google Hotels</a>`,
-        `<a href="${esc(sflUrl(h))}" target="_blank" rel="noopener" title="Not checked automatically: Stayforlong blocks bots">Stayforlong</a>`,
+        `<a href="${esc(sflUrl(h, chkIn, chkOut))}" target="_blank" rel="noopener" title="Not checked automatically: Stayforlong blocks bots">${h.stayforlong ? "Stayforlong" : `Stayforlong (${esc(h.stayforlong_city || config.settings?.stayforlong_city || cityName())} list)`}</a>`,
         ta ? `<a href="${esc(ta)}" target="_blank" rel="noopener">Tripadvisor</a>` : ""].filter(Boolean).join(" · ");
       const rates = q ? `<details><summary>${q.rates.length} site${q.rates.length === 1 ? "" : "s"}</summary><ul class="legs">${
         q.rates.map((r) => `<li>${esc(r.name)}: <b>${money(conv(r.rate * q.nights))}</b> <span class="lay">(${money(conv(r.rate))} a night${fx() ? ` · ${nf.format(r.rate)} €` : ""})</span></li>`).join("")}</ul></details>` : "";

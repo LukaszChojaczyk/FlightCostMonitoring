@@ -98,7 +98,7 @@ The same workflow fetches it (`--city phuket`) into `data/hotels-phuket/`.
 ### Stayforlong
 
 Stayforlong.com sits behind AWS WAF bot protection: automated requests, even for robots.txt,
-get a challenge or a 403. It is therefore not fetched; each hotel has a Stayforlong link to check by hand.
+get a challenge or a 403. It is therefore not fetched; each hotel has a Stayforlong link (with the dates) to check by hand: its hotel page when `stayforlong` (the page slug) is set in the config, otherwise the city list (`stayforlong_city`).
 
 ## Adding or changing a route
 

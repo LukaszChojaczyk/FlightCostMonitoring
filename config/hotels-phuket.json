@@ -8,15 +8,14 @@
     "rooms": 1,
     "adults": 3,
     "children_ages": [],
-    "booking_link_guests": {
-      "adults": 2,
-      "children_ages": [12]
-    },
+    "booking_link_guests": { "adults": 2, "children_ages": [12] },
     "guests_note": "2 adults + 1 child aged 12 in one room, priced for 3 adults (the API returns nothing when a child age is given). Confirm the room or villa fits 3 before booking.",
     "criteria_label": "5-star, outdoor pool, by the beach, family-friendly · Patong + quieter beaches",
     "selection_note": "picked for 5 stars, an outdoor pool, a beach close by, good reviews and room for a family of 3 (no adults-only resorts): 4 in or next to lively Patong, 8 on the quieter west-coast beaches",
     "match_note": "Each hotel's Tripadvisor key is found by name in the Phuket list: every word of match must be in the Tripadvisor name, no word of match_exclude. Set key to pin a hotel.",
-    "pause_seconds": 1.5
+    "pause_seconds": 1.5,
+    "stayforlong_city": "phuket",
+    "stayforlong_note": "stayforlong = the hotel's page slug on stayforlong.com (checked by hand, the site blocks bots); without it the link opens Stayforlong's city page (stayforlong_city) for the same dates."
   },
   "stays": [
     {
@@ -24,10 +23,7 @@
       "name": "Phuket, between the Bangkok stays",
       "checkin_dates": ["2027-01-23", "2027-01-24", "2027-01-25"],
       "checkout_dates": ["2027-01-30", "2027-01-31", "2027-02-01"],
-      "default": {
-        "date": "2027-01-24",
-        "nights": 7
-      },
+      "default": { "date": "2027-01-24", "nights": 7 },
       "note": "Check-in after the first Bangkok stay (23-25 Jan), check-out before the last one (30 Jan-1 Feb). Flights BKK-HKT not included."
     }
   ],
@@ -41,7 +37,8 @@
       "beach_note": "Right on the beach",
       "building": "Large low-rise resort",
       "pool": "Several outdoor pools",
-      "family_note": "Family rooms, kids club"
+      "family_note": "Family rooms, kids club",
+      "stayforlong": "katathani-phuket-beach-resort_phuket"
     },
     {
       "id": "movenpick-bangtao",
@@ -74,7 +71,8 @@
       "beach_note": "Beachfront",
       "building": "Low-rise resort",
       "pool": "Outdoor pools",
-      "family_note": "Kids club"
+      "family_note": "Kids club",
+      "stayforlong_city": "kamala"
     },
     {
       "id": "hyatt-regency-phuket",
@@ -85,7 +83,8 @@
       "beach_note": "Hillside, short shuttle to the beach",
       "building": "Hillside resort with sea views",
       "pool": "Outdoor infinity pools",
-      "family_note": "Kids club"
+      "family_note": "Kids club",
+      "stayforlong": "hyatt-regency-phuket-resort_kamala"
     },
     {
       "id": "pullman-naithon",
@@ -107,7 +106,8 @@
       "beach_note": "Private bay beachfront",
       "building": "Resort in its own bay",
       "pool": "Large outdoor pools",
-      "family_note": "Kids club"
+      "family_note": "Kids club",
+      "stayforlong": "le-meridien-phuket-beach-resort_karon"
     },
     {
       "id": "jw-marriott-mai-khao",
@@ -118,7 +118,8 @@
       "beach_note": "Beachfront, 15 min from the airport",
       "building": "Low-rise resort",
       "pool": "Several outdoor pools",
-      "family_note": "Kids club"
+      "family_note": "Kids club",
+      "stayforlong": "jw-marriott-phuket-resort-spa_mai-khao"
     },
     {
       "id": "amari-phuket",
@@ -129,7 +130,8 @@
       "beach_note": "Beachfront at the quieter south end, walk to the centre",
       "building": "Hillside resort over the bay",
       "pool": "Outdoor infinity pools",
-      "family_note": "Family rooms, kids club"
+      "family_note": "Family rooms, kids club",
+      "stayforlong": "amari-phuket_patong"
     },
     {
       "id": "la-flora-patong",
@@ -139,7 +141,8 @@
       "beach": "Patong Beach",
       "beach_note": "Beachfront on the main beach road",
       "building": "Low-rise resort",
-      "pool": "Outdoor pools"
+      "pool": "Outdoor pools",
+      "stayforlong_city": "patong"
     },
     {
       "id": "kalima-patong",
@@ -150,7 +153,8 @@
       "beach_note": "Hillside over the bay, 5 min to Patong",
       "building": "Hillside resort with sea views",
       "pool": "Outdoor infinity pools",
-      "family_note": "Family suites, kids club"
+      "family_note": "Family suites, kids club",
+      "stayforlong_city": "patong"
     },
     {
       "id": "indigo-patong",
@@ -160,7 +164,8 @@
       "beach": "Patong Beach",
       "beach_note": "About 5 min walk to the beach",
       "building": "Modern hotel in central Patong",
-      "pool": "Rooftop infinity pool"
+      "pool": "Rooftop infinity pool",
+      "stayforlong": "hotel-indigo-phuket-patong-an-ihg-hotel_patong"
     }
   ]
 }
