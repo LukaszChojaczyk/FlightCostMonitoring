@@ -76,7 +76,7 @@ good reviews and a BTS or MRT station within a short walk; edit the list there.
   3-5 Feb (the flight home), each 3, 4 or 5 nights.
 - `scripts/fetch_hotels.py` asks the free [Xotelo](https://xotelo.com) API for each hotel's rates
   for every stay option. Xotelo returns what Tripadvisor shows from Booking.com, Agoda, Expedia,
-  Trip.com and others: one nightly rate per room per site for these guests. No API key and no
+  Trip.com and others: one nightly rate per room per site for 3 guests (asked as 3 adults: the API returns no rates when a child age is given). No API key and no
   SerpApi quota. About 300 requests a run. Prices come in EUR and are shown in PLN at the NBP rate of the day.
 - Hotel keys are found by name in Tripadvisor's Bangkok list (`match` / `match_exclude` in the
   config, cached in `data/hotels/keys.json`); set `key` on a hotel to pin it. Review scores

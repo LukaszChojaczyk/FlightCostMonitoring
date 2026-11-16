@@ -5,9 +5,10 @@
     "currency": "EUR",
     "currency_note": "Xotelo has no PLN, so prices are fetched in EUR and converted with the NBP mid rate of the day.",
     "rooms": 1,
-    "adults": 2,
-    "children_ages": [12],
-    "guests_note": "2 adults + 1 child aged 12 in one room. Many 5-star rooms take 3 guests only with an extra bed or as a family room, so confirm the room type before booking.",
+    "adults": 3,
+    "children_ages": [],
+    "booking_link_guests": { "adults": 2, "children_ages": [12] },
+    "guests_note": "2 adults + 1 child aged 12 in one room. Prices are asked for 3 adults: the API returns nothing when a child age is given, and most Bangkok hotels charge a 12-year-old as an adult (extra bed or triple room). Booking links use 2 adults + child aged 12.",
     "pause_seconds": 1.5,
     "list_pages": 12,
     "match_note": "Each hotel's Tripadvisor key is found by name in the city list: every word of match must be in the Tripadvisor name, no word of match_exclude. Set key to pin a hotel."
