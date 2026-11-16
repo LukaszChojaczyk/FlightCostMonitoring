@@ -18,6 +18,60 @@
       "return_date": "2027-02-05",
       "min_price": null,
       "error": "SerpApi error: Google Flights hasn't returned any results for this query."
+    },
+    {
+      "fetched_at": "2026-11-16T12:44:45+00:00",
+      "return_date": "2027-02-03",
+      "min_price": 9033,
+      "min_price_airlines": [
+        "Air Arabia"
+      ],
+      "min_price_origin": "PRG",
+      "min_price_destination": "BKK",
+      "min_price_baggage_flag": "unknown",
+      "min_price_by_origin": {
+        "PRG": 9033,
+        "WAW": 10858,
+        "BER": 11492
+      },
+      "options_count": 12,
+      "price_level": null
+    },
+    {
+      "fetched_at": "2026-11-16T12:44:45+00:00",
+      "return_date": "2027-02-04",
+      "min_price": 11175,
+      "min_price_airlines": [
+        "Etihad"
+      ],
+      "min_price_origin": "PRG",
+      "min_price_destination": "BKK",
+      "min_price_baggage_flag": "fare-dependent",
+      "min_price_by_origin": {
+        "PRG": 11175,
+        "BER": 11887,
+        "WAW": 12105
+      },
+      "options_count": 14,
+      "price_level": null
+    },
+    {
+      "fetched_at": "2026-11-16T12:44:45+00:00",
+      "return_date": "2027-02-05",
+      "min_price": 9065,
+      "min_price_airlines": [
+        "Air Arabia"
+      ],
+      "min_price_origin": "PRG",
+      "min_price_destination": "BKK",
+      "min_price_baggage_flag": "unknown",
+      "min_price_by_origin": {
+        "PRG": 9065,
+        "BER": 12058,
+        "WAW": 12237
+      },
+      "options_count": 11,
+      "price_level": null
     }
   ]
 }
