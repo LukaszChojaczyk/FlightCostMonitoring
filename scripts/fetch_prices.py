@@ -170,6 +170,20 @@ def normalize_option(opt: dict, pax: int, bag_table: dict) -> dict:
     }
 
 
+def label_long_trip(option: dict, threshold: int | None, minutes_key: str = "total_duration_minutes") -> None:
+    """Mark an option whose outbound (or fetched return) takes longer than `threshold` minutes."""
+    out_min = option.get(minutes_key) or 0
+    back = option.get("return_leg") or {}
+    back_min = back.get(minutes_key) or 0
+    longest = max(out_min, back_min)
+    option["long_trip"] = bool(threshold and longest > threshold)
+    if option["long_trip"]:
+        which = "outbound" if out_min >= back_min else "return"
+        option["duration_label"] = f"Longer trip: {which} {longest // 60}h{longest % 60:02d} (over {threshold // 60} h)"
+    else:
+        option["duration_label"] = None
+
+
 def collect_options(resp: dict) -> list[dict]:
     opts = []
     for group in ("best_flights", "other_flights"):
@@ -290,6 +304,11 @@ def fetch_route(client: SerpApiClient, route: dict, settings: dict, bag_table: d
             no["baggage"] = all_bags
             no["baggage_flag"] = worst_baggage(all_bags)
 
+    threshold = route.get("long_trip_minutes")
+    for r in results:
+        for o in r["options"]:
+            label_long_trip(o, threshold)
+
     snapshot = {
         "route": {k: route[k] for k in route if k != "enabled"},
         "fetched_at": now_iso,
@@ -322,6 +341,7 @@ def summarize(snapshot: dict) -> list[dict]:
             "min_price_origin": best["origin"],
             "min_price_destination": best["destination"],
             "min_price_baggage_flag": best["baggage_flag"],
+            "min_price_long_trip": best.get("long_trip", False),
             "min_price_by_origin": dict(sorted(by_origin.items(), key=lambda kv: kv[1])),
             "options_count": len(priced),
             "price_level": (r.get("price_insights") or {}).get("price_level"),

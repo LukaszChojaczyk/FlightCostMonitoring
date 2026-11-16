@@ -42,7 +42,7 @@ class ParamsTests(unittest.TestCase):
         self.assertEqual(p["arrival_id"], "BKK,DMK")
         self.assertEqual(p["adults"], 3)
         self.assertEqual(p["stops"], 2)  # SerpApi: 2 = one stop or fewer
-        self.assertEqual(p["max_duration"], 1200)
+        self.assertEqual(p["max_duration"], 1440)
         self.assertEqual(p["type"], 1)
         self.assertEqual(p["currency"], "PLN")
         self.assertEqual(p["include_airlines"], "STAR_ALLIANCE,ONEWORLD,EK,EY")
@@ -71,6 +71,20 @@ class DryRunTests(unittest.TestCase):
         self.assertEqual(len(history["entries"]), 3)
         self.assertEqual(history["entries"][0]["min_price_by_origin"], {"BER": 8120, "PRG": 9870, "WAW": 10450})
         self.assertEqual(index["routes"][0]["latest_min_price"], 8120)
+
+
+class LongTripTests(unittest.TestCase):
+    def test_label_uses_longest_direction(self):
+        o = {"total_duration_minutes": 945, "return_leg": {"total_duration_minutes": 1060}}
+        fp.label_long_trip(o, 960)
+        self.assertTrue(o["long_trip"])
+        self.assertEqual(o["duration_label"], "Longer trip: return 17h40 (over 16 h)")
+
+    def test_short_trip_has_no_label(self):
+        o = {"total_duration_minutes": 900, "return_leg": None}
+        fp.label_long_trip(o, 960)
+        self.assertFalse(o["long_trip"])
+        self.assertIsNone(o["duration_label"])
 
 
 class NoResultsTests(unittest.TestCase):
