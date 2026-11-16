@@ -37,15 +37,6 @@ jobs:
           ROUTE_ID: ${{ inputs.route_id }}
         run: python scripts/fetch_prices.py
 
-      - name: Scrape Google Flights directly (fallback source)
-        # Best effort: Google may block or change the page, so this never fails the run.
-        continue-on-error: true
-        timeout-minutes: 8
-        run: |
-          # fast-flights imports typing_extensions without declaring it as a dependency
-          pip install --quiet fast-flights==3.1.0 typing_extensions
-          python scripts/scrape_prices.py
-
       - name: Commit updated data
         run: |
           git config user.name "github-actions[bot]"

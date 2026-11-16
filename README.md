@@ -30,10 +30,12 @@ round-trip total for all three passengers.
 
 `scripts/scrape_prices.py` reads Google Flights pages directly with the
 [fast-flights](https://pypi.org/project/fast-flights/) package, so it needs no API key and
-uses no quota. It runs after the SerpApi step in the same workflow, one request per origin
+uses no quota. It has its own workflow, "Scrape Google Flights"
+(`.github/workflows/scrape-prices.yml`), which runs at 05:33 and 17:33 UTC and can be started
+by hand from the Actions tab ("Run workflow") at no cost. It makes one request per origin
 and return date, limited to the airlines in the route's `scraper.airlines`
 (currently Emirates, Etihad and Qatar Airways). Google may block or change the page at any
-time, so the step is best effort and never fails the run. Results go to
+time, so a blocked request is recorded in the snapshot instead of failing the run. Results go to
 `data/<route_id>/scraped_latest.json` and `scraped_history.json`.
 
 ## Data files (for the dashboard)
@@ -50,7 +52,7 @@ time, so the step is best effort and never fails the run. Results go to
 `site/` is a static page (plain HTML, CSS and JavaScript, no build step) that reads the
 JSON files above. `.github/workflows/pages.yml` copies `site/`, `data/` and `config/` to
 GitHub Pages on every push to `main` that touches them and after every "Fetch flight prices"
-run, so the page is at most a few minutes behind the latest check. It shows the cheapest
+or "Scrape Google Flights" run, so the page is at most a few minutes behind the latest check. It shows the cheapest
 price now (total and per person), a table of the cheapest option per airport and return
 date, every current option with checked-bag flags, source (API or scraper) and a Google
 Flights link, a "longer trip" label above 16 h per direction (the fetcher's `long_trip` flag, or `long_trip_minutes`

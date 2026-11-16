@@ -2,13 +2,13 @@ name: Deploy dashboard
 
 # Publishes site/ plus the data/ and config/ JSON to GitHub Pages.
 # Data commits from the fetch workflow are pushed with GITHUB_TOKEN, which does not
-# trigger "push" workflows, so this also runs after every "Fetch flight prices" run.
+# trigger "push" workflows, so this also runs after every fetch or scrape run.
 on:
   push:
     branches: [main]
     paths: ["site/**", "data/**", "config/**", ".github/workflows/pages.yml"]
   workflow_run:
-    workflows: ["Fetch flight prices"]
+    workflows: ["Fetch flight prices", "Scrape Google Flights"]
     types: [completed]
   workflow_dispatch:
 
