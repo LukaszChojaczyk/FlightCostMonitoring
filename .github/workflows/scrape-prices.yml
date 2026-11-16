@@ -1,0 +1,55 @@
+name: Scrape Google Flights
+
+# Second price source: reads Google Flights pages directly (scripts/scrape_prices.py).
+# No API key and no SerpApi quota, so it is safe to run by hand as often as you like:
+# Actions tab, "Scrape Google Flights", "Run workflow".
+on:
+  schedule:
+    # 10 minutes after the SerpApi fetch so the two data commits don't race.
+    - cron: "33 5 * * *"
+    - cron: "33 17 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+# Same group as "Fetch flight prices": the two never commit to data/ at the same time.
+concurrency:
+  group: fetch-prices
+  cancel-in-progress: false
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install fast-flights
+        # fast-flights imports typing_extensions without declaring it as a dependency
+        run: pip install --quiet fast-flights==3.1.0 typing_extensions
+
+      - name: Scrape Google Flights
+        # A blocked or failed request is recorded in scraped_latest.json and does not fail the run.
+        timeout-minutes: 10
+        run: python scripts/scrape_prices.py
+
+      - name: Commit updated data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898233+github-actions[bot]@users.noreply.github.com"
+          git add data
+          if git diff --cached --quiet; then
+            echo "No data changes."
+            exit 0
+          fi
+          git commit -m "data: scraped flight prices $(date -u +'%Y-%m-%d %H:%M') UTC"
+          for i in 1 2 3; do
+            git pull --rebase && git push && exit 0
+            sleep $((i * 5))
+          done
+          exit 1
