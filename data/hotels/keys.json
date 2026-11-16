@@ -53,5 +53,10 @@
     "match": "Waldorf Astoria Bangkok",
     "key": "g293916-d12987714",
     "tripadvisor_name": "Waldorf Astoria Bangkok"
+  },
+  "marriott-marquis-queens-park": {
+    "match": "Marriott Marquis Queen's Park",
+    "key": "g293916-d10821858",
+    "tripadvisor_name": "Bangkok Marriott Marquis Queen’s Park"
   }
 }
