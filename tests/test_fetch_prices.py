@@ -42,7 +42,7 @@ class ParamsTests(unittest.TestCase):
         self.assertEqual(p["arrival_id"], "BKK,DMK")
         self.assertEqual(p["adults"], 3)
         self.assertEqual(p["stops"], 2)  # SerpApi: 2 = one stop or fewer
-        self.assertEqual(p["max_duration"], 960)
+        self.assertEqual(p["max_duration"], 1200)
         self.assertEqual(p["type"], 1)
         self.assertEqual(p["currency"], "PLN")
         self.assertEqual(p["include_airlines"], "STAR_ALLIANCE,ONEWORLD,EK,EY")
