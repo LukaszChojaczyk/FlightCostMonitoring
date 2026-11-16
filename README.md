@@ -41,7 +41,7 @@ GitHub Pages on every push to `main` that touches them and after every "Fetch fl
 run, so the page is at most a few minutes behind the latest check. It shows the cheapest
 price now (total and per person), a table of the cheapest option per airport and return
 date, every current option with checked-bag flags, source (API or scraper) and a Google
-Flights link, a "longer trip" label above 16 h per direction (`preferred_max_duration_minutes`
+Flights link, a "longer trip" label above 16 h per direction (the fetcher's `long_trip` flag, or `long_trip_minutes`
 on the route overrides it), and the price trend per return date.
 
 One-time setup: Settings, Pages, "Build and deployment", Source: **GitHub Actions**.

@@ -174,6 +174,8 @@
           layovers: o.layovers || [],
           baggage: o.baggage || [],
           bag: o.baggage_flag || "unknown",
+          longTrip: typeof o.long_trip === "boolean" ? o.long_trip : null,
+          durationLabel: o.duration_label || null,
           ret: o.return_leg || null,
           url: urlGroup?.url || gfSearchUrl(o.origin, o.destination, info.outbound_date, r.return_date),
           exactLink: !!urlGroup,
@@ -203,6 +205,8 @@
           layovers: [],
           baggage: o.baggage || [],
           bag: o.baggage_flag || "unknown",
+          longTrip: typeof o.long_trip === "boolean" ? o.long_trip : null,
+          durationLabel: o.duration_label || null,
           ret: null,
           url: gfSearchUrl(o.origin, o.destination, info.outbound_date, r.return_date),
           exactLink: false,
@@ -303,14 +307,15 @@
   function longestMinutes(o) {
     return Math.max(o.minutes || 0, o.ret?.total_duration_minutes || 0);
   }
-  function isLong(o) { return longestMinutes(o) > preferredMinutes(); }
+  // The fetcher sets long_trip / duration_label on each option; older snapshots fall back to minutes.
+  function isLong(o) { return o.longTrip ?? longestMinutes(o) > preferredMinutes(); }
 
   function badges(o, withSource = true) {
     const bagNote = o.baggage.map((x) => `${x.airline}: ${x.note}`).join(" · ");
     return [
       `<span class="badge bag ${esc(o.bag)}" title="${esc(bagNote)}">${esc(BAG_LABEL[o.bag] || o.bag)}</span>`,
       `<span class="badge">${o.stops === 0 ? "Direct" : o.stops === 1 ? `1 stop${o.via.length ? " · " + esc(o.via.join(", ")) : ""}` : `${o.stops} stops`}</span>`,
-      isLong(o) ? `<span class="badge long" title="Longer than the preferred ${Math.round(preferredMinutes() / 60)} h per direction">Longer trip · ${dur(longestMinutes(o))}</span>` : "",
+      isLong(o) ? `<span class="badge long" title="${esc(o.durationLabel || `Longer than the preferred ${Math.round(preferredMinutes() / 60)} h per direction`)}">${o.durationLabel ? esc(o.durationLabel) : `Longer trip · ${dur(longestMinutes(o))}`}</span>` : "",
       withSource ? `<span class="badge src-${o.source}">${o.source === "api" ? "API" : "Scraper"}</span>` : "",
     ].join("");
   }
