@@ -1,0 +1,33 @@
+name: Probe a search
+
+# Manual debugging aid: runs one Google Flights search (1 SerpApi search) and prints
+# every option in the log. Saves nothing.
+on:
+  workflow_dispatch:
+    inputs:
+      departure: { description: "Departure airport(s), comma-separated", default: "BER" }
+      arrival: { description: "Arrival airport(s)", default: "BKK,DMK" }
+      outbound: { description: "Outbound date", default: "2027-01-19" }
+      return_date: { description: "Return date", default: "2027-02-04" }
+      airlines: { description: "include_airlines (IATA codes or alliances, blank = any)", default: "QR", required: false }
+      stops: { description: "SerpApi stops (blank any, 1 nonstop, 2 max 1 stop, 3 max 2 stops)", default: "", required: false }
+      max_duration: { description: "Max minutes per direction (blank = no limit)", default: "", required: false }
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - env:
+          SERPAPI_KEY: ${{ secrets.SERPAPI_KEY }}
+          DEPARTURE: ${{ inputs.departure }}
+          ARRIVAL: ${{ inputs.arrival }}
+          OUTBOUND: ${{ inputs.outbound }}
+          RETURN: ${{ inputs.return_date }}
+          AIRLINES: ${{ inputs.airlines }}
+          STOPS: ${{ inputs.stops }}
+          MAX_DURATION: ${{ inputs.max_duration }}
+        run: python scripts/probe_search.py
