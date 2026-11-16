@@ -22,6 +22,8 @@
       "travel_class": "economy",
       "max_stops": 1,
       "max_duration_minutes": 960,
+      "include_airlines": ["STAR_ALLIANCE", "ONEWORLD", "EK", "EY"],
+      "include_airlines_note": "Premium carriers only: Star Alliance (LOT, Lufthansa, Turkish, Thai, Swiss, Austrian, Singapore...), oneworld (Qatar, Finnair, BA, Cathay, Oman Air...), Emirates and Etihad. Google Flights then shows only itineraries flown by these airlines.",
       "checked_bags_needed": 3,
       "return_details_top_n": 3
     }

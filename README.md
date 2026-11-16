@@ -8,7 +8,7 @@ dashboard can read those files directly.
 
 Warsaw (WAW), Wroclaw (WRO), Berlin (BER) and Prague (PRG) to Bangkok (BKK and DMK),
 out 2027-01-19, back 2027-02-03, 02-04 or 02-05. 3 adults (the 12-year-old pays adult fare),
-economy, at most 1 stop, at most 16 h per direction. Prices are in PLN and are the
+economy, premium airlines only (Star Alliance, oneworld, Emirates, Etihad), at most 1 stop, at most 16 h per direction. Prices are in PLN and are the
 round-trip total for all three passengers.
 
 ## How it works
@@ -35,7 +35,8 @@ round-trip total for all three passengers.
 
 ## Adding or changing a route
 
-Add an object to `routes` in `config/routes.json` with a new `id`. Set `"enabled": false`
+Add an object to `routes` in `config/routes.json` with a new `id`. Limit airlines with `include_airlines` (2-letter IATA codes and/or `STAR_ALLIANCE`,
+`SKYTEAM`, `ONEWORLD`) or `exclude_airlines`; Google Flights allows one or the other. Set `"enabled": false`
 to pause a route without deleting its history. Each return date costs one search per run,
 so check the budget: runs per day x airport groups x return dates x 31 should stay under the monthly quota.
 

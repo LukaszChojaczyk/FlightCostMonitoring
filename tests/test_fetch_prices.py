@@ -45,6 +45,8 @@ class ParamsTests(unittest.TestCase):
         self.assertEqual(p["max_duration"], 960)
         self.assertEqual(p["type"], 1)
         self.assertEqual(p["currency"], "PLN")
+        self.assertEqual(p["include_airlines"], "STAR_ALLIANCE,ONEWORLD,EK,EY")
+        self.assertNotIn("exclude_airlines", p)
 
 
 class DryRunTests(unittest.TestCase):

@@ -213,6 +213,11 @@ def base_params(route: dict, settings: dict, return_date: str, origins: list[str
     }
     if route.get("max_stops") is not None:
         params["stops"] = STOPS_PARAM[route["max_stops"]]
+    if route.get("include_airlines"):
+        # IATA codes and/or STAR_ALLIANCE, SKYTEAM, ONEWORLD
+        params["include_airlines"] = ",".join(route["include_airlines"])
+    elif route.get("exclude_airlines"):
+        params["exclude_airlines"] = ",".join(route["exclude_airlines"])
     if route.get("max_duration_minutes"):
         params["max_duration"] = route["max_duration_minutes"]
     return params
