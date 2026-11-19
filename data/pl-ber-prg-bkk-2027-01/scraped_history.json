@@ -575,6 +575,186 @@
       "min_price_origin": "BER",
       "options_count": 26,
       "errors": 0
+    },
+    {
+      "fetched_at": "2026-11-19T19:16:44+00:00",
+      "outbound_date": "2027-01-17",
+      "return_date": "2027-02-03",
+      "min_price": 10068,
+      "min_price_airlines": [
+        "Qatar Airways"
+      ],
+      "min_price_origin": "PRG",
+      "options_count": 19,
+      "errors": 1
+    },
+    {
+      "fetched_at": "2026-11-19T19:16:44+00:00",
+      "outbound_date": "2027-01-17",
+      "return_date": "2027-02-04",
+      "min_price": 11573,
+      "min_price_airlines": [
+        "Qatar Airways"
+      ],
+      "min_price_origin": "PRG",
+      "options_count": 19,
+      "errors": 1
+    },
+    {
+      "fetched_at": "2026-11-19T19:16:44+00:00",
+      "outbound_date": "2027-01-17",
+      "return_date": "2027-02-05",
+      "min_price": 10863,
+      "min_price_airlines": [
+        "Qatar Airways"
+      ],
+      "min_price_origin": "PRG",
+      "options_count": 23,
+      "errors": 0
+    },
+    {
+      "fetched_at": "2026-11-19T19:16:44+00:00",
+      "outbound_date": "2027-01-18",
+      "return_date": "2027-02-03",
+      "min_price": 11409,
+      "min_price_airlines": [
+        "Qatar Airways"
+      ],
+      "min_price_origin": "BER",
+      "options_count": 20,
+      "errors": 0
+    },
+    {
+      "fetched_at": "2026-11-19T19:16:44+00:00",
+      "outbound_date": "2027-01-18",
+      "return_date": "2027-02-04",
+      "min_price": 11391,
+      "min_price_airlines": [
+        "Qatar Airways"
+      ],
+      "min_price_origin": "BER",
+      "options_count": 21,
+      "errors": 0
+    },
+    {
+      "fetched_at": "2026-11-19T19:16:44+00:00",
+      "outbound_date": "2027-01-18",
+      "return_date": "2027-02-05",
+      "min_price": 12381,
+      "min_price_airlines": [
+        "Finnair"
+      ],
+      "min_price_origin": "WAW",
+      "options_count": 15,
+      "errors": 0
+    },
+    {
+      "fetched_at": "2026-11-19T19:16:44+00:00",
+      "outbound_date": "2027-01-19",
+      "return_date": "2027-02-03",
+      "min_price": 10698,
+      "min_price_airlines": [
+        "Finnair"
+      ],
+      "min_price_origin": "WAW",
+      "options_count": 18,
+      "errors": 0
+    },
+    {
+      "fetched_at": "2026-11-19T19:16:44+00:00",
+      "outbound_date": "2027-01-19",
+      "return_date": "2027-02-04",
+      "min_price": 10698,
+      "min_price_airlines": [
+        "Finnair"
+      ],
+      "min_price_origin": "WAW",
+      "options_count": 14,
+      "errors": 0
+    },
+    {
+      "fetched_at": "2026-11-19T19:16:44+00:00",
+      "outbound_date": "2027-01-19",
+      "return_date": "2027-02-05",
+      "min_price": 11083,
+      "min_price_airlines": [
+        "Qatar Airways"
+      ],
+      "min_price_origin": "BER",
+      "options_count": 23,
+      "errors": 0
+    },
+    {
+      "fetched_at": "2026-11-19T19:16:44+00:00",
+      "outbound_date": "2027-01-20",
+      "return_date": "2027-02-03",
+      "min_price": 10122,
+      "min_price_airlines": [
+        "Finnair"
+      ],
+      "min_price_origin": "WAW",
+      "options_count": 9,
+      "errors": 0
+    },
+    {
+      "fetched_at": "2026-11-19T19:16:44+00:00",
+      "outbound_date": "2027-01-20",
+      "return_date": "2027-02-04",
+      "min_price": 10122,
+      "min_price_airlines": [
+        "Finnair"
+      ],
+      "min_price_origin": "WAW",
+      "options_count": 16,
+      "errors": 0
+    },
+    {
+      "fetched_at": "2026-11-19T19:16:44+00:00",
+      "outbound_date": "2027-01-20",
+      "return_date": "2027-02-05",
+      "min_price": 12250,
+      "min_price_airlines": [
+        "Finnair"
+      ],
+      "min_price_origin": "WAW",
+      "options_count": 15,
+      "errors": 0
+    },
+    {
+      "fetched_at": "2026-11-19T19:16:44+00:00",
+      "outbound_date": "2027-01-21",
+      "return_date": "2027-02-03",
+      "min_price": 10274,
+      "min_price_airlines": [
+        "Qatar Airways"
+      ],
+      "min_price_origin": "BER",
+      "options_count": 15,
+      "errors": 0
+    },
+    {
+      "fetched_at": "2026-11-19T19:16:44+00:00",
+      "outbound_date": "2027-01-21",
+      "return_date": "2027-02-04",
+      "min_price": 10122,
+      "min_price_airlines": [
+        "Finnair"
+      ],
+      "min_price_origin": "WAW",
+      "options_count": 31,
+      "errors": 0
+    },
+    {
+      "fetched_at": "2026-11-19T19:16:44+00:00",
+      "outbound_date": "2027-01-21",
+      "return_date": "2027-02-05",
+      "min_price": 10860,
+      "min_price_airlines": [
+        "Qatar Airways"
+      ],
+      "min_price_origin": "PRG",
+      "options_count": 21,
+      "errors": 0
     }
   ]
 }
