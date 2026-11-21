@@ -1,6 +1,6 @@
 {
   "source": "xotelo (Tripadvisor rates)",
-  "fetched_at": "2026-11-20T16:40:13+00:00",
+  "fetched_at": "2026-11-21T15:53:30+00:00",
   "currency": "EUR",
   "pln_rate": 4.4559,
   "pln_rate_source": "NBP table 226/A/NBP/2026 of 2026-11-20",
@@ -43,7 +43,7 @@
       "tripadvisor_url": "https://www.tripadvisor.com/Hotel_Review-g293916-d304494-Reviews-Sheraton_Grande_Sukhumvit_a_Luxury_Collection_Hotel_Bangkok-Bangkok.html",
       "rating": 4.7,
       "reviews": 5360,
-      "popularity_rank": 128,
+      "popularity_rank": 129,
       "typical_price_range": null
     },
     {
@@ -64,7 +64,7 @@
       "tripadvisor_name": "Centara Grand at CentralWorld",
       "tripadvisor_url": "https://www.tripadvisor.com/Hotel_Review-g293916-d850401-Reviews-Centara_Grand_at_CentralWorld-Bangkok.html",
       "rating": 4.8,
-      "reviews": 1781,
+      "reviews": 1782,
       "popularity_rank": 118,
       "typical_price_range": null
     },
@@ -98,7 +98,7 @@
       "tripadvisor_url": "https://www.tripadvisor.com/Hotel_Review-g293916-d14192482-Reviews-Hyatt_Regency_Bangkok_Sukhumvit-Bangkok.html",
       "rating": 4.7,
       "reviews": 1768,
-      "popularity_rank": 129,
+      "popularity_rank": 130,
       "typical_price_range": null
     },
     {
@@ -120,7 +120,7 @@
       "tripadvisor_url": "https://www.tripadvisor.com/Hotel_Review-g293916-d302959-Reviews-Banyan_Tree_Bangkok-Bangkok.html",
       "rating": 4.7,
       "reviews": 16205,
-      "popularity_rank": 323,
+      "popularity_rank": 322,
       "typical_price_range": null
     },
     {
@@ -188,13 +188,13 @@
         {
           "code": "BookingCom",
           "name": "Booking.com",
-          "rate": 337.0
+          "rate": 338.0
         }
       ],
-      "min_rate": 337.0,
+      "min_rate": 338.0,
       "min_site": "Booking.com",
-      "total": 1011,
-      "total_pln": 4505,
+      "total": 1014,
+      "total_pln": 4518,
       "error": null
     },
     {
@@ -268,13 +268,13 @@
         {
           "code": "BookingCom",
           "name": "Booking.com",
-          "rate": 348.0
+          "rate": 339.0
         }
       ],
-      "min_rate": 348.0,
+      "min_rate": 339.0,
       "min_site": "Booking.com",
-      "total": 1392,
-      "total_pln": 6203,
+      "total": 1356,
+      "total_pln": 6042,
       "error": null
     },
     {
@@ -316,25 +316,15 @@
       "nights": 5,
       "rates": [
         {
-          "code": "Agoda",
-          "name": "Agoda.com",
-          "rate": 224.0
-        },
-        {
           "code": "BookingCom",
           "name": "Booking.com",
           "rate": 270.0
-        },
-        {
-          "code": "CtripTA",
-          "name": "Trip.com",
-          "rate": 440.0
         }
       ],
-      "min_rate": 224.0,
-      "min_site": "Agoda.com",
-      "total": 1120,
-      "total_pln": 4991,
+      "min_rate": 270.0,
+      "min_site": "Booking.com",
+      "total": 1350,
+      "total_pln": 6015,
       "error": null
     },
     {
@@ -396,15 +386,25 @@
       "nights": 3,
       "rates": [
         {
+          "code": "Agoda",
+          "name": "Agoda.com",
+          "rate": 222.0
+        },
+        {
           "code": "BookingCom",
           "name": "Booking.com",
-          "rate": 270.0
+          "rate": 241.0
+        },
+        {
+          "code": "CtripTA",
+          "name": "Trip.com",
+          "rate": 440.0
         }
       ],
-      "min_rate": 270.0,
-      "min_site": "Booking.com",
-      "total": 810,
-      "total_pln": 3609,
+      "min_rate": 222.0,
+      "min_site": "Agoda.com",
+      "total": 666,
+      "total_pln": 2968,
       "error": null
     },
     {
@@ -418,18 +418,18 @@
         {
           "code": "BookingCom",
           "name": "Booking.com",
-          "rate": 359.0
+          "rate": 309.0
         },
         {
           "code": "Agoda",
           "name": "Agoda.com",
-          "rate": 359.0
+          "rate": 347.0
         }
       ],
-      "min_rate": 359.0,
+      "min_rate": 309.0,
       "min_site": "Booking.com",
-      "total": 1077,
-      "total_pln": 4799,
+      "total": 927,
+      "total_pln": 4131,
       "error": null
     },
     {
@@ -478,12 +478,7 @@
         {
           "code": "BookingCom",
           "name": "Booking.com",
-          "rate": 270.0
-        },
-        {
-          "code": "CtripTA",
-          "name": "Trip.com",
-          "rate": 440.0
+          "rate": 241.0
         }
       ],
       "min_rate": 223.0,
@@ -501,20 +496,20 @@
       "nights": 4,
       "rates": [
         {
-          "code": "Agoda",
-          "name": "Agoda.com",
-          "rate": 342.0
-        },
-        {
           "code": "BookingCom",
           "name": "Booking.com",
           "rate": 343.0
+        },
+        {
+          "code": "Agoda",
+          "name": "Agoda.com",
+          "rate": 343.0
         }
       ],
-      "min_rate": 342.0,
-      "min_site": "Agoda.com",
-      "total": 1368,
-      "total_pln": 6096,
+      "min_rate": 343.0,
+      "min_site": "Booking.com",
+      "total": 1372,
+      "total_pln": 6113,
       "error": null
     },
     {
@@ -538,7 +533,7 @@
         {
           "code": "Marriott1",
           "name": "Marriott Hotels",
-          "rate": 224.0
+          "rate": 225.0
         }
       ],
       "min_rate": 161.0,
@@ -588,18 +583,18 @@
         {
           "code": "BookingCom",
           "name": "Booking.com",
-          "rate": 340.0
+          "rate": 341.0
         },
         {
           "code": "Agoda",
           "name": "Agoda.com",
-          "rate": 340.0
+          "rate": 341.0
         }
       ],
-      "min_rate": 340.0,
+      "min_rate": 341.0,
       "min_site": "Booking.com",
-      "total": 1700,
-      "total_pln": 7575,
+      "total": 1705,
+      "total_pln": 7597,
       "error": null
     },
     {
@@ -671,11 +666,6 @@
       "nights": 3,
       "rates": [
         {
-          "code": "Vio",
-          "name": "Vio.com",
-          "rate": 315.0
-        },
-        {
           "code": "BookingCom",
           "name": "Booking.com",
           "rate": 330.0
@@ -686,10 +676,10 @@
           "rate": 330.0
         }
       ],
-      "min_rate": 315.0,
-      "min_site": "Vio.com",
-      "total": 945,
-      "total_pln": 4211,
+      "min_rate": 330.0,
+      "min_site": "Booking.com",
+      "total": 990,
+      "total_pln": 4411,
       "error": null
     },
     {
@@ -703,7 +693,7 @@
         {
           "code": "Agoda",
           "name": "Agoda.com",
-          "rate": 161.0
+          "rate": 162.0
         },
         {
           "code": "BookingCom",
@@ -716,10 +706,10 @@
           "rate": 225.0
         }
       ],
-      "min_rate": 161.0,
+      "min_rate": 162.0,
       "min_site": "Agoda.com",
-      "total": 483,
-      "total_pln": 2152,
+      "total": 486,
+      "total_pln": 2166,
       "error": null
     },
     {
@@ -763,18 +753,18 @@
         {
           "code": "BookingCom",
           "name": "Booking.com",
-          "rate": 330.0
+          "rate": 331.0
         },
         {
           "code": "Agoda",
           "name": "Agoda.com",
-          "rate": 330.0
+          "rate": 331.0
         }
       ],
-      "min_rate": 330.0,
+      "min_rate": 331.0,
       "min_site": "Booking.com",
-      "total": 1320,
-      "total_pln": 5882,
+      "total": 1324,
+      "total_pln": 5900,
       "error": null
     },
     {
@@ -798,7 +788,7 @@
         {
           "code": "Marriott1",
           "name": "Marriott Hotels",
-          "rate": 224.0
+          "rate": 225.0
         }
       ],
       "min_rate": 161.0,
@@ -816,25 +806,15 @@
       "nights": 5,
       "rates": [
         {
-          "code": "Agoda",
-          "name": "Agoda.com",
-          "rate": 223.0
-        },
-        {
           "code": "BookingCom",
           "name": "Booking.com",
           "rate": 270.0
-        },
-        {
-          "code": "CtripTA",
-          "name": "Trip.com",
-          "rate": 440.0
         }
       ],
-      "min_rate": 223.0,
-      "min_site": "Agoda.com",
-      "total": 1115,
-      "total_pln": 4968,
+      "min_rate": 270.0,
+      "min_site": "Booking.com",
+      "total": 1350,
+      "total_pln": 6015,
       "error": null
     },
     {
@@ -878,7 +858,7 @@
         {
           "code": "BookingCom",
           "name": "Booking.com",
-          "rate": 210.0
+          "rate": 211.0
         },
         {
           "code": "Marriott1",
@@ -901,15 +881,25 @@
       "nights": 3,
       "rates": [
         {
+          "code": "Agoda",
+          "name": "Agoda.com",
+          "rate": 222.0
+        },
+        {
           "code": "BookingCom",
           "name": "Booking.com",
-          "rate": 270.0
+          "rate": 256.0
+        },
+        {
+          "code": "CtripTA",
+          "name": "Trip.com",
+          "rate": 440.0
         }
       ],
-      "min_rate": 270.0,
-      "min_site": "Booking.com",
-      "total": 810,
-      "total_pln": 3609,
+      "min_rate": 222.0,
+      "min_site": "Agoda.com",
+      "total": 666,
+      "total_pln": 2968,
       "error": null
     },
     {
@@ -921,14 +911,9 @@
       "nights": 3,
       "rates": [
         {
-          "code": "Vio",
-          "name": "Vio.com",
-          "rate": 323.0
-        },
-        {
           "code": "BookingCom",
           "name": "Booking.com",
-          "rate": 335.0
+          "rate": 316.0
         },
         {
           "code": "Agoda",
@@ -936,10 +921,10 @@
           "rate": 335.0
         }
       ],
-      "min_rate": 323.0,
-      "min_site": "Vio.com",
-      "total": 969,
-      "total_pln": 4318,
+      "min_rate": 316.0,
+      "min_site": "Booking.com",
+      "total": 948,
+      "total_pln": 4224,
       "error": null
     },
     {
@@ -953,7 +938,7 @@
         {
           "code": "Agoda",
           "name": "Agoda.com",
-          "rate": 161.0
+          "rate": 162.0
         },
         {
           "code": "BookingCom",
@@ -966,10 +951,10 @@
           "rate": 225.0
         }
       ],
-      "min_rate": 161.0,
+      "min_rate": 162.0,
       "min_site": "Agoda.com",
-      "total": 483,
-      "total_pln": 2152,
+      "total": 486,
+      "total_pln": 2166,
       "error": null
     },
     {
@@ -981,15 +966,25 @@
       "nights": 4,
       "rates": [
         {
+          "code": "Agoda",
+          "name": "Agoda.com",
+          "rate": 223.0
+        },
+        {
           "code": "BookingCom",
           "name": "Booking.com",
           "rate": 270.0
+        },
+        {
+          "code": "CtripTA",
+          "name": "Trip.com",
+          "rate": 440.0
         }
       ],
-      "min_rate": 270.0,
-      "min_site": "Booking.com",
-      "total": 1080,
-      "total_pln": 4812,
+      "min_rate": 223.0,
+      "min_site": "Agoda.com",
+      "total": 892,
+      "total_pln": 3975,
       "error": null
     },
     {
@@ -1001,25 +996,20 @@
       "nights": 4,
       "rates": [
         {
-          "code": "Vio",
-          "name": "Vio.com",
-          "rate": 302.0
-        },
-        {
           "code": "BookingCom",
           "name": "Booking.com",
-          "rate": 315.0
+          "rate": 316.0
         },
         {
           "code": "Agoda",
           "name": "Agoda.com",
-          "rate": 315.0
+          "rate": 316.0
         }
       ],
-      "min_rate": 302.0,
-      "min_site": "Vio.com",
-      "total": 1208,
-      "total_pln": 5383,
+      "min_rate": 316.0,
+      "min_site": "Booking.com",
+      "total": 1264,
+      "total_pln": 5632,
       "error": null
     },
     {
@@ -1043,7 +1033,7 @@
         {
           "code": "Marriott1",
           "name": "Marriott Hotels",
-          "rate": 227.0
+          "rate": 228.0
         }
       ],
       "min_rate": 164.0,
@@ -1063,7 +1053,7 @@
         {
           "code": "Agoda",
           "name": "Agoda.com",
-          "rate": 227.0
+          "rate": 223.0
         },
         {
           "code": "BookingCom",
@@ -1076,10 +1066,10 @@
           "rate": 440.0
         }
       ],
-      "min_rate": 227.0,
+      "min_rate": 223.0,
       "min_site": "Agoda.com",
-      "total": 1135,
-      "total_pln": 5057,
+      "total": 1115,
+      "total_pln": 4968,
       "error": null
     },
     {
@@ -1123,7 +1113,7 @@
         {
           "code": "BookingCom",
           "name": "Booking.com",
-          "rate": 212.0
+          "rate": 213.0
         },
         {
           "code": "Marriott1",
@@ -1146,15 +1136,25 @@
       "nights": 3,
       "rates": [
         {
+          "code": "Agoda",
+          "name": "Agoda.com",
+          "rate": 222.0
+        },
+        {
           "code": "BookingCom",
           "name": "Booking.com",
-          "rate": 270.0
+          "rate": 256.0
+        },
+        {
+          "code": "CtripTA",
+          "name": "Trip.com",
+          "rate": 440.0
         }
       ],
-      "min_rate": 270.0,
-      "min_site": "Booking.com",
-      "total": 810,
-      "total_pln": 3609,
+      "min_rate": 222.0,
+      "min_site": "Agoda.com",
+      "total": 666,
+      "total_pln": 2968,
       "error": null
     },
     {
@@ -1166,11 +1166,6 @@
       "nights": 3,
       "rates": [
         {
-          "code": "Vio",
-          "name": "Vio.com",
-          "rate": 241.0
-        },
-        {
           "code": "BookingCom",
           "name": "Booking.com",
           "rate": 250.0
@@ -1181,10 +1176,10 @@
           "rate": 250.0
         }
       ],
-      "min_rate": 241.0,
-      "min_site": "Vio.com",
-      "total": 723,
-      "total_pln": 3222,
+      "min_rate": 250.0,
+      "min_site": "Booking.com",
+      "total": 750,
+      "total_pln": 3342,
       "error": null
     },
     {
@@ -1226,15 +1221,25 @@
       "nights": 4,
       "rates": [
         {
+          "code": "Agoda",
+          "name": "Agoda.com",
+          "rate": 223.0
+        },
+        {
           "code": "BookingCom",
           "name": "Booking.com",
           "rate": 270.0
+        },
+        {
+          "code": "CtripTA",
+          "name": "Trip.com",
+          "rate": 440.0
         }
       ],
-      "min_rate": 270.0,
-      "min_site": "Booking.com",
-      "total": 1080,
-      "total_pln": 4812,
+      "min_rate": 223.0,
+      "min_site": "Agoda.com",
+      "total": 892,
+      "total_pln": 3975,
       "error": null
     },
     {
@@ -1301,15 +1306,25 @@
       "nights": 5,
       "rates": [
         {
+          "code": "Agoda",
+          "name": "Agoda.com",
+          "rate": 224.0
+        },
+        {
           "code": "BookingCom",
           "name": "Booking.com",
           "rate": 270.0
+        },
+        {
+          "code": "CtripTA",
+          "name": "Trip.com",
+          "rate": 440.0
         }
       ],
-      "min_rate": 270.0,
-      "min_site": "Booking.com",
-      "total": 1350,
-      "total_pln": 6015,
+      "min_rate": 224.0,
+      "min_site": "Agoda.com",
+      "total": 1120,
+      "total_pln": 4991,
       "error": null
     },
     {
@@ -1321,25 +1336,20 @@
       "nights": 5,
       "rates": [
         {
-          "code": "Vio",
-          "name": "Vio.com",
-          "rate": 248.0
-        },
-        {
           "code": "BookingCom",
           "name": "Booking.com",
-          "rate": 259.0
+          "rate": 260.0
         },
         {
           "code": "Agoda",
           "name": "Agoda.com",
-          "rate": 259.0
+          "rate": 260.0
         }
       ],
-      "min_rate": 248.0,
-      "min_site": "Vio.com",
-      "total": 1240,
-      "total_pln": 5525,
+      "min_rate": 260.0,
+      "min_site": "Booking.com",
+      "total": 1300,
+      "total_pln": 5793,
       "error": null
     },
     {
@@ -1381,25 +1391,15 @@
       "nights": 5,
       "rates": [
         {
-          "code": "Agoda",
-          "name": "Agoda.com",
-          "rate": 223.0
-        },
-        {
           "code": "BookingCom",
           "name": "Booking.com",
           "rate": 270.0
-        },
-        {
-          "code": "CtripTA",
-          "name": "Trip.com",
-          "rate": 440.0
         }
       ],
-      "min_rate": 223.0,
-      "min_site": "Agoda.com",
-      "total": 1115,
-      "total_pln": 4968,
+      "min_rate": 270.0,
+      "min_site": "Booking.com",
+      "total": 1350,
+      "total_pln": 6015,
       "error": null
     },
     {
@@ -1443,7 +1443,7 @@
         {
           "code": "BookingCom",
           "name": "Booking.com",
-          "rate": 212.0
+          "rate": 213.0
         },
         {
           "code": "Marriott1",
@@ -1486,25 +1486,20 @@
       "nights": 4,
       "rates": [
         {
-          "code": "Vio",
-          "name": "Vio.com",
-          "rate": 272.0
-        },
-        {
           "code": "BookingCom",
           "name": "Booking.com",
-          "rate": 281.0
+          "rate": 282.0
         },
         {
           "code": "Agoda",
           "name": "Agoda.com",
-          "rate": 281.0
+          "rate": 282.0
         }
       ],
-      "min_rate": 272.0,
-      "min_site": "Vio.com",
-      "total": 1088,
-      "total_pln": 4848,
+      "min_rate": 282.0,
+      "min_site": "Booking.com",
+      "total": 1128,
+      "total_pln": 5026,
       "error": null
     },
     {
@@ -1546,25 +1541,15 @@
       "nights": 5,
       "rates": [
         {
-          "code": "Agoda",
-          "name": "Agoda.com",
-          "rate": 224.0
-        },
-        {
           "code": "BookingCom",
           "name": "Booking.com",
           "rate": 270.0
-        },
-        {
-          "code": "CtripTA",
-          "name": "Trip.com",
-          "rate": 440.0
         }
       ],
-      "min_rate": 224.0,
-      "min_site": "Agoda.com",
-      "total": 1120,
-      "total_pln": 4991,
+      "min_rate": 270.0,
+      "min_site": "Booking.com",
+      "total": 1350,
+      "total_pln": 6015,
       "error": null
     },
     {
@@ -1664,6 +1649,11 @@
           "code": "BookingCom",
           "name": "Booking.com",
           "rate": 274.0
+        },
+        {
+          "code": "Agoda",
+          "name": "Agoda.com",
+          "rate": 274.0
         }
       ],
       "min_rate": 274.0,
@@ -1719,11 +1709,6 @@
           "code": "BookingCom",
           "name": "Booking.com",
           "rate": 270.0
-        },
-        {
-          "code": "CtripTA",
-          "name": "Trip.com",
-          "rate": 440.0
         }
       ],
       "min_rate": 223.0,
@@ -1743,6 +1728,11 @@
         {
           "code": "BookingCom",
           "name": "Booking.com",
+          "rate": 274.0
+        },
+        {
+          "code": "Agoda",
+          "name": "Agoda.com",
           "rate": 274.0
         }
       ],
@@ -1824,6 +1814,11 @@
           "code": "BookingCom",
           "name": "Booking.com",
           "rate": 274.0
+        },
+        {
+          "code": "Agoda",
+          "name": "Agoda.com",
+          "rate": 274.0
         }
       ],
       "min_rate": 274.0,
@@ -1878,7 +1873,7 @@
         {
           "code": "BookingCom",
           "name": "Booking.com",
-          "rate": 255.0
+          "rate": 270.0
         },
         {
           "code": "CtripTA",
@@ -1984,6 +1979,11 @@
           "code": "BookingCom",
           "name": "Booking.com",
           "rate": 274.0
+        },
+        {
+          "code": "Agoda",
+          "name": "Agoda.com",
+          "rate": 274.0
         }
       ],
       "min_rate": 274.0,
@@ -2033,7 +2033,7 @@
         {
           "code": "Agoda",
           "name": "Agoda.com",
-          "rate": 222.0
+          "rate": 235.0
         },
         {
           "code": "BookingCom",
@@ -2046,10 +2046,10 @@
           "rate": 440.0
         }
       ],
-      "min_rate": 222.0,
+      "min_rate": 235.0,
       "min_site": "Agoda.com",
-      "total": 666,
-      "total_pln": 2968,
+      "total": 705,
+      "total_pln": 3141,
       "error": null
     },
     {
@@ -2128,7 +2128,7 @@
         {
           "code": "Agoda",
           "name": "Agoda.com",
-          "rate": 158.0
+          "rate": 159.0
         },
         {
           "code": "BookingCom",
@@ -2153,28 +2153,28 @@
         {
           "code": "Agoda",
           "name": "Agoda.com",
-          "rate": 256.0
+          "rate": 259.0
         },
         {
           "code": "IHG",
           "name": "IHG",
-          "rate": 282.0
+          "rate": 284.0
         },
         {
           "code": "BookingCom",
           "name": "Booking.com",
-          "rate": 284.0
+          "rate": 286.0
         },
         {
           "code": "CtripTA",
           "name": "Trip.com",
-          "rate": 284.0
+          "rate": 287.0
         }
       ],
-      "min_rate": 256.0,
+      "min_rate": 259.0,
       "min_site": "Agoda.com",
-      "total": 768,
-      "total_pln": 3422,
+      "total": 777,
+      "total_pln": 3462,
       "error": null
     },
     {
@@ -2193,7 +2193,7 @@
         {
           "code": "BookingCom",
           "name": "Booking.com",
-          "rate": 440.0
+          "rate": 441.0
         },
         {
           "code": "CtripTA",
@@ -2228,12 +2228,12 @@
         {
           "code": "Agoda",
           "name": "Agoda.com",
-          "rate": 158.0
+          "rate": 157.0
         },
         {
           "code": "BookingCom",
           "name": "Booking.com",
-          "rate": 184.0
+          "rate": 185.0
         }
       ],
       "min_rate": 126.0,
@@ -2253,28 +2253,28 @@
         {
           "code": "Agoda",
           "name": "Agoda.com",
-          "rate": 210.0
+          "rate": 212.0
         },
         {
           "code": "IHG",
           "name": "IHG",
-          "rate": 277.0
+          "rate": 280.0
         },
         {
           "code": "BookingCom",
           "name": "Booking.com",
-          "rate": 279.0
+          "rate": 282.0
         },
         {
           "code": "CtripTA",
           "name": "Trip.com",
-          "rate": 279.0
+          "rate": 282.0
         }
       ],
-      "min_rate": 210.0,
+      "min_rate": 212.0,
       "min_site": "Agoda.com",
-      "total": 840,
-      "total_pln": 3743,
+      "total": 848,
+      "total_pln": 3779,
       "error": null
     },
     {
@@ -2288,12 +2288,12 @@
         {
           "code": "Agoda",
           "name": "Agoda.com",
-          "rate": 176.0
+          "rate": 177.0
         },
         {
           "code": "BookingCom",
           "name": "Booking.com",
-          "rate": 441.0
+          "rate": 442.0
         },
         {
           "code": "CtripTA",
@@ -2301,10 +2301,10 @@
           "rate": 505.0
         }
       ],
-      "min_rate": 176.0,
+      "min_rate": 177.0,
       "min_site": "Agoda.com",
-      "total": 704,
-      "total_pln": 3137,
+      "total": 708,
+      "total_pln": 3155,
       "error": null
     },
     {
@@ -2333,7 +2333,7 @@
         {
           "code": "BookingCom",
           "name": "Booking.com",
-          "rate": 184.0
+          "rate": 185.0
         }
       ],
       "min_rate": 126.0,
@@ -2353,28 +2353,28 @@
         {
           "code": "Agoda",
           "name": "Agoda.com",
-          "rate": 219.0
+          "rate": 221.0
         },
         {
           "code": "IHG",
           "name": "IHG",
-          "rate": 289.0
+          "rate": 291.0
         },
         {
           "code": "BookingCom",
           "name": "Booking.com",
-          "rate": 290.0
+          "rate": 293.0
         },
         {
           "code": "CtripTA",
           "name": "Trip.com",
-          "rate": 291.0
+          "rate": 293.0
         }
       ],
-      "min_rate": 219.0,
+      "min_rate": 221.0,
       "min_site": "Agoda.com",
-      "total": 1095,
-      "total_pln": 4879,
+      "total": 1105,
+      "total_pln": 4924,
       "error": null
     },
     {
@@ -2398,7 +2398,7 @@
         {
           "code": "CtripTA",
           "name": "Trip.com",
-          "rate": 504.0
+          "rate": 505.0
         }
       ],
       "min_rate": 177.0,
@@ -2416,6 +2416,11 @@
       "nights": 3,
       "rates": [
         {
+          "code": "CtripTA",
+          "name": "Trip.com",
+          "rate": 126.0
+        },
+        {
           "code": "TravelClickCPA",
           "name": "Official Hotel",
           "rate": 142.0
@@ -2423,7 +2428,7 @@
         {
           "code": "Agoda",
           "name": "Agoda.com",
-          "rate": 161.0
+          "rate": 159.0
         },
         {
           "code": "BookingCom",
@@ -2431,10 +2436,10 @@
           "rate": 164.0
         }
       ],
-      "min_rate": 142.0,
-      "min_site": "Official Hotel",
-      "total": 426,
-      "total_pln": 1898,
+      "min_rate": 126.0,
+      "min_site": "Trip.com",
+      "total": 378,
+      "total_pln": 1684,
       "error": null
     },
     {
@@ -2448,28 +2453,28 @@
         {
           "code": "Agoda",
           "name": "Agoda.com",
-          "rate": 239.0
+          "rate": 242.0
         },
         {
           "code": "IHG",
           "name": "IHG",
-          "rate": 263.0
+          "rate": 267.0
         },
         {
           "code": "BookingCom",
           "name": "Booking.com",
-          "rate": 265.0
+          "rate": 268.0
         },
         {
           "code": "CtripTA",
           "name": "Trip.com",
-          "rate": 265.0
+          "rate": 269.0
         }
       ],
-      "min_rate": 239.0,
+      "min_rate": 242.0,
       "min_site": "Agoda.com",
-      "total": 717,
-      "total_pln": 3195,
+      "total": 726,
+      "total_pln": 3235,
       "error": null
     },
     {
@@ -2493,7 +2498,7 @@
         {
           "code": "CtripTA",
           "name": "Trip.com",
-          "rate": 502.0
+          "rate": 503.0
         }
       ],
       "min_rate": 251.0,
@@ -2523,12 +2528,12 @@
         {
           "code": "Agoda",
           "name": "Agoda.com",
-          "rate": 161.0
+          "rate": 157.0
         },
         {
           "code": "BookingCom",
           "name": "Booking.com",
-          "rate": 173.0
+          "rate": 164.0
         }
       ],
       "min_rate": 126.0,
@@ -2548,28 +2553,28 @@
         {
           "code": "Agoda",
           "name": "Agoda.com",
-          "rate": 213.0
+          "rate": 215.0
         },
         {
           "code": "IHG",
           "name": "IHG",
-          "rate": 281.0
+          "rate": 284.0
         },
         {
           "code": "BookingCom",
           "name": "Booking.com",
-          "rate": 283.0
+          "rate": 286.0
         },
         {
           "code": "CtripTA",
           "name": "Trip.com",
-          "rate": 283.0
+          "rate": 286.0
         }
       ],
-      "min_rate": 213.0,
+      "min_rate": 215.0,
       "min_site": "Agoda.com",
-      "total": 852,
-      "total_pln": 3796,
+      "total": 860,
+      "total_pln": 3832,
       "error": null
     },
     {
@@ -2583,7 +2588,7 @@
         {
           "code": "Agoda",
           "name": "Agoda.com",
-          "rate": 174.0
+          "rate": 175.0
         },
         {
           "code": "BookingCom",
@@ -2593,13 +2598,13 @@
         {
           "code": "CtripTA",
           "name": "Trip.com",
-          "rate": 502.0
+          "rate": 503.0
         }
       ],
-      "min_rate": 174.0,
+      "min_rate": 175.0,
       "min_site": "Agoda.com",
-      "total": 696,
-      "total_pln": 3101,
+      "total": 700,
+      "total_pln": 3119,
       "error": null
     },
     {
@@ -2623,12 +2628,12 @@
         {
           "code": "Agoda",
           "name": "Agoda.com",
-          "rate": 157.0
+          "rate": 159.0
         },
         {
           "code": "BookingCom",
           "name": "Booking.com",
-          "rate": 184.0
+          "rate": 164.0
         }
       ],
       "min_rate": 126.0,
@@ -2648,28 +2653,28 @@
         {
           "code": "Agoda",
           "name": "Agoda.com",
-          "rate": 212.0
+          "rate": 214.0
         },
         {
           "code": "IHG",
           "name": "IHG",
-          "rate": 278.0
+          "rate": 281.0
         },
         {
           "code": "BookingCom",
           "name": "Booking.com",
-          "rate": 280.0
+          "rate": 283.0
         },
         {
           "code": "CtripTA",
           "name": "Trip.com",
-          "rate": 280.0
+          "rate": 283.0
         }
       ],
-      "min_rate": 212.0,
+      "min_rate": 214.0,
       "min_site": "Agoda.com",
-      "total": 1060,
-      "total_pln": 4723,
+      "total": 1070,
+      "total_pln": 4768,
       "error": null
     },
     {
@@ -2688,7 +2693,7 @@
         {
           "code": "BookingCom",
           "name": "Booking.com",
-          "rate": 439.0
+          "rate": 440.0
         },
         {
           "code": "CtripTA",
@@ -2723,12 +2728,12 @@
         {
           "code": "Agoda",
           "name": "Agoda.com",
-          "rate": 159.0
+          "rate": 161.0
         },
         {
           "code": "BookingCom",
           "name": "Booking.com",
-          "rate": 184.0
+          "rate": 185.0
         }
       ],
       "min_rate": 126.0,
@@ -2748,28 +2753,28 @@
         {
           "code": "Agoda",
           "name": "Agoda.com",
-          "rate": 261.0
+          "rate": 264.0
         },
         {
           "code": "IHG",
           "name": "IHG",
-          "rate": 287.0
+          "rate": 290.0
         },
         {
           "code": "BookingCom",
           "name": "Booking.com",
-          "rate": 289.0
+          "rate": 292.0
         },
         {
           "code": "CtripTA",
           "name": "Trip.com",
-          "rate": 289.0
+          "rate": 292.0
         }
       ],
-      "min_rate": 261.0,
+      "min_rate": 264.0,
       "min_site": "Agoda.com",
-      "total": 783,
-      "total_pln": 3489,
+      "total": 792,
+      "total_pln": 3529,
       "error": null
     },
     {
@@ -2793,7 +2798,7 @@
         {
           "code": "CtripTA",
           "name": "Trip.com",
-          "rate": 504.0
+          "rate": 505.0
         }
       ],
       "min_rate": 254.0,
@@ -2823,12 +2828,12 @@
         {
           "code": "Agoda",
           "name": "Agoda.com",
-          "rate": 158.0
+          "rate": 157.0
         },
         {
           "code": "BookingCom",
           "name": "Booking.com",
-          "rate": 184.0
+          "rate": 185.0
         }
       ],
       "min_rate": 126.0,
@@ -2848,28 +2853,28 @@
         {
           "code": "Agoda",
           "name": "Agoda.com",
-          "rate": 214.0
+          "rate": 216.0
         },
         {
           "code": "IHG",
           "name": "IHG",
-          "rate": 282.0
+          "rate": 285.0
         },
         {
           "code": "BookingCom",
           "name": "Booking.com",
-          "rate": 284.0
+          "rate": 287.0
         },
         {
           "code": "CtripTA",
           "name": "Trip.com",
-          "rate": 284.0
+          "rate": 287.0
         }
       ],
-      "min_rate": 214.0,
+      "min_rate": 216.0,
       "min_site": "Agoda.com",
-      "total": 856,
-      "total_pln": 3814,
+      "total": 864,
+      "total_pln": 3850,
       "error": null
     },
     {
@@ -2883,12 +2888,12 @@
         {
           "code": "Agoda",
           "name": "Agoda.com",
-          "rate": 176.0
+          "rate": 177.0
         },
         {
           "code": "BookingCom",
           "name": "Booking.com",
-          "rate": 441.0
+          "rate": 442.0
         },
         {
           "code": "CtripTA",
@@ -2896,10 +2901,10 @@
           "rate": 505.0
         }
       ],
-      "min_rate": 176.0,
+      "min_rate": 177.0,
       "min_site": "Agoda.com",
-      "total": 704,
-      "total_pln": 3137,
+      "total": 708,
+      "total_pln": 3155,
       "error": null
     },
     {
@@ -2923,12 +2928,12 @@
         {
           "code": "Agoda",
           "name": "Agoda.com",
-          "rate": 157.0
+          "rate": 161.0
         },
         {
           "code": "BookingCom",
           "name": "Booking.com",
-          "rate": 184.0
+          "rate": 185.0
         }
       ],
       "min_rate": 126.0,
@@ -2948,28 +2953,28 @@
         {
           "code": "Agoda",
           "name": "Agoda.com",
-          "rate": 221.0
+          "rate": 223.0
         },
         {
           "code": "IHG",
           "name": "IHG",
-          "rate": 291.0
+          "rate": 293.0
         },
         {
           "code": "BookingCom",
           "name": "Booking.com",
-          "rate": 292.0
+          "rate": 295.0
         },
         {
           "code": "CtripTA",
           "name": "Trip.com",
-          "rate": 293.0
+          "rate": 295.0
         }
       ],
-      "min_rate": 221.0,
+      "min_rate": 223.0,
       "min_site": "Agoda.com",
-      "total": 1105,
-      "total_pln": 4924,
+      "total": 1115,
+      "total_pln": 4968,
       "error": null
     },
     {
@@ -2993,7 +2998,7 @@
         {
           "code": "CtripTA",
           "name": "Trip.com",
-          "rate": 504.0
+          "rate": 505.0
         }
       ],
       "min_rate": 177.0,
@@ -3028,7 +3033,7 @@
         {
           "code": "BookingCom",
           "name": "Booking.com",
-          "rate": 184.0
+          "rate": 169.0
         }
       ],
       "min_rate": 126.0,
@@ -3048,28 +3053,28 @@
         {
           "code": "Agoda",
           "name": "Agoda.com",
-          "rate": 262.0
+          "rate": 265.0
         },
         {
           "code": "IHG",
           "name": "IHG",
-          "rate": 288.0
+          "rate": 291.0
         },
         {
           "code": "BookingCom",
           "name": "Booking.com",
-          "rate": 290.0
+          "rate": 293.0
         },
         {
           "code": "CtripTA",
           "name": "Trip.com",
-          "rate": 290.0
+          "rate": 293.0
         }
       ],
-      "min_rate": 262.0,
+      "min_rate": 265.0,
       "min_site": "Agoda.com",
-      "total": 786,
-      "total_pln": 3502,
+      "total": 795,
+      "total_pln": 3542,
       "error": null
     },
     {
@@ -3088,7 +3093,7 @@
         {
           "code": "BookingCom",
           "name": "Booking.com",
-          "rate": 442.0
+          "rate": 443.0
         },
         {
           "code": "CtripTA",
@@ -3123,12 +3128,12 @@
         {
           "code": "Agoda",
           "name": "Agoda.com",
-          "rate": 161.0
+          "rate": 157.0
         },
         {
           "code": "BookingCom",
           "name": "Booking.com",
-          "rate": 184.0
+          "rate": 185.0
         }
       ],
       "min_rate": 126.0,
@@ -3148,28 +3153,28 @@
         {
           "code": "Agoda",
           "name": "Agoda.com",
-          "rate": 225.0
+          "rate": 227.0
         },
         {
           "code": "IHG",
           "name": "IHG",
-          "rate": 297.0
+          "rate": 299.0
         },
         {
           "code": "BookingCom",
           "name": "Booking.com",
-          "rate": 299.0
+          "rate": 301.0
         },
         {
           "code": "CtripTA",
           "name": "Trip.com",
-          "rate": 299.0
+          "rate": 301.0
         }
       ],
-      "min_rate": 225.0,
+      "min_rate": 227.0,
       "min_site": "Agoda.com",
-      "total": 900,
-      "total_pln": 4010,
+      "total": 908,
+      "total_pln": 4046,
       "error": null
     },
     {
@@ -3183,12 +3188,12 @@
         {
           "code": "Agoda",
           "name": "Agoda.com",
-          "rate": 176.0
+          "rate": 177.0
         },
         {
           "code": "BookingCom",
           "name": "Booking.com",
-          "rate": 441.0
+          "rate": 442.0
         },
         {
           "code": "CtripTA",
@@ -3196,10 +3201,10 @@
           "rate": 505.0
         }
       ],
-      "min_rate": 176.0,
+      "min_rate": 177.0,
       "min_site": "Agoda.com",
-      "total": 704,
-      "total_pln": 3137,
+      "total": 708,
+      "total_pln": 3155,
       "error": null
     },
     {
@@ -3223,12 +3228,12 @@
         {
           "code": "Agoda",
           "name": "Agoda.com",
-          "rate": 157.0
+          "rate": 161.0
         },
         {
           "code": "BookingCom",
           "name": "Booking.com",
-          "rate": 184.0
+          "rate": 185.0
         }
       ],
       "min_rate": 126.0,
@@ -3248,28 +3253,28 @@
         {
           "code": "Agoda",
           "name": "Agoda.com",
-          "rate": 225.0
+          "rate": 227.0
         },
         {
           "code": "IHG",
           "name": "IHG",
-          "rate": 296.0
+          "rate": 298.0
         },
         {
           "code": "BookingCom",
           "name": "Booking.com",
-          "rate": 298.0
+          "rate": 300.0
         },
         {
           "code": "CtripTA",
           "name": "Trip.com",
-          "rate": 298.0
+          "rate": 300.0
         }
       ],
-      "min_rate": 225.0,
+      "min_rate": 227.0,
       "min_site": "Agoda.com",
-      "total": 1125,
-      "total_pln": 5013,
+      "total": 1135,
+      "total_pln": 5057,
       "error": null
     },
     {
@@ -3293,7 +3298,7 @@
         {
           "code": "CtripTA",
           "name": "Trip.com",
-          "rate": 504.0
+          "rate": 505.0
         }
       ],
       "min_rate": 177.0,
@@ -3323,7 +3328,7 @@
         {
           "code": "Agoda",
           "name": "Agoda.com",
-          "rate": 155.0
+          "rate": 161.0
         },
         {
           "code": "BookingCom",
@@ -3348,28 +3353,28 @@
         {
           "code": "Agoda",
           "name": "Agoda.com",
-          "rate": 280.0
+          "rate": 282.0
         },
         {
           "code": "IHG",
           "name": "IHG",
-          "rate": 309.0
+          "rate": 310.0
         },
         {
           "code": "BookingCom",
           "name": "Booking.com",
-          "rate": 310.0
+          "rate": 312.0
         },
         {
           "code": "CtripTA",
           "name": "Trip.com",
-          "rate": 311.0
+          "rate": 313.0
         }
       ],
-      "min_rate": 280.0,
+      "min_rate": 282.0,
       "min_site": "Agoda.com",
-      "total": 840,
-      "total_pln": 3743,
+      "total": 846,
+      "total_pln": 3770,
       "error": null
     },
     {
@@ -3388,7 +3393,7 @@
         {
           "code": "BookingCom",
           "name": "Booking.com",
-          "rate": 440.0
+          "rate": 441.0
         },
         {
           "code": "CtripTA",
@@ -3423,12 +3428,12 @@
         {
           "code": "Agoda",
           "name": "Agoda.com",
-          "rate": 158.0
+          "rate": 157.0
         },
         {
           "code": "BookingCom",
           "name": "Booking.com",
-          "rate": 184.0
+          "rate": 185.0
         }
       ],
       "min_rate": 126.0,
@@ -3448,28 +3453,28 @@
         {
           "code": "Agoda",
           "name": "Agoda.com",
-          "rate": 230.0
+          "rate": 232.0
         },
         {
           "code": "IHG",
           "name": "IHG",
-          "rate": 305.0
+          "rate": 306.0
         },
         {
           "code": "BookingCom",
           "name": "Booking.com",
-          "rate": 306.0
+          "rate": 308.0
         },
         {
           "code": "CtripTA",
           "name": "Trip.com",
-          "rate": 307.0
+          "rate": 308.0
         }
       ],
-      "min_rate": 230.0,
+      "min_rate": 232.0,
       "min_site": "Agoda.com",
-      "total": 920,
-      "total_pln": 4099,
+      "total": 928,
+      "total_pln": 4135,
       "error": null
     },
     {
@@ -3493,7 +3498,7 @@
         {
           "code": "CtripTA",
           "name": "Trip.com",
-          "rate": 503.0
+          "rate": 504.0
         }
       ],
       "min_rate": 175.0,
@@ -3528,7 +3533,7 @@
         {
           "code": "BookingCom",
           "name": "Booking.com",
-          "rate": 184.0
+          "rate": 185.0
         }
       ],
       "min_rate": 126.0,
@@ -3548,28 +3553,23 @@
         {
           "code": "Agoda",
           "name": "Agoda.com",
-          "rate": 230.0
+          "rate": 231.0
         },
         {
           "code": "IHG",
           "name": "IHG",
-          "rate": 303.0
+          "rate": 304.0
         },
         {
           "code": "BookingCom",
           "name": "Booking.com",
-          "rate": 305.0
-        },
-        {
-          "code": "CtripTA",
-          "name": "Trip.com",
-          "rate": 305.0
+          "rate": 306.0
         }
       ],
-      "min_rate": 230.0,
+      "min_rate": 231.0,
       "min_site": "Agoda.com",
-      "total": 1150,
-      "total_pln": 5124,
+      "total": 1155,
+      "total_pln": 5147,
       "error": null
     },
     {
@@ -3588,12 +3588,12 @@
         {
           "code": "BookingCom",
           "name": "Booking.com",
-          "rate": 441.0
+          "rate": 442.0
         },
         {
           "code": "CtripTA",
           "name": "Trip.com",
-          "rate": 505.0
+          "rate": 506.0
         }
       ],
       "min_rate": 177.0,
@@ -3628,7 +3628,7 @@
         {
           "code": "BookingCom",
           "name": "Booking.com",
-          "rate": 184.0
+          "rate": 185.0
         }
       ],
       "min_rate": 126.0,
@@ -3648,23 +3648,28 @@
         {
           "code": "Agoda",
           "name": "Agoda.com",
-          "rate": 207.0
+          "rate": 209.0
         },
         {
           "code": "IHG",
           "name": "IHG",
-          "rate": 272.0
+          "rate": 274.0
         },
         {
           "code": "BookingCom",
           "name": "Booking.com",
-          "rate": 274.0
+          "rate": 276.0
+        },
+        {
+          "code": "CtripTA",
+          "name": "Trip.com",
+          "rate": 276.0
         }
       ],
-      "min_rate": 207.0,
+      "min_rate": 209.0,
       "min_site": "Agoda.com",
-      "total": 1035,
-      "total_pln": 4612,
+      "total": 1045,
+      "total_pln": 4656,
       "error": null
     },
     {
@@ -3678,23 +3683,23 @@
         {
           "code": "Agoda",
           "name": "Agoda.com",
-          "rate": 173.0
+          "rate": 174.0
         },
         {
           "code": "BookingCom",
           "name": "Booking.com",
-          "rate": 429.0
+          "rate": 430.0
         },
         {
           "code": "CtripTA",
           "name": "Trip.com",
-          "rate": 491.0
+          "rate": 492.0
         }
       ],
-      "min_rate": 173.0,
+      "min_rate": 174.0,
       "min_site": "Agoda.com",
-      "total": 865,
-      "total_pln": 3854,
+      "total": 870,
+      "total_pln": 3877,
       "error": null
     },
     {
@@ -3718,12 +3723,12 @@
         {
           "code": "Agoda",
           "name": "Agoda.com",
-          "rate": 161.0
+          "rate": 156.0
         },
         {
           "code": "BookingCom",
           "name": "Booking.com",
-          "rate": 184.0
+          "rate": 185.0
         }
       ],
       "min_rate": 126.0,
@@ -3743,28 +3748,28 @@
         {
           "code": "Agoda",
           "name": "Agoda.com",
-          "rate": 209.0
+          "rate": 210.0
         },
         {
           "code": "IHG",
           "name": "IHG",
-          "rate": 276.0
+          "rate": 277.0
         },
         {
           "code": "BookingCom",
           "name": "Booking.com",
-          "rate": 277.0
+          "rate": 279.0
         },
         {
           "code": "CtripTA",
           "name": "Trip.com",
-          "rate": 278.0
+          "rate": 279.0
         }
       ],
-      "min_rate": 209.0,
+      "min_rate": 210.0,
       "min_site": "Agoda.com",
-      "total": 836,
-      "total_pln": 3725,
+      "total": 840,
+      "total_pln": 3743,
       "error": null
     },
     {
@@ -3823,7 +3828,7 @@
         {
           "code": "BookingCom",
           "name": "Booking.com",
-          "rate": 184.0
+          "rate": 185.0
         }
       ],
       "min_rate": 126.0,
@@ -3843,28 +3848,28 @@
         {
           "code": "Agoda",
           "name": "Agoda.com",
-          "rate": 208.0
+          "rate": 209.0
         },
         {
           "code": "IHG",
           "name": "IHG",
-          "rate": 274.0
+          "rate": 275.0
         },
         {
           "code": "BookingCom",
           "name": "Booking.com",
-          "rate": 275.0
+          "rate": 277.0
         },
         {
           "code": "CtripTA",
           "name": "Trip.com",
-          "rate": 276.0
+          "rate": 277.0
         }
       ],
-      "min_rate": 208.0,
+      "min_rate": 209.0,
       "min_site": "Agoda.com",
-      "total": 1040,
-      "total_pln": 4634,
+      "total": 1045,
+      "total_pln": 4656,
       "error": null
     },
     {
@@ -3878,7 +3883,7 @@
         {
           "code": "Agoda",
           "name": "Agoda.com",
-          "rate": 174.0
+          "rate": 175.0
         },
         {
           "code": "BookingCom",
@@ -3891,10 +3896,10 @@
           "rate": 506.0
         }
       ],
-      "min_rate": 174.0,
+      "min_rate": 175.0,
       "min_site": "Agoda.com",
-      "total": 870,
-      "total_pln": 3877,
+      "total": 875,
+      "total_pln": 3899,
       "error": null
     },
     {
@@ -3923,7 +3928,7 @@
         {
           "code": "BookingCom",
           "name": "Booking.com",
-          "rate": 184.0
+          "rate": 185.0
         }
       ],
       "min_rate": 126.0,
@@ -3943,28 +3948,28 @@
         {
           "code": "Agoda",
           "name": "Agoda.com",
-          "rate": 255.0
+          "rate": 256.0
         },
         {
           "code": "IHG",
           "name": "IHG",
-          "rate": 281.0
+          "rate": 282.0
         },
         {
           "code": "BookingCom",
           "name": "Booking.com",
-          "rate": 283.0
+          "rate": 284.0
         },
         {
           "code": "CtripTA",
           "name": "Trip.com",
-          "rate": 283.0
+          "rate": 284.0
         }
       ],
-      "min_rate": 255.0,
+      "min_rate": 256.0,
       "min_site": "Agoda.com",
-      "total": 765,
-      "total_pln": 3409,
+      "total": 768,
+      "total_pln": 3422,
       "error": null
     },
     {
@@ -3988,7 +3993,7 @@
         {
           "code": "CtripTA",
           "name": "Trip.com",
-          "rate": 498.0
+          "rate": 499.0
         }
       ],
       "min_rate": 247.0,
@@ -4018,12 +4023,12 @@
         {
           "code": "Agoda",
           "name": "Agoda.com",
-          "rate": 161.0
+          "rate": 157.0
         },
         {
           "code": "BookingCom",
           "name": "Booking.com",
-          "rate": 184.0
+          "rate": 185.0
         }
       ],
       "min_rate": 126.0,
@@ -4053,7 +4058,7 @@
         {
           "code": "BookingCom",
           "name": "Booking.com",
-          "rate": 279.0
+          "rate": 280.0
         },
         {
           "code": "CtripTA",
@@ -4078,12 +4083,12 @@
         {
           "code": "Agoda",
           "name": "Agoda.com",
-          "rate": 173.0
+          "rate": 174.0
         },
         {
           "code": "BookingCom",
           "name": "Booking.com",
-          "rate": 442.0
+          "rate": 443.0
         },
         {
           "code": "CtripTA",
@@ -4091,10 +4096,10 @@
           "rate": 506.0
         }
       ],
-      "min_rate": 173.0,
+      "min_rate": 174.0,
       "min_site": "Agoda.com",
-      "total": 692,
-      "total_pln": 3083,
+      "total": 696,
+      "total_pln": 3101,
       "error": null
     },
     {
@@ -4118,12 +4123,12 @@
         {
           "code": "Agoda",
           "name": "Agoda.com",
-          "rate": 161.0
+          "rate": 157.0
         },
         {
           "code": "BookingCom",
           "name": "Booking.com",
-          "rate": 184.0
+          "rate": 185.0
         }
       ],
       "min_rate": 126.0,
@@ -4143,28 +4148,28 @@
         {
           "code": "Agoda",
           "name": "Agoda.com",
-          "rate": 211.0
-        },
-        {
-          "code": "CtripTA",
-          "name": "Trip.com",
-          "rate": 274.0
+          "rate": 212.0
         },
         {
           "code": "IHG",
           "name": "IHG",
-          "rate": 275.0
+          "rate": 276.0
         },
         {
           "code": "BookingCom",
           "name": "Booking.com",
-          "rate": 277.0
+          "rate": 278.0
+        },
+        {
+          "code": "CtripTA",
+          "name": "Trip.com",
+          "rate": 278.0
         }
       ],
-      "min_rate": 211.0,
+      "min_rate": 212.0,
       "min_site": "Agoda.com",
-      "total": 1055,
-      "total_pln": 4701,
+      "total": 1060,
+      "total_pln": 4723,
       "error": null
     },
     {
@@ -4183,7 +4188,7 @@
         {
           "code": "BookingCom",
           "name": "Booking.com",
-          "rate": 446.0
+          "rate": 447.0
         },
         {
           "code": "CtripTA",
@@ -4223,7 +4228,7 @@
         {
           "code": "BookingCom",
           "name": "Booking.com",
-          "rate": 184.0
+          "rate": 185.0
         }
       ],
       "min_rate": 126.0,
@@ -4288,7 +4293,7 @@
         {
           "code": "CtripTA",
           "name": "Trip.com",
-          "rate": 506.0
+          "rate": 507.0
         }
       ],
       "min_rate": 248.0,
@@ -4323,7 +4328,7 @@
         {
           "code": "BookingCom",
           "name": "Booking.com",
-          "rate": 184.0
+          "rate": 185.0
         }
       ],
       "min_rate": 126.0,
@@ -4343,28 +4348,28 @@
         {
           "code": "Agoda",
           "name": "Agoda.com",
-          "rate": 214.0
+          "rate": 215.0
         },
         {
           "code": "IHG",
           "name": "IHG",
-          "rate": 279.0
+          "rate": 280.0
         },
         {
           "code": "BookingCom",
           "name": "Booking.com",
-          "rate": 280.0
+          "rate": 282.0
         },
         {
           "code": "CtripTA",
           "name": "Trip.com",
-          "rate": 280.0
+          "rate": 282.0
         }
       ],
-      "min_rate": 214.0,
+      "min_rate": 215.0,
       "min_site": "Agoda.com",
-      "total": 856,
-      "total_pln": 3814,
+      "total": 860,
+      "total_pln": 3832,
       "error": null
     },
     {
@@ -4388,7 +4393,7 @@
         {
           "code": "CtripTA",
           "name": "Trip.com",
-          "rate": 512.0
+          "rate": 513.0
         }
       ],
       "min_rate": 174.0,
@@ -4443,28 +4448,28 @@
         {
           "code": "Agoda",
           "name": "Agoda.com",
-          "rate": 250.0
+          "rate": 251.0
         },
         {
           "code": "IHG",
           "name": "IHG",
-          "rate": 275.0
+          "rate": 276.0
         },
         {
           "code": "BookingCom",
           "name": "Booking.com",
-          "rate": 276.0
+          "rate": 278.0
         },
         {
           "code": "CtripTA",
           "name": "Trip.com",
-          "rate": 277.0
+          "rate": 278.0
         }
       ],
-      "min_rate": 250.0,
+      "min_rate": 251.0,
       "min_site": "Agoda.com",
-      "total": 750,
-      "total_pln": 3342,
+      "total": 753,
+      "total_pln": 3355,
       "error": null
     },
     {
@@ -4488,7 +4493,7 @@
         {
           "code": "CtripTA",
           "name": "Trip.com",
-          "rate": 518.0
+          "rate": 519.0
         }
       ],
       "min_rate": 253.0,
@@ -4523,7 +4528,7 @@
         {
           "code": "BookingCom",
           "name": "Booking.com",
-          "rate": 266.0
+          "rate": 267.0
         }
       ],
       "min_rate": 200.0,
@@ -4543,7 +4548,7 @@
         {
           "code": "Agoda",
           "name": "Agoda.com",
-          "rate": 147.0
+          "rate": 148.0
         },
         {
           "code": "Marriott1",
@@ -4561,10 +4566,10 @@
           "rate": 211.0
         }
       ],
-      "min_rate": 147.0,
+      "min_rate": 148.0,
       "min_site": "Agoda.com",
-      "total": 441,
-      "total_pln": 1965,
+      "total": 444,
+      "total_pln": 1978,
       "error": null
     },
     {
@@ -4618,7 +4623,7 @@
         {
           "code": "CtripTA",
           "name": "Trip.com",
-          "rate": 264.0
+          "rate": 265.0
         },
         {
           "code": "BookingCom",
@@ -4643,7 +4648,12 @@
         {
           "code": "Agoda",
           "name": "Agoda.com",
-          "rate": 147.0
+          "rate": 148.0
+        },
+        {
+          "code": "Vio",
+          "name": "Vio.com",
+          "rate": 148.0
         },
         {
           "code": "Marriott1",
@@ -4661,10 +4671,10 @@
           "rate": 211.0
         }
       ],
-      "min_rate": 147.0,
+      "min_rate": 148.0,
       "min_site": "Agoda.com",
-      "total": 588,
-      "total_pln": 2620,
+      "total": 592,
+      "total_pln": 2638,
       "error": null
     },
     {
@@ -4678,7 +4688,7 @@
         {
           "code": "Agoda",
           "name": "Agoda.com",
-          "rate": 156.0
+          "rate": 149.0
         },
         {
           "code": "BookingCom",
@@ -4691,10 +4701,10 @@
           "rate": 217.0
         }
       ],
-      "min_rate": 156.0,
+      "min_rate": 149.0,
       "min_site": "Agoda.com",
-      "total": 624,
-      "total_pln": 2780,
+      "total": 596,
+      "total_pln": 2656,
       "error": null
     },
     {
@@ -4716,14 +4726,14 @@
           "rate": 240.0
         },
         {
-          "code": "CtripTA",
-          "name": "Trip.com",
-          "rate": 240.0
-        },
-        {
           "code": "BookingCom",
           "name": "Booking.com",
-          "rate": 241.0
+          "rate": 242.0
+        },
+        {
+          "code": "CtripTA",
+          "name": "Trip.com",
+          "rate": 263.0
         }
       ],
       "min_rate": 178.0,
@@ -4743,7 +4753,7 @@
         {
           "code": "Agoda",
           "name": "Agoda.com",
-          "rate": 125.0
+          "rate": 126.0
         },
         {
           "code": "Marriott1",
@@ -4751,20 +4761,15 @@
           "rate": 185.0
         },
         {
-          "code": "CtripTA",
-          "name": "Trip.com",
-          "rate": 185.0
-        },
-        {
           "code": "BookingCom",
           "name": "Booking.com",
-          "rate": 186.0
+          "rate": 187.0
         }
       ],
-      "min_rate": 125.0,
+      "min_rate": 126.0,
       "min_site": "Agoda.com",
-      "total": 625,
-      "total_pln": 2785,
+      "total": 630,
+      "total_pln": 2807,
       "error": null
     },
     {
@@ -4778,7 +4783,7 @@
         {
           "code": "Agoda",
           "name": "Agoda.com",
-          "rate": 156.0
+          "rate": 149.0
         },
         {
           "code": "BookingCom",
@@ -4791,10 +4796,10 @@
           "rate": 217.0
         }
       ],
-      "min_rate": 156.0,
+      "min_rate": 149.0,
       "min_site": "Agoda.com",
-      "total": 780,
-      "total_pln": 3476,
+      "total": 745,
+      "total_pln": 3320,
       "error": null
     },
     {
@@ -4811,6 +4816,11 @@
           "rate": 201.0
         },
         {
+          "code": "Vio",
+          "name": "Vio.com",
+          "rate": 246.0
+        },
+        {
           "code": "Marriott1",
           "name": "LuxuryCollection",
           "rate": 266.0
@@ -4823,7 +4833,7 @@
         {
           "code": "BookingCom",
           "name": "Booking.com",
-          "rate": 267.0
+          "rate": 268.0
         }
       ],
       "min_rate": 201.0,
@@ -4843,7 +4853,7 @@
         {
           "code": "Agoda",
           "name": "Agoda.com",
-          "rate": 147.0
+          "rate": 148.0
         },
         {
           "code": "Marriott1",
@@ -4861,10 +4871,10 @@
           "rate": 211.0
         }
       ],
-      "min_rate": 147.0,
+      "min_rate": 148.0,
       "min_site": "Agoda.com",
-      "total": 441,
-      "total_pln": 1965,
+      "total": 444,
+      "total_pln": 1978,
       "error": null
     },
     {
@@ -4911,9 +4921,14 @@
           "rate": 199.0
         },
         {
+          "code": "Vio",
+          "name": "Vio.com",
+          "rate": 199.0
+        },
+        {
           "code": "Marriott1",
           "name": "LuxuryCollection",
-          "rate": 263.0
+          "rate": 264.0
         },
         {
           "code": "BookingCom",
@@ -4938,7 +4953,7 @@
         {
           "code": "Agoda",
           "name": "Agoda.com",
-          "rate": 147.0
+          "rate": 148.0
         },
         {
           "code": "Marriott1",
@@ -4956,10 +4971,10 @@
           "rate": 211.0
         }
       ],
-      "min_rate": 147.0,
+      "min_rate": 148.0,
       "min_site": "Agoda.com",
-      "total": 588,
-      "total_pln": 2620,
+      "total": 592,
+      "total_pln": 2638,
       "error": null
     },
     {
@@ -4973,7 +4988,7 @@
         {
           "code": "Agoda",
           "name": "Agoda.com",
-          "rate": 156.0
+          "rate": 149.0
         },
         {
           "code": "BookingCom",
@@ -4986,10 +5001,10 @@
           "rate": 217.0
         }
       ],
-      "min_rate": 156.0,
+      "min_rate": 149.0,
       "min_site": "Agoda.com",
-      "total": 624,
-      "total_pln": 2780,
+      "total": 596,
+      "total_pln": 2656,
       "error": null
     },
     {
@@ -5038,7 +5053,7 @@
         {
           "code": "Agoda",
           "name": "Agoda.com",
-          "rate": 125.0
+          "rate": 126.0
         },
         {
           "code": "Marriott1",
@@ -5048,18 +5063,18 @@
         {
           "code": "CtripTA",
           "name": "Trip.com",
-          "rate": 185.0
+          "rate": 186.0
         },
         {
           "code": "BookingCom",
           "name": "Booking.com",
-          "rate": 186.0
+          "rate": 187.0
         }
       ],
-      "min_rate": 125.0,
+      "min_rate": 126.0,
       "min_site": "Agoda.com",
-      "total": 625,
-      "total_pln": 2785,
+      "total": 630,
+      "total_pln": 2807,
       "error": null
     },
     {
@@ -5073,7 +5088,7 @@
         {
           "code": "Agoda",
           "name": "Agoda.com",
-          "rate": 156.0
+          "rate": 149.0
         },
         {
           "code": "BookingCom",
@@ -5086,10 +5101,10 @@
           "rate": 217.0
         }
       ],
-      "min_rate": 156.0,
+      "min_rate": 149.0,
       "min_site": "Agoda.com",
-      "total": 780,
-      "total_pln": 3476,
+      "total": 745,
+      "total_pln": 3320,
       "error": null
     },
     {
@@ -5118,7 +5133,7 @@
         {
           "code": "BookingCom",
           "name": "Booking.com",
-          "rate": 266.0
+          "rate": 267.0
         }
       ],
       "min_rate": 200.0,
@@ -5138,7 +5153,7 @@
         {
           "code": "Agoda",
           "name": "Agoda.com",
-          "rate": 147.0
+          "rate": 148.0
         },
         {
           "code": "Marriott1",
@@ -5156,10 +5171,10 @@
           "rate": 211.0
         }
       ],
-      "min_rate": 147.0,
+      "min_rate": 148.0,
       "min_site": "Agoda.com",
-      "total": 441,
-      "total_pln": 1965,
+      "total": 444,
+      "total_pln": 1978,
       "error": null
     },
     {
@@ -5203,7 +5218,12 @@
         {
           "code": "Agoda",
           "name": "Agoda.com",
-          "rate": 198.0
+          "rate": 199.0
+        },
+        {
+          "code": "Vio",
+          "name": "Vio.com",
+          "rate": 199.0
         },
         {
           "code": "Marriott1",
@@ -5211,20 +5231,15 @@
           "rate": 263.0
         },
         {
-          "code": "CtripTA",
-          "name": "Trip.com",
-          "rate": 263.0
-        },
-        {
           "code": "BookingCom",
           "name": "Booking.com",
-          "rate": 264.0
+          "rate": 265.0
         }
       ],
-      "min_rate": 198.0,
+      "min_rate": 199.0,
       "min_site": "Agoda.com",
-      "total": 792,
-      "total_pln": 3529,
+      "total": 796,
+      "total_pln": 3547,
       "error": null
     },
     {
@@ -5238,7 +5253,7 @@
         {
           "code": "Agoda",
           "name": "Agoda.com",
-          "rate": 147.0
+          "rate": 148.0
         },
         {
           "code": "Marriott1",
@@ -5256,10 +5271,10 @@
           "rate": 211.0
         }
       ],
-      "min_rate": 147.0,
+      "min_rate": 148.0,
       "min_site": "Agoda.com",
-      "total": 588,
-      "total_pln": 2620,
+      "total": 592,
+      "total_pln": 2638,
       "error": null
     },
     {
@@ -5273,7 +5288,7 @@
         {
           "code": "Agoda",
           "name": "Agoda.com",
-          "rate": 156.0
+          "rate": 149.0
         },
         {
           "code": "BookingCom",
@@ -5286,10 +5301,10 @@
           "rate": 217.0
         }
       ],
-      "min_rate": 156.0,
+      "min_rate": 149.0,
       "min_site": "Agoda.com",
-      "total": 624,
-      "total_pln": 2780,
+      "total": 596,
+      "total_pln": 2656,
       "error": null
     },
     {
@@ -5341,8 +5356,18 @@
           "rate": 126.0
         },
         {
+          "code": "Vio",
+          "name": "Vio.com",
+          "rate": 173.0
+        },
+        {
           "code": "Marriott1",
           "name": "Marriott Hotels",
+          "rate": 186.0
+        },
+        {
+          "code": "CtripTA",
+          "name": "Trip.com",
           "rate": 186.0
         },
         {
@@ -5366,15 +5391,25 @@
       "nights": 5,
       "rates": [
         {
+          "code": "Agoda",
+          "name": "Agoda.com",
+          "rate": 149.0
+        },
+        {
           "code": "BookingCom",
           "name": "Booking.com",
           "rate": 207.0
+        },
+        {
+          "code": "CtripTA",
+          "name": "Trip.com",
+          "rate": 217.0
         }
       ],
-      "min_rate": 207.0,
-      "min_site": "Booking.com",
-      "total": 1035,
-      "total_pln": 4612,
+      "min_rate": 149.0,
+      "min_site": "Agoda.com",
+      "total": 745,
+      "total_pln": 3320,
       "error": null
     },
     {
@@ -5403,7 +5438,7 @@
         {
           "code": "BookingCom",
           "name": "Booking.com",
-          "rate": 260.0
+          "rate": 261.0
         }
       ],
       "min_rate": 195.0,
@@ -5438,7 +5473,7 @@
         {
           "code": "BookingCom",
           "name": "Booking.com",
-          "rate": 255.0
+          "rate": 285.0
         }
       ],
       "min_rate": 210.0,
@@ -5503,7 +5538,7 @@
         {
           "code": "BookingCom",
           "name": "Booking.com",
-          "rate": 260.0
+          "rate": 261.0
         }
       ],
       "min_rate": 195.0,
@@ -5521,8 +5556,18 @@
       "nights": 4,
       "rates": [
         {
+          "code": "CtripTA",
+          "name": "Trip.com",
+          "rate": 211.0
+        },
+        {
           "code": "Agoda",
           "name": "Agoda.com",
+          "rate": 215.0
+        },
+        {
+          "code": "Vio",
+          "name": "Vio.com",
           "rate": 215.0
         },
         {
@@ -5533,13 +5578,13 @@
         {
           "code": "BookingCom",
           "name": "Booking.com",
-          "rate": 256.0
+          "rate": 286.0
         }
       ],
-      "min_rate": 215.0,
-      "min_site": "Agoda.com",
-      "total": 860,
-      "total_pln": 3832,
+      "min_rate": 211.0,
+      "min_site": "Trip.com",
+      "total": 844,
+      "total_pln": 3761,
       "error": null
     },
     {
@@ -5553,7 +5598,7 @@
         {
           "code": "Agoda",
           "name": "Agoda.com",
-          "rate": 156.0
+          "rate": 149.0
         },
         {
           "code": "BookingCom",
@@ -5566,10 +5611,10 @@
           "rate": 217.0
         }
       ],
-      "min_rate": 156.0,
+      "min_rate": 149.0,
       "min_site": "Agoda.com",
-      "total": 624,
-      "total_pln": 2780,
+      "total": 596,
+      "total_pln": 2656,
       "error": null
     },
     {
@@ -5598,7 +5643,7 @@
         {
           "code": "BookingCom",
           "name": "Booking.com",
-          "rate": 237.0
+          "rate": 238.0
         }
       ],
       "min_rate": 174.0,
@@ -5628,12 +5673,12 @@
         {
           "code": "CtripTA",
           "name": "Trip.com",
-          "rate": 186.0
+          "rate": 187.0
         },
         {
           "code": "BookingCom",
           "name": "Booking.com",
-          "rate": 187.0
+          "rate": 188.0
         }
       ],
       "min_rate": 126.0,
@@ -5651,125 +5696,15 @@
       "nights": 5,
       "rates": [
         {
-          "code": "Agoda",
-          "name": "Agoda.com",
-          "rate": 156.0
-        },
-        {
           "code": "BookingCom",
           "name": "Booking.com",
           "rate": 207.0
-        },
-        {
-          "code": "CtripTA",
-          "name": "Trip.com",
-          "rate": 217.0
-        }
-      ],
-      "min_rate": 156.0,
-      "min_site": "Agoda.com",
-      "total": 780,
-      "total_pln": 3476,
-      "error": null
-    },
-    {
-      "hotel": "sheraton-grande-sukhumvit",
-      "stay": "first",
-      "date": "2027-01-22",
-      "chk_in": "2027-01-22",
-      "chk_out": "2027-01-25",
-      "nights": 3,
-      "rates": [
-        {
-          "code": "Agoda",
-          "name": "Agoda.com",
-          "rate": 194.0
-        },
-        {
-          "code": "Marriott1",
-          "name": "LuxuryCollection",
-          "rate": 258.0
-        },
-        {
-          "code": "CtripTA",
-          "name": "Trip.com",
-          "rate": 258.0
-        },
-        {
-          "code": "BookingCom",
-          "name": "Booking.com",
-          "rate": 259.0
-        }
-      ],
-      "min_rate": 194.0,
-      "min_site": "Agoda.com",
-      "total": 582,
-      "total_pln": 2593,
-      "error": null
-    },
-    {
-      "hotel": "marriott-marquis-queens-park",
-      "stay": "first",
-      "date": "2027-01-22",
-      "chk_in": "2027-01-22",
-      "chk_out": "2027-01-25",
-      "nights": 3,
-      "rates": [
-        {
-          "code": "Agoda",
-          "name": "Agoda.com",
-          "rate": 148.0
-        },
-        {
-          "code": "Marriott1",
-          "name": "Marriott Hotels",
-          "rate": 211.0
-        },
-        {
-          "code": "CtripTA",
-          "name": "Trip.com",
-          "rate": 211.0
-        },
-        {
-          "code": "BookingCom",
-          "name": "Booking.com",
-          "rate": 212.0
-        }
-      ],
-      "min_rate": 148.0,
-      "min_site": "Agoda.com",
-      "total": 444,
-      "total_pln": 1978,
-      "error": null
-    },
-    {
-      "hotel": "so-bangkok",
-      "stay": "first",
-      "date": "2027-01-22",
-      "chk_in": "2027-01-22",
-      "chk_out": "2027-01-25",
-      "nights": 3,
-      "rates": [
-        {
-          "code": "BookingCom",
-          "name": "Booking.com",
-          "rate": 207.0
-        },
-        {
-          "code": "Agoda",
-          "name": "Agoda.com",
-          "rate": 207.0
-        },
-        {
-          "code": "CtripTA",
-          "name": "Trip.com",
-          "rate": 217.0
         }
       ],
       "min_rate": 207.0,
       "min_site": "Booking.com",
-      "total": 621,
-      "total_pln": 2767,
+      "total": 1035,
+      "total_pln": 4612,
       "error": null
     },
     {
@@ -5777,8 +5712,8 @@
       "stay": "first",
       "date": "2027-01-22",
       "chk_in": "2027-01-22",
-      "chk_out": "2027-01-26",
-      "nights": 4,
+      "chk_out": "2027-01-25",
+      "nights": 3,
       "rates": [
         {
           "code": "Agoda",
@@ -5803,8 +5738,8 @@
       ],
       "min_rate": 194.0,
       "min_site": "Agoda.com",
-      "total": 776,
-      "total_pln": 3458,
+      "total": 582,
+      "total_pln": 2593,
       "error": null
     },
     {
@@ -5812,8 +5747,8 @@
       "stay": "first",
       "date": "2027-01-22",
       "chk_in": "2027-01-22",
-      "chk_out": "2027-01-26",
-      "nights": 4,
+      "chk_out": "2027-01-25",
+      "nights": 3,
       "rates": [
         {
           "code": "Agoda",
@@ -5838,6 +5773,91 @@
       ],
       "min_rate": 149.0,
       "min_site": "Agoda.com",
+      "total": 447,
+      "total_pln": 1992,
+      "error": null
+    },
+    {
+      "hotel": "so-bangkok",
+      "stay": "first",
+      "date": "2027-01-22",
+      "chk_in": "2027-01-22",
+      "chk_out": "2027-01-25",
+      "nights": 3,
+      "rates": [
+        {
+          "code": "BookingCom",
+          "name": "Booking.com",
+          "rate": 207.0
+        }
+      ],
+      "min_rate": 207.0,
+      "min_site": "Booking.com",
+      "total": 621,
+      "total_pln": 2767,
+      "error": null
+    },
+    {
+      "hotel": "sheraton-grande-sukhumvit",
+      "stay": "first",
+      "date": "2027-01-22",
+      "chk_in": "2027-01-22",
+      "chk_out": "2027-01-26",
+      "nights": 4,
+      "rates": [
+        {
+          "code": "Agoda",
+          "name": "Agoda.com",
+          "rate": 195.0
+        },
+        {
+          "code": "Marriott1",
+          "name": "LuxuryCollection",
+          "rate": 258.0
+        },
+        {
+          "code": "CtripTA",
+          "name": "Trip.com",
+          "rate": 259.0
+        },
+        {
+          "code": "BookingCom",
+          "name": "Booking.com",
+          "rate": 260.0
+        }
+      ],
+      "min_rate": 195.0,
+      "min_site": "Agoda.com",
+      "total": 780,
+      "total_pln": 3476,
+      "error": null
+    },
+    {
+      "hotel": "marriott-marquis-queens-park",
+      "stay": "first",
+      "date": "2027-01-22",
+      "chk_in": "2027-01-22",
+      "chk_out": "2027-01-26",
+      "nights": 4,
+      "rates": [
+        {
+          "code": "Agoda",
+          "name": "Agoda.com",
+          "rate": 149.0
+        },
+        {
+          "code": "Marriott1",
+          "name": "Marriott Hotels",
+          "rate": 211.0
+        },
+        {
+          "code": "BookingCom",
+          "name": "Booking.com",
+          "rate": 213.0
+        }
+      ],
+      "min_rate": 149.0,
+      "min_site": "Agoda.com",
       "total": 596,
       "total_pln": 2656,
       "error": null
@@ -5853,7 +5873,7 @@
         {
           "code": "Agoda",
           "name": "Agoda.com",
-          "rate": 156.0
+          "rate": 149.0
         },
         {
           "code": "BookingCom",
@@ -5866,10 +5886,10 @@
           "rate": 217.0
         }
       ],
-      "min_rate": 156.0,
+      "min_rate": 149.0,
       "min_site": "Agoda.com",
-      "total": 624,
-      "total_pln": 2780,
+      "total": 596,
+      "total_pln": 2656,
       "error": null
     },
     {
@@ -5888,17 +5908,17 @@
         {
           "code": "Marriott1",
           "name": "LuxuryCollection",
-          "rate": 235.0
-        },
-        {
-          "code": "CtripTA",
-          "name": "Trip.com",
           "rate": 236.0
         },
         {
           "code": "BookingCom",
           "name": "Booking.com",
           "rate": 237.0
+        },
+        {
+          "code": "CtripTA",
+          "name": "Trip.com",
+          "rate": 259.0
         }
       ],
       "min_rate": 174.0,
@@ -5918,11 +5938,6 @@
         {
           "code": "Agoda",
           "name": "Agoda.com",
-          "rate": 127.0
-        },
-        {
-          "code": "Vio",
-          "name": "Vio.com",
           "rate": 127.0
         },
         {
@@ -5958,7 +5973,7 @@
         {
           "code": "Agoda",
           "name": "Agoda.com",
-          "rate": 156.0
+          "rate": 149.0
         },
         {
           "code": "BookingCom",
@@ -5971,10 +5986,10 @@
           "rate": 217.0
         }
       ],
-      "min_rate": 156.0,
+      "min_rate": 149.0,
       "min_site": "Agoda.com",
-      "total": 780,
-      "total_pln": 3476,
+      "total": 745,
+      "total_pln": 3320,
       "error": null
     },
     {
@@ -5998,7 +6013,7 @@
         {
           "code": "CtripTA",
           "name": "Trip.com",
-          "rate": 239.0
+          "rate": 240.0
         },
         {
           "code": "BookingCom",
@@ -6024,6 +6039,11 @@
           "code": "Agoda",
           "name": "Agoda.com",
           "rate": 126.0
+        },
+        {
+          "code": "Vio",
+          "name": "Vio.com",
+          "rate": 173.0
         },
         {
           "code": "Marriott1",
@@ -6058,7 +6078,7 @@
         {
           "code": "Agoda",
           "name": "Agoda.com",
-          "rate": 156.0
+          "rate": 149.0
         },
         {
           "code": "BookingCom",
@@ -6071,10 +6091,10 @@
           "rate": 217.0
         }
       ],
-      "min_rate": 156.0,
+      "min_rate": 149.0,
       "min_site": "Agoda.com",
-      "total": 780,
-      "total_pln": 3476,
+      "total": 745,
+      "total_pln": 3320,
       "error": null
     },
     {
@@ -6098,7 +6118,7 @@
         {
           "code": "CtripTA",
           "name": "Trip.com",
-          "rate": 264.0
+          "rate": 265.0
         },
         {
           "code": "BookingCom",
@@ -6123,7 +6143,7 @@
         {
           "code": "Agoda",
           "name": "Agoda.com",
-          "rate": 147.0
+          "rate": 148.0
         },
         {
           "code": "Marriott1",
@@ -6141,10 +6161,10 @@
           "rate": 211.0
         }
       ],
-      "min_rate": 147.0,
+      "min_rate": 148.0,
       "min_site": "Agoda.com",
-      "total": 588,
-      "total_pln": 2620,
+      "total": 592,
+      "total_pln": 2638,
       "error": null
     },
     {
@@ -6158,7 +6178,7 @@
         {
           "code": "Agoda",
           "name": "Agoda.com",
-          "rate": 156.0
+          "rate": 149.0
         },
         {
           "code": "BookingCom",
@@ -6171,10 +6191,10 @@
           "rate": 217.0
         }
       ],
-      "min_rate": 156.0,
+      "min_rate": 149.0,
       "min_site": "Agoda.com",
-      "total": 624,
-      "total_pln": 2780,
+      "total": 596,
+      "total_pln": 2656,
       "error": null
     },
     {
@@ -6198,7 +6218,7 @@
         {
           "code": "CtripTA",
           "name": "Trip.com",
-          "rate": 244.0
+          "rate": 245.0
         },
         {
           "code": "BookingCom",
@@ -6223,7 +6243,7 @@
         {
           "code": "Agoda",
           "name": "Agoda.com",
-          "rate": 125.0
+          "rate": 126.0
         },
         {
           "code": "Marriott1",
@@ -6233,18 +6253,18 @@
         {
           "code": "CtripTA",
           "name": "Trip.com",
-          "rate": 185.0
+          "rate": 186.0
         },
         {
           "code": "BookingCom",
           "name": "Booking.com",
-          "rate": 186.0
+          "rate": 187.0
         }
       ],
-      "min_rate": 125.0,
+      "min_rate": 126.0,
       "min_site": "Agoda.com",
-      "total": 625,
-      "total_pln": 2785,
+      "total": 630,
+      "total_pln": 2807,
       "error": null
     },
     {
@@ -6258,7 +6278,7 @@
         {
           "code": "Agoda",
           "name": "Agoda.com",
-          "rate": 156.0
+          "rate": 149.0
         },
         {
           "code": "BookingCom",
@@ -6271,10 +6291,10 @@
           "rate": 217.0
         }
       ],
-      "min_rate": 156.0,
+      "min_rate": 149.0,
       "min_site": "Agoda.com",
-      "total": 780,
-      "total_pln": 3476,
+      "total": 745,
+      "total_pln": 3320,
       "error": null
     },
     {
@@ -6303,7 +6323,7 @@
         {
           "code": "BookingCom",
           "name": "Booking.com",
-          "rate": 268.0
+          "rate": 269.0
         }
       ],
       "min_rate": 202.0,
@@ -6323,7 +6343,12 @@
         {
           "code": "Agoda",
           "name": "Agoda.com",
-          "rate": 147.0
+          "rate": 148.0
+        },
+        {
+          "code": "Vio",
+          "name": "Vio.com",
+          "rate": 148.0
         },
         {
           "code": "Marriott1",
@@ -6341,10 +6366,10 @@
           "rate": 211.0
         }
       ],
-      "min_rate": 147.0,
+      "min_rate": 148.0,
       "min_site": "Agoda.com",
-      "total": 441,
-      "total_pln": 1965,
+      "total": 444,
+      "total_pln": 1978,
       "error": null
     },
     {
@@ -6396,14 +6421,14 @@
           "rate": 270.0
         },
         {
+          "code": "CtripTA",
+          "name": "Trip.com",
+          "rate": 271.0
+        },
+        {
           "code": "BookingCom",
           "name": "Booking.com",
           "rate": 272.0
-        },
-        {
-          "code": "CtripTA",
-          "name": "Trip.com",
-          "rate": 323.0
         }
       ],
       "min_rate": 205.0,
@@ -6431,11 +6456,6 @@
           "rate": 210.0
         },
         {
-          "code": "CtripTA",
-          "name": "Trip.com",
-          "rate": 210.0
-        },
-        {
           "code": "BookingCom",
           "name": "Booking.com",
           "rate": 285.0
@@ -6456,25 +6476,15 @@
       "nights": 4,
       "rates": [
         {
-          "code": "Agoda",
-          "name": "Agoda.com",
-          "rate": 156.0
-        },
-        {
           "code": "BookingCom",
           "name": "Booking.com",
           "rate": 207.0
-        },
-        {
-          "code": "CtripTA",
-          "name": "Trip.com",
-          "rate": 217.0
         }
       ],
-      "min_rate": 156.0,
-      "min_site": "Agoda.com",
-      "total": 624,
-      "total_pln": 2780,
+      "min_rate": 207.0,
+      "min_site": "Booking.com",
+      "total": 828,
+      "total_pln": 3689,
       "error": null
     },
     {
@@ -6503,7 +6513,7 @@
         {
           "code": "CtripTA",
           "name": "Trip.com",
-          "rate": 323.0
+          "rate": 374.0
         }
       ],
       "min_rate": 185.0,
@@ -6523,7 +6533,7 @@
         {
           "code": "Agoda",
           "name": "Agoda.com",
-          "rate": 125.0
+          "rate": 126.0
         },
         {
           "code": "Marriott1",
@@ -6531,15 +6541,20 @@
           "rate": 185.0
         },
         {
+          "code": "CtripTA",
+          "name": "Trip.com",
+          "rate": 186.0
+        },
+        {
           "code": "BookingCom",
           "name": "Booking.com",
-          "rate": 186.0
+          "rate": 187.0
         }
       ],
-      "min_rate": 125.0,
+      "min_rate": 126.0,
       "min_site": "Agoda.com",
-      "total": 625,
-      "total_pln": 2785,
+      "total": 630,
+      "total_pln": 2807,
       "error": null
     },
     {
@@ -6553,7 +6568,7 @@
         {
           "code": "Agoda",
           "name": "Agoda.com",
-          "rate": 156.0
+          "rate": 149.0
         },
         {
           "code": "BookingCom",
@@ -6566,10 +6581,10 @@
           "rate": 217.0
         }
       ],
-      "min_rate": 156.0,
+      "min_rate": 149.0,
       "min_site": "Agoda.com",
-      "total": 780,
-      "total_pln": 3476,
+      "total": 745,
+      "total_pln": 3320,
       "error": null
     },
     {
@@ -6591,14 +6606,14 @@
           "rate": 274.0
         },
         {
+          "code": "CtripTA",
+          "name": "Trip.com",
+          "rate": 274.0
+        },
+        {
           "code": "BookingCom",
           "name": "Booking.com",
           "rate": 275.0
-        },
-        {
-          "code": "CtripTA",
-          "name": "Trip.com",
-          "rate": 327.0
         }
       ],
       "min_rate": 235.0,
@@ -6633,7 +6648,7 @@
         {
           "code": "BookingCom",
           "name": "Booking.com",
-          "rate": 582.0
+          "rate": 583.0
         }
       ],
       "min_rate": 283.0,
@@ -6693,7 +6708,7 @@
         {
           "code": "CtripTA",
           "name": "Trip.com",
-          "rate": 272.0
+          "rate": 273.0
         },
         {
           "code": "BookingCom",
@@ -6753,7 +6768,7 @@
         {
           "code": "Agoda",
           "name": "Agoda.com",
-          "rate": 156.0
+          "rate": 149.0
         },
         {
           "code": "BookingCom",
@@ -6766,10 +6781,10 @@
           "rate": 217.0
         }
       ],
-      "min_rate": 156.0,
+      "min_rate": 149.0,
       "min_site": "Agoda.com",
-      "total": 624,
-      "total_pln": 2780,
+      "total": 596,
+      "total_pln": 2656,
       "error": null
     },
     {
@@ -6788,7 +6803,7 @@
         {
           "code": "Marriott1",
           "name": "LuxuryCollection",
-          "rate": 276.0
+          "rate": 277.0
         },
         {
           "code": "CtripTA",
@@ -6881,25 +6896,25 @@
       "nights": 3,
       "rates": [
         {
-          "code": "Agoda",
-          "name": "Agoda.com",
-          "rate": 163.0
-        },
-        {
           "code": "CtripTA",
           "name": "Trip.com",
-          "rate": 172.0
+          "rate": 174.0
         },
         {
           "code": "BookingCom",
           "name": "Booking.com",
-          "rate": 174.0
+          "rate": 175.0
+        },
+        {
+          "code": "Agoda",
+          "name": "Agoda.com",
+          "rate": 222.0
         }
       ],
-      "min_rate": 163.0,
-      "min_site": "Agoda.com",
-      "total": 489,
-      "total_pln": 2179,
+      "min_rate": 174.0,
+      "min_site": "Trip.com",
+      "total": 522,
+      "total_pln": 2326,
       "error": null
     },
     {
@@ -6916,18 +6931,18 @@
           "rate": 327.0
         },
         {
-          "code": "Agoda",
-          "name": "Agoda.com",
-          "rate": 330.0
-        },
-        {
           "code": "BookingCom",
           "name": "Booking.com",
-          "rate": 365.0
+          "rate": 366.0
         },
         {
           "code": "CtripTA",
           "name": "Trip.com",
+          "rate": 366.0
+        },
+        {
+          "code": "Agoda",
+          "name": "Agoda.com",
           "rate": 366.0
         }
       ],
@@ -6981,25 +6996,25 @@
       "nights": 4,
       "rates": [
         {
-          "code": "Agoda",
-          "name": "Agoda.com",
-          "rate": 165.0
-        },
-        {
           "code": "CtripTA",
           "name": "Trip.com",
-          "rate": 172.0
+          "rate": 174.0
         },
         {
           "code": "BookingCom",
           "name": "Booking.com",
           "rate": 175.0
+        },
+        {
+          "code": "Agoda",
+          "name": "Agoda.com",
+          "rate": 223.0
         }
       ],
-      "min_rate": 165.0,
-      "min_site": "Agoda.com",
-      "total": 660,
-      "total_pln": 2941,
+      "min_rate": 174.0,
+      "min_site": "Trip.com",
+      "total": 696,
+      "total_pln": 3101,
       "error": null
     },
     {
@@ -7018,7 +7033,7 @@
         {
           "code": "Hyatt",
           "name": "Hyatt.com",
-          "rate": 323.0
+          "rate": 322.0
         },
         {
           "code": "BookingCom",
@@ -7063,7 +7078,7 @@
         {
           "code": "CtripTA",
           "name": "Trip.com",
-          "rate": 355.0
+          "rate": 356.0
         }
       ],
       "min_rate": 296.0,
@@ -7081,9 +7096,9 @@
       "nights": 5,
       "rates": [
         {
-          "code": "CtripTA",
-          "name": "Trip.com",
-          "rate": 174.0
+          "code": "Agoda",
+          "name": "Agoda.com",
+          "rate": 170.0
         },
         {
           "code": "BookingCom",
@@ -7091,15 +7106,15 @@
           "rate": 176.0
         },
         {
-          "code": "Agoda",
-          "name": "Agoda.com",
-          "rate": 224.0
+          "code": "CtripTA",
+          "name": "Trip.com",
+          "rate": 176.0
         }
       ],
-      "min_rate": 174.0,
-      "min_site": "Trip.com",
-      "total": 870,
-      "total_pln": 3877,
+      "min_rate": 170.0,
+      "min_site": "Agoda.com",
+      "total": 850,
+      "total_pln": 3788,
       "error": null
     },
     {
@@ -7113,17 +7128,17 @@
         {
           "code": "Agoda",
           "name": "Agoda.com",
-          "rate": 241.0
+          "rate": 240.0
         },
         {
           "code": "Hyatt",
           "name": "Hyatt.com",
-          "rate": 300.0
+          "rate": 299.0
         },
         {
           "code": "BookingCom",
           "name": "Booking.com",
-          "rate": 302.0
+          "rate": 301.0
         },
         {
           "code": "CtripTA",
@@ -7131,10 +7146,10 @@
           "rate": 302.0
         }
       ],
-      "min_rate": 241.0,
+      "min_rate": 240.0,
       "min_site": "Agoda.com",
-      "total": 1205,
-      "total_pln": 5369,
+      "total": 1200,
+      "total_pln": 5347,
       "error": null
     },
     {
@@ -7158,12 +7173,12 @@
         {
           "code": "BookingCom",
           "name": "Booking.com",
-          "rate": 359.0
+          "rate": 360.0
         },
         {
           "code": "CtripTA",
           "name": "Trip.com",
-          "rate": 359.0
+          "rate": 360.0
         }
       ],
       "min_rate": 299.0,
@@ -7181,25 +7196,25 @@
       "nights": 3,
       "rates": [
         {
-          "code": "Agoda",
-          "name": "Agoda.com",
-          "rate": 165.0
+          "code": "BookingCom",
+          "name": "Booking.com",
+          "rate": 175.0
         },
         {
           "code": "CtripTA",
           "name": "Trip.com",
-          "rate": 173.0
+          "rate": 175.0
         },
         {
-          "code": "BookingCom",
-          "name": "Booking.com",
-          "rate": 175.0
+          "code": "Agoda",
+          "name": "Agoda.com",
+          "rate": 223.0
         }
       ],
-      "min_rate": 165.0,
-      "min_site": "Agoda.com",
-      "total": 495,
-      "total_pln": 2206,
+      "min_rate": 175.0,
+      "min_site": "Booking.com",
+      "total": 525,
+      "total_pln": 2339,
       "error": null
     },
     {
@@ -7213,28 +7228,28 @@
         {
           "code": "Agoda",
           "name": "Agoda.com",
-          "rate": 293.0
+          "rate": 292.0
         },
         {
           "code": "Hyatt",
           "name": "Hyatt.com",
-          "rate": 322.0
+          "rate": 321.0
         },
         {
           "code": "BookingCom",
           "name": "Booking.com",
-          "rate": 324.0
+          "rate": 323.0
         },
         {
           "code": "CtripTA",
           "name": "Trip.com",
-          "rate": 324.0
+          "rate": 323.0
         }
       ],
-      "min_rate": 293.0,
+      "min_rate": 292.0,
       "min_site": "Agoda.com",
-      "total": 879,
-      "total_pln": 3917,
+      "total": 876,
+      "total_pln": 3903,
       "error": null
     },
     {
@@ -7248,7 +7263,7 @@
         {
           "code": "Agoda",
           "name": "Agoda.com",
-          "rate": 323.0
+          "rate": 324.0
         },
         {
           "code": "HiltonAPAC",
@@ -7263,13 +7278,13 @@
         {
           "code": "CtripTA",
           "name": "Trip.com",
-          "rate": 358.0
+          "rate": 359.0
         }
       ],
-      "min_rate": 323.0,
+      "min_rate": 324.0,
       "min_site": "Agoda.com",
-      "total": 969,
-      "total_pln": 4318,
+      "total": 972,
+      "total_pln": 4331,
       "error": null
     },
     {
@@ -7281,25 +7296,25 @@
       "nights": 4,
       "rates": [
         {
+          "code": "Agoda",
+          "name": "Agoda.com",
+          "rate": 165.0
+        },
+        {
           "code": "CtripTA",
           "name": "Trip.com",
-          "rate": 174.0
+          "rate": 176.0
         },
         {
           "code": "BookingCom",
           "name": "Booking.com",
           "rate": 177.0
-        },
-        {
-          "code": "Agoda",
-          "name": "Agoda.com",
-          "rate": 224.0
         }
       ],
-      "min_rate": 174.0,
-      "min_site": "Trip.com",
-      "total": 696,
-      "total_pln": 3101,
+      "min_rate": 165.0,
+      "min_site": "Agoda.com",
+      "total": 660,
+      "total_pln": 2941,
       "error": null
     },
     {
@@ -7318,12 +7333,12 @@
         {
           "code": "Hyatt",
           "name": "Hyatt.com",
-          "rate": 293.0
+          "rate": 292.0
         },
         {
           "code": "BookingCom",
           "name": "Booking.com",
-          "rate": 295.0
+          "rate": 294.0
         },
         {
           "code": "CtripTA",
@@ -7348,7 +7363,7 @@
         {
           "code": "Agoda",
           "name": "Agoda.com",
-          "rate": 301.0
+          "rate": 302.0
         },
         {
           "code": "HiltonAPAC",
@@ -7358,7 +7373,7 @@
         {
           "code": "BookingCom",
           "name": "Booking.com",
-          "rate": 362.0
+          "rate": 363.0
         },
         {
           "code": "CtripTA",
@@ -7366,10 +7381,10 @@
           "rate": 363.0
         }
       ],
-      "min_rate": 301.0,
+      "min_rate": 302.0,
       "min_site": "Agoda.com",
-      "total": 1204,
-      "total_pln": 5365,
+      "total": 1208,
+      "total_pln": 5383,
       "error": null
     },
     {
@@ -7393,7 +7408,7 @@
         {
           "code": "CtripTA",
           "name": "Trip.com",
-          "rate": 203.0
+          "rate": 204.0
         }
       ],
       "min_rate": 178.0,
@@ -7413,28 +7428,38 @@
         {
           "code": "Agoda",
           "name": "Agoda.com",
-          "rate": 223.0
+          "rate": 224.0
+        },
+        {
+          "code": "Vio",
+          "name": "Vio.com",
+          "rate": 232.0
         },
         {
           "code": "Hyatt",
           "name": "Hyatt.com",
-          "rate": 278.0
+          "rate": 279.0
         },
         {
           "code": "BookingCom",
           "name": "Booking.com",
-          "rate": 279.0
+          "rate": 281.0
         },
         {
           "code": "CtripTA",
           "name": "Trip.com",
-          "rate": 279.0
+          "rate": 281.0
+        },
+        {
+          "code": "Klook",
+          "name": "KLOOK",
+          "rate": 331.0
         }
       ],
-      "min_rate": 223.0,
+      "min_rate": 224.0,
       "min_site": "Agoda.com",
-      "total": 1115,
-      "total_pln": 4968,
+      "total": 1120,
+      "total_pln": 4991,
       "error": null
     },
     {
@@ -7463,7 +7488,7 @@
         {
           "code": "CtripTA",
           "name": "Trip.com",
-          "rate": 360.0
+          "rate": 361.0
         }
       ],
       "min_rate": 300.0,
@@ -7481,25 +7506,25 @@
       "nights": 3,
       "rates": [
         {
-          "code": "Agoda",
-          "name": "Agoda.com",
-          "rate": 169.0
+          "code": "BookingCom",
+          "name": "Booking.com",
+          "rate": 177.0
         },
         {
           "code": "CtripTA",
           "name": "Trip.com",
-          "rate": 174.0
+          "rate": 177.0
         },
         {
-          "code": "BookingCom",
-          "name": "Booking.com",
-          "rate": 177.0
+          "code": "Agoda",
+          "name": "Agoda.com",
+          "rate": 224.0
         }
       ],
-      "min_rate": 169.0,
-      "min_site": "Agoda.com",
-      "total": 507,
-      "total_pln": 2259,
+      "min_rate": 177.0,
+      "min_site": "Booking.com",
+      "total": 531,
+      "total_pln": 2366,
       "error": null
     },
     {
@@ -7513,28 +7538,28 @@
         {
           "code": "Agoda",
           "name": "Agoda.com",
-          "rate": 256.0
+          "rate": 255.0
         },
         {
           "code": "Hyatt",
           "name": "Hyatt.com",
-          "rate": 282.0
+          "rate": 281.0
         },
         {
           "code": "BookingCom",
           "name": "Booking.com",
-          "rate": 284.0
+          "rate": 283.0
         },
         {
           "code": "CtripTA",
           "name": "Trip.com",
-          "rate": 284.0
+          "rate": 283.0
         }
       ],
-      "min_rate": 256.0,
+      "min_rate": 255.0,
       "min_site": "Agoda.com",
-      "total": 768,
-      "total_pln": 3422,
+      "total": 765,
+      "total_pln": 3409,
       "error": null
     },
     {
@@ -7556,13 +7581,13 @@
           "rate": 359.0
         },
         {
-          "code": "Agoda",
-          "name": "Agoda.com",
+          "code": "CtripTA",
+          "name": "Trip.com",
           "rate": 359.0
         },
         {
-          "code": "CtripTA",
-          "name": "Trip.com",
+          "code": "Agoda",
+          "name": "Agoda.com",
           "rate": 359.0
         }
       ],
@@ -7591,11 +7616,6 @@
           "rate": 178.0
         },
         {
-          "code": "Vio",
-          "name": "Vio.com",
-          "rate": 178.0
-        },
-        {
           "code": "CtripTA",
           "name": "Trip.com",
           "rate": 203.0
@@ -7618,33 +7638,28 @@
         {
           "code": "Agoda",
           "name": "Agoda.com",
-          "rate": 213.0
+          "rate": 214.0
         },
         {
           "code": "Hyatt",
           "name": "Hyatt.com",
-          "rate": 265.0
+          "rate": 267.0
         },
         {
           "code": "BookingCom",
           "name": "Booking.com",
-          "rate": 267.0
+          "rate": 269.0
         },
         {
           "code": "CtripTA",
           "name": "Trip.com",
-          "rate": 267.0
-        },
-        {
-          "code": "Klook",
-          "name": "KLOOK",
-          "rate": 315.0
+          "rate": 269.0
         }
       ],
-      "min_rate": 213.0,
+      "min_rate": 214.0,
       "min_site": "Agoda.com",
-      "total": 852,
-      "total_pln": 3796,
+      "total": 856,
+      "total_pln": 3814,
       "error": null
     },
     {
@@ -7658,7 +7673,7 @@
         {
           "code": "Agoda",
           "name": "Agoda.com",
-          "rate": 297.0
+          "rate": 298.0
         },
         {
           "code": "HiltonAPAC",
@@ -7673,13 +7688,13 @@
         {
           "code": "CtripTA",
           "name": "Trip.com",
-          "rate": 357.0
+          "rate": 358.0
         }
       ],
-      "min_rate": 297.0,
+      "min_rate": 298.0,
       "min_site": "Agoda.com",
-      "total": 1188,
-      "total_pln": 5294,
+      "total": 1192,
+      "total_pln": 5311,
       "error": null
     },
     {
@@ -7699,6 +7714,11 @@
           "code": "Agoda",
           "name": "Agoda.com",
           "rate": 178.0
+        },
+        {
+          "code": "CtripTA",
+          "name": "Trip.com",
+          "rate": 204.0
         }
       ],
       "min_rate": 178.0,
@@ -7718,33 +7738,33 @@
         {
           "code": "Agoda",
           "name": "Agoda.com",
-          "rate": 202.0
+          "rate": 203.0
         },
         {
           "code": "Hyatt",
           "name": "Hyatt.com",
-          "rate": 252.0
+          "rate": 253.0
         },
         {
           "code": "BookingCom",
           "name": "Booking.com",
-          "rate": 253.0
+          "rate": 255.0
         },
         {
           "code": "CtripTA",
           "name": "Trip.com",
-          "rate": 254.0
+          "rate": 255.0
         },
         {
           "code": "Klook",
           "name": "KLOOK",
-          "rate": 300.0
+          "rate": 301.0
         }
       ],
-      "min_rate": 202.0,
+      "min_rate": 203.0,
       "min_site": "Agoda.com",
-      "total": 1010,
-      "total_pln": 4500,
+      "total": 1015,
+      "total_pln": 4523,
       "error": null
     },
     {
@@ -7773,7 +7793,7 @@
         {
           "code": "CtripTA",
           "name": "Trip.com",
-          "rate": 438.0
+          "rate": 350.0
         }
       ],
       "min_rate": 291.0,
@@ -7803,7 +7823,7 @@
         {
           "code": "CtripTA",
           "name": "Trip.com",
-          "rate": 203.0
+          "rate": 202.0
         }
       ],
       "min_rate": 180.0,
@@ -7823,28 +7843,28 @@
         {
           "code": "Agoda",
           "name": "Agoda.com",
-          "rate": 222.0
+          "rate": 224.0
         },
         {
           "code": "Hyatt",
           "name": "Hyatt.com",
-          "rate": 245.0
+          "rate": 247.0
         },
         {
           "code": "BookingCom",
           "name": "Booking.com",
-          "rate": 246.0
+          "rate": 248.0
         },
         {
           "code": "CtripTA",
           "name": "Trip.com",
-          "rate": 246.0
+          "rate": 249.0
         }
       ],
-      "min_rate": 222.0,
+      "min_rate": 224.0,
       "min_site": "Agoda.com",
-      "total": 666,
-      "total_pln": 2968,
+      "total": 672,
+      "total_pln": 2994,
       "error": null
     },
     {
@@ -7873,7 +7893,7 @@
         {
           "code": "CtripTA",
           "name": "Trip.com",
-          "rate": 350.0
+          "rate": 351.0
         }
       ],
       "min_rate": 316.0,
@@ -7903,7 +7923,7 @@
         {
           "code": "CtripTA",
           "name": "Trip.com",
-          "rate": 203.0
+          "rate": 202.0
         }
       ],
       "min_rate": 179.0,
@@ -7923,23 +7943,28 @@
         {
           "code": "Agoda",
           "name": "Agoda.com",
-          "rate": 187.0
+          "rate": 188.0
         },
         {
           "code": "Hyatt",
           "name": "Hyatt.com",
-          "rate": 233.0
+          "rate": 235.0
         },
         {
           "code": "BookingCom",
           "name": "Booking.com",
-          "rate": 235.0
+          "rate": 236.0
+        },
+        {
+          "code": "CtripTA",
+          "name": "Trip.com",
+          "rate": 237.0
         }
       ],
-      "min_rate": 187.0,
+      "min_rate": 188.0,
       "min_site": "Agoda.com",
-      "total": 748,
-      "total_pln": 3333,
+      "total": 752,
+      "total_pln": 3351,
       "error": null
     },
     {
@@ -7953,7 +7978,7 @@
         {
           "code": "Agoda",
           "name": "Agoda.com",
-          "rate": 285.0
+          "rate": 286.0
         },
         {
           "code": "HiltonAPAC",
@@ -7971,10 +7996,10 @@
           "rate": 343.0
         }
       ],
-      "min_rate": 285.0,
+      "min_rate": 286.0,
       "min_site": "Agoda.com",
-      "total": 1140,
-      "total_pln": 5080,
+      "total": 1144,
+      "total_pln": 5098,
       "error": null
     },
     {
@@ -8013,33 +8038,33 @@
         {
           "code": "Agoda",
           "name": "Agoda.com",
-          "rate": 182.0
-        },
-        {
-          "code": "Vio",
-          "name": "Vio.com",
-          "rate": 189.0
+          "rate": 184.0
         },
         {
           "code": "Hyatt",
           "name": "Hyatt.com",
-          "rate": 227.0
+          "rate": 228.0
         },
         {
           "code": "BookingCom",
           "name": "Booking.com",
-          "rate": 228.0
+          "rate": 230.0
         },
         {
           "code": "CtripTA",
           "name": "Trip.com",
-          "rate": 228.0
+          "rate": 230.0
+        },
+        {
+          "code": "Klook",
+          "name": "KLOOK",
+          "rate": 267.0
         }
       ],
-      "min_rate": 182.0,
+      "min_rate": 184.0,
       "min_site": "Agoda.com",
-      "total": 910,
-      "total_pln": 4055,
+      "total": 920,
+      "total_pln": 4099,
       "error": null
     },
     {
@@ -8068,7 +8093,7 @@
         {
           "code": "CtripTA",
           "name": "Trip.com",
-          "rate": 339.0
+          "rate": 340.0
         }
       ],
       "min_rate": 282.0,
@@ -8098,7 +8123,7 @@
         {
           "code": "CtripTA",
           "name": "Trip.com",
-          "rate": 203.0
+          "rate": 202.0
         }
       ],
       "min_rate": 180.0,
@@ -8118,23 +8143,28 @@
         {
           "code": "Agoda",
           "name": "Agoda.com",
-          "rate": 188.0
+          "rate": 191.0
         },
         {
           "code": "Hyatt",
           "name": "Hyatt.com",
-          "rate": 207.0
+          "rate": 210.0
         },
         {
           "code": "BookingCom",
           "name": "Booking.com",
-          "rate": 208.0
+          "rate": 212.0
+        },
+        {
+          "code": "CtripTA",
+          "name": "Trip.com",
+          "rate": 212.0
         }
       ],
-      "min_rate": 188.0,
+      "min_rate": 191.0,
       "min_site": "Agoda.com",
-      "total": 564,
-      "total_pln": 2513,
+      "total": 573,
+      "total_pln": 2553,
       "error": null
     },
     {
@@ -8153,12 +8183,12 @@
         {
           "code": "BookingCom",
           "name": "Booking.com",
-          "rate": 349.0
+          "rate": 350.0
         },
         {
           "code": "Agoda",
           "name": "Agoda.com",
-          "rate": 349.0
+          "rate": 350.0
         },
         {
           "code": "CtripTA",
@@ -8193,7 +8223,7 @@
         {
           "code": "CtripTA",
           "name": "Trip.com",
-          "rate": 204.0
+          "rate": 206.0
         }
       ],
       "min_rate": 177.0,
@@ -8213,28 +8243,28 @@
         {
           "code": "Agoda",
           "name": "Agoda.com",
-          "rate": 164.0
+          "rate": 167.0
         },
         {
           "code": "Hyatt",
           "name": "Hyatt.com",
-          "rate": 205.0
+          "rate": 208.0
         },
         {
           "code": "BookingCom",
           "name": "Booking.com",
-          "rate": 206.0
+          "rate": 210.0
         },
         {
           "code": "CtripTA",
           "name": "Trip.com",
-          "rate": 207.0
+          "rate": 210.0
         }
       ],
-      "min_rate": 164.0,
+      "min_rate": 167.0,
       "min_site": "Agoda.com",
-      "total": 656,
-      "total_pln": 2923,
+      "total": 668,
+      "total_pln": 2977,
       "error": null
     },
     {
@@ -8248,7 +8278,7 @@
         {
           "code": "Agoda",
           "name": "Agoda.com",
-          "rate": 285.0
+          "rate": 286.0
         },
         {
           "code": "HiltonAPAC",
@@ -8263,13 +8293,13 @@
         {
           "code": "CtripTA",
           "name": "Trip.com",
-          "rate": 343.0
+          "rate": 344.0
         }
       ],
-      "min_rate": 285.0,
+      "min_rate": 286.0,
       "min_site": "Agoda.com",
-      "total": 1140,
-      "total_pln": 5080,
+      "total": 1144,
+      "total_pln": 5098,
       "error": null
     },
     {
@@ -8308,33 +8338,33 @@
         {
           "code": "Agoda",
           "name": "Agoda.com",
-          "rate": 166.0
+          "rate": 169.0
         },
         {
           "code": "Hyatt",
           "name": "Hyatt.com",
-          "rate": 207.0
+          "rate": 210.0
         },
         {
           "code": "BookingCom",
           "name": "Booking.com",
-          "rate": 208.0
+          "rate": 211.0
         },
         {
           "code": "CtripTA",
           "name": "Trip.com",
-          "rate": 208.0
+          "rate": 212.0
         },
         {
           "code": "Klook",
           "name": "KLOOK",
-          "rate": 246.0
+          "rate": 250.0
         }
       ],
-      "min_rate": 166.0,
+      "min_rate": 169.0,
       "min_site": "Agoda.com",
-      "total": 830,
-      "total_pln": 3698,
+      "total": 845,
+      "total_pln": 3765,
       "error": null
     },
     {
@@ -8408,7 +8438,7 @@
         {
           "code": "Agoda",
           "name": "Agoda.com",
-          "rate": 214.0
+          "rate": 215.0
         },
         {
           "code": "Hyatt",
@@ -8418,23 +8448,23 @@
         {
           "code": "BookingCom",
           "name": "Booking.com",
-          "rate": 268.0
+          "rate": 269.0
         },
         {
           "code": "CtripTA",
           "name": "Trip.com",
-          "rate": 268.0
+          "rate": 269.0
         },
         {
           "code": "Klook",
           "name": "KLOOK",
-          "rate": 317.0
+          "rate": 318.0
         }
       ],
-      "min_rate": 214.0,
+      "min_rate": 215.0,
       "min_site": "Agoda.com",
-      "total": 1070,
-      "total_pln": 4768,
+      "total": 1075,
+      "total_pln": 4790,
       "error": null
     },
     {
@@ -8483,12 +8513,12 @@
         {
           "code": "BookingCom",
           "name": "Booking.com",
-          "rate": 163.0
+          "rate": 164.0
         },
         {
           "code": "Agoda",
           "name": "Agoda.com",
-          "rate": 163.0
+          "rate": 164.0
         },
         {
           "code": "CtripTA",
@@ -8496,10 +8526,10 @@
           "rate": 187.0
         }
       ],
-      "min_rate": 163.0,
+      "min_rate": 164.0,
       "min_site": "Booking.com",
-      "total": 652,
-      "total_pln": 2905,
+      "total": 656,
+      "total_pln": 2923,
       "error": null
     },
     {
@@ -8513,28 +8543,33 @@
         {
           "code": "Agoda",
           "name": "Agoda.com",
-          "rate": 222.0
+          "rate": 223.0
         },
         {
           "code": "Hyatt",
           "name": "Hyatt.com",
-          "rate": 277.0
+          "rate": 278.0
         },
         {
           "code": "BookingCom",
           "name": "Booking.com",
-          "rate": 279.0
+          "rate": 280.0
         },
         {
           "code": "CtripTA",
           "name": "Trip.com",
-          "rate": 279.0
+          "rate": 280.0
+        },
+        {
+          "code": "Klook",
+          "name": "KLOOK",
+          "rate": 330.0
         }
       ],
-      "min_rate": 222.0,
+      "min_rate": 223.0,
       "min_site": "Agoda.com",
-      "total": 888,
-      "total_pln": 3957,
+      "total": 892,
+      "total_pln": 3975,
       "error": null
     },
     {
@@ -8551,6 +8586,11 @@
           "rate": 281.0
         },
         {
+          "code": "Vio",
+          "name": "Vio.com",
+          "rate": 305.0
+        },
+        {
           "code": "HiltonAPAC",
           "name": "Waldorf Astoria",
           "rate": 335.0
@@ -8563,7 +8603,7 @@
         {
           "code": "CtripTA",
           "name": "Trip.com",
-          "rate": 337.0
+          "rate": 338.0
         }
       ],
       "min_rate": 281.0,
@@ -8583,7 +8623,7 @@
         {
           "code": "Agoda",
           "name": "Agoda.com",
-          "rate": 190.0
+          "rate": 189.0
         },
         {
           "code": "BookingCom",
@@ -8591,10 +8631,10 @@
           "rate": 243.0
         }
       ],
-      "min_rate": 190.0,
+      "min_rate": 189.0,
       "min_site": "Agoda.com",
-      "total": 950,
-      "total_pln": 4233,
+      "total": 945,
+      "total_pln": 4211,
       "error": null
     },
     {
@@ -8608,28 +8648,33 @@
         {
           "code": "Agoda",
           "name": "Agoda.com",
-          "rate": 230.0
+          "rate": 231.0
         },
         {
           "code": "Hyatt",
           "name": "Hyatt.com",
-          "rate": 287.0
+          "rate": 288.0
         },
         {
           "code": "BookingCom",
           "name": "Booking.com",
-          "rate": 289.0
+          "rate": 290.0
         },
         {
           "code": "CtripTA",
           "name": "Trip.com",
-          "rate": 289.0
+          "rate": 290.0
+        },
+        {
+          "code": "Klook",
+          "name": "KLOOK",
+          "rate": 342.0
         }
       ],
-      "min_rate": 230.0,
+      "min_rate": 231.0,
       "min_site": "Agoda.com",
-      "total": 1150,
-      "total_pln": 5124,
+      "total": 1155,
+      "total_pln": 5147,
       "error": null
     },
     {
@@ -8643,17 +8688,17 @@
         {
           "code": "Agoda",
           "name": "Agoda.com",
-          "rate": 287.0
+          "rate": 288.0
         },
         {
           "code": "HiltonAPAC",
           "name": "Waldorf Astoria",
-          "rate": 344.0
+          "rate": 343.0
         },
         {
           "code": "BookingCom",
           "name": "Booking.com",
-          "rate": 345.0
+          "rate": 346.0
         },
         {
           "code": "CtripTA",
@@ -8661,10 +8706,10 @@
           "rate": 346.0
         }
       ],
-      "min_rate": 287.0,
+      "min_rate": 288.0,
       "min_site": "Agoda.com",
-      "total": 1435,
-      "total_pln": 6394,
+      "total": 1440,
+      "total_pln": 6416,
       "error": null
     },
     {
@@ -8678,23 +8723,23 @@
         {
           "code": "Agoda",
           "name": "Agoda.com",
-          "rate": 155.0
-        },
-        {
-          "code": "CtripTA",
-          "name": "Trip.com",
-          "rate": 162.0
+          "rate": 153.0
         },
         {
           "code": "BookingCom",
           "name": "Booking.com",
           "rate": 163.0
+        },
+        {
+          "code": "CtripTA",
+          "name": "Trip.com",
+          "rate": 164.0
         }
       ],
-      "min_rate": 155.0,
+      "min_rate": 153.0,
       "min_site": "Agoda.com",
-      "total": 465,
-      "total_pln": 2072,
+      "total": 459,
+      "total_pln": 2045,
       "error": null
     },
     {
@@ -8713,12 +8758,17 @@
         {
           "code": "Hyatt",
           "name": "Hyatt.com",
-          "rate": 293.0
+          "rate": 292.0
+        },
+        {
+          "code": "BookingCom",
+          "name": "Booking.com",
+          "rate": 294.0
         },
         {
           "code": "CtripTA",
           "name": "Trip.com",
-          "rate": 295.0
+          "rate": 294.0
         }
       ],
       "min_rate": 266.0,
@@ -8743,12 +8793,12 @@
         {
           "code": "HiltonAPAC",
           "name": "Waldorf Astoria",
-          "rate": 323.0
+          "rate": 322.0
         },
         {
           "code": "BookingCom",
           "name": "Booking.com",
-          "rate": 324.0
+          "rate": 325.0
         },
         {
           "code": "CtripTA",
@@ -8771,14 +8821,14 @@
       "nights": 4,
       "rates": [
         {
-          "code": "CtripTA",
-          "name": "Trip.com",
-          "rate": 170.0
-        },
-        {
           "code": "Agoda",
           "name": "Agoda.com",
-          "rate": 218.0
+          "rate": 149.0
+        },
+        {
+          "code": "CtripTA",
+          "name": "Trip.com",
+          "rate": 172.0
         },
         {
           "code": "BookingCom",
@@ -8786,10 +8836,10 @@
           "rate": 243.0
         }
       ],
-      "min_rate": 170.0,
-      "min_site": "Trip.com",
-      "total": 680,
-      "total_pln": 3030,
+      "min_rate": 149.0,
+      "min_site": "Agoda.com",
+      "total": 596,
+      "total_pln": 2656,
       "error": null
     },
     {
@@ -8808,7 +8858,7 @@
         {
           "code": "Hyatt",
           "name": "Hyatt.com",
-          "rate": 302.0
+          "rate": 301.0
         },
         {
           "code": "BookingCom",
@@ -8818,7 +8868,7 @@
         {
           "code": "CtripTA",
           "name": "Trip.com",
-          "rate": 304.0
+          "rate": 303.0
         }
       ],
       "min_rate": 242.0,
@@ -8838,7 +8888,7 @@
         {
           "code": "Agoda",
           "name": "Agoda.com",
-          "rate": 281.0
+          "rate": 282.0
         },
         {
           "code": "HiltonAPAC",
@@ -8856,10 +8906,10 @@
           "rate": 338.0
         }
       ],
-      "min_rate": 281.0,
+      "min_rate": 282.0,
       "min_site": "Agoda.com",
-      "total": 1124,
-      "total_pln": 5008,
+      "total": 1128,
+      "total_pln": 5026,
       "error": null
     },
     {
@@ -8903,7 +8953,7 @@
         {
           "code": "Hyatt",
           "name": "Hyatt.com",
-          "rate": 307.0
+          "rate": 306.0
         },
         {
           "code": "BookingCom",
@@ -8913,7 +8963,7 @@
         {
           "code": "CtripTA",
           "name": "Trip.com",
-          "rate": 309.0
+          "rate": 308.0
         }
       ],
       "min_rate": 246.0,
@@ -8948,7 +8998,7 @@
         {
           "code": "CtripTA",
           "name": "Trip.com",
-          "rate": 424.0
+          "rate": 340.0
         }
       ],
       "min_rate": 282.0,
@@ -8968,7 +9018,7 @@
         {
           "code": "CtripTA",
           "name": "Trip.com",
-          "rate": 172.0
+          "rate": 174.0
         },
         {
           "code": "Agoda",
@@ -8978,13 +9028,13 @@
         {
           "code": "BookingCom",
           "name": "Booking.com",
-          "rate": 242.0
+          "rate": 243.0
         }
       ],
-      "min_rate": 172.0,
+      "min_rate": 174.0,
       "min_site": "Trip.com",
-      "total": 516,
-      "total_pln": 2299,
+      "total": 522,
+      "total_pln": 2326,
       "error": null
     },
     {
@@ -8996,6 +9046,11 @@
       "nights": 3,
       "rates": [
         {
+          "code": "Agoda",
+          "name": "Agoda.com",
+          "rate": 357.0
+        },
+        {
           "code": "Hyatt",
           "name": "Hyatt.com",
           "rate": 363.0
@@ -9006,20 +9061,15 @@
           "rate": 395.0
         },
         {
-          "code": "Agoda",
-          "name": "Agoda.com",
-          "rate": 395.0
-        },
-        {
           "code": "CtripTA",
           "name": "Trip.com",
-          "rate": 395.0
+          "rate": 484.0
         }
       ],
-      "min_rate": 363.0,
-      "min_site": "Hyatt.com",
-      "total": 1089,
-      "total_pln": 4852,
+      "min_rate": 357.0,
+      "min_site": "Agoda.com",
+      "total": 1071,
+      "total_pln": 4772,
       "error": null
     },
     {
@@ -9043,7 +9093,7 @@
         {
           "code": "BookingCom",
           "name": "Booking.com",
-          "rate": 339.0
+          "rate": 340.0
         },
         {
           "code": "CtripTA",
@@ -9066,25 +9116,15 @@
       "nights": 4,
       "rates": [
         {
-          "code": "CtripTA",
-          "name": "Trip.com",
-          "rate": 177.0
-        },
-        {
-          "code": "Agoda",
-          "name": "Agoda.com",
-          "rate": 223.0
-        },
-        {
           "code": "BookingCom",
           "name": "Booking.com",
           "rate": 245.0
         }
       ],
-      "min_rate": 177.0,
-      "min_site": "Trip.com",
-      "total": 708,
-      "total_pln": 3155,
+      "min_rate": 245.0,
+      "min_site": "Booking.com",
+      "total": 980,
+      "total_pln": 4367,
       "error": null
     },
     {
@@ -9098,7 +9138,7 @@
         {
           "code": "Agoda",
           "name": "Agoda.com",
-          "rate": 262.0
+          "rate": 263.0
         },
         {
           "code": "Hyatt",
@@ -9114,17 +9154,12 @@
           "code": "CtripTA",
           "name": "Trip.com",
           "rate": 329.0
-        },
-        {
-          "code": "Klook",
-          "name": "KLOOK",
-          "rate": 389.0
         }
       ],
-      "min_rate": 262.0,
+      "min_rate": 263.0,
       "min_site": "Agoda.com",
-      "total": 1048,
-      "total_pln": 4670,
+      "total": 1052,
+      "total_pln": 4688,
       "error": null
     },
     {
@@ -9138,7 +9173,7 @@
         {
           "code": "Agoda",
           "name": "Agoda.com",
-          "rate": 283.0
+          "rate": 284.0
         },
         {
           "code": "HiltonAPAC",
@@ -9148,18 +9183,18 @@
         {
           "code": "BookingCom",
           "name": "Booking.com",
-          "rate": 340.0
+          "rate": 341.0
         },
         {
           "code": "CtripTA",
           "name": "Trip.com",
-          "rate": 340.0
+          "rate": 341.0
         }
       ],
-      "min_rate": 283.0,
+      "min_rate": 284.0,
       "min_site": "Agoda.com",
-      "total": 1132,
-      "total_pln": 5044,
+      "total": 1136,
+      "total_pln": 5062,
       "error": null
     },
     {
@@ -9171,15 +9206,25 @@
       "nights": 3,
       "rates": [
         {
+          "code": "Agoda",
+          "name": "Agoda.com",
+          "rate": 159.0
+        },
+        {
+          "code": "CtripTA",
+          "name": "Trip.com",
+          "rate": 184.0
+        },
+        {
           "code": "BookingCom",
           "name": "Booking.com",
-          "rate": 247.0
+          "rate": 248.0
         }
       ],
-      "min_rate": 247.0,
-      "min_site": "Booking.com",
-      "total": 741,
-      "total_pln": 3302,
+      "min_rate": 159.0,
+      "min_site": "Agoda.com",
+      "total": 477,
+      "total_pln": 2125,
       "error": null
     },
     {
@@ -9208,7 +9253,7 @@
         {
           "code": "CtripTA",
           "name": "Trip.com",
-          "rate": 395.0
+          "rate": 484.0
         }
       ],
       "min_rate": 363.0,
@@ -9228,28 +9273,23 @@
         {
           "code": "HiltonAPAC",
           "name": "Waldorf Astoria",
-          "rate": 348.0
+          "rate": 347.0
         },
         {
           "code": "BookingCom",
           "name": "Booking.com",
-          "rate": 349.0
+          "rate": 350.0
         },
         {
           "code": "Agoda",
           "name": "Agoda.com",
-          "rate": 349.0
-        },
-        {
-          "code": "CtripTA",
-          "name": "Trip.com",
           "rate": 350.0
         }
       ],
-      "min_rate": 348.0,
+      "min_rate": 347.0,
       "min_site": "Waldorf Astoria",
-      "total": 1044,
-      "total_pln": 4652,
+      "total": 1041,
+      "total_pln": 4639,
       "error": null
     }
   ],
