@@ -52,7 +52,7 @@
     "checked_bags_needed": 3,
     "return_details_top_n": 3
   },
-  "fetched_at": "2026-11-22T14:25:19+00:00",
+  "fetched_at": "2026-11-23T17:51:59+00:00",
   "passengers_total": 3,
   "price_note": "Prices are round-trip totals for all passengers, as shown by Google Flights.",
   "results": [
@@ -75,8 +75,8 @@
       "price_insights": null,
       "options": [
         {
-          "price": 9801,
-          "price_per_person": 3267,
+          "price": 9556,
+          "price_per_person": 3185,
           "origin": "BER",
           "origin_name": "Berlin Brandenburg Airport",
           "destination": "BKK",
@@ -130,8 +130,8 @@
           "extensions": [],
           "google_best": false,
           "return_leg": {
-            "price": 9801,
-            "price_per_person": 3267,
+            "price": 9556,
+            "price_per_person": 3185,
             "origin": "BKK",
             "origin_name": "Suvarnabhumi Airport",
             "destination": "BER",
@@ -188,67 +188,8 @@
           "duration_label": "Longer trip: return 17h40 (over 16 h)"
         },
         {
-          "price": 10566,
-          "price_per_person": 3522,
-          "origin": "WAW",
-          "origin_name": "Warsaw Chopin Airport",
-          "destination": "BKK",
-          "departure_time": "2027-01-19 08:50",
-          "arrival_time": "2027-01-20 06:05",
-          "total_duration_minutes": 915,
-          "stops": 1,
-          "airlines": [
-            "Finnair"
-          ],
-          "legs": [
-            {
-              "from": "WAW",
-              "to": "HEL",
-              "departure_time": "2027-01-19 08:50",
-              "arrival_time": "2027-01-19 11:35",
-              "airline": "Finnair",
-              "flight_number": "AY 1142",
-              "duration_minutes": 105,
-              "airplane": "Airbus A319",
-              "overnight": false
-            },
-            {
-              "from": "HEL",
-              "to": "BKK",
-              "departure_time": "2027-01-19 13:55",
-              "arrival_time": "2027-01-20 06:05",
-              "airline": "Finnair",
-              "flight_number": "AY 141",
-              "duration_minutes": 670,
-              "airplane": "Airbus A350",
-              "overnight": true
-            }
-          ],
-          "layovers": [
-            {
-              "airport": "HEL",
-              "name": "Helsinki Airport",
-              "duration_minutes": 140,
-              "overnight": false
-            }
-          ],
-          "baggage": [
-            {
-              "airline": "Finnair",
-              "status": "fare-dependent",
-              "note": "Economy Light fares exclude a checked bag."
-            }
-          ],
-          "baggage_flag": "fare-dependent",
-          "extensions": [],
-          "google_best": false,
-          "return_leg": null,
-          "long_trip": false,
-          "duration_label": null
-        },
-        {
-          "price": 10670,
-          "price_per_person": 3557,
+          "price": 10463,
+          "price_per_person": 3488,
           "origin": "BER",
           "origin_name": "Berlin Brandenburg Airport",
           "destination": "BKK",
@@ -306,8 +247,126 @@
           "duration_label": null
         },
         {
-          "price": 10821,
-          "price_per_person": 3607,
+          "price": 10860,
+          "price_per_person": 3620,
+          "origin": "WAW",
+          "origin_name": "Warsaw Chopin Airport",
+          "destination": "BKK",
+          "departure_time": "2027-01-19 08:50",
+          "arrival_time": "2027-01-20 06:05",
+          "total_duration_minutes": 915,
+          "stops": 1,
+          "airlines": [
+            "Finnair"
+          ],
+          "legs": [
+            {
+              "from": "WAW",
+              "to": "HEL",
+              "departure_time": "2027-01-19 08:50",
+              "arrival_time": "2027-01-19 11:35",
+              "airline": "Finnair",
+              "flight_number": "AY 1142",
+              "duration_minutes": 105,
+              "airplane": "Airbus A319",
+              "overnight": false
+            },
+            {
+              "from": "HEL",
+              "to": "BKK",
+              "departure_time": "2027-01-19 13:55",
+              "arrival_time": "2027-01-20 06:05",
+              "airline": "Finnair",
+              "flight_number": "AY 141",
+              "duration_minutes": 670,
+              "airplane": "Airbus A350",
+              "overnight": true
+            }
+          ],
+          "layovers": [
+            {
+              "airport": "HEL",
+              "name": "Helsinki Airport",
+              "duration_minutes": 140,
+              "overnight": false
+            }
+          ],
+          "baggage": [
+            {
+              "airline": "Finnair",
+              "status": "fare-dependent",
+              "note": "Economy Light fares exclude a checked bag."
+            }
+          ],
+          "baggage_flag": "fare-dependent",
+          "extensions": [],
+          "google_best": false,
+          "return_leg": null,
+          "long_trip": false,
+          "duration_label": null
+        },
+        {
+          "price": 10909,
+          "price_per_person": 3636,
+          "origin": "BER",
+          "origin_name": "Berlin Brandenburg Airport",
+          "destination": "BKK",
+          "departure_time": "2027-01-19 14:40",
+          "arrival_time": "2027-01-20 16:05",
+          "total_duration_minutes": 1165,
+          "stops": 1,
+          "airlines": [
+            "British Airways"
+          ],
+          "legs": [
+            {
+              "from": "BER",
+              "to": "LHR",
+              "departure_time": "2027-01-19 14:40",
+              "arrival_time": "2027-01-19 15:45",
+              "airline": "British Airways",
+              "flight_number": "BA 979",
+              "duration_minutes": 125,
+              "airplane": "Airbus A320",
+              "overnight": false
+            },
+            {
+              "from": "LGW",
+              "to": "BKK",
+              "departure_time": "2027-01-19 21:20",
+              "arrival_time": "2027-01-20 16:05",
+              "airline": "British Airways",
+              "flight_number": "BA 2231",
+              "duration_minutes": 705,
+              "airplane": "Boeing 777",
+              "overnight": true
+            }
+          ],
+          "layovers": [
+            {
+              "airport": "LHR",
+              "name": "London Gatwick Airport",
+              "duration_minutes": 335,
+              "overnight": false
+            }
+          ],
+          "baggage": [
+            {
+              "airline": "British Airways",
+              "status": "unknown",
+              "note": "Airline not in the list. Check the checked-bag allowance before booking."
+            }
+          ],
+          "baggage_flag": "unknown",
+          "extensions": [],
+          "google_best": false,
+          "return_leg": null,
+          "long_trip": true,
+          "duration_label": "Longer trip: outbound 19h25 (over 16 h)"
+        },
+        {
+          "price": 11294,
+          "price_per_person": 3765,
           "origin": "PRG",
           "origin_name": "Letiště Václava Havla Praha",
           "destination": "DMK",
@@ -371,67 +430,8 @@
           "duration_label": "Longer trip: outbound 23h25 (over 16 h)"
         },
         {
-          "price": 11695,
-          "price_per_person": 3898,
-          "origin": "PRG",
-          "origin_name": "Letiště Václava Havla Praha",
-          "destination": "BKK",
-          "departure_time": "2027-01-19 14:45",
-          "arrival_time": "2027-01-20 12:05",
-          "total_duration_minutes": 920,
-          "stops": 1,
-          "airlines": [
-            "Emirates"
-          ],
-          "legs": [
-            {
-              "from": "PRG",
-              "to": "DXB",
-              "departure_time": "2027-01-19 14:45",
-              "arrival_time": "2027-01-19 23:40",
-              "airline": "Emirates",
-              "flight_number": "EK 140",
-              "duration_minutes": 355,
-              "airplane": "Airbus A380",
-              "overnight": false
-            },
-            {
-              "from": "DXB",
-              "to": "BKK",
-              "departure_time": "2027-01-20 03:05",
-              "arrival_time": "2027-01-20 12:05",
-              "airline": "Emirates",
-              "flight_number": "EK 384",
-              "duration_minutes": 360,
-              "airplane": "Airbus A380",
-              "overnight": true
-            }
-          ],
-          "layovers": [
-            {
-              "airport": "DXB",
-              "name": "Dubai International Airport",
-              "duration_minutes": 205,
-              "overnight": false
-            }
-          ],
-          "baggage": [
-            {
-              "airline": "Emirates",
-              "status": "included",
-              "note": "Economy fares include checked baggage (20-30 kg by fare)."
-            }
-          ],
-          "baggage_flag": "included",
-          "extensions": [],
-          "google_best": false,
-          "return_leg": null,
-          "long_trip": false,
-          "duration_label": null
-        },
-        {
-          "price": 11833,
-          "price_per_person": 3944,
+          "price": 11344,
+          "price_per_person": 3781,
           "origin": "BER",
           "origin_name": "Berlin Brandenburg Airport",
           "destination": "BKK",
@@ -489,114 +489,55 @@
           "duration_label": null
         },
         {
-          "price": 11917,
-          "price_per_person": 3972,
+          "price": 11383,
+          "price_per_person": 3794,
           "origin": "BER",
           "origin_name": "Berlin Brandenburg Airport",
           "destination": "BKK",
-          "departure_time": "2027-01-19 10:00",
-          "arrival_time": "2027-01-20 07:15",
-          "total_duration_minutes": 915,
+          "departure_time": "2027-01-19 15:05",
+          "arrival_time": "2027-01-20 10:45",
+          "total_duration_minutes": 820,
           "stops": 1,
           "airlines": [
-            "Condor"
+            "SWISS"
           ],
           "legs": [
             {
               "from": "BER",
-              "to": "AUH",
-              "departure_time": "2027-01-19 10:00",
-              "arrival_time": "2027-01-19 19:15",
-              "airline": "Condor",
-              "flight_number": "DE 2552",
-              "duration_minutes": 375,
+              "to": "ZRH",
+              "departure_time": "2027-01-19 15:05",
+              "arrival_time": "2027-01-19 16:30",
+              "airline": "SWISS",
+              "flight_number": "LX 967",
+              "duration_minutes": 85,
               "airplane": "Airbus A320neo",
               "overnight": false
             },
             {
-              "from": "AUH",
+              "from": "ZRH",
               "to": "BKK",
-              "departure_time": "2027-01-19 22:15",
-              "arrival_time": "2027-01-20 07:15",
-              "airline": "Condor",
-              "flight_number": "DE 2548",
-              "duration_minutes": 360,
-              "airplane": "Airbus A330-900neo",
+              "departure_time": "2027-01-19 18:00",
+              "arrival_time": "2027-01-20 10:45",
+              "airline": "SWISS",
+              "flight_number": "LX 180",
+              "duration_minutes": 645,
+              "airplane": "Boeing 777",
               "overnight": true
             }
           ],
           "layovers": [
             {
-              "airport": "AUH",
-              "name": "Zayed International Airport",
-              "duration_minutes": 180,
-              "overnight": false
-            }
-          ],
-          "baggage": [
-            {
-              "airline": "Condor",
-              "status": "fare-dependent",
-              "note": "Long-haul Economy Light has no checked bag; Classic and Flex include one."
-            }
-          ],
-          "baggage_flag": "fare-dependent",
-          "extensions": [],
-          "google_best": false,
-          "return_leg": null,
-          "long_trip": false,
-          "duration_label": null
-        },
-        {
-          "price": 12060,
-          "price_per_person": 4020,
-          "origin": "WRO",
-          "origin_name": "Nicolaus Copernicus Wrocław Airport",
-          "destination": "BKK",
-          "departure_time": "2027-01-19 12:20",
-          "arrival_time": "2027-01-20 07:05",
-          "total_duration_minutes": 765,
-          "stops": 1,
-          "airlines": [
-            "LOT"
-          ],
-          "legs": [
-            {
-              "from": "WRO",
-              "to": "WAW",
-              "departure_time": "2027-01-19 12:20",
-              "arrival_time": "2027-01-19 13:15",
-              "airline": "LOT",
-              "flight_number": "LO 3854",
-              "duration_minutes": 55,
-              "airplane": "Embraer 175",
-              "overnight": false
-            },
-            {
-              "from": "WAW",
-              "to": "BKK",
-              "departure_time": "2027-01-19 14:45",
-              "arrival_time": "2027-01-20 07:05",
-              "airline": "LOT",
-              "flight_number": "LO 65",
-              "duration_minutes": 620,
-              "airplane": "Boeing 787",
-              "overnight": true
-            }
-          ],
-          "layovers": [
-            {
-              "airport": "WAW",
-              "name": "Warsaw Chopin Airport",
+              "airport": "ZRH",
+              "name": "Zurich Airport",
               "duration_minutes": 90,
               "overnight": false
             }
           ],
           "baggage": [
             {
-              "airline": "LOT",
+              "airline": "SWISS",
               "status": "fare-dependent",
-              "note": "Long-haul Economy Saver usually has 1 bag, but check the fare."
+              "note": "Economy Light fares exclude a checked bag."
             }
           ],
           "baggage_flag": "fare-dependent",
@@ -607,96 +548,114 @@
           "duration_label": null
         },
         {
-          "price": 12294,
-          "price_per_person": 4098,
-          "origin": "WAW",
-          "origin_name": "Warsaw Chopin Airport",
+          "price": 11401,
+          "price_per_person": 3800,
+          "origin": "BER",
+          "origin_name": "Berlin Brandenburg Airport",
           "destination": "BKK",
-          "departure_time": "2027-01-19 14:45",
-          "arrival_time": "2027-01-20 07:05",
-          "total_duration_minutes": 620,
-          "stops": 0,
-          "airlines": [
-            "LOT"
-          ],
-          "legs": [
-            {
-              "from": "WAW",
-              "to": "BKK",
-              "departure_time": "2027-01-19 14:45",
-              "arrival_time": "2027-01-20 07:05",
-              "airline": "LOT",
-              "flight_number": "LO 65",
-              "duration_minutes": 620,
-              "airplane": "Boeing 787",
-              "overnight": true
-            }
-          ],
-          "layovers": [],
-          "baggage": [
-            {
-              "airline": "LOT",
-              "status": "fare-dependent",
-              "note": "Long-haul Economy Saver usually has 1 bag, but check the fare."
-            }
-          ],
-          "baggage_flag": "fare-dependent",
-          "extensions": [],
-          "google_best": false,
-          "return_leg": null,
-          "long_trip": false,
-          "duration_label": null
-        },
-        {
-          "price": 12370,
-          "price_per_person": 4123,
-          "origin": "WAW",
-          "origin_name": "Warsaw Chopin Airport",
-          "destination": "BKK",
-          "departure_time": "2027-01-19 09:35",
-          "arrival_time": "2027-01-20 04:15",
-          "total_duration_minutes": 760,
+          "departure_time": "2027-01-19 19:40",
+          "arrival_time": "2027-01-20 15:30",
+          "total_duration_minutes": 830,
           "stops": 1,
           "airlines": [
-            "Turkish Airlines"
+            "Austrian"
           ],
           "legs": [
             {
-              "from": "WAW",
-              "to": "IST",
-              "departure_time": "2027-01-19 09:35",
-              "arrival_time": "2027-01-19 14:15",
-              "airline": "Turkish Airlines",
-              "flight_number": "TK 1266",
-              "duration_minutes": 160,
-              "airplane": "Airbus A321neo",
+              "from": "BER",
+              "to": "VIE",
+              "departure_time": "2027-01-19 19:40",
+              "arrival_time": "2027-01-19 20:55",
+              "airline": "Austrian",
+              "flight_number": "OS 236",
+              "duration_minutes": 75,
+              "airplane": "Airbus A320",
               "overnight": false
             },
             {
-              "from": "IST",
+              "from": "VIE",
               "to": "BKK",
-              "departure_time": "2027-01-19 15:15",
-              "arrival_time": "2027-01-20 04:15",
-              "airline": "Turkish Airlines",
-              "flight_number": "TK 58",
-              "duration_minutes": 540,
-              "airplane": "Airbus A350",
+              "departure_time": "2027-01-19 23:25",
+              "arrival_time": "2027-01-20 15:30",
+              "airline": "Austrian",
+              "flight_number": "OS 7",
+              "duration_minutes": 605,
+              "airplane": "Boeing 777",
               "overnight": true
             }
           ],
           "layovers": [
             {
-              "airport": "IST",
-              "name": "Istanbul Airport",
-              "duration_minutes": 60,
+              "airport": "VIE",
+              "name": "Vienna International Airport",
+              "duration_minutes": 150,
               "overnight": false
             }
           ],
           "baggage": [
             {
-              "airline": "Turkish Airlines",
+              "airline": "Austrian",
+              "status": "fare-dependent",
+              "note": "Economy Light fares exclude a checked bag."
+            }
+          ],
+          "baggage_flag": "fare-dependent",
+          "extensions": [],
+          "google_best": false,
+          "return_leg": null,
+          "long_trip": false,
+          "duration_label": null
+        },
+        {
+          "price": 11852,
+          "price_per_person": 3951,
+          "origin": "BER",
+          "origin_name": "Berlin Brandenburg Airport",
+          "destination": "BKK",
+          "departure_time": "2027-01-19 15:15",
+          "arrival_time": "2027-01-20 12:15",
+          "total_duration_minutes": 900,
+          "stops": 1,
+          "airlines": [
+            "Qatar Airways"
+          ],
+          "legs": [
+            {
+              "from": "BER",
+              "to": "DOH",
+              "departure_time": "2027-01-19 15:15",
+              "arrival_time": "2027-01-19 22:55",
+              "airline": "Qatar Airways",
+              "flight_number": "QR 82",
+              "duration_minutes": 340,
+              "airplane": "Boeing 787",
+              "overnight": false
+            },
+            {
+              "from": "DOH",
+              "to": "BKK",
+              "departure_time": "2027-01-20 02:00",
+              "arrival_time": "2027-01-20 12:15",
+              "airline": "Qatar Airways",
+              "flight_number": "QR 834",
+              "duration_minutes": 375,
+              "airplane": "Airbus A380",
+              "overnight": true
+            }
+          ],
+          "layovers": [
+            {
+              "airport": "DOH",
+              "name": "Hamad International Airport",
+              "duration_minutes": 185,
+              "overnight": false
+            }
+          ],
+          "baggage": [
+            {
+              "airline": "Qatar Airways",
               "status": "included",
-              "note": "Intercontinental economy includes 1 checked bag."
+              "note": "Economy usually includes 1 checked bag (23-25 kg)."
             }
           ],
           "baggage_flag": "included",
@@ -707,8 +666,8 @@
           "duration_label": null
         },
         {
-          "price": 13025,
-          "price_per_person": 4342,
+          "price": 12026,
+          "price_per_person": 4009,
           "origin": "BER",
           "origin_name": "Berlin Brandenburg Airport",
           "destination": "BKK",
@@ -764,6 +723,165 @@
           "return_leg": null,
           "long_trip": false,
           "duration_label": null
+        },
+        {
+          "price": 12060,
+          "price_per_person": 4020,
+          "origin": "WRO",
+          "origin_name": "Nicolaus Copernicus Wrocław Airport",
+          "destination": "BKK",
+          "departure_time": "2027-01-19 12:20",
+          "arrival_time": "2027-01-20 07:05",
+          "total_duration_minutes": 765,
+          "stops": 1,
+          "airlines": [
+            "LOT"
+          ],
+          "legs": [
+            {
+              "from": "WRO",
+              "to": "WAW",
+              "departure_time": "2027-01-19 12:20",
+              "arrival_time": "2027-01-19 13:15",
+              "airline": "LOT",
+              "flight_number": "LO 3854",
+              "duration_minutes": 55,
+              "airplane": "Embraer 175",
+              "overnight": false
+            },
+            {
+              "from": "WAW",
+              "to": "BKK",
+              "departure_time": "2027-01-19 14:45",
+              "arrival_time": "2027-01-20 07:05",
+              "airline": "LOT",
+              "flight_number": "LO 65",
+              "duration_minutes": 620,
+              "airplane": "Boeing 787",
+              "overnight": true
+            }
+          ],
+          "layovers": [
+            {
+              "airport": "WAW",
+              "name": "Warsaw Chopin Airport",
+              "duration_minutes": 90,
+              "overnight": false
+            }
+          ],
+          "baggage": [
+            {
+              "airline": "LOT",
+              "status": "fare-dependent",
+              "note": "Long-haul Economy Saver usually has 1 bag, but check the fare."
+            }
+          ],
+          "baggage_flag": "fare-dependent",
+          "extensions": [],
+          "google_best": false,
+          "return_leg": null,
+          "long_trip": false,
+          "duration_label": null
+        },
+        {
+          "price": 12303,
+          "price_per_person": 4101,
+          "origin": "WAW",
+          "origin_name": "Warsaw Chopin Airport",
+          "destination": "BKK",
+          "departure_time": "2027-01-19 14:45",
+          "arrival_time": "2027-01-20 07:05",
+          "total_duration_minutes": 620,
+          "stops": 0,
+          "airlines": [
+            "LOT"
+          ],
+          "legs": [
+            {
+              "from": "WAW",
+              "to": "BKK",
+              "departure_time": "2027-01-19 14:45",
+              "arrival_time": "2027-01-20 07:05",
+              "airline": "LOT",
+              "flight_number": "LO 65",
+              "duration_minutes": 620,
+              "airplane": "Boeing 787",
+              "overnight": true
+            }
+          ],
+          "layovers": [],
+          "baggage": [
+            {
+              "airline": "LOT",
+              "status": "fare-dependent",
+              "note": "Long-haul Economy Saver usually has 1 bag, but check the fare."
+            }
+          ],
+          "baggage_flag": "fare-dependent",
+          "extensions": [],
+          "google_best": false,
+          "return_leg": null,
+          "long_trip": false,
+          "duration_label": null
+        },
+        {
+          "price": 12370,
+          "price_per_person": 4123,
+          "origin": "WAW",
+          "origin_name": "Warsaw Chopin Airport",
+          "destination": "BKK",
+          "departure_time": "2027-01-19 09:35",
+          "arrival_time": "2027-01-20 04:15",
+          "total_duration_minutes": 760,
+          "stops": 1,
+          "airlines": [
+            "Turkish Airlines"
+          ],
+          "legs": [
+            {
+              "from": "WAW",
+              "to": "IST",
+              "departure_time": "2027-01-19 09:35",
+              "arrival_time": "2027-01-19 14:15",
+              "airline": "Turkish Airlines",
+              "flight_number": "TK 1266",
+              "duration_minutes": 160,
+              "airplane": "Airbus A321neo",
+              "overnight": false
+            },
+            {
+              "from": "IST",
+              "to": "BKK",
+              "departure_time": "2027-01-19 15:15",
+              "arrival_time": "2027-01-20 04:15",
+              "airline": "Turkish Airlines",
+              "flight_number": "TK 58",
+              "duration_minutes": 540,
+              "airplane": "Airbus A350",
+              "overnight": true
+            }
+          ],
+          "layovers": [
+            {
+              "airport": "IST",
+              "name": "Istanbul Airport",
+              "duration_minutes": 60,
+              "overnight": false
+            }
+          ],
+          "baggage": [
+            {
+              "airline": "Turkish Airlines",
+              "status": "included",
+              "note": "Intercontinental economy includes 1 checked bag."
+            }
+          ],
+          "baggage_flag": "included",
+          "extensions": [],
+          "google_best": false,
+          "return_leg": null,
+          "long_trip": false,
+          "duration_label": null
         }
       ]
     },
@@ -786,14 +904,14 @@
       "price_insights": null,
       "options": [
         {
-          "price": 9226,
-          "price_per_person": 3075,
+          "price": 9355,
+          "price_per_person": 3118,
           "origin": "BER",
           "origin_name": "Berlin Brandenburg Airport",
           "destination": "BKK",
-          "departure_time": "2027-01-19 21:40",
-          "arrival_time": "2027-01-20 19:25",
-          "total_duration_minutes": 945,
+          "departure_time": "2027-01-19 08:50",
+          "arrival_time": "2027-01-20 13:05",
+          "total_duration_minutes": 1335,
           "stops": 1,
           "airlines": [
             "Qatar Airways"
@@ -802,31 +920,31 @@
             {
               "from": "BER",
               "to": "DOH",
-              "departure_time": "2027-01-19 21:40",
-              "arrival_time": "2027-01-20 05:20",
+              "departure_time": "2027-01-19 08:50",
+              "arrival_time": "2027-01-19 16:30",
               "airline": "Qatar Airways",
-              "flight_number": "QR 84",
+              "flight_number": "QR 80",
               "duration_minutes": 340,
               "airplane": "Boeing 787",
-              "overnight": true
+              "overnight": false
             },
             {
               "from": "DOH",
               "to": "BKK",
-              "departure_time": "2027-01-20 09:10",
-              "arrival_time": "2027-01-20 19:25",
+              "departure_time": "2027-01-20 02:50",
+              "arrival_time": "2027-01-20 13:05",
               "airline": "Qatar Airways",
-              "flight_number": "QR 826",
+              "flight_number": "QR 836",
               "duration_minutes": 375,
-              "airplane": "Boeing 777",
-              "overnight": false
+              "airplane": "Airbus A380",
+              "overnight": true
             }
           ],
           "layovers": [
             {
               "airport": "DOH",
               "name": "Hamad International Airport",
-              "duration_minutes": 230,
+              "duration_minutes": 620,
               "overnight": false
             }
           ],
@@ -841,8 +959,8 @@
           "extensions": [],
           "google_best": false,
           "return_leg": {
-            "price": 11807,
-            "price_per_person": 3936,
+            "price": 9689,
+            "price_per_person": 3230,
             "origin": "BKK",
             "origin_name": "Suvarnabhumi Airport",
             "destination": "BER",
@@ -896,11 +1014,11 @@
             "extensions": []
           },
           "long_trip": true,
-          "duration_label": "Longer trip: return 17h40 (over 16 h)"
+          "duration_label": "Longer trip: outbound 22h15 (over 16 h)"
         },
         {
-          "price": 9774,
-          "price_per_person": 3258,
+          "price": 9556,
+          "price_per_person": 3185,
           "origin": "BER",
           "origin_name": "Berlin Brandenburg Airport",
           "destination": "BKK",
@@ -954,8 +1072,8 @@
           "extensions": [],
           "google_best": false,
           "return_leg": {
-            "price": 9774,
-            "price_per_person": 3258,
+            "price": 9556,
+            "price_per_person": 3185,
             "origin": "BKK",
             "origin_name": "Suvarnabhumi Airport",
             "destination": "BER",
@@ -1012,8 +1130,8 @@
           "duration_label": "Longer trip: return 17h40 (over 16 h)"
         },
         {
-          "price": 10656,
-          "price_per_person": 3552,
+          "price": 10463,
+          "price_per_person": 3488,
           "origin": "BER",
           "origin_name": "Berlin Brandenburg Airport",
           "destination": "BKK",
@@ -1071,8 +1189,67 @@
           "duration_label": null
         },
         {
-          "price": 10767,
-          "price_per_person": 3589,
+          "price": 10701,
+          "price_per_person": 3567,
+          "origin": "WAW",
+          "origin_name": "Warsaw Chopin Airport",
+          "destination": "BKK",
+          "departure_time": "2027-01-19 13:05",
+          "arrival_time": "2027-01-20 16:35",
+          "total_duration_minutes": 1290,
+          "stops": 1,
+          "airlines": [
+            "Finnair"
+          ],
+          "legs": [
+            {
+              "from": "WAW",
+              "to": "HEL",
+              "departure_time": "2027-01-19 13:05",
+              "arrival_time": "2027-01-19 15:50",
+              "airline": "Finnair",
+              "flight_number": "AY 1144",
+              "duration_minutes": 105,
+              "airplane": "Embraer 190",
+              "overnight": false
+            },
+            {
+              "from": "HEL",
+              "to": "BKK",
+              "departure_time": "2027-01-20 00:15",
+              "arrival_time": "2027-01-20 16:35",
+              "airline": "Finnair",
+              "flight_number": "AY 145",
+              "duration_minutes": 680,
+              "airplane": "Airbus A350",
+              "overnight": true
+            }
+          ],
+          "layovers": [
+            {
+              "airport": "HEL",
+              "name": "Helsinki Airport",
+              "duration_minutes": 505,
+              "overnight": false
+            }
+          ],
+          "baggage": [
+            {
+              "airline": "Finnair",
+              "status": "fare-dependent",
+              "note": "Economy Light fares exclude a checked bag."
+            }
+          ],
+          "baggage_flag": "fare-dependent",
+          "extensions": [],
+          "google_best": false,
+          "return_leg": null,
+          "long_trip": true,
+          "duration_label": "Longer trip: outbound 21h30 (over 16 h)"
+        },
+        {
+          "price": 10731,
+          "price_per_person": 3577,
           "origin": "WAW",
           "origin_name": "Warsaw Chopin Airport",
           "destination": "BKK",
@@ -1130,8 +1307,8 @@
           "duration_label": null
         },
         {
-          "price": 11303,
-          "price_per_person": 3768,
+          "price": 10812,
+          "price_per_person": 3604,
           "origin": "PRG",
           "origin_name": "Letiště Václava Havla Praha",
           "destination": "DMK",
@@ -1195,8 +1372,8 @@
           "duration_label": "Longer trip: outbound 23h25 (over 16 h)"
         },
         {
-          "price": 11807,
-          "price_per_person": 3936,
+          "price": 11331,
+          "price_per_person": 3777,
           "origin": "BER",
           "origin_name": "Berlin Brandenburg Airport",
           "destination": "BKK",
@@ -1244,6 +1421,65 @@
               "airline": "Qatar Airways",
               "status": "included",
               "note": "Economy usually includes 1 checked bag (23-25 kg)."
+            }
+          ],
+          "baggage_flag": "included",
+          "extensions": [],
+          "google_best": false,
+          "return_leg": null,
+          "long_trip": false,
+          "duration_label": null
+        },
+        {
+          "price": 11685,
+          "price_per_person": 3895,
+          "origin": "PRG",
+          "origin_name": "Letiště Václava Havla Praha",
+          "destination": "BKK",
+          "departure_time": "2027-01-19 14:45",
+          "arrival_time": "2027-01-20 12:05",
+          "total_duration_minutes": 920,
+          "stops": 1,
+          "airlines": [
+            "Emirates"
+          ],
+          "legs": [
+            {
+              "from": "PRG",
+              "to": "DXB",
+              "departure_time": "2027-01-19 14:45",
+              "arrival_time": "2027-01-19 23:40",
+              "airline": "Emirates",
+              "flight_number": "EK 140",
+              "duration_minutes": 355,
+              "airplane": "Airbus A380",
+              "overnight": false
+            },
+            {
+              "from": "DXB",
+              "to": "BKK",
+              "departure_time": "2027-01-20 03:05",
+              "arrival_time": "2027-01-20 12:05",
+              "airline": "Emirates",
+              "flight_number": "EK 384",
+              "duration_minutes": 360,
+              "airplane": "Airbus A380",
+              "overnight": true
+            }
+          ],
+          "layovers": [
+            {
+              "airport": "DXB",
+              "name": "Dubai International Airport",
+              "duration_minutes": 205,
+              "overnight": false
+            }
+          ],
+          "baggage": [
+            {
+              "airline": "Emirates",
+              "status": "included",
+              "note": "Economy fares include checked baggage (20-30 kg by fare)."
             }
           ],
           "baggage_flag": "included",
@@ -1313,65 +1549,6 @@
           "duration_label": null
         },
         {
-          "price": 12177,
-          "price_per_person": 4059,
-          "origin": "PRG",
-          "origin_name": "Letiště Václava Havla Praha",
-          "destination": "BKK",
-          "departure_time": "2027-01-19 14:45",
-          "arrival_time": "2027-01-20 12:05",
-          "total_duration_minutes": 920,
-          "stops": 1,
-          "airlines": [
-            "Emirates"
-          ],
-          "legs": [
-            {
-              "from": "PRG",
-              "to": "DXB",
-              "departure_time": "2027-01-19 14:45",
-              "arrival_time": "2027-01-19 23:40",
-              "airline": "Emirates",
-              "flight_number": "EK 140",
-              "duration_minutes": 355,
-              "airplane": "Airbus A380",
-              "overnight": false
-            },
-            {
-              "from": "DXB",
-              "to": "BKK",
-              "departure_time": "2027-01-20 03:05",
-              "arrival_time": "2027-01-20 12:05",
-              "airline": "Emirates",
-              "flight_number": "EK 384",
-              "duration_minutes": 360,
-              "airplane": "Airbus A380",
-              "overnight": true
-            }
-          ],
-          "layovers": [
-            {
-              "airport": "DXB",
-              "name": "Dubai International Airport",
-              "duration_minutes": 205,
-              "overnight": false
-            }
-          ],
-          "baggage": [
-            {
-              "airline": "Emirates",
-              "status": "included",
-              "note": "Economy fares include checked baggage (20-30 kg by fare)."
-            }
-          ],
-          "baggage_flag": "included",
-          "extensions": [],
-          "google_best": false,
-          "return_leg": null,
-          "long_trip": false,
-          "duration_label": null
-        },
-        {
           "price": 12370,
           "price_per_person": 4123,
           "origin": "WAW",
@@ -1431,8 +1608,8 @@
           "duration_label": null
         },
         {
-          "price": 12450,
-          "price_per_person": 4150,
+          "price": 12492,
+          "price_per_person": 4164,
           "origin": "WAW",
           "origin_name": "Warsaw Chopin Airport",
           "destination": "BKK",
@@ -1472,8 +1649,8 @@
           "duration_label": null
         },
         {
-          "price": 13694,
-          "price_per_person": 4565,
+          "price": 13001,
+          "price_per_person": 4334,
           "origin": "BER",
           "origin_name": "Berlin Brandenburg Airport",
           "destination": "BKK",
@@ -1551,8 +1728,67 @@
       "price_insights": null,
       "options": [
         {
-          "price": 10202,
-          "price_per_person": 3401,
+          "price": 9782,
+          "price_per_person": 3261,
+          "origin": "BER",
+          "origin_name": "Berlin Brandenburg Airport",
+          "destination": "BKK",
+          "departure_time": "2027-01-19 08:50",
+          "arrival_time": "2027-01-20 13:05",
+          "total_duration_minutes": 1335,
+          "stops": 1,
+          "airlines": [
+            "Qatar Airways"
+          ],
+          "legs": [
+            {
+              "from": "BER",
+              "to": "DOH",
+              "departure_time": "2027-01-19 08:50",
+              "arrival_time": "2027-01-19 16:30",
+              "airline": "Qatar Airways",
+              "flight_number": "QR 80",
+              "duration_minutes": 340,
+              "airplane": "Boeing 787",
+              "overnight": false
+            },
+            {
+              "from": "DOH",
+              "to": "BKK",
+              "departure_time": "2027-01-20 02:50",
+              "arrival_time": "2027-01-20 13:05",
+              "airline": "Qatar Airways",
+              "flight_number": "QR 836",
+              "duration_minutes": 375,
+              "airplane": "Airbus A380",
+              "overnight": true
+            }
+          ],
+          "layovers": [
+            {
+              "airport": "DOH",
+              "name": "Hamad International Airport",
+              "duration_minutes": 620,
+              "overnight": false
+            }
+          ],
+          "baggage": [
+            {
+              "airline": "Qatar Airways",
+              "status": "included",
+              "note": "Economy usually includes 1 checked bag (23-25 kg)."
+            }
+          ],
+          "baggage_flag": "included",
+          "extensions": [],
+          "google_best": false,
+          "return_leg": null,
+          "long_trip": true,
+          "duration_label": "Longer trip: outbound 22h15 (over 16 h)"
+        },
+        {
+          "price": 9969,
+          "price_per_person": 3323,
           "origin": "BER",
           "origin_name": "Berlin Brandenburg Airport",
           "destination": "BKK",
@@ -1610,8 +1846,8 @@
           "duration_label": null
         },
         {
-          "price": 10821,
-          "price_per_person": 3607,
+          "price": 10812,
+          "price_per_person": 3604,
           "origin": "PRG",
           "origin_name": "Letiště Václava Havla Praha",
           "destination": "DMK",
@@ -1675,8 +1911,8 @@
           "duration_label": "Longer trip: outbound 23h25 (over 16 h)"
         },
         {
-          "price": 11071,
-          "price_per_person": 3690,
+          "price": 10890,
+          "price_per_person": 3630,
           "origin": "BER",
           "origin_name": "Berlin Brandenburg Airport",
           "destination": "BKK",
@@ -1734,67 +1970,8 @@
           "duration_label": null
         },
         {
-          "price": 11343,
-          "price_per_person": 3781,
-          "origin": "BER",
-          "origin_name": "Berlin Brandenburg Airport",
-          "destination": "BKK",
-          "departure_time": "2027-01-19 14:40",
-          "arrival_time": "2027-01-20 16:05",
-          "total_duration_minutes": 1165,
-          "stops": 1,
-          "airlines": [
-            "British Airways"
-          ],
-          "legs": [
-            {
-              "from": "BER",
-              "to": "LHR",
-              "departure_time": "2027-01-19 14:40",
-              "arrival_time": "2027-01-19 15:45",
-              "airline": "British Airways",
-              "flight_number": "BA 979",
-              "duration_minutes": 125,
-              "airplane": "Airbus A320",
-              "overnight": false
-            },
-            {
-              "from": "LGW",
-              "to": "BKK",
-              "departure_time": "2027-01-19 21:20",
-              "arrival_time": "2027-01-20 16:05",
-              "airline": "British Airways",
-              "flight_number": "BA 2231",
-              "duration_minutes": 705,
-              "airplane": "Boeing 777",
-              "overnight": true
-            }
-          ],
-          "layovers": [
-            {
-              "airport": "LHR",
-              "name": "London Gatwick Airport",
-              "duration_minutes": 335,
-              "overnight": false
-            }
-          ],
-          "baggage": [
-            {
-              "airline": "British Airways",
-              "status": "unknown",
-              "note": "Airline not in the list. Check the checked-bag allowance before booking."
-            }
-          ],
-          "baggage_flag": "unknown",
-          "extensions": [],
-          "google_best": false,
-          "return_leg": null,
-          "long_trip": true,
-          "duration_label": "Longer trip: outbound 19h25 (over 16 h)"
-        },
-        {
-          "price": 11695,
-          "price_per_person": 3898,
+          "price": 11685,
+          "price_per_person": 3895,
           "origin": "PRG",
           "origin_name": "Letiště Václava Havla Praha",
           "destination": "BKK",
@@ -1852,58 +2029,58 @@
           "duration_label": null
         },
         {
-          "price": 11785,
-          "price_per_person": 3928,
-          "origin": "PRG",
-          "origin_name": "Letiště Václava Havla Praha",
-          "destination": "DMK",
-          "departure_time": "2027-01-19 22:15",
-          "arrival_time": "2027-01-20 20:10",
-          "total_duration_minutes": 955,
+          "price": 11745,
+          "price_per_person": 3915,
+          "origin": "BER",
+          "origin_name": "Berlin Brandenburg Airport",
+          "destination": "BKK",
+          "departure_time": "2027-01-19 15:15",
+          "arrival_time": "2027-01-20 13:05",
+          "total_duration_minutes": 950,
           "stops": 1,
           "airlines": [
-            "flydubai"
+            "Qatar Airways"
           ],
           "legs": [
             {
-              "from": "PRG",
-              "to": "DXB",
-              "departure_time": "2027-01-19 22:15",
-              "arrival_time": "2027-01-20 07:30",
-              "airline": "flydubai",
-              "flight_number": "FZ 1782",
-              "duration_minutes": 375,
-              "airplane": "Boeing 737MAX 8 Passenger",
-              "overnight": true
+              "from": "BER",
+              "to": "DOH",
+              "departure_time": "2027-01-19 15:15",
+              "arrival_time": "2027-01-19 22:55",
+              "airline": "Qatar Airways",
+              "flight_number": "QR 82",
+              "duration_minutes": 340,
+              "airplane": "Boeing 787",
+              "overnight": false
             },
             {
-              "from": "DXB",
-              "to": "DMK",
-              "departure_time": "2027-01-20 10:45",
-              "arrival_time": "2027-01-20 20:10",
-              "airline": "flydubai",
-              "flight_number": "FZ 1335",
-              "duration_minutes": 385,
-              "airplane": "Boeing 737MAX 8 Passenger",
-              "overnight": false
+              "from": "DOH",
+              "to": "BKK",
+              "departure_time": "2027-01-20 02:50",
+              "arrival_time": "2027-01-20 13:05",
+              "airline": "Qatar Airways",
+              "flight_number": "QR 836",
+              "duration_minutes": 375,
+              "airplane": "Airbus A380",
+              "overnight": true
             }
           ],
           "layovers": [
             {
-              "airport": "DXB",
-              "name": "Dubai International Airport",
-              "duration_minutes": 195,
+              "airport": "DOH",
+              "name": "Hamad International Airport",
+              "duration_minutes": 235,
               "overnight": false
             }
           ],
           "baggage": [
             {
-              "airline": "flydubai",
-              "status": "extra",
-              "note": "Value fares on flydubai often exclude checked baggage."
+              "airline": "Qatar Airways",
+              "status": "included",
+              "note": "Economy usually includes 1 checked bag (23-25 kg)."
             }
           ],
-          "baggage_flag": "extra",
+          "baggage_flag": "included",
           "extensions": [],
           "google_best": false,
           "return_leg": null,
@@ -1970,8 +2147,8 @@
           "duration_label": null
         },
         {
-          "price": 12078,
-          "price_per_person": 4026,
+          "price": 12095,
+          "price_per_person": 4032,
           "origin": "BER",
           "origin_name": "Berlin Brandenburg Airport",
           "destination": "BKK",
@@ -2029,8 +2206,8 @@
           "duration_label": null
         },
         {
-          "price": 12483,
-          "price_per_person": 4161,
+          "price": 12492,
+          "price_per_person": 4164,
           "origin": "WAW",
           "origin_name": "Warsaw Chopin Airport",
           "destination": "BKK",
@@ -2129,8 +2306,8 @@
           "duration_label": null
         },
         {
-          "price": 13745,
-          "price_per_person": 4582,
+          "price": 13720,
+          "price_per_person": 4573,
           "origin": "BER",
           "origin_name": "Berlin Brandenburg Airport",
           "destination": "BKK",
