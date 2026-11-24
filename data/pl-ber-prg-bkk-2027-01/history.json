@@ -655,6 +655,65 @@
       },
       "options_count": 11,
       "price_level": null
+    },
+    {
+      "fetched_at": "2026-11-24T17:25:08+00:00",
+      "return_date": "2027-02-03",
+      "min_price": 9831,
+      "min_price_airlines": [
+        "Condor"
+      ],
+      "min_price_origin": "BER",
+      "min_price_destination": "BKK",
+      "min_price_baggage_flag": "fare-dependent",
+      "min_price_long_trip": true,
+      "min_price_by_origin": {
+        "BER": 9831,
+        "PRG": 10863,
+        "WAW": 11039
+      },
+      "options_count": 12,
+      "price_level": null
+    },
+    {
+      "fetched_at": "2026-11-24T17:25:08+00:00",
+      "return_date": "2027-02-04",
+      "min_price": 10494,
+      "min_price_airlines": [
+        "Qatar Airways"
+      ],
+      "min_price_origin": "BER",
+      "min_price_destination": "BKK",
+      "min_price_baggage_flag": "included",
+      "min_price_long_trip": false,
+      "min_price_by_origin": {
+        "BER": 10494,
+        "PRG": 10863,
+        "WAW": 11057,
+        "WRO": 12105
+      },
+      "options_count": 15,
+      "price_level": null
+    },
+    {
+      "fetched_at": "2026-11-24T17:25:08+00:00",
+      "return_date": "2027-02-05",
+      "min_price": 10544,
+      "min_price_airlines": [
+        "Qatar Airways"
+      ],
+      "min_price_origin": "BER",
+      "min_price_destination": "BKK",
+      "min_price_baggage_flag": "included",
+      "min_price_long_trip": false,
+      "min_price_by_origin": {
+        "BER": 10544,
+        "PRG": 11347,
+        "WRO": 12105,
+        "WAW": 12537
+      },
+      "options_count": 12,
+      "price_level": null
     }
   ]
 }
