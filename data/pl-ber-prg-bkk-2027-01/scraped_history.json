@@ -1813,6 +1813,188 @@
       "min_price_origin": "BER",
       "options_count": 21,
       "errors": 0
+    },
+    {
+      "fetched_at": "2026-11-26T19:55:39+00:00",
+      "outbound_date": "2027-01-17",
+      "return_date": "2027-02-03",
+      "min_price": 11279,
+      "min_price_airlines": [
+        "Finnair"
+      ],
+      "min_price_origin": "WAW",
+      "options_count": 26,
+      "errors": 0
+    },
+    {
+      "fetched_at": "2026-11-26T19:55:39+00:00",
+      "outbound_date": "2027-01-17",
+      "return_date": "2027-02-04",
+      "min_price": 12360,
+      "min_price_airlines": [
+        "LOT"
+      ],
+      "min_price_origin": "WRO",
+      "options_count": 13,
+      "errors": 0
+    },
+    {
+      "fetched_at": "2026-11-26T19:55:39+00:00",
+      "outbound_date": "2027-01-17",
+      "return_date": "2027-02-05",
+      "min_price": 12514,
+      "min_price_airlines": [
+        "Condor"
+      ],
+      "min_price_origin": "BER",
+      "options_count": 10,
+      "errors": 0
+    },
+    {
+      "fetched_at": "2026-11-26T19:55:39+00:00",
+      "outbound_date": "2027-01-18",
+      "return_date": "2027-02-03",
+      "min_price": 10206,
+      "min_price_airlines": [
+        "Condor",
+        "Etihad"
+      ],
+      "min_price_origin": "BER",
+      "options_count": 18,
+      "errors": 0
+    },
+    {
+      "fetched_at": "2026-11-26T19:55:39+00:00",
+      "outbound_date": "2027-01-18",
+      "return_date": "2027-02-04",
+      "min_price": 15295,
+      "min_price_airlines": [
+        "Lufthansa"
+      ],
+      "min_price_origin": "WRO",
+      "options_count": 3,
+      "errors": 0
+    },
+    {
+      "fetched_at": "2026-11-26T19:55:39+00:00",
+      "outbound_date": "2027-01-18",
+      "return_date": "2027-02-05",
+      "min_price": 12260,
+      "min_price_airlines": [
+        "Qatar Airways"
+      ],
+      "min_price_origin": "BER",
+      "options_count": 16,
+      "errors": 0
+    },
+    {
+      "fetched_at": "2026-11-26T19:55:39+00:00",
+      "outbound_date": "2027-01-19",
+      "return_date": "2027-02-03",
+      "min_price": 9883,
+      "min_price_airlines": [
+        "Condor",
+        "Etihad"
+      ],
+      "min_price_origin": "BER",
+      "options_count": 18,
+      "errors": 0
+    },
+    {
+      "fetched_at": "2026-11-26T19:55:39+00:00",
+      "outbound_date": "2027-01-19",
+      "return_date": "2027-02-04",
+      "min_price": 10541,
+      "min_price_airlines": [
+        "Qatar Airways"
+      ],
+      "min_price_origin": "BER",
+      "options_count": 25,
+      "errors": 0
+    },
+    {
+      "fetched_at": "2026-11-26T19:55:39+00:00",
+      "outbound_date": "2027-01-19",
+      "return_date": "2027-02-05",
+      "min_price": 11521,
+      "min_price_airlines": [
+        "Qatar Airways"
+      ],
+      "min_price_origin": "BER",
+      "options_count": 20,
+      "errors": 0
+    },
+    {
+      "fetched_at": "2026-11-26T19:55:39+00:00",
+      "outbound_date": "2027-01-20",
+      "return_date": "2027-02-03",
+      "min_price": 10708,
+      "min_price_airlines": [
+        "Finnair"
+      ],
+      "min_price_origin": "WAW",
+      "options_count": 16,
+      "errors": 1
+    },
+    {
+      "fetched_at": "2026-11-26T19:55:39+00:00",
+      "outbound_date": "2027-01-20",
+      "return_date": "2027-02-04",
+      "min_price": 10541,
+      "min_price_airlines": [
+        "Qatar Airways"
+      ],
+      "min_price_origin": "BER",
+      "options_count": 21,
+      "errors": 0
+    },
+    {
+      "fetched_at": "2026-11-26T19:55:39+00:00",
+      "outbound_date": "2027-01-20",
+      "return_date": "2027-02-05",
+      "min_price": 11347,
+      "min_price_airlines": [
+        "Qatar Airways"
+      ],
+      "min_price_origin": "BER",
+      "options_count": 29,
+      "errors": 0
+    },
+    {
+      "fetched_at": "2026-11-26T19:55:39+00:00",
+      "outbound_date": "2027-01-21",
+      "return_date": "2027-02-03",
+      "min_price": 10508,
+      "min_price_airlines": [
+        "Qatar Airways"
+      ],
+      "min_price_origin": "PRG",
+      "options_count": 14,
+      "errors": 0
+    },
+    {
+      "fetched_at": "2026-11-26T19:55:39+00:00",
+      "outbound_date": "2027-01-21",
+      "return_date": "2027-02-04",
+      "min_price": 10141,
+      "min_price_airlines": [
+        "Etihad"
+      ],
+      "min_price_origin": "WAW",
+      "options_count": 31,
+      "errors": 0
+    },
+    {
+      "fetched_at": "2026-11-26T19:55:39+00:00",
+      "outbound_date": "2027-01-21",
+      "return_date": "2027-02-05",
+      "min_price": 11863,
+      "min_price_airlines": [
+        "Qatar Airways"
+      ],
+      "min_price_origin": "WAW",
+      "options_count": 10,
+      "errors": 0
     }
   ]
 }
