@@ -775,6 +775,65 @@
       },
       "options_count": 14,
       "price_level": null
+    },
+    {
+      "fetched_at": "2026-11-26T16:43:11+00:00",
+      "return_date": "2027-02-03",
+      "min_price": 9886,
+      "min_price_airlines": [
+        "Condor"
+      ],
+      "min_price_origin": "BER",
+      "min_price_destination": "BKK",
+      "min_price_baggage_flag": "fare-dependent",
+      "min_price_long_trip": true,
+      "min_price_by_origin": {
+        "BER": 9886,
+        "WAW": 11075,
+        "PRG": 11361
+      },
+      "options_count": 13,
+      "price_level": null
+    },
+    {
+      "fetched_at": "2026-11-26T16:43:11+00:00",
+      "return_date": "2027-02-04",
+      "min_price": 10195,
+      "min_price_airlines": [
+        "Condor"
+      ],
+      "min_price_origin": "BER",
+      "min_price_destination": "BKK",
+      "min_price_baggage_flag": "fare-dependent",
+      "min_price_long_trip": true,
+      "min_price_by_origin": {
+        "BER": 10195,
+        "PRG": 10876,
+        "WAW": 11066
+      },
+      "options_count": 14,
+      "price_level": null
+    },
+    {
+      "fetched_at": "2026-11-26T16:43:11+00:00",
+      "return_date": "2027-02-05",
+      "min_price": 10876,
+      "min_price_airlines": [
+        "Emirates",
+        "flydubai"
+      ],
+      "min_price_origin": "PRG",
+      "min_price_destination": "DMK",
+      "min_price_baggage_flag": "extra",
+      "min_price_long_trip": true,
+      "min_price_by_origin": {
+        "PRG": 10876,
+        "BER": 11176,
+        "WRO": 12099,
+        "WAW": 12156
+      },
+      "options_count": 12,
+      "price_level": null
     }
   ]
 }
