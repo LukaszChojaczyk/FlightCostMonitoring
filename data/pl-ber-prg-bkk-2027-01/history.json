@@ -895,6 +895,67 @@
       },
       "options_count": 12,
       "price_level": null
+    },
+    {
+      "fetched_at": "2026-11-28T15:21:37+00:00",
+      "return_date": "2027-02-03",
+      "min_price": 10721,
+      "min_price_airlines": [
+        "Qatar Airways"
+      ],
+      "min_price_origin": "BER",
+      "min_price_destination": "BKK",
+      "min_price_baggage_flag": "included",
+      "min_price_long_trip": true,
+      "min_price_by_origin": {
+        "BER": 10721,
+        "PRG": 10864,
+        "WAW": 11245,
+        "WRO": 12570
+      },
+      "options_count": 11,
+      "price_level": null
+    },
+    {
+      "fetched_at": "2026-11-28T15:21:37+00:00",
+      "return_date": "2027-02-04",
+      "min_price": 10520,
+      "min_price_airlines": [
+        "Qatar Airways"
+      ],
+      "min_price_origin": "BER",
+      "min_price_destination": "BKK",
+      "min_price_baggage_flag": "included",
+      "min_price_long_trip": true,
+      "min_price_by_origin": {
+        "BER": 10520,
+        "PRG": 10864,
+        "WAW": 11282,
+        "WRO": 12120
+      },
+      "options_count": 13,
+      "price_level": null
+    },
+    {
+      "fetched_at": "2026-11-28T15:21:37+00:00",
+      "return_date": "2027-02-05",
+      "min_price": 10864,
+      "min_price_airlines": [
+        "Emirates",
+        "flydubai"
+      ],
+      "min_price_origin": "PRG",
+      "min_price_destination": "DMK",
+      "min_price_baggage_flag": "extra",
+      "min_price_long_trip": true,
+      "min_price_by_origin": {
+        "PRG": 10864,
+        "BER": 11151,
+        "WRO": 12570,
+        "WAW": 12584
+      },
+      "options_count": 11,
+      "price_level": null
     }
   ]
 }
