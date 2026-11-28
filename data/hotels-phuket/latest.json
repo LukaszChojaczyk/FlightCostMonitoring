@@ -1,6 +1,6 @@
 {
   "source": "xotelo (Tripadvisor rates)",
-  "fetched_at": "2026-11-27T17:49:04+00:00",
+  "fetched_at": "2026-11-28T16:36:48+00:00",
   "currency": "EUR",
   "pln_rate": 4.4673,
   "pln_rate_source": "NBP table 231/A/NBP/2026 of 2026-11-27",
@@ -97,7 +97,7 @@
       "tripadvisor_name": "JW Marriott Phuket Resort & Spa",
       "tripadvisor_url": "https://www.tripadvisor.com/Hotel_Review-g1223683-d519702-Reviews-JW_Marriott_Phuket_Resort_Spa-Mai_Khao_Thalang_District_Phuket.html",
       "rating": 4.7,
-      "reviews": 8171,
+      "reviews": 8173,
       "popularity_rank": 236,
       "typical_price_range": null
     },
@@ -108,8 +108,8 @@
       "tripadvisor_name": "Amari Phuket",
       "tripadvisor_url": "https://www.tripadvisor.com/Hotel_Review-g297930-d305178-Reviews-Amari_Phuket-Patong_Kathu_Phuket.html",
       "rating": 4.7,
-      "reviews": 11053,
-      "popularity_rank": 163,
+      "reviews": 11055,
+      "popularity_rank": 162,
       "typical_price_range": null
     },
     {
@@ -172,17 +172,22 @@
         {
           "code": "Agoda",
           "name": "Agoda.com",
-          "rate": 296.0
+          "rate": 290.0
+        },
+        {
+          "code": "Vio",
+          "name": "Vio.com",
+          "rate": 291.0
         },
         {
           "code": "Hyatt",
           "name": "Hyatt.com",
-          "rate": 338.0
+          "rate": 339.0
         },
         {
           "code": "BookingCom",
           "name": "Booking.com",
-          "rate": 340.0
+          "rate": 342.0
         },
         {
           "code": "CtripTA",
@@ -190,10 +195,10 @@
           "rate": 342.0
         }
       ],
-      "min_rate": 296.0,
+      "min_rate": 290.0,
       "min_site": "Agoda.com",
-      "total": 2072,
-      "total_pln": 9256,
+      "total": 2030,
+      "total_pln": 9069,
       "error": null
     },
     {
@@ -203,6 +208,154 @@
       "chk_in": "2027-01-23",
       "chk_out": "2027-01-30",
       "nights": 7,
+      "rates": [
+        {
+          "code": "BookingCom",
+          "name": "Booking.com",
+          "rate": 202.0
+        },
+        {
+          "code": "Agoda",
+          "name": "Agoda.com",
+          "rate": 239.0
+        }
+      ],
+      "min_rate": 202.0,
+      "min_site": "Booking.com",
+      "total": 1414,
+      "total_pln": 6317,
+      "error": null
+    },
+    {
+      "hotel": "katathani",
+      "stay": "middle",
+      "date": "2027-01-23",
+      "chk_in": "2027-01-23",
+      "chk_out": "2027-01-31",
+      "nights": 8,
+      "rates": [],
+      "min_rate": null,
+      "min_site": null,
+      "total": null,
+      "total_pln": null,
+      "error": null
+    },
+    {
+      "hotel": "hyatt-regency-phuket",
+      "stay": "middle",
+      "date": "2027-01-23",
+      "chk_in": "2027-01-23",
+      "chk_out": "2027-01-31",
+      "nights": 8,
+      "rates": [
+        {
+          "code": "Vio",
+          "name": "Vio.com",
+          "rate": 289.0
+        },
+        {
+          "code": "Hyatt",
+          "name": "Hyatt.com",
+          "rate": 339.0
+        },
+        {
+          "code": "BookingCom",
+          "name": "Booking.com",
+          "rate": 342.0
+        },
+        {
+          "code": "CtripTA",
+          "name": "Trip.com",
+          "rate": 342.0
+        }
+      ],
+      "min_rate": 289.0,
+      "min_site": "Vio.com",
+      "total": 2312,
+      "total_pln": 10328,
+      "error": null
+    },
+    {
+      "hotel": "amari-phuket",
+      "stay": "middle",
+      "date": "2027-01-23",
+      "chk_in": "2027-01-23",
+      "chk_out": "2027-01-31",
+      "nights": 8,
+      "rates": [
+        {
+          "code": "BookingCom",
+          "name": "Booking.com",
+          "rate": 201.0
+        },
+        {
+          "code": "Agoda",
+          "name": "Agoda.com",
+          "rate": 239.0
+        }
+      ],
+      "min_rate": 201.0,
+      "min_site": "Booking.com",
+      "total": 1608,
+      "total_pln": 7183,
+      "error": null
+    },
+    {
+      "hotel": "katathani",
+      "stay": "middle",
+      "date": "2027-01-23",
+      "chk_in": "2027-01-23",
+      "chk_out": "2027-02-01",
+      "nights": 9,
+      "rates": [],
+      "min_rate": null,
+      "min_site": null,
+      "total": null,
+      "total_pln": null,
+      "error": null
+    },
+    {
+      "hotel": "hyatt-regency-phuket",
+      "stay": "middle",
+      "date": "2027-01-23",
+      "chk_in": "2027-01-23",
+      "chk_out": "2027-02-01",
+      "nights": 9,
+      "rates": [
+        {
+          "code": "Hyatt",
+          "name": "Hyatt.com",
+          "rate": 339.0
+        },
+        {
+          "code": "BookingCom",
+          "name": "Booking.com",
+          "rate": 342.0
+        },
+        {
+          "code": "Agoda",
+          "name": "Agoda.com",
+          "rate": 342.0
+        },
+        {
+          "code": "CtripTA",
+          "name": "Trip.com",
+          "rate": 342.0
+        }
+      ],
+      "min_rate": 339.0,
+      "min_site": "Hyatt.com",
+      "total": 3051,
+      "total_pln": 13630,
+      "error": null
+    },
+    {
+      "hotel": "amari-phuket",
+      "stay": "middle",
+      "date": "2027-01-23",
+      "chk_in": "2027-01-23",
+      "chk_out": "2027-02-01",
+      "nights": 9,
       "rates": [
         {
           "code": "BookingCom",
@@ -217,16 +370,149 @@
       ],
       "min_rate": 200.0,
       "min_site": "Booking.com",
-      "total": 1400,
-      "total_pln": 6254,
+      "total": 1800,
+      "total_pln": 8041,
       "error": null
     },
     {
       "hotel": "katathani",
       "stay": "middle",
-      "date": "2027-01-23",
-      "chk_in": "2027-01-23",
+      "date": "2027-01-24",
+      "chk_in": "2027-01-24",
+      "chk_out": "2027-01-30",
+      "nights": 6,
+      "rates": [],
+      "min_rate": null,
+      "min_site": null,
+      "total": null,
+      "total_pln": null,
+      "error": null
+    },
+    {
+      "hotel": "hyatt-regency-phuket",
+      "stay": "middle",
+      "date": "2027-01-24",
+      "chk_in": "2027-01-24",
+      "chk_out": "2027-01-30",
+      "nights": 6,
+      "rates": [
+        {
+          "code": "Agoda",
+          "name": "Agoda.com",
+          "rate": 290.0
+        },
+        {
+          "code": "BookingCom",
+          "name": "Booking.com",
+          "rate": 342.0
+        }
+      ],
+      "min_rate": 290.0,
+      "min_site": "Agoda.com",
+      "total": 1740,
+      "total_pln": 7773,
+      "error": null
+    },
+    {
+      "hotel": "amari-phuket",
+      "stay": "middle",
+      "date": "2027-01-24",
+      "chk_in": "2027-01-24",
+      "chk_out": "2027-01-30",
+      "nights": 6,
+      "rates": [
+        {
+          "code": "BookingCom",
+          "name": "Booking.com",
+          "rate": 198.0
+        }
+      ],
+      "min_rate": 198.0,
+      "min_site": "Booking.com",
+      "total": 1188,
+      "total_pln": 5307,
+      "error": null
+    },
+    {
+      "hotel": "katathani",
+      "stay": "middle",
+      "date": "2027-01-24",
+      "chk_in": "2027-01-24",
       "chk_out": "2027-01-31",
+      "nights": 7,
+      "rates": [],
+      "min_rate": null,
+      "min_site": null,
+      "total": null,
+      "total_pln": null,
+      "error": null
+    },
+    {
+      "hotel": "hyatt-regency-phuket",
+      "stay": "middle",
+      "date": "2027-01-24",
+      "chk_in": "2027-01-24",
+      "chk_out": "2027-01-31",
+      "nights": 7,
+      "rates": [
+        {
+          "code": "Agoda",
+          "name": "Agoda.com",
+          "rate": 290.0
+        },
+        {
+          "code": "Hyatt",
+          "name": "Hyatt.com",
+          "rate": 339.0
+        },
+        {
+          "code": "BookingCom",
+          "name": "Booking.com",
+          "rate": 342.0
+        },
+        {
+          "code": "CtripTA",
+          "name": "Trip.com",
+          "rate": 342.0
+        }
+      ],
+      "min_rate": 290.0,
+      "min_site": "Agoda.com",
+      "total": 2030,
+      "total_pln": 9069,
+      "error": null
+    },
+    {
+      "hotel": "amari-phuket",
+      "stay": "middle",
+      "date": "2027-01-24",
+      "chk_in": "2027-01-24",
+      "chk_out": "2027-01-31",
+      "nights": 7,
+      "rates": [
+        {
+          "code": "BookingCom",
+          "name": "Booking.com",
+          "rate": 198.0
+        },
+        {
+          "code": "Agoda",
+          "name": "Agoda.com",
+          "rate": 234.0
+        }
+      ],
+      "min_rate": 198.0,
+      "min_site": "Booking.com",
+      "total": 1386,
+      "total_pln": 6192,
+      "error": null
+    },
+    {
+      "hotel": "katathani",
+      "stay": "middle",
+      "date": "2027-01-24",
+      "chk_in": "2027-01-24",
+      "chk_out": "2027-02-01",
       "nights": 8,
       "rates": [],
       "min_rate": null,
@@ -238,25 +524,30 @@
     {
       "hotel": "hyatt-regency-phuket",
       "stay": "middle",
-      "date": "2027-01-23",
-      "chk_in": "2027-01-23",
-      "chk_out": "2027-01-31",
+      "date": "2027-01-24",
+      "chk_in": "2027-01-24",
+      "chk_out": "2027-02-01",
       "nights": 8,
       "rates": [
         {
           "code": "Agoda",
           "name": "Agoda.com",
-          "rate": 296.0
+          "rate": 290.0
+        },
+        {
+          "code": "Vio",
+          "name": "Vio.com",
+          "rate": 291.0
         },
         {
           "code": "Hyatt",
           "name": "Hyatt.com",
-          "rate": 338.0
+          "rate": 339.0
         },
         {
           "code": "BookingCom",
           "name": "Booking.com",
-          "rate": 340.0
+          "rate": 342.0
         },
         {
           "code": "CtripTA",
@@ -264,24 +555,24 @@
           "rate": 342.0
         }
       ],
-      "min_rate": 296.0,
+      "min_rate": 290.0,
       "min_site": "Agoda.com",
-      "total": 2368,
-      "total_pln": 10579,
+      "total": 2320,
+      "total_pln": 10364,
       "error": null
     },
     {
       "hotel": "amari-phuket",
       "stay": "middle",
-      "date": "2027-01-23",
-      "chk_in": "2027-01-23",
-      "chk_out": "2027-01-31",
+      "date": "2027-01-24",
+      "chk_in": "2027-01-24",
+      "chk_out": "2027-02-01",
       "nights": 8,
       "rates": [
         {
           "code": "BookingCom",
           "name": "Booking.com",
-          "rate": 200.0
+          "rate": 198.0
         },
         {
           "code": "Agoda",
@@ -289,19 +580,19 @@
           "rate": 236.0
         }
       ],
-      "min_rate": 200.0,
+      "min_rate": 198.0,
       "min_site": "Booking.com",
-      "total": 1600,
-      "total_pln": 7148,
+      "total": 1584,
+      "total_pln": 7076,
       "error": null
     },
     {
       "hotel": "katathani",
       "stay": "middle",
-      "date": "2027-01-23",
-      "chk_in": "2027-01-23",
-      "chk_out": "2027-02-01",
-      "nights": 9,
+      "date": "2027-01-25",
+      "chk_in": "2027-01-25",
+      "chk_out": "2027-01-30",
+      "nights": 5,
       "rates": [],
       "min_rate": null,
       "min_site": null,
@@ -312,69 +603,54 @@
     {
       "hotel": "hyatt-regency-phuket",
       "stay": "middle",
-      "date": "2027-01-23",
-      "chk_in": "2027-01-23",
-      "chk_out": "2027-02-01",
-      "nights": 9,
+      "date": "2027-01-25",
+      "chk_in": "2027-01-25",
+      "chk_out": "2027-01-30",
+      "nights": 5,
       "rates": [
         {
-          "code": "Hyatt",
-          "name": "Hyatt.com",
-          "rate": 338.0
+          "code": "Agoda",
+          "name": "Agoda.com",
+          "rate": 290.0
         },
         {
           "code": "BookingCom",
           "name": "Booking.com",
-          "rate": 340.0
-        },
-        {
-          "code": "Agoda",
-          "name": "Agoda.com",
-          "rate": 340.0
-        },
-        {
-          "code": "CtripTA",
-          "name": "Trip.com",
           "rate": 342.0
         }
       ],
-      "min_rate": 338.0,
-      "min_site": "Hyatt.com",
-      "total": 3042,
-      "total_pln": 13590,
+      "min_rate": 290.0,
+      "min_site": "Agoda.com",
+      "total": 1450,
+      "total_pln": 6478,
       "error": null
     },
     {
       "hotel": "amari-phuket",
       "stay": "middle",
-      "date": "2027-01-23",
-      "chk_in": "2027-01-23",
-      "chk_out": "2027-02-01",
-      "nights": 9,
+      "date": "2027-01-25",
+      "chk_in": "2027-01-25",
+      "chk_out": "2027-01-30",
+      "nights": 5,
       "rates": [
         {
           "code": "BookingCom",
           "name": "Booking.com",
-          "rate": 199.0
-        },
-        {
-          "code": "Agoda",
-          "name": "Agoda.com",
-          "rate": 237.0
+          "rate": 197.0
         }
       ],
-      "min_rate": 199.0,
+      "min_rate": 197.0,
       "min_site": "Booking.com",
-      "total": 1791,
-      "total_pln": 8001,
+      "total": 985,
+      "total_pln": 4400,
       "error": null
     },
     {
       "hotel": "katathani",
       "stay": "middle",
-      "date": "2027-01-24",
-      "chk_in": "2027-01-24",
-      "chk_out": "2027-01-30",
+      "date": "2027-01-25",
+      "chk_in": "2027-01-25",
+      "chk_out": "2027-01-31",
       "nights": 6,
       "rates": [],
       "min_rate": null,
@@ -386,34 +662,34 @@
     {
       "hotel": "hyatt-regency-phuket",
       "stay": "middle",
-      "date": "2027-01-24",
-      "chk_in": "2027-01-24",
-      "chk_out": "2027-01-30",
+      "date": "2027-01-25",
+      "chk_in": "2027-01-25",
+      "chk_out": "2027-01-31",
       "nights": 6,
       "rates": [
         {
           "code": "Agoda",
           "name": "Agoda.com",
-          "rate": 296.0
+          "rate": 290.0
         },
         {
           "code": "BookingCom",
           "name": "Booking.com",
-          "rate": 340.0
+          "rate": 342.0
         }
       ],
-      "min_rate": 296.0,
+      "min_rate": 290.0,
       "min_site": "Agoda.com",
-      "total": 1776,
-      "total_pln": 7934,
+      "total": 1740,
+      "total_pln": 7773,
       "error": null
     },
     {
       "hotel": "amari-phuket",
       "stay": "middle",
-      "date": "2027-01-24",
-      "chk_in": "2027-01-24",
-      "chk_out": "2027-01-30",
+      "date": "2027-01-25",
+      "chk_in": "2027-01-25",
+      "chk_out": "2027-01-31",
       "nights": 6,
       "rates": [
         {
@@ -431,9 +707,9 @@
     {
       "hotel": "katathani",
       "stay": "middle",
-      "date": "2027-01-24",
-      "chk_in": "2027-01-24",
-      "chk_out": "2027-01-31",
+      "date": "2027-01-25",
+      "chk_in": "2027-01-25",
+      "chk_out": "2027-02-01",
       "nights": 7,
       "rates": [],
       "min_rate": null,
@@ -445,30 +721,25 @@
     {
       "hotel": "hyatt-regency-phuket",
       "stay": "middle",
-      "date": "2027-01-24",
-      "chk_in": "2027-01-24",
-      "chk_out": "2027-01-31",
+      "date": "2027-01-25",
+      "chk_in": "2027-01-25",
+      "chk_out": "2027-02-01",
       "nights": 7,
       "rates": [
         {
-          "code": "Vio",
-          "name": "Vio.com",
-          "rate": 288.0
-        },
-        {
           "code": "Agoda",
           "name": "Agoda.com",
-          "rate": 296.0
+          "rate": 290.0
         },
         {
           "code": "Hyatt",
           "name": "Hyatt.com",
-          "rate": 338.0
+          "rate": 339.0
         },
         {
           "code": "BookingCom",
           "name": "Booking.com",
-          "rate": 340.0
+          "rate": 342.0
         },
         {
           "code": "CtripTA",
@@ -476,93 +747,19 @@
           "rate": 342.0
         }
       ],
-      "min_rate": 288.0,
-      "min_site": "Vio.com",
-      "total": 2016,
-      "total_pln": 9006,
-      "error": null
-    },
-    {
-      "hotel": "amari-phuket",
-      "stay": "middle",
-      "date": "2027-01-24",
-      "chk_in": "2027-01-24",
-      "chk_out": "2027-01-31",
-      "nights": 7,
-      "rates": [
-        {
-          "code": "BookingCom",
-          "name": "Booking.com",
-          "rate": 197.0
-        },
-        {
-          "code": "Agoda",
-          "name": "Agoda.com",
-          "rate": 235.0
-        }
-      ],
-      "min_rate": 197.0,
-      "min_site": "Booking.com",
-      "total": 1379,
-      "total_pln": 6160,
-      "error": null
-    },
-    {
-      "hotel": "katathani",
-      "stay": "middle",
-      "date": "2027-01-24",
-      "chk_in": "2027-01-24",
-      "chk_out": "2027-02-01",
-      "nights": 8,
-      "rates": [],
-      "min_rate": null,
-      "min_site": null,
-      "total": null,
-      "total_pln": null,
-      "error": null
-    },
-    {
-      "hotel": "hyatt-regency-phuket",
-      "stay": "middle",
-      "date": "2027-01-24",
-      "chk_in": "2027-01-24",
-      "chk_out": "2027-02-01",
-      "nights": 8,
-      "rates": [
-        {
-          "code": "Agoda",
-          "name": "Agoda.com",
-          "rate": 296.0
-        },
-        {
-          "code": "Hyatt",
-          "name": "Hyatt.com",
-          "rate": 338.0
-        },
-        {
-          "code": "BookingCom",
-          "name": "Booking.com",
-          "rate": 340.0
-        },
-        {
-          "code": "CtripTA",
-          "name": "Trip.com",
-          "rate": 342.0
-        }
-      ],
-      "min_rate": 296.0,
+      "min_rate": 290.0,
       "min_site": "Agoda.com",
-      "total": 2368,
-      "total_pln": 10579,
+      "total": 2030,
+      "total_pln": 9069,
       "error": null
     },
     {
       "hotel": "amari-phuket",
       "stay": "middle",
-      "date": "2027-01-24",
-      "chk_in": "2027-01-24",
+      "date": "2027-01-25",
+      "chk_in": "2027-01-25",
       "chk_out": "2027-02-01",
-      "nights": 8,
+      "nights": 7,
       "rates": [
         {
           "code": "BookingCom",
@@ -577,200 +774,8 @@
       ],
       "min_rate": 197.0,
       "min_site": "Booking.com",
-      "total": 1576,
-      "total_pln": 7040,
-      "error": null
-    },
-    {
-      "hotel": "katathani",
-      "stay": "middle",
-      "date": "2027-01-25",
-      "chk_in": "2027-01-25",
-      "chk_out": "2027-01-30",
-      "nights": 5,
-      "rates": [],
-      "min_rate": null,
-      "min_site": null,
-      "total": null,
-      "total_pln": null,
-      "error": null
-    },
-    {
-      "hotel": "hyatt-regency-phuket",
-      "stay": "middle",
-      "date": "2027-01-25",
-      "chk_in": "2027-01-25",
-      "chk_out": "2027-01-30",
-      "nights": 5,
-      "rates": [
-        {
-          "code": "Agoda",
-          "name": "Agoda.com",
-          "rate": 296.0
-        },
-        {
-          "code": "BookingCom",
-          "name": "Booking.com",
-          "rate": 340.0
-        }
-      ],
-      "min_rate": 296.0,
-      "min_site": "Agoda.com",
-      "total": 1480,
-      "total_pln": 6612,
-      "error": null
-    },
-    {
-      "hotel": "amari-phuket",
-      "stay": "middle",
-      "date": "2027-01-25",
-      "chk_in": "2027-01-25",
-      "chk_out": "2027-01-30",
-      "nights": 5,
-      "rates": [
-        {
-          "code": "BookingCom",
-          "name": "Booking.com",
-          "rate": 196.0
-        }
-      ],
-      "min_rate": 196.0,
-      "min_site": "Booking.com",
-      "total": 980,
-      "total_pln": 4378,
-      "error": null
-    },
-    {
-      "hotel": "katathani",
-      "stay": "middle",
-      "date": "2027-01-25",
-      "chk_in": "2027-01-25",
-      "chk_out": "2027-01-31",
-      "nights": 6,
-      "rates": [],
-      "min_rate": null,
-      "min_site": null,
-      "total": null,
-      "total_pln": null,
-      "error": null
-    },
-    {
-      "hotel": "hyatt-regency-phuket",
-      "stay": "middle",
-      "date": "2027-01-25",
-      "chk_in": "2027-01-25",
-      "chk_out": "2027-01-31",
-      "nights": 6,
-      "rates": [
-        {
-          "code": "Agoda",
-          "name": "Agoda.com",
-          "rate": 296.0
-        },
-        {
-          "code": "BookingCom",
-          "name": "Booking.com",
-          "rate": 340.0
-        }
-      ],
-      "min_rate": 296.0,
-      "min_site": "Agoda.com",
-      "total": 1776,
-      "total_pln": 7934,
-      "error": null
-    },
-    {
-      "hotel": "amari-phuket",
-      "stay": "middle",
-      "date": "2027-01-25",
-      "chk_in": "2027-01-25",
-      "chk_out": "2027-01-31",
-      "nights": 6,
-      "rates": [
-        {
-          "code": "BookingCom",
-          "name": "Booking.com",
-          "rate": 196.0
-        }
-      ],
-      "min_rate": 196.0,
-      "min_site": "Booking.com",
-      "total": 1176,
-      "total_pln": 5254,
-      "error": null
-    },
-    {
-      "hotel": "katathani",
-      "stay": "middle",
-      "date": "2027-01-25",
-      "chk_in": "2027-01-25",
-      "chk_out": "2027-02-01",
-      "nights": 7,
-      "rates": [],
-      "min_rate": null,
-      "min_site": null,
-      "total": null,
-      "total_pln": null,
-      "error": null
-    },
-    {
-      "hotel": "hyatt-regency-phuket",
-      "stay": "middle",
-      "date": "2027-01-25",
-      "chk_in": "2027-01-25",
-      "chk_out": "2027-02-01",
-      "nights": 7,
-      "rates": [
-        {
-          "code": "Agoda",
-          "name": "Agoda.com",
-          "rate": 296.0
-        },
-        {
-          "code": "Hyatt",
-          "name": "Hyatt.com",
-          "rate": 338.0
-        },
-        {
-          "code": "BookingCom",
-          "name": "Booking.com",
-          "rate": 340.0
-        },
-        {
-          "code": "CtripTA",
-          "name": "Trip.com",
-          "rate": 342.0
-        }
-      ],
-      "min_rate": 296.0,
-      "min_site": "Agoda.com",
-      "total": 2072,
-      "total_pln": 9256,
-      "error": null
-    },
-    {
-      "hotel": "amari-phuket",
-      "stay": "middle",
-      "date": "2027-01-25",
-      "chk_in": "2027-01-25",
-      "chk_out": "2027-02-01",
-      "nights": 7,
-      "rates": [
-        {
-          "code": "BookingCom",
-          "name": "Booking.com",
-          "rate": 196.0
-        },
-        {
-          "code": "Agoda",
-          "name": "Agoda.com",
-          "rate": 233.0
-        }
-      ],
-      "min_rate": 196.0,
-      "min_site": "Booking.com",
-      "total": 1372,
-      "total_pln": 6129,
+      "total": 1379,
+      "total_pln": 6160,
       "error": null
     },
     {
@@ -782,25 +787,20 @@
       "nights": 7,
       "rates": [
         {
-          "code": "Vio",
-          "name": "Vio.com",
-          "rate": 1042.0
-        },
-        {
           "code": "Agoda",
           "name": "Agoda.com",
-          "rate": 1195.0
+          "rate": 1202.0
         },
         {
           "code": "BookingCom",
           "name": "Booking.com",
-          "rate": 1204.0
+          "rate": 1211.0
         }
       ],
-      "min_rate": 1042.0,
-      "min_site": "Vio.com",
-      "total": 7294,
-      "total_pln": 32584,
+      "min_rate": 1202.0,
+      "min_site": "Agoda.com",
+      "total": 8414,
+      "total_pln": 37588,
       "error": null
     },
     {
@@ -814,17 +814,17 @@
         {
           "code": "Accor",
           "name": "Pullman",
-          "rate": 407.0
+          "rate": 409.0
         },
         {
           "code": "Agoda",
           "name": "Agoda.com",
-          "rate": 407.0
+          "rate": 410.0
         },
         {
           "code": "BookingCom",
           "name": "Booking.com",
-          "rate": 451.0
+          "rate": 453.0
         },
         {
           "code": "CtripTA",
@@ -832,10 +832,10 @@
           "rate": 454.0
         }
       ],
-      "min_rate": 407.0,
+      "min_rate": 409.0,
       "min_site": "Pullman",
-      "total": 2849,
-      "total_pln": 12727,
+      "total": 2863,
+      "total_pln": 12790,
       "error": null
     },
     {
@@ -849,13 +849,13 @@
         {
           "code": "Agoda",
           "name": "Agoda.com",
-          "rate": 362.0
+          "rate": 372.0
         }
       ],
-      "min_rate": 362.0,
+      "min_rate": 372.0,
       "min_site": "Agoda.com",
-      "total": 2534,
-      "total_pln": 11320,
+      "total": 2604,
+      "total_pln": 11633,
       "error": null
     },
     {
@@ -869,23 +869,23 @@
         {
           "code": "Accor",
           "name": "Movenpick",
-          "rate": 1088.0
+          "rate": 1093.0
         },
         {
           "code": "Agoda",
           "name": "Agoda.com",
-          "rate": 1195.0
+          "rate": 1202.0
         },
         {
           "code": "BookingCom",
           "name": "Booking.com",
-          "rate": 1204.0
+          "rate": 1211.0
         }
       ],
-      "min_rate": 1088.0,
+      "min_rate": 1093.0,
       "min_site": "Movenpick",
-      "total": 8704,
-      "total_pln": 38883,
+      "total": 8744,
+      "total_pln": 39062,
       "error": null
     },
     {
@@ -899,17 +899,17 @@
         {
           "code": "Accor",
           "name": "Pullman",
-          "rate": 404.0
+          "rate": 406.0
         },
         {
           "code": "Agoda",
           "name": "Agoda.com",
-          "rate": 404.0
+          "rate": 406.0
         },
         {
           "code": "BookingCom",
           "name": "Booking.com",
-          "rate": 447.0
+          "rate": 450.0
         },
         {
           "code": "CtripTA",
@@ -917,10 +917,10 @@
           "rate": 450.0
         }
       ],
-      "min_rate": 404.0,
+      "min_rate": 406.0,
       "min_site": "Pullman",
-      "total": 3232,
-      "total_pln": 14438,
+      "total": 3248,
+      "total_pln": 14510,
       "error": null
     },
     {
@@ -934,13 +934,13 @@
         {
           "code": "Agoda",
           "name": "Agoda.com",
-          "rate": 359.0
+          "rate": 369.0
         }
       ],
-      "min_rate": 359.0,
+      "min_rate": 369.0,
       "min_site": "Agoda.com",
-      "total": 2872,
-      "total_pln": 12830,
+      "total": 2952,
+      "total_pln": 13187,
       "error": null
     },
     {
@@ -954,23 +954,23 @@
         {
           "code": "Accor",
           "name": "Movenpick",
-          "rate": 1088.0
+          "rate": 1093.0
         },
         {
           "code": "Agoda",
           "name": "Agoda.com",
-          "rate": 1195.0
+          "rate": 1202.0
         },
         {
           "code": "BookingCom",
           "name": "Booking.com",
-          "rate": 1204.0
+          "rate": 1211.0
         }
       ],
-      "min_rate": 1088.0,
+      "min_rate": 1093.0,
       "min_site": "Movenpick",
-      "total": 9792,
-      "total_pln": 43744,
+      "total": 9837,
+      "total_pln": 43945,
       "error": null
     },
     {
@@ -984,17 +984,17 @@
         {
           "code": "Accor",
           "name": "Pullman",
-          "rate": 401.0
+          "rate": 403.0
         },
         {
           "code": "Agoda",
           "name": "Agoda.com",
-          "rate": 401.0
+          "rate": 404.0
         },
         {
           "code": "BookingCom",
           "name": "Booking.com",
-          "rate": 444.0
+          "rate": 447.0
         },
         {
           "code": "CtripTA",
@@ -1002,10 +1002,10 @@
           "rate": 447.0
         }
       ],
-      "min_rate": 401.0,
+      "min_rate": 403.0,
       "min_site": "Pullman",
-      "total": 3609,
-      "total_pln": 16122,
+      "total": 3627,
+      "total_pln": 16203,
       "error": null
     },
     {
@@ -1019,13 +1019,13 @@
         {
           "code": "Agoda",
           "name": "Agoda.com",
-          "rate": 357.0
+          "rate": 356.0
         }
       ],
-      "min_rate": 357.0,
+      "min_rate": 356.0,
       "min_site": "Agoda.com",
-      "total": 3213,
-      "total_pln": 14353,
+      "total": 3204,
+      "total_pln": 14313,
       "error": null
     },
     {
@@ -1039,18 +1039,18 @@
         {
           "code": "Agoda",
           "name": "Agoda.com",
-          "rate": 1270.0
+          "rate": 1278.0
         },
         {
           "code": "BookingCom",
           "name": "Booking.com",
-          "rate": 1279.0
+          "rate": 1287.0
         }
       ],
-      "min_rate": 1270.0,
+      "min_rate": 1278.0,
       "min_site": "Agoda.com",
-      "total": 7620,
-      "total_pln": 34041,
+      "total": 7668,
+      "total_pln": 34255,
       "error": null
     },
     {
@@ -1090,11 +1090,17 @@
       "chk_in": "2027-01-24",
       "chk_out": "2027-01-30",
       "nights": 6,
-      "rates": [],
-      "min_rate": null,
-      "min_site": null,
-      "total": null,
-      "total_pln": null,
+      "rates": [
+        {
+          "code": "Agoda",
+          "name": "Agoda.com",
+          "rate": 360.0
+        }
+      ],
+      "min_rate": 360.0,
+      "min_site": "Agoda.com",
+      "total": 2160,
+      "total_pln": 9649,
       "error": null
     },
     {
@@ -1108,18 +1114,18 @@
         {
           "code": "Agoda",
           "name": "Agoda.com",
-          "rate": 1195.0
+          "rate": 1202.0
         },
         {
           "code": "BookingCom",
           "name": "Booking.com",
-          "rate": 1204.0
+          "rate": 1211.0
         }
       ],
-      "min_rate": 1195.0,
+      "min_rate": 1202.0,
       "min_site": "Agoda.com",
-      "total": 8365,
-      "total_pln": 37369,
+      "total": 8414,
+      "total_pln": 37588,
       "error": null
     },
     {
@@ -1143,12 +1149,12 @@
         {
           "code": "BookingCom",
           "name": "Booking.com",
-          "rate": 428.0
+          "rate": 429.0
         },
         {
           "code": "CtripTA",
           "name": "Trip.com",
-          "rate": 431.0
+          "rate": 430.0
         }
       ],
       "min_rate": 387.0,
@@ -1168,13 +1174,13 @@
         {
           "code": "Agoda",
           "name": "Agoda.com",
-          "rate": 349.0
+          "rate": 359.0
         }
       ],
-      "min_rate": 349.0,
+      "min_rate": 359.0,
       "min_site": "Agoda.com",
-      "total": 2443,
-      "total_pln": 10914,
+      "total": 2513,
+      "total_pln": 11226,
       "error": null
     },
     {
@@ -1188,23 +1194,23 @@
         {
           "code": "Accor",
           "name": "Movenpick",
-          "rate": 1088.0
+          "rate": 1093.0
         },
         {
           "code": "Agoda",
           "name": "Agoda.com",
-          "rate": 1195.0
+          "rate": 1202.0
         },
         {
           "code": "BookingCom",
           "name": "Booking.com",
-          "rate": 1204.0
+          "rate": 1211.0
         }
       ],
-      "min_rate": 1088.0,
+      "min_rate": 1093.0,
       "min_site": "Movenpick",
-      "total": 8704,
-      "total_pln": 38883,
+      "total": 8744,
+      "total_pln": 39062,
       "error": null
     },
     {
@@ -1223,17 +1229,12 @@
         {
           "code": "Agoda",
           "name": "Agoda.com",
-          "rate": 386.0
+          "rate": 387.0
         },
         {
           "code": "BookingCom",
           "name": "Booking.com",
-          "rate": 427.0
-        },
-        {
-          "code": "CtripTA",
-          "name": "Trip.com",
-          "rate": 431.0
+          "rate": 428.0
         }
       ],
       "min_rate": 386.0,
@@ -1253,13 +1254,13 @@
         {
           "code": "Agoda",
           "name": "Agoda.com",
-          "rate": 356.0
+          "rate": 354.0
         }
       ],
-      "min_rate": 356.0,
+      "min_rate": 354.0,
       "min_site": "Agoda.com",
-      "total": 2848,
-      "total_pln": 12723,
+      "total": 2832,
+      "total_pln": 12651,
       "error": null
     },
     {
@@ -1273,18 +1274,18 @@
         {
           "code": "Agoda",
           "name": "Agoda.com",
-          "rate": 1270.0
+          "rate": 1278.0
         },
         {
           "code": "BookingCom",
           "name": "Booking.com",
-          "rate": 1279.0
+          "rate": 1287.0
         }
       ],
-      "min_rate": 1270.0,
+      "min_rate": 1278.0,
       "min_site": "Agoda.com",
-      "total": 6350,
-      "total_pln": 28367,
+      "total": 6390,
+      "total_pln": 28546,
       "error": null
     },
     {
@@ -1296,13 +1297,13 @@
       "nights": 5,
       "rates": [
         {
-          "code": "Agoda",
-          "name": "Agoda.com",
+          "code": "Accor",
+          "name": "Pullman",
           "rate": 411.0
         },
         {
-          "code": "Accor",
-          "name": "Pullman",
+          "code": "Agoda",
+          "name": "Agoda.com",
           "rate": 412.0
         },
         {
@@ -1313,11 +1314,11 @@
         {
           "code": "CtripTA",
           "name": "Trip.com",
-          "rate": 459.0
+          "rate": 456.0
         }
       ],
       "min_rate": 411.0,
-      "min_site": "Agoda.com",
+      "min_site": "Pullman",
       "total": 2055,
       "total_pln": 9180,
       "error": null
@@ -1347,18 +1348,18 @@
         {
           "code": "Agoda",
           "name": "Agoda.com",
-          "rate": 1270.0
+          "rate": 1278.0
         },
         {
           "code": "BookingCom",
           "name": "Booking.com",
-          "rate": 1279.0
+          "rate": 1287.0
         }
       ],
-      "min_rate": 1270.0,
+      "min_rate": 1278.0,
       "min_site": "Agoda.com",
-      "total": 7620,
-      "total_pln": 34041,
+      "total": 7668,
+      "total_pln": 34255,
       "error": null
     },
     {
@@ -1398,11 +1399,17 @@
       "chk_in": "2027-01-25",
       "chk_out": "2027-01-31",
       "nights": 6,
-      "rates": [],
-      "min_rate": null,
-      "min_site": null,
-      "total": null,
-      "total_pln": null,
+      "rates": [
+        {
+          "code": "Agoda",
+          "name": "Agoda.com",
+          "rate": 356.0
+        }
+      ],
+      "min_rate": 356.0,
+      "min_site": "Agoda.com",
+      "total": 2136,
+      "total_pln": 9542,
       "error": null
     },
     {
@@ -1416,18 +1423,18 @@
         {
           "code": "Agoda",
           "name": "Agoda.com",
-          "rate": 1195.0
+          "rate": 1202.0
         },
         {
           "code": "BookingCom",
           "name": "Booking.com",
-          "rate": 1204.0
+          "rate": 1211.0
         }
       ],
-      "min_rate": 1195.0,
+      "min_rate": 1202.0,
       "min_site": "Agoda.com",
-      "total": 8365,
-      "total_pln": 37369,
+      "total": 8414,
+      "total_pln": 37588,
       "error": null
     },
     {
@@ -1451,12 +1458,12 @@
         {
           "code": "BookingCom",
           "name": "Booking.com",
-          "rate": 428.0
+          "rate": 429.0
         },
         {
           "code": "CtripTA",
           "name": "Trip.com",
-          "rate": 431.0
+          "rate": 429.0
         }
       ],
       "min_rate": 387.0,
@@ -1476,13 +1483,13 @@
         {
           "code": "Agoda",
           "name": "Agoda.com",
-          "rate": 344.0
+          "rate": 354.0
         }
       ],
-      "min_rate": 344.0,
+      "min_rate": 354.0,
       "min_site": "Agoda.com",
-      "total": 2408,
-      "total_pln": 10757,
+      "total": 2478,
+      "total_pln": 11070,
       "error": null
     },
     {
@@ -1494,14 +1501,14 @@
       "nights": 7,
       "rates": [
         {
-          "code": "Agoda",
-          "name": "Agoda.com",
-          "rate": 459.0
-        },
-        {
           "code": "BookingCom",
           "name": "Booking.com",
-          "rate": 459.0
+          "rate": 462.0
+        },
+        {
+          "code": "Agoda",
+          "name": "Agoda.com",
+          "rate": 462.0
         },
         {
           "code": "CtripTA",
@@ -1509,10 +1516,10 @@
           "rate": 1200.0
         }
       ],
-      "min_rate": 459.0,
-      "min_site": "Agoda.com",
-      "total": 3213,
-      "total_pln": 14353,
+      "min_rate": 462.0,
+      "min_site": "Booking.com",
+      "total": 3234,
+      "total_pln": 14447,
       "error": null
     },
     {
@@ -1526,28 +1533,28 @@
         {
           "code": "Agoda",
           "name": "Agoda.com",
-          "rate": 361.0
+          "rate": 363.0
         },
         {
           "code": "BookingCom",
           "name": "Booking.com",
-          "rate": 437.0
-        },
-        {
-          "code": "Marriott1",
-          "name": "LeMeridien.com",
           "rate": 440.0
         },
         {
           "code": "CtripTA",
           "name": "Trip.com",
-          "rate": 440.0
+          "rate": 441.0
+        },
+        {
+          "code": "Marriott1",
+          "name": "LeMeridien.com",
+          "rate": 442.0
         }
       ],
-      "min_rate": 361.0,
+      "min_rate": 363.0,
       "min_site": "Agoda.com",
-      "total": 2527,
-      "total_pln": 11289,
+      "total": 2541,
+      "total_pln": 11351,
       "error": null
     },
     {
@@ -1561,23 +1568,18 @@
         {
           "code": "Agoda",
           "name": "Agoda.com",
-          "rate": 216.0
-        },
-        {
-          "code": "Vio",
-          "name": "Vio.com",
-          "rate": 219.0
+          "rate": 220.0
         },
         {
           "code": "BookingCom",
           "name": "Booking.com",
-          "rate": 249.0
+          "rate": 250.0
         }
       ],
-      "min_rate": 216.0,
+      "min_rate": 220.0,
       "min_site": "Agoda.com",
-      "total": 1512,
-      "total_pln": 6755,
+      "total": 1540,
+      "total_pln": 6880,
       "error": null
     },
     {
@@ -1589,14 +1591,14 @@
       "nights": 8,
       "rates": [
         {
-          "code": "Agoda",
-          "name": "Agoda.com",
-          "rate": 455.0
-        },
-        {
           "code": "BookingCom",
           "name": "Booking.com",
-          "rate": 455.0
+          "rate": 457.0
+        },
+        {
+          "code": "Agoda",
+          "name": "Agoda.com",
+          "rate": 457.0
         },
         {
           "code": "CtripTA",
@@ -1604,10 +1606,10 @@
           "rate": 1171.0
         }
       ],
-      "min_rate": 455.0,
-      "min_site": "Agoda.com",
-      "total": 3640,
-      "total_pln": 16261,
+      "min_rate": 457.0,
+      "min_site": "Booking.com",
+      "total": 3656,
+      "total_pln": 16332,
       "error": null
     },
     {
@@ -1621,28 +1623,28 @@
         {
           "code": "Agoda",
           "name": "Agoda.com",
-          "rate": 361.0
+          "rate": 363.0
         },
         {
           "code": "BookingCom",
           "name": "Booking.com",
-          "rate": 437.0
-        },
-        {
-          "code": "Marriott1",
-          "name": "LeMeridien.com",
           "rate": 440.0
         },
         {
           "code": "CtripTA",
           "name": "Trip.com",
-          "rate": 440.0
+          "rate": 441.0
+        },
+        {
+          "code": "Marriott1",
+          "name": "LeMeridien.com",
+          "rate": 442.0
         }
       ],
-      "min_rate": 361.0,
+      "min_rate": 363.0,
       "min_site": "Agoda.com",
-      "total": 2888,
-      "total_pln": 12902,
+      "total": 2904,
+      "total_pln": 12973,
       "error": null
     },
     {
@@ -1656,18 +1658,23 @@
         {
           "code": "Agoda",
           "name": "Agoda.com",
-          "rate": 216.0
+          "rate": 220.0
+        },
+        {
+          "code": "Vio",
+          "name": "Vio.com",
+          "rate": 223.0
         },
         {
           "code": "BookingCom",
           "name": "Booking.com",
-          "rate": 249.0
+          "rate": 250.0
         }
       ],
-      "min_rate": 216.0,
+      "min_rate": 220.0,
       "min_site": "Agoda.com",
-      "total": 1728,
-      "total_pln": 7719,
+      "total": 1760,
+      "total_pln": 7862,
       "error": null
     },
     {
@@ -1679,14 +1686,14 @@
       "nights": 9,
       "rates": [
         {
-          "code": "Agoda",
-          "name": "Agoda.com",
-          "rate": 451.0
-        },
-        {
           "code": "BookingCom",
           "name": "Booking.com",
-          "rate": 451.0
+          "rate": 454.0
+        },
+        {
+          "code": "Agoda",
+          "name": "Agoda.com",
+          "rate": 454.0
         },
         {
           "code": "CtripTA",
@@ -1694,10 +1701,10 @@
           "rate": 1149.0
         }
       ],
-      "min_rate": 451.0,
-      "min_site": "Agoda.com",
-      "total": 4059,
-      "total_pln": 18133,
+      "min_rate": 454.0,
+      "min_site": "Booking.com",
+      "total": 4086,
+      "total_pln": 18253,
       "error": null
     },
     {
@@ -1711,28 +1718,23 @@
         {
           "code": "Agoda",
           "name": "Agoda.com",
-          "rate": 361.0
+          "rate": 363.0
         },
         {
           "code": "BookingCom",
           "name": "Booking.com",
-          "rate": 437.0
+          "rate": 440.0
         },
         {
           "code": "Marriott1",
           "name": "LeMeridien.com",
-          "rate": 440.0
-        },
-        {
-          "code": "CtripTA",
-          "name": "Trip.com",
-          "rate": 440.0
+          "rate": 442.0
         }
       ],
-      "min_rate": 361.0,
+      "min_rate": 363.0,
       "min_site": "Agoda.com",
-      "total": 3249,
-      "total_pln": 14514,
+      "total": 3267,
+      "total_pln": 14595,
       "error": null
     },
     {
@@ -1744,20 +1746,20 @@
       "nights": 9,
       "rates": [
         {
-          "code": "Agoda",
-          "name": "Agoda.com",
-          "rate": 216.0
-        },
-        {
           "code": "BookingCom",
           "name": "Booking.com",
-          "rate": 249.0
+          "rate": 219.0
+        },
+        {
+          "code": "Agoda",
+          "name": "Agoda.com",
+          "rate": 220.0
         }
       ],
-      "min_rate": 216.0,
-      "min_site": "Agoda.com",
-      "total": 1944,
-      "total_pln": 8684,
+      "min_rate": 219.0,
+      "min_site": "Booking.com",
+      "total": 1971,
+      "total_pln": 8805,
       "error": null
     },
     {
@@ -1769,25 +1771,25 @@
       "nights": 6,
       "rates": [
         {
-          "code": "Agoda",
-          "name": "Agoda.com",
-          "rate": 488.0
-        },
-        {
           "code": "BookingCom",
           "name": "Booking.com",
-          "rate": 488.0
+          "rate": 491.0
+        },
+        {
+          "code": "Agoda",
+          "name": "Agoda.com",
+          "rate": 491.0
         },
         {
           "code": "CtripTA",
           "name": "Trip.com",
-          "rate": 1320.0
+          "rate": 1321.0
         }
       ],
-      "min_rate": 488.0,
-      "min_site": "Agoda.com",
-      "total": 2928,
-      "total_pln": 13080,
+      "min_rate": 491.0,
+      "min_site": "Booking.com",
+      "total": 2946,
+      "total_pln": 13161,
       "error": null
     },
     {
@@ -1801,28 +1803,28 @@
         {
           "code": "Agoda",
           "name": "Agoda.com",
-          "rate": 361.0
+          "rate": 363.0
         },
         {
           "code": "BookingCom",
           "name": "Booking.com",
-          "rate": 437.0
-        },
-        {
-          "code": "Marriott1",
-          "name": "LeMeridien.com",
           "rate": 440.0
         },
         {
           "code": "CtripTA",
           "name": "Trip.com",
-          "rate": 440.0
+          "rate": 441.0
+        },
+        {
+          "code": "Marriott1",
+          "name": "LeMeridien.com",
+          "rate": 442.0
         }
       ],
-      "min_rate": 361.0,
+      "min_rate": 363.0,
       "min_site": "Agoda.com",
-      "total": 2166,
-      "total_pln": 9676,
+      "total": 2178,
+      "total_pln": 9730,
       "error": null
     },
     {
@@ -1836,18 +1838,18 @@
         {
           "code": "Agoda",
           "name": "Agoda.com",
-          "rate": 216.0
+          "rate": 220.0
         },
         {
           "code": "BookingCom",
           "name": "Booking.com",
-          "rate": 269.0
+          "rate": 271.0
         }
       ],
-      "min_rate": 216.0,
+      "min_rate": 220.0,
       "min_site": "Agoda.com",
-      "total": 1296,
-      "total_pln": 5790,
+      "total": 1320,
+      "total_pln": 5897,
       "error": null
     },
     {
@@ -1859,14 +1861,14 @@
       "nights": 7,
       "rates": [
         {
-          "code": "Agoda",
-          "name": "Agoda.com",
-          "rate": 478.0
-        },
-        {
           "code": "BookingCom",
           "name": "Booking.com",
-          "rate": 478.0
+          "rate": 480.0
+        },
+        {
+          "code": "Agoda",
+          "name": "Agoda.com",
+          "rate": 480.0
         },
         {
           "code": "CtripTA",
@@ -1874,195 +1876,180 @@
           "rate": 1241.0
         }
       ],
+      "min_rate": 480.0,
+      "min_site": "Booking.com",
+      "total": 3360,
+      "total_pln": 15010,
+      "error": null
+    },
+    {
+      "hotel": "le-meridien-phuket",
+      "stay": "middle",
+      "date": "2027-01-24",
+      "chk_in": "2027-01-24",
+      "chk_out": "2027-01-31",
+      "nights": 7,
+      "rates": [
+        {
+          "code": "Agoda",
+          "name": "Agoda.com",
+          "rate": 363.0
+        },
+        {
+          "code": "BookingCom",
+          "name": "Booking.com",
+          "rate": 440.0
+        },
+        {
+          "code": "Marriott1",
+          "name": "LeMeridien.com",
+          "rate": 442.0
+        },
+        {
+          "code": "CtripTA",
+          "name": "Trip.com",
+          "rate": 1037.0
+        }
+      ],
+      "min_rate": 363.0,
+      "min_site": "Agoda.com",
+      "total": 2541,
+      "total_pln": 11351,
+      "error": null
+    },
+    {
+      "hotel": "kalima-patong",
+      "stay": "middle",
+      "date": "2027-01-24",
+      "chk_in": "2027-01-24",
+      "chk_out": "2027-01-31",
+      "nights": 7,
+      "rates": [
+        {
+          "code": "Agoda",
+          "name": "Agoda.com",
+          "rate": 220.0
+        },
+        {
+          "code": "BookingCom",
+          "name": "Booking.com",
+          "rate": 250.0
+        }
+      ],
+      "min_rate": 220.0,
+      "min_site": "Agoda.com",
+      "total": 1540,
+      "total_pln": 6880,
+      "error": null
+    },
+    {
+      "hotel": "angsana-laguna",
+      "stay": "middle",
+      "date": "2027-01-24",
+      "chk_in": "2027-01-24",
+      "chk_out": "2027-02-01",
+      "nights": 8,
+      "rates": [
+        {
+          "code": "BookingCom",
+          "name": "Booking.com",
+          "rate": 474.0
+        },
+        {
+          "code": "Agoda",
+          "name": "Agoda.com",
+          "rate": 474.0
+        }
+      ],
+      "min_rate": 474.0,
+      "min_site": "Booking.com",
+      "total": 3792,
+      "total_pln": 16940,
+      "error": null
+    },
+    {
+      "hotel": "le-meridien-phuket",
+      "stay": "middle",
+      "date": "2027-01-24",
+      "chk_in": "2027-01-24",
+      "chk_out": "2027-02-01",
+      "nights": 8,
+      "rates": [
+        {
+          "code": "Agoda",
+          "name": "Agoda.com",
+          "rate": 363.0
+        },
+        {
+          "code": "BookingCom",
+          "name": "Booking.com",
+          "rate": 440.0
+        },
+        {
+          "code": "Marriott1",
+          "name": "LeMeridien.com",
+          "rate": 442.0
+        }
+      ],
+      "min_rate": 363.0,
+      "min_site": "Agoda.com",
+      "total": 2904,
+      "total_pln": 12973,
+      "error": null
+    },
+    {
+      "hotel": "kalima-patong",
+      "stay": "middle",
+      "date": "2027-01-24",
+      "chk_in": "2027-01-24",
+      "chk_out": "2027-02-01",
+      "nights": 8,
+      "rates": [
+        {
+          "code": "Agoda",
+          "name": "Agoda.com",
+          "rate": 220.0
+        },
+        {
+          "code": "BookingCom",
+          "name": "Booking.com",
+          "rate": 250.0
+        }
+      ],
+      "min_rate": 220.0,
+      "min_site": "Agoda.com",
+      "total": 1760,
+      "total_pln": 7862,
+      "error": null
+    },
+    {
+      "hotel": "angsana-laguna",
+      "stay": "middle",
+      "date": "2027-01-25",
+      "chk_in": "2027-01-25",
+      "chk_out": "2027-01-30",
+      "nights": 5,
+      "rates": [
+        {
+          "code": "BookingCom",
+          "name": "Booking.com",
+          "rate": 478.0
+        },
+        {
+          "code": "Agoda",
+          "name": "Agoda.com",
+          "rate": 478.0
+        },
+        {
+          "code": "CtripTA",
+          "name": "Trip.com",
+          "rate": 1256.0
+        }
+      ],
       "min_rate": 478.0,
-      "min_site": "Agoda.com",
-      "total": 3346,
-      "total_pln": 14948,
-      "error": null
-    },
-    {
-      "hotel": "le-meridien-phuket",
-      "stay": "middle",
-      "date": "2027-01-24",
-      "chk_in": "2027-01-24",
-      "chk_out": "2027-01-31",
-      "nights": 7,
-      "rates": [
-        {
-          "code": "Agoda",
-          "name": "Agoda.com",
-          "rate": 361.0
-        },
-        {
-          "code": "BookingCom",
-          "name": "Booking.com",
-          "rate": 437.0
-        },
-        {
-          "code": "Marriott1",
-          "name": "LeMeridien.com",
-          "rate": 440.0
-        },
-        {
-          "code": "CtripTA",
-          "name": "Trip.com",
-          "rate": 440.0
-        }
-      ],
-      "min_rate": 361.0,
-      "min_site": "Agoda.com",
-      "total": 2527,
-      "total_pln": 11289,
-      "error": null
-    },
-    {
-      "hotel": "kalima-patong",
-      "stay": "middle",
-      "date": "2027-01-24",
-      "chk_in": "2027-01-24",
-      "chk_out": "2027-01-31",
-      "nights": 7,
-      "rates": [
-        {
-          "code": "Agoda",
-          "name": "Agoda.com",
-          "rate": 216.0
-        },
-        {
-          "code": "BookingCom",
-          "name": "Booking.com",
-          "rate": 249.0
-        }
-      ],
-      "min_rate": 216.0,
-      "min_site": "Agoda.com",
-      "total": 1512,
-      "total_pln": 6755,
-      "error": null
-    },
-    {
-      "hotel": "angsana-laguna",
-      "stay": "middle",
-      "date": "2027-01-24",
-      "chk_in": "2027-01-24",
-      "chk_out": "2027-02-01",
-      "nights": 8,
-      "rates": [
-        {
-          "code": "BookingCom",
-          "name": "Booking.com",
-          "rate": 471.0
-        },
-        {
-          "code": "Agoda",
-          "name": "Agoda.com",
-          "rate": 471.0
-        },
-        {
-          "code": "CtripTA",
-          "name": "Trip.com",
-          "rate": 1207.0
-        }
-      ],
-      "min_rate": 471.0,
       "min_site": "Booking.com",
-      "total": 3768,
-      "total_pln": 16833,
-      "error": null
-    },
-    {
-      "hotel": "le-meridien-phuket",
-      "stay": "middle",
-      "date": "2027-01-24",
-      "chk_in": "2027-01-24",
-      "chk_out": "2027-02-01",
-      "nights": 8,
-      "rates": [
-        {
-          "code": "Agoda",
-          "name": "Agoda.com",
-          "rate": 361.0
-        },
-        {
-          "code": "BookingCom",
-          "name": "Booking.com",
-          "rate": 437.0
-        },
-        {
-          "code": "Marriott1",
-          "name": "LeMeridien.com",
-          "rate": 440.0
-        },
-        {
-          "code": "CtripTA",
-          "name": "Trip.com",
-          "rate": 440.0
-        }
-      ],
-      "min_rate": 361.0,
-      "min_site": "Agoda.com",
-      "total": 2888,
-      "total_pln": 12902,
-      "error": null
-    },
-    {
-      "hotel": "kalima-patong",
-      "stay": "middle",
-      "date": "2027-01-24",
-      "chk_in": "2027-01-24",
-      "chk_out": "2027-02-01",
-      "nights": 8,
-      "rates": [
-        {
-          "code": "Agoda",
-          "name": "Agoda.com",
-          "rate": 216.0
-        },
-        {
-          "code": "Vio",
-          "name": "Vio.com",
-          "rate": 219.0
-        },
-        {
-          "code": "BookingCom",
-          "name": "Booking.com",
-          "rate": 249.0
-        }
-      ],
-      "min_rate": 216.0,
-      "min_site": "Agoda.com",
-      "total": 1728,
-      "total_pln": 7719,
-      "error": null
-    },
-    {
-      "hotel": "angsana-laguna",
-      "stay": "middle",
-      "date": "2027-01-25",
-      "chk_in": "2027-01-25",
-      "chk_out": "2027-01-30",
-      "nights": 5,
-      "rates": [
-        {
-          "code": "BookingCom",
-          "name": "Booking.com",
-          "rate": 475.0
-        },
-        {
-          "code": "Agoda",
-          "name": "Agoda.com",
-          "rate": 475.0
-        },
-        {
-          "code": "CtripTA",
-          "name": "Trip.com",
-          "rate": 1255.0
-        }
-      ],
-      "min_rate": 475.0,
-      "min_site": "Booking.com",
-      "total": 2375,
-      "total_pln": 10610,
+      "total": 2390,
+      "total_pln": 10677,
       "error": null
     },
     {
@@ -2076,28 +2063,28 @@
         {
           "code": "Agoda",
           "name": "Agoda.com",
-          "rate": 361.0
+          "rate": 363.0
         },
         {
           "code": "BookingCom",
           "name": "Booking.com",
-          "rate": 437.0
-        },
-        {
-          "code": "Marriott1",
-          "name": "LeMeridien.com",
           "rate": 440.0
         },
         {
           "code": "CtripTA",
           "name": "Trip.com",
-          "rate": 440.0
+          "rate": 441.0
+        },
+        {
+          "code": "Marriott1",
+          "name": "LeMeridien.com",
+          "rate": 442.0
         }
       ],
-      "min_rate": 361.0,
+      "min_rate": 363.0,
       "min_site": "Agoda.com",
-      "total": 1805,
-      "total_pln": 8063,
+      "total": 1815,
+      "total_pln": 8108,
       "error": null
     },
     {
@@ -2111,18 +2098,18 @@
         {
           "code": "Agoda",
           "name": "Agoda.com",
-          "rate": 215.0
+          "rate": 220.0
         },
         {
           "code": "BookingCom",
           "name": "Booking.com",
-          "rate": 249.0
+          "rate": 250.0
         }
       ],
-      "min_rate": 215.0,
+      "min_rate": 220.0,
       "min_site": "Agoda.com",
-      "total": 1075,
-      "total_pln": 4802,
+      "total": 1100,
+      "total_pln": 4914,
       "error": null
     },
     {
@@ -2134,14 +2121,14 @@
       "nights": 6,
       "rates": [
         {
-          "code": "Agoda",
-          "name": "Agoda.com",
-          "rate": 467.0
-        },
-        {
           "code": "BookingCom",
           "name": "Booking.com",
-          "rate": 467.0
+          "rate": 469.0
+        },
+        {
+          "code": "Agoda",
+          "name": "Agoda.com",
+          "rate": 469.0
         },
         {
           "code": "CtripTA",
@@ -2149,10 +2136,10 @@
           "rate": 1212.0
         }
       ],
-      "min_rate": 467.0,
-      "min_site": "Agoda.com",
-      "total": 2802,
-      "total_pln": 12517,
+      "min_rate": 469.0,
+      "min_site": "Booking.com",
+      "total": 2814,
+      "total_pln": 12571,
       "error": null
     },
     {
@@ -2166,28 +2153,28 @@
         {
           "code": "Agoda",
           "name": "Agoda.com",
-          "rate": 361.0
+          "rate": 363.0
         },
         {
           "code": "BookingCom",
           "name": "Booking.com",
-          "rate": 437.0
-        },
-        {
-          "code": "Marriott1",
-          "name": "LeMeridien.com",
           "rate": 440.0
         },
         {
           "code": "CtripTA",
           "name": "Trip.com",
-          "rate": 440.0
+          "rate": 441.0
+        },
+        {
+          "code": "Marriott1",
+          "name": "LeMeridien.com",
+          "rate": 442.0
         }
       ],
-      "min_rate": 361.0,
+      "min_rate": 363.0,
       "min_site": "Agoda.com",
-      "total": 2166,
-      "total_pln": 9676,
+      "total": 2178,
+      "total_pln": 9730,
       "error": null
     },
     {
@@ -2201,18 +2188,18 @@
         {
           "code": "Agoda",
           "name": "Agoda.com",
-          "rate": 216.0
+          "rate": 220.0
         },
         {
           "code": "BookingCom",
           "name": "Booking.com",
-          "rate": 252.0
+          "rate": 253.0
         }
       ],
-      "min_rate": 216.0,
+      "min_rate": 220.0,
       "min_site": "Agoda.com",
-      "total": 1296,
-      "total_pln": 5790,
+      "total": 1320,
+      "total_pln": 5897,
       "error": null
     },
     {
@@ -2224,25 +2211,25 @@
       "nights": 7,
       "rates": [
         {
-          "code": "Agoda",
-          "name": "Agoda.com",
-          "rate": 460.0
-        },
-        {
           "code": "BookingCom",
           "name": "Booking.com",
-          "rate": 460.0
+          "rate": 462.0
+        },
+        {
+          "code": "Agoda",
+          "name": "Agoda.com",
+          "rate": 462.0
         },
         {
           "code": "CtripTA",
           "name": "Trip.com",
-          "rate": 1150.0
+          "rate": 1151.0
         }
       ],
-      "min_rate": 460.0,
-      "min_site": "Agoda.com",
-      "total": 3220,
-      "total_pln": 14385,
+      "min_rate": 462.0,
+      "min_site": "Booking.com",
+      "total": 3234,
+      "total_pln": 14447,
       "error": null
     },
     {
@@ -2256,28 +2243,28 @@
         {
           "code": "Agoda",
           "name": "Agoda.com",
-          "rate": 361.0
+          "rate": 363.0
         },
         {
           "code": "BookingCom",
           "name": "Booking.com",
-          "rate": 437.0
-        },
-        {
-          "code": "Marriott1",
-          "name": "LeMeridien.com",
           "rate": 440.0
         },
         {
           "code": "CtripTA",
           "name": "Trip.com",
-          "rate": 440.0
+          "rate": 441.0
+        },
+        {
+          "code": "Marriott1",
+          "name": "LeMeridien.com",
+          "rate": 442.0
         }
       ],
-      "min_rate": 361.0,
+      "min_rate": 363.0,
       "min_site": "Agoda.com",
-      "total": 2527,
-      "total_pln": 11289,
+      "total": 2541,
+      "total_pln": 11351,
       "error": null
     },
     {
@@ -2291,18 +2278,18 @@
         {
           "code": "Agoda",
           "name": "Agoda.com",
-          "rate": 216.0
+          "rate": 220.0
         },
         {
           "code": "BookingCom",
           "name": "Booking.com",
-          "rate": 249.0
+          "rate": 250.0
         }
       ],
-      "min_rate": 216.0,
+      "min_rate": 220.0,
       "min_site": "Agoda.com",
-      "total": 1512,
-      "total_pln": 6755,
+      "total": 1540,
+      "total_pln": 6880,
       "error": null
     },
     {
@@ -2316,23 +2303,28 @@
         {
           "code": "Agoda",
           "name": "Agoda.com",
-          "rate": 621.0
+          "rate": 639.0
         },
         {
           "code": "IHG",
           "name": "IHG",
-          "rate": 768.0
+          "rate": 774.0
         },
         {
           "code": "BookingCom",
           "name": "Booking.com",
-          "rate": 772.0
+          "rate": 780.0
+        },
+        {
+          "code": "CtripTA",
+          "name": "Trip.com",
+          "rate": 781.0
         }
       ],
-      "min_rate": 621.0,
+      "min_rate": 639.0,
       "min_site": "Agoda.com",
-      "total": 4347,
-      "total_pln": 19419,
+      "total": 4473,
+      "total_pln": 19982,
       "error": null
     },
     {
@@ -2346,23 +2338,23 @@
         {
           "code": "Agoda",
           "name": "Agoda.com",
-          "rate": 465.0
+          "rate": 468.0
         },
         {
           "code": "BookingCom",
           "name": "Booking.com",
-          "rate": 481.0
+          "rate": 484.0
         },
         {
           "code": "Marriott1",
           "name": "JW Marriott",
-          "rate": 485.0
+          "rate": 487.0
         }
       ],
-      "min_rate": 465.0,
+      "min_rate": 468.0,
       "min_site": "Agoda.com",
-      "total": 3255,
-      "total_pln": 14541,
+      "total": 3276,
+      "total_pln": 14635,
       "error": null
     },
     {
@@ -2376,7 +2368,397 @@
         {
           "code": "Agoda",
           "name": "Agoda.com",
-          "rate": 211.0
+          "rate": 216.0
+        },
+        {
+          "code": "IHG",
+          "name": "IHG",
+          "rate": 269.0
+        },
+        {
+          "code": "BookingCom",
+          "name": "Booking.com",
+          "rate": 271.0
+        },
+        {
+          "code": "CtripTA",
+          "name": "Trip.com",
+          "rate": 272.0
+        }
+      ],
+      "min_rate": 216.0,
+      "min_site": "Agoda.com",
+      "total": 1512,
+      "total_pln": 6755,
+      "error": null
+    },
+    {
+      "hotel": "intercontinental-phuket",
+      "stay": "middle",
+      "date": "2027-01-23",
+      "chk_in": "2027-01-23",
+      "chk_out": "2027-01-31",
+      "nights": 8,
+      "rates": [
+        {
+          "code": "Agoda",
+          "name": "Agoda.com",
+          "rate": 638.0
+        },
+        {
+          "code": "IHG",
+          "name": "IHG",
+          "rate": 773.0
+        },
+        {
+          "code": "BookingCom",
+          "name": "Booking.com",
+          "rate": 779.0
+        },
+        {
+          "code": "CtripTA",
+          "name": "Trip.com",
+          "rate": 780.0
+        }
+      ],
+      "min_rate": 638.0,
+      "min_site": "Agoda.com",
+      "total": 5104,
+      "total_pln": 22801,
+      "error": null
+    },
+    {
+      "hotel": "jw-marriott-mai-khao",
+      "stay": "middle",
+      "date": "2027-01-23",
+      "chk_in": "2027-01-23",
+      "chk_out": "2027-01-31",
+      "nights": 8,
+      "rates": [
+        {
+          "code": "Agoda",
+          "name": "Agoda.com",
+          "rate": 467.0
+        },
+        {
+          "code": "BookingCom",
+          "name": "Booking.com",
+          "rate": 484.0
+        },
+        {
+          "code": "Marriott1",
+          "name": "JW Marriott",
+          "rate": 486.0
+        }
+      ],
+      "min_rate": 467.0,
+      "min_site": "Agoda.com",
+      "total": 3736,
+      "total_pln": 16690,
+      "error": null
+    },
+    {
+      "hotel": "indigo-patong",
+      "stay": "middle",
+      "date": "2027-01-23",
+      "chk_in": "2027-01-23",
+      "chk_out": "2027-01-31",
+      "nights": 8,
+      "rates": [
+        {
+          "code": "Agoda",
+          "name": "Agoda.com",
+          "rate": 215.0
+        },
+        {
+          "code": "IHG",
+          "name": "IHG",
+          "rate": 268.0
+        },
+        {
+          "code": "BookingCom",
+          "name": "Booking.com",
+          "rate": 270.0
+        }
+      ],
+      "min_rate": 215.0,
+      "min_site": "Agoda.com",
+      "total": 1720,
+      "total_pln": 7684,
+      "error": null
+    },
+    {
+      "hotel": "intercontinental-phuket",
+      "stay": "middle",
+      "date": "2027-01-23",
+      "chk_in": "2027-01-23",
+      "chk_out": "2027-02-01",
+      "nights": 9,
+      "rates": [
+        {
+          "code": "Agoda",
+          "name": "Agoda.com",
+          "rate": 634.0
+        },
+        {
+          "code": "IHG",
+          "name": "IHG",
+          "rate": 768.0
+        },
+        {
+          "code": "BookingCom",
+          "name": "Booking.com",
+          "rate": 774.0
+        },
+        {
+          "code": "CtripTA",
+          "name": "Trip.com",
+          "rate": 775.0
+        }
+      ],
+      "min_rate": 634.0,
+      "min_site": "Agoda.com",
+      "total": 5706,
+      "total_pln": 25490,
+      "error": null
+    },
+    {
+      "hotel": "jw-marriott-mai-khao",
+      "stay": "middle",
+      "date": "2027-01-23",
+      "chk_in": "2027-01-23",
+      "chk_out": "2027-02-01",
+      "nights": 9,
+      "rates": [
+        {
+          "code": "Agoda",
+          "name": "Agoda.com",
+          "rate": 472.0
+        },
+        {
+          "code": "BookingCom",
+          "name": "Booking.com",
+          "rate": 488.0
+        },
+        {
+          "code": "Marriott1",
+          "name": "JW Marriott",
+          "rate": 491.0
+        }
+      ],
+      "min_rate": 472.0,
+      "min_site": "Agoda.com",
+      "total": 4248,
+      "total_pln": 18977,
+      "error": null
+    },
+    {
+      "hotel": "indigo-patong",
+      "stay": "middle",
+      "date": "2027-01-23",
+      "chk_in": "2027-01-23",
+      "chk_out": "2027-02-01",
+      "nights": 9,
+      "rates": [
+        {
+          "code": "Agoda",
+          "name": "Agoda.com",
+          "rate": 215.0
+        },
+        {
+          "code": "IHG",
+          "name": "IHG",
+          "rate": 268.0
+        },
+        {
+          "code": "BookingCom",
+          "name": "Booking.com",
+          "rate": 270.0
+        }
+      ],
+      "min_rate": 215.0,
+      "min_site": "Agoda.com",
+      "total": 1935,
+      "total_pln": 8644,
+      "error": null
+    },
+    {
+      "hotel": "intercontinental-phuket",
+      "stay": "middle",
+      "date": "2027-01-24",
+      "chk_in": "2027-01-24",
+      "chk_out": "2027-01-30",
+      "nights": 6,
+      "rates": [
+        {
+          "code": "Agoda",
+          "name": "Agoda.com",
+          "rate": 639.0
+        },
+        {
+          "code": "IHG",
+          "name": "IHG",
+          "rate": 774.0
+        },
+        {
+          "code": "BookingCom",
+          "name": "Booking.com",
+          "rate": 780.0
+        },
+        {
+          "code": "CtripTA",
+          "name": "Trip.com",
+          "rate": 781.0
+        }
+      ],
+      "min_rate": 639.0,
+      "min_site": "Agoda.com",
+      "total": 3834,
+      "total_pln": 17128,
+      "error": null
+    },
+    {
+      "hotel": "jw-marriott-mai-khao",
+      "stay": "middle",
+      "date": "2027-01-24",
+      "chk_in": "2027-01-24",
+      "chk_out": "2027-01-30",
+      "nights": 6,
+      "rates": [
+        {
+          "code": "Agoda",
+          "name": "Agoda.com",
+          "rate": 466.0
+        },
+        {
+          "code": "BookingCom",
+          "name": "Booking.com",
+          "rate": 482.0
+        },
+        {
+          "code": "Marriott1",
+          "name": "JW Marriott",
+          "rate": 485.0
+        }
+      ],
+      "min_rate": 466.0,
+      "min_site": "Agoda.com",
+      "total": 2796,
+      "total_pln": 12491,
+      "error": null
+    },
+    {
+      "hotel": "indigo-patong",
+      "stay": "middle",
+      "date": "2027-01-24",
+      "chk_in": "2027-01-24",
+      "chk_out": "2027-01-30",
+      "nights": 6,
+      "rates": [
+        {
+          "code": "Agoda",
+          "name": "Agoda.com",
+          "rate": 216.0
+        },
+        {
+          "code": "IHG",
+          "name": "IHG",
+          "rate": 269.0
+        },
+        {
+          "code": "BookingCom",
+          "name": "Booking.com",
+          "rate": 271.0
+        },
+        {
+          "code": "CtripTA",
+          "name": "Trip.com",
+          "rate": 272.0
+        }
+      ],
+      "min_rate": 216.0,
+      "min_site": "Agoda.com",
+      "total": 1296,
+      "total_pln": 5790,
+      "error": null
+    },
+    {
+      "hotel": "intercontinental-phuket",
+      "stay": "middle",
+      "date": "2027-01-24",
+      "chk_in": "2027-01-24",
+      "chk_out": "2027-01-31",
+      "nights": 7,
+      "rates": [
+        {
+          "code": "Agoda",
+          "name": "Agoda.com",
+          "rate": 638.0
+        },
+        {
+          "code": "IHG",
+          "name": "IHG",
+          "rate": 773.0
+        },
+        {
+          "code": "BookingCom",
+          "name": "Booking.com",
+          "rate": 779.0
+        },
+        {
+          "code": "CtripTA",
+          "name": "Trip.com",
+          "rate": 780.0
+        }
+      ],
+      "min_rate": 638.0,
+      "min_site": "Agoda.com",
+      "total": 4466,
+      "total_pln": 19951,
+      "error": null
+    },
+    {
+      "hotel": "jw-marriott-mai-khao",
+      "stay": "middle",
+      "date": "2027-01-24",
+      "chk_in": "2027-01-24",
+      "chk_out": "2027-01-31",
+      "nights": 7,
+      "rates": [
+        {
+          "code": "Agoda",
+          "name": "Agoda.com",
+          "rate": 466.0
+        },
+        {
+          "code": "BookingCom",
+          "name": "Booking.com",
+          "rate": 482.0
+        },
+        {
+          "code": "Marriott1",
+          "name": "JW Marriott",
+          "rate": 485.0
+        }
+      ],
+      "min_rate": 466.0,
+      "min_site": "Agoda.com",
+      "total": 3262,
+      "total_pln": 14572,
+      "error": null
+    },
+    {
+      "hotel": "indigo-patong",
+      "stay": "middle",
+      "date": "2027-01-24",
+      "chk_in": "2027-01-24",
+      "chk_out": "2027-01-31",
+      "nights": 7,
+      "rates": [
+        {
+          "code": "Agoda",
+          "name": "Agoda.com",
+          "rate": 215.0
         },
         {
           "code": "IHG",
@@ -2391,27 +2773,27 @@
         {
           "code": "CtripTA",
           "name": "Trip.com",
-          "rate": 272.0
+          "rate": 271.0
         }
       ],
-      "min_rate": 211.0,
+      "min_rate": 215.0,
       "min_site": "Agoda.com",
-      "total": 1477,
-      "total_pln": 6598,
+      "total": 1505,
+      "total_pln": 6723,
       "error": null
     },
     {
       "hotel": "intercontinental-phuket",
       "stay": "middle",
-      "date": "2027-01-23",
-      "chk_in": "2027-01-23",
-      "chk_out": "2027-01-31",
+      "date": "2027-01-24",
+      "chk_in": "2027-01-24",
+      "chk_out": "2027-02-01",
       "nights": 8,
       "rates": [
         {
           "code": "Agoda",
           "name": "Agoda.com",
-          "rate": 620.0
+          "rate": 633.0
         },
         {
           "code": "IHG",
@@ -2421,62 +2803,62 @@
         {
           "code": "BookingCom",
           "name": "Booking.com",
-          "rate": 772.0
+          "rate": 773.0
         },
         {
           "code": "CtripTA",
           "name": "Trip.com",
-          "rate": 777.0
+          "rate": 774.0
         }
       ],
-      "min_rate": 620.0,
+      "min_rate": 633.0,
       "min_site": "Agoda.com",
-      "total": 4960,
-      "total_pln": 22158,
+      "total": 5064,
+      "total_pln": 22622,
       "error": null
     },
     {
       "hotel": "jw-marriott-mai-khao",
       "stay": "middle",
-      "date": "2027-01-23",
-      "chk_in": "2027-01-23",
-      "chk_out": "2027-01-31",
+      "date": "2027-01-24",
+      "chk_in": "2027-01-24",
+      "chk_out": "2027-02-01",
       "nights": 8,
       "rates": [
         {
           "code": "Agoda",
           "name": "Agoda.com",
-          "rate": 465.0
+          "rate": 471.0
         },
         {
           "code": "BookingCom",
           "name": "Booking.com",
-          "rate": 481.0
+          "rate": 487.0
         },
         {
           "code": "Marriott1",
           "name": "JW Marriott",
-          "rate": 484.0
+          "rate": 490.0
         }
       ],
-      "min_rate": 465.0,
+      "min_rate": 471.0,
       "min_site": "Agoda.com",
-      "total": 3720,
-      "total_pln": 16618,
+      "total": 3768,
+      "total_pln": 16833,
       "error": null
     },
     {
       "hotel": "indigo-patong",
       "stay": "middle",
-      "date": "2027-01-23",
-      "chk_in": "2027-01-23",
-      "chk_out": "2027-01-31",
+      "date": "2027-01-24",
+      "chk_in": "2027-01-24",
+      "chk_out": "2027-02-01",
       "nights": 8,
       "rates": [
         {
           "code": "Agoda",
           "name": "Agoda.com",
-          "rate": 210.0
+          "rate": 215.0
         },
         {
           "code": "IHG",
@@ -2487,6 +2869,101 @@
           "code": "BookingCom",
           "name": "Booking.com",
           "rate": 269.0
+        }
+      ],
+      "min_rate": 215.0,
+      "min_site": "Agoda.com",
+      "total": 1720,
+      "total_pln": 7684,
+      "error": null
+    },
+    {
+      "hotel": "intercontinental-phuket",
+      "stay": "middle",
+      "date": "2027-01-25",
+      "chk_in": "2027-01-25",
+      "chk_out": "2027-01-30",
+      "nights": 5,
+      "rates": [
+        {
+          "code": "Agoda",
+          "name": "Agoda.com",
+          "rate": 649.0
+        },
+        {
+          "code": "IHG",
+          "name": "IHG",
+          "rate": 786.0
+        },
+        {
+          "code": "BookingCom",
+          "name": "Booking.com",
+          "rate": 792.0
+        },
+        {
+          "code": "CtripTA",
+          "name": "Trip.com",
+          "rate": 793.0
+        }
+      ],
+      "min_rate": 649.0,
+      "min_site": "Agoda.com",
+      "total": 3245,
+      "total_pln": 14496,
+      "error": null
+    },
+    {
+      "hotel": "jw-marriott-mai-khao",
+      "stay": "middle",
+      "date": "2027-01-25",
+      "chk_in": "2027-01-25",
+      "chk_out": "2027-01-30",
+      "nights": 5,
+      "rates": [
+        {
+          "code": "Agoda",
+          "name": "Agoda.com",
+          "rate": 463.0
+        },
+        {
+          "code": "BookingCom",
+          "name": "Booking.com",
+          "rate": 480.0
+        },
+        {
+          "code": "Marriott1",
+          "name": "JW Marriott",
+          "rate": 483.0
+        }
+      ],
+      "min_rate": 463.0,
+      "min_site": "Agoda.com",
+      "total": 2315,
+      "total_pln": 10342,
+      "error": null
+    },
+    {
+      "hotel": "indigo-patong",
+      "stay": "middle",
+      "date": "2027-01-25",
+      "chk_in": "2027-01-25",
+      "chk_out": "2027-01-30",
+      "nights": 5,
+      "rates": [
+        {
+          "code": "Agoda",
+          "name": "Agoda.com",
+          "rate": 216.0
+        },
+        {
+          "code": "IHG",
+          "name": "IHG",
+          "rate": 269.0
+        },
+        {
+          "code": "BookingCom",
+          "name": "Booking.com",
+          "rate": 271.0
         },
         {
           "code": "CtripTA",
@@ -2494,143 +2971,53 @@
           "rate": 272.0
         }
       ],
-      "min_rate": 210.0,
+      "min_rate": 216.0,
       "min_site": "Agoda.com",
-      "total": 1680,
-      "total_pln": 7505,
+      "total": 1080,
+      "total_pln": 4825,
       "error": null
     },
     {
       "hotel": "intercontinental-phuket",
       "stay": "middle",
-      "date": "2027-01-23",
-      "chk_in": "2027-01-23",
-      "chk_out": "2027-02-01",
-      "nights": 9,
-      "rates": [
-        {
-          "code": "Agoda",
-          "name": "Agoda.com",
-          "rate": 617.0
-        },
-        {
-          "code": "IHG",
-          "name": "IHG",
-          "rate": 764.0
-        },
-        {
-          "code": "BookingCom",
-          "name": "Booking.com",
-          "rate": 768.0
-        }
-      ],
-      "min_rate": 617.0,
-      "min_site": "Agoda.com",
-      "total": 5553,
-      "total_pln": 24807,
-      "error": null
-    },
-    {
-      "hotel": "jw-marriott-mai-khao",
-      "stay": "middle",
-      "date": "2027-01-23",
-      "chk_in": "2027-01-23",
-      "chk_out": "2027-02-01",
-      "nights": 9,
-      "rates": [
-        {
-          "code": "Agoda",
-          "name": "Agoda.com",
-          "rate": 469.0
-        },
-        {
-          "code": "BookingCom",
-          "name": "Booking.com",
-          "rate": 485.0
-        },
-        {
-          "code": "Marriott1",
-          "name": "JW Marriott",
-          "rate": 489.0
-        }
-      ],
-      "min_rate": 469.0,
-      "min_site": "Agoda.com",
-      "total": 4221,
-      "total_pln": 18856,
-      "error": null
-    },
-    {
-      "hotel": "indigo-patong",
-      "stay": "middle",
-      "date": "2027-01-23",
-      "chk_in": "2027-01-23",
-      "chk_out": "2027-02-01",
-      "nights": 9,
-      "rates": [
-        {
-          "code": "Agoda",
-          "name": "Agoda.com",
-          "rate": 210.0
-        },
-        {
-          "code": "IHG",
-          "name": "IHG",
-          "rate": 266.0
-        },
-        {
-          "code": "BookingCom",
-          "name": "Booking.com",
-          "rate": 268.0
-        }
-      ],
-      "min_rate": 210.0,
-      "min_site": "Agoda.com",
-      "total": 1890,
-      "total_pln": 8443,
-      "error": null
-    },
-    {
-      "hotel": "intercontinental-phuket",
-      "stay": "middle",
-      "date": "2027-01-24",
-      "chk_in": "2027-01-24",
-      "chk_out": "2027-01-30",
+      "date": "2027-01-25",
+      "chk_in": "2027-01-25",
+      "chk_out": "2027-01-31",
       "nights": 6,
       "rates": [
         {
           "code": "Agoda",
           "name": "Agoda.com",
-          "rate": 622.0
+          "rate": 646.0
         },
         {
           "code": "IHG",
           "name": "IHG",
-          "rate": 768.0
+          "rate": 783.0
         },
         {
           "code": "BookingCom",
           "name": "Booking.com",
-          "rate": 772.0
+          "rate": 789.0
         },
         {
           "code": "CtripTA",
           "name": "Trip.com",
-          "rate": 777.0
+          "rate": 790.0
         }
       ],
-      "min_rate": 622.0,
+      "min_rate": 646.0,
       "min_site": "Agoda.com",
-      "total": 3732,
-      "total_pln": 16672,
+      "total": 3876,
+      "total_pln": 17315,
       "error": null
     },
     {
       "hotel": "jw-marriott-mai-khao",
       "stay": "middle",
-      "date": "2027-01-24",
-      "chk_in": "2027-01-24",
-      "chk_out": "2027-01-30",
+      "date": "2027-01-25",
+      "chk_in": "2027-01-25",
+      "chk_out": "2027-01-31",
       "nights": 6,
       "rates": [
         {
@@ -2658,341 +3045,6 @@
     {
       "hotel": "indigo-patong",
       "stay": "middle",
-      "date": "2027-01-24",
-      "chk_in": "2027-01-24",
-      "chk_out": "2027-01-30",
-      "nights": 6,
-      "rates": [
-        {
-          "code": "Agoda",
-          "name": "Agoda.com",
-          "rate": 211.0
-        },
-        {
-          "code": "IHG",
-          "name": "IHG",
-          "rate": 268.0
-        },
-        {
-          "code": "BookingCom",
-          "name": "Booking.com",
-          "rate": 270.0
-        },
-        {
-          "code": "CtripTA",
-          "name": "Trip.com",
-          "rate": 272.0
-        }
-      ],
-      "min_rate": 211.0,
-      "min_site": "Agoda.com",
-      "total": 1266,
-      "total_pln": 5656,
-      "error": null
-    },
-    {
-      "hotel": "intercontinental-phuket",
-      "stay": "middle",
-      "date": "2027-01-24",
-      "chk_in": "2027-01-24",
-      "chk_out": "2027-01-31",
-      "nights": 7,
-      "rates": [
-        {
-          "code": "Agoda",
-          "name": "Agoda.com",
-          "rate": 620.0
-        },
-        {
-          "code": "IHG",
-          "name": "IHG",
-          "rate": 767.0
-        },
-        {
-          "code": "BookingCom",
-          "name": "Booking.com",
-          "rate": 771.0
-        },
-        {
-          "code": "CtripTA",
-          "name": "Trip.com",
-          "rate": 777.0
-        }
-      ],
-      "min_rate": 620.0,
-      "min_site": "Agoda.com",
-      "total": 4340,
-      "total_pln": 19388,
-      "error": null
-    },
-    {
-      "hotel": "jw-marriott-mai-khao",
-      "stay": "middle",
-      "date": "2027-01-24",
-      "chk_in": "2027-01-24",
-      "chk_out": "2027-01-31",
-      "nights": 7,
-      "rates": [
-        {
-          "code": "Agoda",
-          "name": "Agoda.com",
-          "rate": 463.0
-        },
-        {
-          "code": "BookingCom",
-          "name": "Booking.com",
-          "rate": 479.0
-        },
-        {
-          "code": "Marriott1",
-          "name": "JW Marriott",
-          "rate": 483.0
-        }
-      ],
-      "min_rate": 463.0,
-      "min_site": "Agoda.com",
-      "total": 3241,
-      "total_pln": 14479,
-      "error": null
-    },
-    {
-      "hotel": "indigo-patong",
-      "stay": "middle",
-      "date": "2027-01-24",
-      "chk_in": "2027-01-24",
-      "chk_out": "2027-01-31",
-      "nights": 7,
-      "rates": [
-        {
-          "code": "Agoda",
-          "name": "Agoda.com",
-          "rate": 210.0
-        },
-        {
-          "code": "IHG",
-          "name": "IHG",
-          "rate": 267.0
-        },
-        {
-          "code": "BookingCom",
-          "name": "Booking.com",
-          "rate": 269.0
-        },
-        {
-          "code": "CtripTA",
-          "name": "Trip.com",
-          "rate": 272.0
-        }
-      ],
-      "min_rate": 210.0,
-      "min_site": "Agoda.com",
-      "total": 1470,
-      "total_pln": 6567,
-      "error": null
-    },
-    {
-      "hotel": "intercontinental-phuket",
-      "stay": "middle",
-      "date": "2027-01-24",
-      "chk_in": "2027-01-24",
-      "chk_out": "2027-02-01",
-      "nights": 8,
-      "rates": [
-        {
-          "code": "Agoda",
-          "name": "Agoda.com",
-          "rate": 615.0
-        },
-        {
-          "code": "IHG",
-          "name": "IHG",
-          "rate": 763.0
-        },
-        {
-          "code": "BookingCom",
-          "name": "Booking.com",
-          "rate": 767.0
-        },
-        {
-          "code": "CtripTA",
-          "name": "Trip.com",
-          "rate": 886.0
-        }
-      ],
-      "min_rate": 615.0,
-      "min_site": "Agoda.com",
-      "total": 4920,
-      "total_pln": 21979,
-      "error": null
-    },
-    {
-      "hotel": "jw-marriott-mai-khao",
-      "stay": "middle",
-      "date": "2027-01-24",
-      "chk_in": "2027-01-24",
-      "chk_out": "2027-02-01",
-      "nights": 8,
-      "rates": [
-        {
-          "code": "Agoda",
-          "name": "Agoda.com",
-          "rate": 469.0
-        },
-        {
-          "code": "BookingCom",
-          "name": "Booking.com",
-          "rate": 484.0
-        },
-        {
-          "code": "Marriott1",
-          "name": "JW Marriott",
-          "rate": 488.0
-        }
-      ],
-      "min_rate": 469.0,
-      "min_site": "Agoda.com",
-      "total": 3752,
-      "total_pln": 16761,
-      "error": null
-    },
-    {
-      "hotel": "indigo-patong",
-      "stay": "middle",
-      "date": "2027-01-24",
-      "chk_in": "2027-01-24",
-      "chk_out": "2027-02-01",
-      "nights": 8,
-      "rates": [
-        {
-          "code": "Agoda",
-          "name": "Agoda.com",
-          "rate": 209.0
-        },
-        {
-          "code": "IHG",
-          "name": "IHG",
-          "rate": 266.0
-        },
-        {
-          "code": "BookingCom",
-          "name": "Booking.com",
-          "rate": 268.0
-        },
-        {
-          "code": "CtripTA",
-          "name": "Trip.com",
-          "rate": 270.0
-        }
-      ],
-      "min_rate": 209.0,
-      "min_site": "Agoda.com",
-      "total": 1672,
-      "total_pln": 7469,
-      "error": null
-    },
-    {
-      "hotel": "intercontinental-phuket",
-      "stay": "middle",
-      "date": "2027-01-25",
-      "chk_in": "2027-01-25",
-      "chk_out": "2027-01-30",
-      "nights": 5,
-      "rates": [
-        {
-          "code": "Agoda",
-          "name": "Agoda.com",
-          "rate": 630.0
-        },
-        {
-          "code": "IHG",
-          "name": "IHG",
-          "rate": 780.0
-        },
-        {
-          "code": "BookingCom",
-          "name": "Booking.com",
-          "rate": 784.0
-        },
-        {
-          "code": "CtripTA",
-          "name": "Trip.com",
-          "rate": 790.0
-        }
-      ],
-      "min_rate": 630.0,
-      "min_site": "Agoda.com",
-      "total": 3150,
-      "total_pln": 14072,
-      "error": null
-    },
-    {
-      "hotel": "jw-marriott-mai-khao",
-      "stay": "middle",
-      "date": "2027-01-25",
-      "chk_in": "2027-01-25",
-      "chk_out": "2027-01-30",
-      "nights": 5,
-      "rates": [
-        {
-          "code": "Agoda",
-          "name": "Agoda.com",
-          "rate": 461.0
-        },
-        {
-          "code": "BookingCom",
-          "name": "Booking.com",
-          "rate": 477.0
-        },
-        {
-          "code": "Marriott1",
-          "name": "JW Marriott",
-          "rate": 481.0
-        }
-      ],
-      "min_rate": 461.0,
-      "min_site": "Agoda.com",
-      "total": 2305,
-      "total_pln": 10297,
-      "error": null
-    },
-    {
-      "hotel": "indigo-patong",
-      "stay": "middle",
-      "date": "2027-01-25",
-      "chk_in": "2027-01-25",
-      "chk_out": "2027-01-30",
-      "nights": 5,
-      "rates": [
-        {
-          "code": "Agoda",
-          "name": "Agoda.com",
-          "rate": 211.0
-        },
-        {
-          "code": "IHG",
-          "name": "IHG",
-          "rate": 268.0
-        },
-        {
-          "code": "BookingCom",
-          "name": "Booking.com",
-          "rate": 270.0
-        },
-        {
-          "code": "CtripTA",
-          "name": "Trip.com",
-          "rate": 272.0
-        }
-      ],
-      "min_rate": 211.0,
-      "min_site": "Agoda.com",
-      "total": 1055,
-      "total_pln": 4713,
-      "error": null
-    },
-    {
-      "hotel": "intercontinental-phuket",
-      "stay": "middle",
       "date": "2027-01-25",
       "chk_in": "2027-01-25",
       "chk_out": "2027-01-31",
@@ -3001,7 +3053,42 @@
         {
           "code": "Agoda",
           "name": "Agoda.com",
-          "rate": 624.0
+          "rate": 215.0
+        },
+        {
+          "code": "IHG",
+          "name": "IHG",
+          "rate": 268.0
+        },
+        {
+          "code": "BookingCom",
+          "name": "Booking.com",
+          "rate": 270.0
+        },
+        {
+          "code": "CtripTA",
+          "name": "Trip.com",
+          "rate": 270.0
+        }
+      ],
+      "min_rate": 215.0,
+      "min_site": "Agoda.com",
+      "total": 1290,
+      "total_pln": 5763,
+      "error": null
+    },
+    {
+      "hotel": "intercontinental-phuket",
+      "stay": "middle",
+      "date": "2027-01-25",
+      "chk_in": "2027-01-25",
+      "chk_out": "2027-02-01",
+      "nights": 7,
+      "rates": [
+        {
+          "code": "Agoda",
+          "name": "Agoda.com",
+          "rate": 640.0
         },
         {
           "code": "IHG",
@@ -3011,18 +3098,18 @@
         {
           "code": "BookingCom",
           "name": "Booking.com",
-          "rate": 779.0
+          "rate": 781.0
         },
         {
           "code": "CtripTA",
           "name": "Trip.com",
-          "rate": 901.0
+          "rate": 782.0
         }
       ],
-      "min_rate": 624.0,
+      "min_rate": 640.0,
       "min_site": "Agoda.com",
-      "total": 3744,
-      "total_pln": 16726,
+      "total": 4480,
+      "total_pln": 20014,
       "error": null
     },
     {
@@ -3030,29 +3117,29 @@
       "stay": "middle",
       "date": "2027-01-25",
       "chk_in": "2027-01-25",
-      "chk_out": "2027-01-31",
-      "nights": 6,
+      "chk_out": "2027-02-01",
+      "nights": 7,
       "rates": [
         {
           "code": "Agoda",
           "name": "Agoda.com",
-          "rate": 461.0
+          "rate": 470.0
         },
         {
           "code": "BookingCom",
           "name": "Booking.com",
-          "rate": 477.0
+          "rate": 486.0
         },
         {
           "code": "Marriott1",
           "name": "JW Marriott",
-          "rate": 481.0
+          "rate": 489.0
         }
       ],
-      "min_rate": 461.0,
+      "min_rate": 470.0,
       "min_site": "Agoda.com",
-      "total": 2766,
-      "total_pln": 12357,
+      "total": 3290,
+      "total_pln": 14697,
       "error": null
     },
     {
@@ -3060,13 +3147,13 @@
       "stay": "middle",
       "date": "2027-01-25",
       "chk_in": "2027-01-25",
-      "chk_out": "2027-01-31",
-      "nights": 6,
+      "chk_out": "2027-02-01",
+      "nights": 7,
       "rates": [
         {
           "code": "Agoda",
           "name": "Agoda.com",
-          "rate": 210.0
+          "rate": 214.0
         },
         {
           "code": "IHG",
@@ -3076,107 +3163,7 @@
         {
           "code": "BookingCom",
           "name": "Booking.com",
-          "rate": 268.0
-        },
-        {
-          "code": "CtripTA",
-          "name": "Trip.com",
-          "rate": 270.0
-        }
-      ],
-      "min_rate": 210.0,
-      "min_site": "Agoda.com",
-      "total": 1260,
-      "total_pln": 5629,
-      "error": null
-    },
-    {
-      "hotel": "intercontinental-phuket",
-      "stay": "middle",
-      "date": "2027-01-25",
-      "chk_in": "2027-01-25",
-      "chk_out": "2027-02-01",
-      "nights": 7,
-      "rates": [
-        {
-          "code": "Agoda",
-          "name": "Agoda.com",
-          "rate": 619.0
-        },
-        {
-          "code": "IHG",
-          "name": "IHG",
-          "rate": 768.0
-        },
-        {
-          "code": "BookingCom",
-          "name": "Booking.com",
-          "rate": 772.0
-        },
-        {
-          "code": "CtripTA",
-          "name": "Trip.com",
-          "rate": 777.0
-        }
-      ],
-      "min_rate": 619.0,
-      "min_site": "Agoda.com",
-      "total": 4333,
-      "total_pln": 19357,
-      "error": null
-    },
-    {
-      "hotel": "jw-marriott-mai-khao",
-      "stay": "middle",
-      "date": "2027-01-25",
-      "chk_in": "2027-01-25",
-      "chk_out": "2027-02-01",
-      "nights": 7,
-      "rates": [
-        {
-          "code": "Agoda",
-          "name": "Agoda.com",
-          "rate": 467.0
-        },
-        {
-          "code": "BookingCom",
-          "name": "Booking.com",
-          "rate": 483.0
-        },
-        {
-          "code": "Marriott1",
-          "name": "JW Marriott",
-          "rate": 487.0
-        }
-      ],
-      "min_rate": 467.0,
-      "min_site": "Agoda.com",
-      "total": 3269,
-      "total_pln": 14604,
-      "error": null
-    },
-    {
-      "hotel": "indigo-patong",
-      "stay": "middle",
-      "date": "2027-01-25",
-      "chk_in": "2027-01-25",
-      "chk_out": "2027-02-01",
-      "nights": 7,
-      "rates": [
-        {
-          "code": "Agoda",
-          "name": "Agoda.com",
-          "rate": 209.0
-        },
-        {
-          "code": "IHG",
-          "name": "IHG",
-          "rate": 266.0
-        },
-        {
-          "code": "BookingCom",
-          "name": "Booking.com",
-          "rate": 268.0
+          "rate": 269.0
         },
         {
           "code": "CtripTA",
@@ -3184,10 +3171,10 @@
           "rate": 269.0
         }
       ],
-      "min_rate": 209.0,
+      "min_rate": 214.0,
       "min_site": "Agoda.com",
-      "total": 1463,
-      "total_pln": 6536,
+      "total": 1498,
+      "total_pln": 6692,
       "error": null
     }
   ],
